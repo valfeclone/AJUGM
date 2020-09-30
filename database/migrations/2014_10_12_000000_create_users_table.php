@@ -16,6 +16,11 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->enum('kategori_lomba', ['Arjuna', 'Kresna', 'Prahasta', 'Nakula', 'Sadewa']);
+            $table->enum('lomba', ['Homeless Media', 'Comic Strip', 'Podcast', 'Film Fiksi', 'Movie Scoring', 'Film Dokumenter', 'Penulisan Naskah', 'PR Campaign', 'Press Conference', 'Risk Management', 'Riset Strategis Akademik', 'Fun Research', 'Social Media Activation', 'Unconventional Media', 'Brandbook', 'Skip Ad']);
+            $table->string('path_bukti_bayar')->nullable();
+            $table->string('path_file_lomba')->nullable();
+            $table->boolean('validasi_pembayaran')->default(false);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

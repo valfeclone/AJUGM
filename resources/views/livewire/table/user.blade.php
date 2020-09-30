@@ -3,15 +3,23 @@
         <x-slot name="head">
             <tr>
                 <th><a wire:click.prevent="sortBy('id')" role="button" href="#">
-                    ID
+                    ID Tim
                     @include('components.sort-icon', ['field' => 'id'])
                 </a></th>
                 <th><a wire:click.prevent="sortBy('name')" role="button" href="#">
-                    Name
+                    Nama Tim
                     @include('components.sort-icon', ['field' => 'name'])
                 </a></th>
+                <th><a wire:click.prevent="sortBy('kategori_lomba')" role="button" href="#">
+                    Kategori Lomba
+                    @include('components.sort-icon', ['field' => 'kategori_lomba'])
+                </a></th>
+                <th><a wire:click.prevent="sortBy('lomba')" role="button" href="#">
+                    Lomba
+                    @include('components.sort-icon', ['field' => 'Lomba'])
+                </a></th>
                 <th><a wire:click.prevent="sortBy('email')" role="button" href="#">
-                    Email
+                    Email Ketua Tim
                     @include('components.sort-icon', ['field' => 'email'])
                 </a></th>
                 <th><a wire:click.prevent="sortBy('created_at')" role="button" href="#">
@@ -26,6 +34,8 @@
                 <tr x-data="window.__controller.dataTableController({{ $user->id }})">
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
+                    <td>{{ $user->kategori_lomba }}</td>
+                    <td>{{ $user->lomba }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->created_at->format('d M Y H:i') }}</td>
                     <td class="whitespace-no-wrap row-action--icon">
