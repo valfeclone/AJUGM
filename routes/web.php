@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,17 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
 });
+
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::view('/dashboard', "dashboard")->name('dashboard');
+
+    Route::get('/admin', [ AdminController::class, "index_view" ])->name('admin');
+    Route::view('/admin/new', "pages2.admin.admin-new")->name('admin.new');
+    Route::view('/admin/edit/{adminId}', "pages2.admin.admin-edit")->name('admin.edit');
+});
+
+Route::get('/dashboard/admin', function(){
+    return view("login_admin");
+});
+
+Route::post('/admin/login', [ AdminController::class, "handleLogin" ]);

@@ -10,8 +10,43 @@
             @csrf
 
             <div>
-                <x-jet-label value="{{ __('Name') }}" />
+                <x-jet-label value="{{ __('Nama Tim') }}" />
                 <x-jet-input class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label value="{{ __('Kategori') }}" />
+                <x-jet-input class="block mt-1 w-full" list="kategori-kategori" name="kategori_lomba" :value="old('kategori_lomba')" required />
+                <datalist id="kategori-kategori">
+                    <option value="Arjuna">
+                    <option value="Kresna">
+                    <option value="Prahasta">
+                    <option value="Nakula">
+                    <option value="Sadewa">
+                </datalist>
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label value="{{ __('Lomba') }}" />
+                <x-jet-input class="block mt-1 w-full" list="lomba-lomba" name="lomba" :value="old('lomba')" required />
+                <datalist id="lomba-lomba">
+                    <option value="Homeless Media">
+                    <option value="Comic Strip">
+                    <option value="Podcast">
+                    <option value="Film Fiksi">
+                    <option value="Movie Scoring">
+                    <option value="Film Dokumenter">
+                    <option value="Penulisan Naskah">
+                    <option value="PR Campaign">
+                    <option value="Press Conference">
+                    <option value="Risk Management">
+                    <option value="Riset Strategis Akademik">
+                    <option value="Fun Research">
+                    <option value="Social Media Activation">
+                    <option value="Unconventional Media">
+                    <option value="Brandbook">
+                    <option value="Skip Ad">
+                </datalist>
             </div>
 
             <div class="mt-4">
