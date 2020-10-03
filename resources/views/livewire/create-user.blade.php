@@ -17,6 +17,45 @@
             </div>
 
             <div class="form-group col-span-6 sm:col-span-5">
+                <x-jet-label for="kategori_lomba" value="{{ __('Kategori Lomba') }}" />
+                <small>Kategori Lomba yang Diikuti</small>
+                <x-jet-input id="kategori_lomba" list="kategori-kategori" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.kategori_lomba" />
+                <datalist id="kategori-kategori">
+                    <option value="Arjuna">
+                    <option value="Kresna">
+                    <option value="Prahasta">
+                    <option value="Nakula">
+                    <option value="Sadewa">
+                </datalist>
+                <x-jet-input-error for="user.kategori_lomba" class="mt-2" />
+            </div>
+
+            <div class="form-group col-span-6 sm:col-span-5">
+                <x-jet-label for="lomba" value="{{ __('Lomba') }}" />
+                <small>Lomba yang Diikuti</small>
+                <x-jet-input id="lomba" list="lomba-lomba" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.lomba" />
+                <datalist id="lomba-lomba">
+                    <option value="Homeless Media">
+                    <option value="Comic Strip">
+                    <option value="Podcast">
+                    <option value="Film Fiksi">
+                    <option value="Movie Scoring">
+                    <option value="Film Dokumenter">
+                    <option value="Penulisan Naskah">
+                    <option value="PR Campaign">
+                    <option value="Press Conference">
+                    <option value="Risk Management">
+                    <option value="Riset Strategis Akademik">
+                    <option value="Fun Research">
+                    <option value="Social Media Activation">
+                    <option value="Unconventional Media">
+                    <option value="Brandbook">
+                    <option value="Skip Ad">
+                </datalist>
+                <x-jet-input-error for="user.lomba" class="mt-2" />
+            </div>
+
+            <div class="form-group col-span-6 sm:col-span-5">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" type="text" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.email" />
                 <x-jet-input-error for="user.email" class="mt-2" />
