@@ -13,3 +13,4 @@
         <livewire:table.main name="user" :model="$user" />
     </div>
 </x-app-layout>
+<!-- INI BUAT NAVBAR YANG KIRI DLAN -->
