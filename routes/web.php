@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UploadbuktiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,7 +36,12 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/admin/edit/{adminId}', "pages2.admin.admin-edit")->name('admin.edit');
 });
 
+//buat login admin
 Route::get('/dashboard/admin', function(){
     return view("login_admin");
 });
 Route::post('/admin/login', [ AdminController::class, "handleLogin" ]);
+
+//buat upload bukti bayar
+Route::get('/upload', [ UploadbuktiController::class, "upload" ]);
+Route::post('/upload/proses', [ UploadbuktiController::class, "proses_upload" ]);
