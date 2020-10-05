@@ -16,14 +16,13 @@ class AdminController extends Controller
     }
     public function handleLogin (Request $req)
     {
-        if(Auth::providers('users')->attempt([
-            'username' => $req->username,
-            'password' => $req->password,
-        ])) {
-            return redirect()->route('dashboard');
-            } 
+        $credentials = $req->only('email', 'password');
+        
+        if (Auth::guard('admins')->attempt($credentials)) {
+            return redirect()->intended('dashboard');
+        } 
         else{
-            return back()->withErrors('login');
+            echo "gagal";
         }
     }
 }

@@ -38,5 +38,4 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 Route::get('/dashboard/admin', function(){
     return view("login_admin");
 });
-
 Route::post('/admin/login', [ AdminController::class, "handleLogin" ]);
