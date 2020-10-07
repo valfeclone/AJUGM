@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UploadbuktiController;
+use App\Http\Controllers\UploadFileLombaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,8 +41,13 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 Route::get('/dashboard/admin', function(){
     return view("login_admin");
 });
-Route::post('/admin/login', [ AdminController::class, "handleLogin" ]);
+Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
+    ->middleware(['guest']);
 
 //buat upload bukti bayar
-Route::get('/upload', [ UploadbuktiController::class, "upload" ]);
-Route::post('/upload/proses', [ UploadbuktiController::class, "proses_upload" ]);
+Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ]);
+Route::post('/uploadbukti/proses', [ UploadbuktiController::class, "proses_upload" ]);
+
+//buat upload file lomba
+Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ] );
+Route::post('/uploadfile/proses', [ UploadFileLombaController::class, "proses_upload" ]);

@@ -5,7 +5,7 @@
         </x-slot>
 
         <div class="block mt-4">
-            <x-jet-label value="{{ __('UPLOAD BUKTI PEMBAYARAN') }}" />
+            <x-jet-label value="{{ __('UPLOAD FILE LOMBA') }}" />
         </div>
 
         <x-jet-validation-errors class="mb-4" />
@@ -16,17 +16,17 @@
             </div>
         @endif
 
-        <form method="POST" action="/uploadbukti/proses" enctype="multipart/form-data">
+        <form method="POST" action="/uploadfile/proses" enctype="multipart/form-data">
             @csrf
 
             <div>
-                <x-jet-label value="{{ __('File Bukti Pembayaran') }}" />
-                <x-jet-input class="block mt-1 w-full" type="file" name="file_bukti_pembayaran" required />
+                <x-jet-label value="{{ __('File Lomba') }}" />
+                <x-jet-input class="block mt-1 w-full" type="file" name="file_lomba" required />
             </div>
 
             <div class="flex items-center justify-end mt-4">
                 <x-jet-button class="ml-4">
-                    {{ __('Upload Bukti Pembayaran') }}
+                    {{ __('Upload File Lomba') }}
                 </x-jet-button>
             </div>
         </form>

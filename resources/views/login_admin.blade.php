@@ -4,6 +4,10 @@
             <x-jet-authentication-card-logo />
         </x-slot>
 
+        <div class="block mt-4">
+            <x-jet-label value="{{ __('LOGIN ADMIN') }}" />
+        </div>
+
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))

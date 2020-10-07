@@ -4,24 +4,24 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request;
  
-class UploadbuktiController extends Controller
+class UploadFileLombaController extends Controller
 {
 	public function upload(){
-		return view('upload_bukti');
+		return view('upload_file');
 	}
  
 	public function proses_upload(Request $request){
 		$this->validate($request, [
-			'file_bukti_pembayaran' => 'required',
+			'file_lomba' => 'required',
 		]);
 
 	    // menyimpan data file yang diupload ke variabel $file
-	    $file = $request->file('file_bukti_pembayaran');
+	    $file = $request->file('file_lomba');
 
 		// menyimpan data file yang diupload ke variabel $file
-        $tujuan_upload = 'bukti_pembayaran';
+        $tujuan_upload = 'file_lomba';
         $file->move($tujuan_upload,$file->getClientOriginalName());
         
-        echo "upload bukti sukses";
+        echo "upload file sukses";
 	}
 }

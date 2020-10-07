@@ -22,7 +22,7 @@ class AdminController extends Controller
             return redirect()->intended('dashboard');
         } 
         else{
-            echo "gagal";
+            return back()->withErrors(['field_name' => ['Login Gagal']]);
         }
     }
 }
