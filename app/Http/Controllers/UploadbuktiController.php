@@ -21,7 +21,13 @@ class UploadbuktiController extends Controller
 		// menyimpan data file yang diupload ke variabel $file
         $tujuan_upload = 'bukti_pembayaran';
         $file->move($tujuan_upload,$file->getClientOriginalName());
-        
+
+		$user = auth()->user();
+		if($user) {
+			$user->path_bukti_bayar = $tujuan_upload."/".($file->getClientOriginalName());
+			$user->save();
+		}
+
         echo "upload bukti sukses";
 	}
 }

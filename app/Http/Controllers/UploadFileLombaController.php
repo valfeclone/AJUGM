@@ -21,7 +21,13 @@ class UploadFileLombaController extends Controller
 		// menyimpan data file yang diupload ke variabel $file
         $tujuan_upload = 'file_lomba';
         $file->move($tujuan_upload,$file->getClientOriginalName());
-        
+		
+		$user = auth()->user();
+		if($user) {
+			$user->path_file_lomba = $tujuan_upload."/".($file->getClientOriginalName());
+			$user->save();
+		}
+
         echo "upload file sukses";
 	}
 }

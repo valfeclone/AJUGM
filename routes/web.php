@@ -45,9 +45,11 @@ Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
     ->middleware(['guest']);
 
 //buat upload bukti bayar
-Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ]);
+Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ])
+    ->middleware(['auth:sanctum', 'verified']);
 Route::post('/uploadbukti/proses', [ UploadbuktiController::class, "proses_upload" ]);
 
 //buat upload file lomba
-Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ] );
+Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ])
+    ->middleware(['auth:sanctum', 'verified']);
 Route::post('/uploadfile/proses', [ UploadFileLombaController::class, "proses_upload" ]);
