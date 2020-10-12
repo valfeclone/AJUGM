@@ -16,13 +16,13 @@
 
             <div class="mt-4">
                 <x-jet-label value="{{ __('Kategori') }}" />
-                <x-jet-input class="block mt-1 w-full" list="kategori-kategori" name="kategori_lomba" :value="old('kategori_lomba')" required />
+                <x-jet-input class="block mt-1 w-full" type="enum" list="kategori-kategori" name="kategori_lomba" :value="old('kategori_lomba')" required />
                 <datalist id="kategori-kategori">
-                    <option value="Arjuna">
-                    <option value="Kresna">
-                    <option value="Prahasta">
-                    <option value="Nakula">
-                    <option value="Sadewa">
+                    <option name="Arjuna" value="Arjuna">
+                    <option name="Kresna" value="Kresna">
+                    <option name="Prahasta" value="Prahasta">
+                    <option name="Nakula" value="Nakula">
+                    <option name="Sadewa" value="Sadewa">
                 </datalist>
             </div>
 
@@ -30,22 +30,22 @@
                 <x-jet-label value="{{ __('Lomba') }}" />
                 <x-jet-input class="block mt-1 w-full" list="lomba-lomba" name="lomba" :value="old('lomba')" required />
                 <datalist id="lomba-lomba">
-                    <option value="Homeless Media">
-                    <option value="Comic Strip">
-                    <option value="Podcast">
-                    <option value="Film Fiksi">
-                    <option value="Movie Scoring">
-                    <option value="Film Dokumenter">
-                    <option value="Penulisan Naskah">
-                    <option value="PR Campaign">
-                    <option value="Press Conference">
-                    <option value="Risk Management">
-                    <option value="Riset Strategis Akademik">
-                    <option value="Fun Research">
-                    <option value="Social Media Activation">
-                    <option value="Unconventional Media">
-                    <option value="Brandbook">
-                    <option value="Skip Ad">
+                    <option name="Homeless Media" value="Homeless Media">
+                    <option name="Podcast" value="Comic Strip">
+                    <option name="Podcast" value="Podcast">
+                    <option name="Film Fiksi" value="Film Fiksi">
+                    <option name="Movie Scoring" value="Movie Scoring">
+                    <option name="Film Dokumenter" value="Film Dokumenter">
+                    <option name="Penulisan Naskah" value="Penulisan Naskah">
+                    <option name="PR Campaign" value="PR Campaign">
+                    <option name="Press Conference" value="Press Conference">
+                    <option name="Risk Management" value="Risk Management">
+                    <option name="Riset Strategis Akademik" value="Riset Strategis Akademik">
+                    <option name="Fun Research" value="Fun Research">
+                    <option name="Social Media Activation" value="Social Media Activation">
+                    <option name="Unconventional Media" value="Unconventional Media">
+                    <option name="Brandbook" value="Brandbook">
+                    <option name="Skip Ad" value="Skip Ad">
                 </datalist>
             </div>
 

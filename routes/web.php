@@ -49,7 +49,41 @@ Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
 Route::post('/uploadbukti/proses', [ UploadbuktiController::class, "proses_upload" ]);
 
-//buat upload file lomba
+//buat upload file gambar lomba
 Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
 Route::post('/uploadfile/proses', [ UploadFileLombaController::class, "proses_upload" ]);
+Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
+
+//akses gambar bukti
+Route::get('/images/bukti/{file}', [ function ($file) {
+
+    $path = storage_path('app/bukti_pembayaran/'.$file);
+
+    if (file_exists($path)) {
+
+        return response()->file($path, array('Content-Type' =>'image/jpeg'));
+
+    }
+
+    abort(404);
+
+}]);
+
+//akses file lomba
+Route::get('/images/filelomba/{file}', [ function ($file) {
+
+    $path = storage_path('app/file_lomba/'.$file);
+
+    if (file_exists($path)) {
+
+        return response()->file($path, array('Content-Type' =>'image/jpeg'));
+
+    }
+
+    abort(404);
+
+}]);
+
+//verifikasi pembayaran
+Route::post('/verifypembayaran', [ UserController::class, "verify_pembayaran" ]);

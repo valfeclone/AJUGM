@@ -12,4 +12,13 @@ class UserController extends Controller
             'user' => User::class
         ]);
     }
+
+    public function verify_pembayaran(){
+		$user = auth()->user();
+		if($user) {
+			$user->validasi_pembayaran = true;
+			$user->save();
+		}
+        alert("tim diverifikasi");
+	}
 }
