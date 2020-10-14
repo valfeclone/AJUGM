@@ -86,4 +86,4 @@ Route::get('/images/filelomba/{file}', [ function ($file) {
 }]);
 
 //verifikasi pembayaran
-Route::post('/verifypembayaran', [ UserController::class, "verify_pembayaran" ]);
+Route::get('/verifypembayaran/{userId}', [ UserController::class, "verify_pembayaran" ])->name('verifikasi_pembayaran');
