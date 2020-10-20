@@ -52,39 +52,41 @@
                     <td>{{ $user->email }}</td>
                     <td>
                         <?php if($user->path_bukti_bayar): ?>
-                            <a href="/images/bukti/{{ $user->path_bukti_bayar }}">Click to view</a>
+                            <a href="/images/bukti/{{ $user->path_bukti_bayar }}" download>Click to view</a>
                         <?php else: ?>
                             belum tersedia
                         <?php endif; ?>
                     </td>
                     <td>
-                        <?php if($user->path_file_lomba): ?>
-                            <?php if($user->kategori_lomba == 'Kresna'): ?>
-                                <a href="/images/filelomba/{{ $user->path_file_lomba }}">Click to view</a>
-                            <?php else: ?>
+                        @if ($user->path_file_lomba)
+                            @if ($user->lomba !== "Skip Ad" and $user->lomba !== "Film Dokumenter" and $user->lomba !== "Film Fiksi")
+                                <a href="/images/filelomba/{{ $user->path_file_lomba }}" download>Click to view</a>
+                            @else
                             <!-- Harus pake https:// -->
                                 <a href="{{ $user->path_file_lomba }}" target="_blank">Click to open file link</a>
-                            <?php endif; ?>
-                        <?php else: ?>
+                            @endif
+                        @else
                             belum tersedia
-                        <?php endif; ?>
+                        @endif
                     </td>
                     <td>
-                        <?php if($user->path_bukti_bayar): ?>
-                            <?php if($user->validasi_pembayaran == true): ?>
-                                Sudah Diverifikasi
-                            <?php else: ?>
-                                Menunggu Verifikasi
-                            <?php endif; ?>
-                        <?php else: ?>
-                            belum tersedia
-                        <?php endif; ?>
+                        @if ($user->path_bukti_bayar)
+                            @if ($user->validasi_pembayaran == true)
+                                <p style="color:green">Sudah Diverifikasi</p>
+                            @else
+                                <p style="color:orange">Menunggu Verifikasi</p>
+                            @endif
+                        @else
+                            <p style="color:red">Belum Tersedia</p>
+                        @endif
                     </td>
                     <td>{{ $user->created_at->format('d M Y H:i') }}</td>
                     <td class="whitespace-no-wrap row-action--icon">
-                        <?php if($user->path_bukti_bayar): ?>
-                            <a role="button" href="{{ route('verifikasi_pembayaran',[$user->id]) }}" class="mr-3"><i class="fa fa-16px fa-check text-green-500" ></i></a>
-                        <?php endif; ?>
+                        @if ($user->path_bukti_bayar)
+                            @if ($user->validasi_pembayaran == false)
+                                <a role="button" href="{{ route('verifikasi_pembayaran',[$user->id]) }}" class="mr-3"><i class="fa fa-16px fa-check text-green-500" ></i></a>
+                            @endif
+                        @endif
                         <a role="button" href="/user/edit/{{ $user->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
                         <a role="button" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
                     </td>

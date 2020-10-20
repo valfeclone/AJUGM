@@ -15,7 +15,7 @@
                 {{ session('status') }}
             </div>
         @endif
-        <?php if($lomba !== "Skip Ad" and $lomba !== "Film Dokumenter" and $lomba !== "Film Fiksi"): ?>
+        @if ($lomba !== "Skip Ad" and $lomba !== "Film Dokumenter" and $lomba !== "Film Fiksi")
             <form method="POST" action="/uploadfile/proses" enctype="multipart/form-data">
                 @csrf
 
@@ -30,7 +30,7 @@
                     </x-jet-button>
                 </div>
             </form>
-        <?php else: ?>
+        @else
             <form method="POST" action="/uploadlink/proses">
                 @csrf
             
@@ -45,7 +45,7 @@
                     </x-jet-button>
                 </div>
             </form>
-        <?php endif; ?>
+        @endif
 
     </x-jet-authentication-card>
 </x-guest-layout>

@@ -13,13 +13,6 @@ $links = [
                     ["href" => "user", "text" => "Data User"],
                     ["href" => "user.new", "text" => "Buat User"]
                 ]
-            ],
-            [
-                "section_text" => "Admin",
-                "section_list" => [
-                    ["href" => "admin", "text" => "Data Admin"],
-                    ["href" => "admin.new", "text" => "Buat Admin"]
-                ]
             ]
         ],
         "text" => "User",
