@@ -1,0 +1,62 @@
+.landing-about {
+    padding: $section-padding;
+    background-color: $color-white;
+    position: relative;
+    border-bottom: 1px solid $color-grey;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+
+    overflow: hidden;
+
+    &__content {
+        grid-column: 2 / 3;
+        z-index: 10;
+
+        display: flex;
+    }
+
+    &__video {
+        width: 55rem;
+        // width: 100%;
+    }
+
+    &__media-container {
+        display: inline-block;
+        position: relative;
+        width: 250%;
+    }
+
+    &__about-text {
+        width: max-content;
+        padding-top: 1.5rem;
+        border-top: .5rem solid $color-red;
+    }
+
+    &__geometry {
+        
+        &--red-circle {
+            width: 13.5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-60%, -40%);
+        }
+
+        &--blue-wave {
+            width: 20rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(20%, 150%);
+        }
+
+        &--white-circle {
+            width: 55rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(30%, 35%);
+        }
+    }
+}

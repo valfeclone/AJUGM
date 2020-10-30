@@ -1,0 +1,63 @@
+.landing-banner {
+    grid-row: banner-start / banner-end;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100% !important;
+        object-fit: contain;
+        overflow: hidden;
+        
+    }
+
+    &__carousel {
+
+        &-text {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & > *:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &__geometry--blue {
+        width: 28rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+        
+        transform: translate(20%, -30%)
+    }
+
+    &__geometry--red {
+        width: 50rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+
+        transform: translate(-50%, 50%)
+    }
+}
