@@ -33,13 +33,13 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
 });
 
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-    Route::view('/dashboard', "dashboard")->name('dashboard');
+// Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+//     Route::view('/dashboard', "dashboard")->name('dashboard');
 
-    Route::get('/admin', [ AdminController::class, "index_view" ])->name('admin');
-    Route::view('/admin/new', "pages2.admin.admin-new")->name('admin.new');
-    Route::view('/admin/edit/{adminId}', "pages2.admin.admin-edit")->name('admin.edit');
-});
+//     Route::get('/admin', [ AdminController::class, "index_view" ])->name('admin');
+//     Route::view('/admin/new', "pages2.admin.admin-new")->name('admin.new');
+//     Route::view('/admin/edit/{adminId}', "pages2.admin.admin-edit")->name('admin.edit');
+// });
 
 //buat login admin
 Route::get('/dashboard/admin', function(){
@@ -89,5 +89,16 @@ Route::get('/images/filelomba/{file}', [ function ($file) {
 
 }]);
 
-//verifikasi pembayaran
-Route::get('/verifypembayaran/{userId}', [ UserController::class, "verify_pembayaran" ])->name('verifikasi_pembayaran');
+//dashboard peserta
+Route::get('/peserta', function () {
+    return view('dashpeserta');
+});
+
+//artstep
+Route::get('/galeri', function(){
+    return view("artstep");
+});
+
+//detail tim
+Route::get('/akun', [ UserController::class, "show_account" ])
+    ->middleware(['auth:sanctum', 'verified']);

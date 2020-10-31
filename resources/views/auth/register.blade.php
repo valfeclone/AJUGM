@@ -15,6 +15,11 @@
             </div>
 
             <div class="mt-4">
+                <x-jet-label value="{{ __('Asal Universitas') }}" />
+                <x-jet-input class="block mt-1 w-full" type="text" name="universitas" :value="old('universitas')" required autofocus autocomplete="universitas" />
+            </div>
+
+            <div class="mt-4">
                 <x-jet-label value="{{ __('Kategori') }}" />
                 <x-jet-input class="block mt-1 w-full" type="enum" list="kategori-kategori" name="kategori_lomba" :value="old('kategori_lomba')" required />
                 <datalist id="kategori-kategori">

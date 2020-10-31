@@ -11,9 +11,16 @@
         <x-slot name="form">
             <div class="form-group col-span-6 sm:col-span-5">
                 <x-jet-label for="name" value="{{ __('Nama') }}" />
-                <small>Nama Lengkap Akun</small>
+                <small>Nama Tim</small>
                 <x-jet-input id="name" type="text" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.name" />
                 <x-jet-input-error for="user.name" class="mt-2" />
+            </div>
+
+            <div class="form-group col-span-6 sm:col-span-5">
+                <x-jet-label for="name" value="{{ __('Universitas') }}" />
+                <small>Universitas</small>
+                <x-jet-input id="universitas" type="text" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.universitas" />
+                <x-jet-input-error for="user.univesitas" class="mt-2" />
             </div>
 
             <div class="form-group col-span-6 sm:col-span-5">
