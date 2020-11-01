@@ -1,0 +1,60 @@
+.card-wrapper {
+    
+    &--flex {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        & > * {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &--grid {
+        
+        &-m {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(min-content, 30rem));
+            grid-row-gap: 2rem;
+            grid-column-gap: 2.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+
+    &-s {
+        width: 17rem !important;
+        padding: 3rem 1.5rem;
+        background-color: white;
+    }
+
+    &-m {
+        width: 25rem !important;
+        padding: 4rem 2rem;
+        background-color: white;
+    }
+
+    &__image {
+
+        @extend %card-img;
+        
+        &--s {
+            width: 5rem;
+            height: 3rem;
+            border-radius: 1rem;
+        }
+    }
+        
+    
+}

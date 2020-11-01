@@ -1,0 +1,101 @@
+// Custom Text
+.text-black {
+    color: $color-black !important;
+}
+
+.text-white {
+    color: $color-white !important;
+}
+
+.text-grey {
+    color: $color-grey !important;
+}
+
+.text-grey-dark {
+    color: $color-grey-dark !important;
+}
+
+.text-blue {
+    color: $color-blue !important;
+}
+
+.text-red {
+    color: $color-red !important;
+}
+
+.text-cyan {
+    color: $color-cyan !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+// Margin Bottom
+.margin-bottom-xs {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom-s {
+    margin-bottom: 2rem;
+}
+
+.margin-bottom-m {
+    margin-bottom: 3.5rem;
+}
+
+.margin-bottom-l {
+    margin-bottom: 5rem;
+}
+
+.margin-bottom-xl {
+    margin-bottom: 12rem;
+}
+
+// Margin left
+.margin-left-s {
+    margin-left: 2rem;
+}
+
+.margin-left-m {
+    margin-left: 3.5rem;
+}
+
+.margin-left-l {
+    margin-left: 5rem;
+}
+
+.margin-left-xl {
+    margin-left: 7rem;
+}
+
+// Margin right
+.margin-right-s {
+    margin-right: 2rem;
+}
+
+.margin-right-m {
+    margin-right: 3.5rem;
+}
+
+.margin-right-l {
+    margin-right: 5rem;
+}
+
+// Width
+.width-50 {
+    width: 50% !important;
+}
+
+.width-max {
+    width: max-content !important;
+}
+
+// Align self
+.align-self-start {
+    align-self: flex-start !important;
+}
+
+.align-self-center {
+    align-self: center !important;
+}

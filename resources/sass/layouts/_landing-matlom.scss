@@ -1,0 +1,56 @@
+.landing-matlom {
+    padding: $section-padding-m;
+    background-color: $color-white;
+    position: relative;
+    border-bottom: 1px solid $color-grey;
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    &__content {
+        width: 60%;
+        z-index: 10;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center;
+    }
+
+    &__card-image {
+        // temp
+        display: inline-block;
+        width: 5rem !important;
+        height: 4rem !important;
+        border-radius: 2px;
+        background-color: $color-white;
+    }
+
+    &__geometry {
+        &--dots {
+            width: 15rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(0, 20rem);
+        }
+
+        &--circle {
+            z-index: 20;
+            width: 25rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(10%, 20%);
+        }
+
+        &--rectangle {
+            width: 35rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(30%, -15rem);
+        }
+    }
+}
