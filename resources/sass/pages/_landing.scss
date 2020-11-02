@@ -1,0 +1,9 @@
+.landing {
+    width: 100%;
+    z-index: 0;
+
+    display: grid;
+    grid-template-rows: [banner-start] minmax(min-content, 90vh) [banner-end about-start] minmax(min-content, 70vh) [about-end matlom-start] minmax(min-content, 70vh) [matlom-end register-start] minmax(min-content, 70vh) [register-end];
+
+    overflow: hidden;
+}

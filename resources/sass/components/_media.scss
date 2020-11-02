@@ -1,0 +1,22 @@
+.media {
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    align-self: center !important;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 7.5rem 0;
+    }
+}
+
+.media-left {
+    justify-self: start !important;
+}
+
+.media-right {
+    justify-self: end !important;
+}

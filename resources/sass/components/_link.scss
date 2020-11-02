@@ -1,0 +1,22 @@
+.link:link,
+.link:visited {
+    text-decoration: none;
+}
+
+.link:hover{
+    cursor: pointer;
+}
+
+.link-item:link,
+.link-item:visited {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    cursor: pointer;
+}
+
+.link-item:hover{
+    cursor: pointer;
+}

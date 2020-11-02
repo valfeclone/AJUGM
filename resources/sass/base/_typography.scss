@@ -1,0 +1,49 @@
+.heading-caps {
+    @extend %heading;
+
+    font-weight: 900;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.heading-1 {
+    @extend %heading;
+
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.heading-2 {
+    @extend %heading;
+
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.heading-3 {
+    @extend %heading;
+
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.subheading{
+    @extend %heading;
+
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.text-bold {
+    @extend %body-text;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.text-regular {
+    @extend %body-text;
+
+    font-weight: 500;
+    font-size: 1.4rem;
+}
