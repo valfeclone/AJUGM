@@ -29,7 +29,7 @@ class UserController extends Controller
     public function show_account(){
         $user = auth()->user();
         // return ($user);
-        return view('detail', [
+        return view('akun', [
             'user' => $user
         ]);
     }

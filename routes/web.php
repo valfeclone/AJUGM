@@ -49,15 +49,19 @@ Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
     ->middleware(['guest']);
 
 //buat upload bukti bayar
-Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ])
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
-Route::post('/uploadbukti/proses', [ UploadbuktiController::class, "proses_upload" ]);
+    Route::post('/uploadbukti/proses', [ UploadbuktiController::class, "proses_upload" ]);
+});
 
 //buat upload file gambar lomba
-Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ])
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
-Route::post('/uploadfile/proses', [ UploadFileLombaController::class, "proses_upload" ]);
-Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
+    Route::post('/uploadfile/proses', [ UploadFileLombaController::class, "proses_upload" ]);
+    Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
+});
 
 //akses gambar bukti
 Route::get('/images/bukti/{file}', [ function ($file) {
