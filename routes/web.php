@@ -45,21 +45,21 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 Route::get('/dashboard/admin', function(){
     return view("login_admin");
 });
-Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
+Route::post('/dashboard/admin', [ AdminController::class, "handleLogin" ])
     ->middleware(['guest']);
 
 //buat upload bukti bayar
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
-    Route::post('/uploadbukti/proses', [ UploadbuktiController::class, "proses_upload" ]);
+    Route::post('/uploadbukti', [ UploadbuktiController::class, "proses_upload" ]);
 });
 
 //buat upload file gambar lomba
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
-    Route::post('/uploadfile/proses', [ UploadFileLombaController::class, "proses_upload" ]);
+    Route::post('/uploadfile', [ UploadFileLombaController::class, "proses_upload" ]);
     Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
 });
 
