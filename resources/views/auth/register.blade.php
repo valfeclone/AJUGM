@@ -1,78 +1,72 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+@extends('layouts.base')
 
-        <x-jet-validation-errors class="mb-4" />
+@section('meta-title')
+    Register
+@endsection
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+@section ('content')
+<div class="register">
+    <form action="{{ route('register') }}" class="register__form">
+        @csrf
+        <div class="card card-xl form-card register-main-card">
+            <h3 class="subheading text-grey text-uppercase margin-bottom-l align-self-start">Register</h3>
 
-            <div>
-                <x-jet-label value="{{ __('Nama Tim') }}" />
-                <x-jet-input class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <input type="text" placeholder="Team Name" name="name" class="input" required autofocus>
+
+            <input type="text" placeholder="University" name="university" class="input" required>
+
+            <div class="select-wrapper">
+                <div class="select">
+                    <div class="select__trigger"><span>Category</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="select-options">
+                        <span class="select-option" data-value="tesla">Tesla</span>
+                        <span class="select-option" data-value="volvo">Volvo</span>
+                        <span class="select-option" data-value="mercedes">Mercedes</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="mt-4">
-                <x-jet-label value="{{ __('Kategori') }}" />
-                <x-jet-input class="block mt-1 w-full" type="enum" list="kategori-kategori" name="kategori_lomba" :value="old('kategori_lomba')" required />
-                <datalist id="kategori-kategori">
-                    <option name="Arjuna" value="Arjuna">
-                    <option name="Kresna" value="Kresna">
-                    <option name="Prahasta" value="Prahasta">
-                    <option name="Nakula" value="Nakula">
-                    <option name="Sadewa" value="Sadewa">
-                </datalist>
+            <input type="email" placeholder="E-mail" name="email" class="input" required >
+
+            <input type="password" placeholder="Password" name="password" class="input" required>
+
+            <input type="password" placeholder="Re-Password" name="repassword" class="input margin-bottom-l" required>
+
+            <button class="button button--white align-self-end margin-bottom-xs" id="nextStepButton">NEXT ></button>
+
+            <img src="/assets/Rectangle 18.png" class="register__geometry--square" alt="">
+        </div>
+
+        <div class="card card-xl form-card register-detail-card">
+            <div class="register-detail-inputs" id="accordion">
+                <div class="collapsible">
+                    <button class="collapsible__button collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                        <p class="text-regular text-black">Team Leader</p>
+                        <span class="collapsible__arrow"></span>
+                    </button>
+                    <div class="collapse" id="collapse1" data-parent="#accordion">
+                        <input type="text" placeholder="Name" name="member-name-1" class="input width-60">
+                        <input type="text" placeholder="Faculty / Major" name="member-faculty-1" class="input width-60">
+                        <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM</label>
+                        <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload">
+                        <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60">
+                        <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60">
+                    </div>
+                </div>
             </div>
 
-            <div class="mt-4">
-                <x-jet-label value="{{ __('Lomba') }}" />
-                <x-jet-input class="block mt-1 w-full" list="lomba-lomba" name="lomba" :value="old('lomba')" required />
-                <datalist id="lomba-lomba">
-                    <option name="Homeless Media" value="Homeless Media">
-                    <option name="Podcast" value="Comic Strip">
-                    <option name="Podcast" value="Podcast">
-                    <option name="Film Fiksi" value="Film Fiksi">
-                    <option name="Movie Scoring" value="Movie Scoring">
-                    <option name="Film Dokumenter" value="Film Dokumenter">
-                    <option name="Penulisan Naskah" value="Penulisan Naskah">
-                    <option name="PR Campaign" value="PR Campaign">
-                    <option name="Press Conference" value="Press Conference">
-                    <option name="Risk Management" value="Risk Management">
-                    <option name="Riset Strategis Akademik" value="Riset Strategis Akademik">
-                    <option name="Fun Research" value="Fun Research">
-                    <option name="Social Media Activation" value="Social Media Activation">
-                    <option name="Unconventional Media" value="Unconventional Media">
-                    <option name="Brandbook" value="Brandbook">
-                    <option name="Skip Ad" value="Skip Ad">
-                </datalist>
+            <button id="addTeamMember" class="button button--white button--borderless align-self-start margin-top-s">Add Member +</button>
+
+            <div class="register-detail-utilities">
+                <input type="submit" class="button button--white margin-bottom-m" value="Register >">
+
+                <p class="text-regular">Already have an account? <a href="#" class="link text-black">Login Here!</a></p>
             </div>
 
-            <div class="mt-4">
-                <x-jet-label value="{{ __('Email') }}" />
-                <x-jet-input class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label value="{{ __('Password') }}" />
-                <x-jet-input class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label value="{{ __('Confirm Password') }}" />
-                <x-jet-input class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-jet-button class="ml-4">
-                    {{ __('Register') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+            <img src="/assets/Ellipse 10.png" class="register__geometry--circle" alt="">
+        </div>
+    </form>
+</div>
+@endsection

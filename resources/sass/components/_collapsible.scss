@@ -1,0 +1,48 @@
+.collapsible {
+    width: 100%;
+
+    &__arrow {
+        background-image: url('/assets/arrow-right.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        position: relative;
+        height: 1rem;
+        width: 1rem;
+        transition: all 0.5s;
+    }
+
+    &__button.collapsed &__arrow {
+        transform: rotate(0deg);
+        transition: all 0.5s;
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: white;
+        color: $color-black;
+        padding: 1rem 0;
+        border: none;
+        border-bottom: 1px solid $color-grey;
+        cursor: pointer;
+
+        &:focus {
+            outline: none !important;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        height: max-content;
+        display: none;
+    }
+
+    &--active {
+        background-color: red;
+    }
+}

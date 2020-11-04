@@ -4,16 +4,22 @@
     margin-bottom: 0;
 }
 
-%body-text {
-    font-family: $font-body;
-    color: $color-grey;
-    margin-bottom: 0;
-}
-
 %card-img {
     max-width: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
+}
+
+%utility {
+    font-family: Avenir Next Regular;
+    display: inline-block;
+    height: max-content;
+
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: normal !important;
+
+    -webkit-appearance: none;
 }

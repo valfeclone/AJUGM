@@ -10,26 +10,26 @@
             <img src="/images/balairung.png" alt="" class="landing-banner__image">
             <img src="/assets/Ellipse 6.png" alt="" class="landing-banner__geometry--blue">
             <div class="landing-banner__content">
-                <div id="carouselExampleControls" class="carousel slide margin-bottom-xl" data-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide margin-bottom-xxl" data-ride="carousel">
                     <div class="carousel-inner landing-banner__carousel-inner">
                         <div class="carousel-item active">
                             <div class="landing-banner__carousel-text">
-                                <h1 class="heading-caps text-white">Virtual Museum</h1>
-                                <p class="text-regular text-black width-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores totam corrupti temporibus ab, quis debitis.</p>
+                                <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
+                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
                                 <a href="#" class="link-item"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="landing-banner__carousel-text">
-                                <h1 class="heading-caps text-white">Virtual Museum</h1>
-                                <p class="text-regular text-black width-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores totam corrupti temporibus ab, quis debitis.</p>
+                                <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
+                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
                                 <a href="#" class="link-item"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="landing-banner__carousel-text">
-                                <h1 class="heading-caps text-white">Virtual Museum</h1>
-                                <p class="text-regular text-black width-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores totam corrupti temporibus ab, quis debitis.</p>
+                                <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
+                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
                                 <a href="#" class="link-item"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>

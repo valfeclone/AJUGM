@@ -45,6 +45,12 @@
         background-color: white;
     }
 
+    &-xl {
+        width: 45rem !important;
+        height: 55rem !important;
+        padding: 7rem;
+    }
+
     &__image {
 
         @extend %card-img;
