@@ -1,0 +1,49 @@
+.register {
+    padding: 12rem 5rem 9rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -11rem;
+
+    background-image: url('/images/adolfo-felix.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__geometry {
+        &--square {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 13rem;
+            transform: translate(-100vw, -30%);
+
+            &.show {
+                transform: translate(-40%, 30%);
+                transition: all 1.8s;
+                transition-delay: 1s;
+            }
+        }
+
+        &--circle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25rem;
+            transform: translate(100vw, -30%);
+
+            &.show {
+                transform: translate(80%, -30%);
+                transition: all 1.8s;
+                transition-delay: 1s;
+            }
+        }
+    }
+
+}

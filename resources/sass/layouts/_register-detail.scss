@@ -1,0 +1,30 @@
+.register-detail {
+    
+    &-card {
+        position: relative;
+        border-radius: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50rem !important;
+        height: 60rem !important;
+        box-shadow: $box-shadow-l;
+        transform: translate(100vw, 0);
+        transition: all 1s;
+
+        &.show {
+            transform: translate(-5%, 0);
+            transition: all 1s;
+        }
+    }
+
+    &-inputs {
+        width: 100%;
+    }
+
+    &-utilities {
+        margin-top: auto;
+        justify-self: flex-end;
+    }
+}

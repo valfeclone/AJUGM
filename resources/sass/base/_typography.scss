@@ -1,49 +1,51 @@
 .heading-caps {
     @extend %heading;
 
-    font-weight: 900;
-    font-size: 4rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 .heading-1 {
     @extend %heading;
 
-    font-weight: 900;
-    font-size: 4rem;
+    font-size: 4.5rem;
+    letter-spacing: 4px;
 }
 
 .heading-2 {
     @extend %heading;
 
-    font-weight: 700;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
 }
 
 .heading-3 {
     @extend %heading;
 
-    font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
 }
 
 .subheading{
     @extend %heading;
 
-    font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
 }
 
 .text-bold {
-    @extend %body-text;
-
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-family: Avenir Next Bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: $color-grey;
+    margin-bottom: 0 !important;
 }
 
 .text-regular {
-    @extend %body-text;
-
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-family: Avenir Next Regular;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: $color-grey;
+    margin-bottom: 0 !important;
 }

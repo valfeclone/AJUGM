@@ -1,0 +1,36 @@
+.login {
+    padding: 15rem 5rem 9rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -11rem;
+
+    background-image: url('/images/adolfo-felix.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__form-card {
+        position: relative;
+    }
+
+    &__geometry {
+
+        &--circle {
+            width: 11rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(-40%, -30%)
+        }
+
+        &--wave {
+            width: 17rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(35%, 60%)
+        }
+    }
+}

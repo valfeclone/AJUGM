@@ -1,0 +1,26 @@
+.input {
+    @extend %utility;
+
+    display: block;
+    width: 100%;
+    color: $color-black;
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 1px solid $color-grey;
+
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid $color-black;
+    }
+}
+
+.input-file-label {
+    text-align: left;
+    cursor: pointer;
+    color: $color-grey;
+    margin-bottom: 0 !important;
+}
+
+input[type="file"] {
+    display: none;
+}

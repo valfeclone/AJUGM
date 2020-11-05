@@ -1,0 +1,17 @@
+.button {
+    @extend %utility;
+
+    border-radius: 1rem;
+    border: 1px solid $color-black;
+    padding: .8rem 2.4rem;
+}
+
+.button--white {
+    color: $color-black !important;
+    background-color: white !important;
+}
+
+.button--borderless {
+    padding: 0 !important;
+    border: none !important;
+}
