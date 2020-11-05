@@ -11,7 +11,8 @@ $(document).ready(() => {
                 </button>
                 <div class="collapse" id="collapse${n+1}" data-parent="#accordion">
                     <input type="text" placeholder="Name" name="member-name-${n+1}" class="input width-60">
-                    <input type="text" placeholder="Faculty / Major" name="member-faculty-${n+1}" class="input width-60">
+                    <input type="text" placeholder="Faculty" name="member-faculty-${n+1}" class="input width-60">
+                    <input type="text" placeholder="Major" name="member-major-${n+1}" class="input width-60">
                     <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM</label>
                     <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload">
                     <input type="email" placeholder="E-mail" name="member-email-${n+1}" class="input width-60">

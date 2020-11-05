@@ -23,7 +23,7 @@
 <body>
     <div class="app">
         <nav class="header">
-            <a href="#" class="logo-box">
+            <a href="/" class="logo-box">
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
             <div class="header__link-box">
@@ -33,7 +33,7 @@
                 <a href="" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
             </div>
             <div class="header__util">
-                <a href="" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a>
+                <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a>
             </div>
         </nav>
 

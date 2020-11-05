@@ -21,7 +21,7 @@
 
             <input type="submit" class="button button--white align-self-center margin-bottom-xs" value="Login >">
 
-            <a href="#" class="link align-self-center"><p class="text-regular text-black">Register .</p></a>
+            <a href="/register" class="link align-self-center"><p class="text-regular text-black">Register .</p></a>
         </form>
 
         <img src="/assets/Ellipse 11.png" alt="" class="login__geometry--circle">
