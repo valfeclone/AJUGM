@@ -34,7 +34,7 @@
 
             <input type="password" placeholder="Re-Password" name="repassword" class="input margin-bottom-l" required>
 
-            <button class="button button--white align-self-end margin-bottom-xs" id="nextStepButton">NEXT ></button>
+            <button type="button" class="button button--white align-self-end margin-bottom-xs" id="nextStepButton">NEXT ></button>
 
             <img src="/assets/Rectangle 18.png" class="register__geometry--square" alt="">
         </div>
