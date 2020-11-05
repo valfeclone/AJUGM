@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <button id="addTeamMember" class="button button--white button--borderless align-self-start margin-top-s">Add Member +</button>
+            <button id="addTeamMember" type="button" class="button button--white button--borderless align-self-start margin-top-s">Add Member +</button>
 
             <div class="register-detail-utilities">
                 <input type="submit" class="button button--white margin-bottom-m" value="Register >">
