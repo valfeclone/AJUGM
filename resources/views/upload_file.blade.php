@@ -16,7 +16,7 @@
             </div>
         @endif
         @if ($lomba !== "Skip Ad" and $lomba !== "Film Dokumenter" and $lomba !== "Film Fiksi")
-            <form method="POST" action="/uploadfile/proses" enctype="multipart/form-data">
+            <form method="POST" action="/uploadfile" enctype="multipart/form-data">
                 @csrf
 
                 <div>

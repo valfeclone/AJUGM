@@ -11,6 +11,10 @@
                     Nama Tim
                     @include('components.sort-icon', ['field' => 'name'])
                 </a></th>
+                <th><a wire:click.prevent="sortBy('name')" role="button" href="#">
+                    Universitas
+                    @include('components.sort-icon', ['field' => 'universitas'])
+                </a></th>
                 <th><a wire:click.prevent="sortBy('kategori_lomba')" role="button" href="#">
                     Kategori Lomba
                     @include('components.sort-icon', ['field' => 'kategori_lomba'])
@@ -47,6 +51,7 @@
                 <tr x-data="window.__controller.dataTableController({{ $user->id }})">
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
+                    <td>{{ $user->universitas }}</td>
                     <td>{{ $user->kategori_lomba }}</td>
                     <td>{{ $user->lomba }}</td>
                     <td>{{ $user->email }}</td>

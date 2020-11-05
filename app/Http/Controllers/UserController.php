@@ -23,5 +23,14 @@ class UserController extends Controller
         return view('pages.user.user-data', [
             'user' => User::class
         ]);
-	}
+    }
+    
+    //buat show team detail
+    public function show_account(){
+        $user = auth()->user();
+        // return ($user);
+        return view('akun', [
+            'user' => $user
+        ]);
+    }
 }

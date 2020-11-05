@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <form method="POST" action="/admin/login">
+        <form method="POST" action="/dashboard/admin">
             @csrf
 
             <div>
