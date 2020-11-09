@@ -1,0 +1,20 @@
+{
+    "Category": [
+        {
+            "Arjuna": ["Homeless Media", "Comic Strip", "Podcast"]
+        },
+        {
+            "Kresna": ["Film Fiksi", "Movie Scoring", "Film Dokumenter", "Penulisan Naskah"]
+        },
+        {
+            "Prahasta": ["PR Campaign", "Press Conference", "Risk Management"]
+        },
+        {
+            "Nakula": ["Riset Strategis Akademik", "Fun Research"]
+        },
+        {
+            "Sadewa": ["Social Media Activation", "Unconventional Media", "Brandbook", "Skip Ad"]
+        }
+    ]
+    
+}

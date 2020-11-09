@@ -17,13 +17,26 @@
 
             <div class="select-wrapper">
                 <div class="select">
-                    <div class="select__trigger"><span>Category</span>
+                    <div class="select__trigger"><span id="select-cat">Category</span>
                         <div class="arrow"></div>
                     </div>
-                    <div class="select-options">
-                        <span class="select-option" data-value="tesla">Tesla</span>
-                        <span class="select-option" data-value="volvo">Volvo</span>
-                        <span class="select-option" data-value="mercedes">Mercedes</span>
+                    <div class="select-options" id="opt-cat">
+                        <span class="select-option" data-value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</span>
+                        <span class="select-option" data-value="Kresna">Kresna (Kreasi Insan Sinema)</span>
+                        <span class="select-option" data-value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</span>
+                        <span class="select-option" data-value="Nakula">Nakula (Penelitian Kawula Muda)</span>
+                        <span class="select-option" data-value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="select-wrapper">
+                <div class="select">
+                    <div class="select__trigger"><span>Competition</span>
+                        <div class="arrow"></div>
+                    </div>
+                    <div class="select-options" id="opt-comp">
+                        <span class="select-option" data-value="choose">Competition</span>
                     </div>
                 </div>
             </div>
@@ -47,12 +60,12 @@
                         <span class="collapsible__arrow"></span>
                     </button>
                     <div class="collapse" id="collapse1" data-parent="#accordion">
-                        <input type="text" placeholder="Name" name="member-name-1" class="input width-60">
-                        <input type="text" placeholder="Faculty / Major" name="member-faculty-1" class="input width-60">
+                        <input type="text" placeholder="Name" name="member-name-1" class="input width-60" required>
+                        <input type="text" placeholder="Faculty / Major" name="member-faculty-1" class="input width-60" required>
                         <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM</label>
-                        <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload">
-                        <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60">
-                        <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60">
+                        <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload" required>
+                        <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60" required>
+                        <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60" required>
                     </div>
                 </div>
             </div>
