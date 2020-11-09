@@ -33,31 +33,35 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
 });
 
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-    Route::view('/dashboard', "dashboard")->name('dashboard');
+// Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+//     Route::view('/dashboard', "dashboard")->name('dashboard');
 
-    Route::get('/admin', [ AdminController::class, "index_view" ])->name('admin');
-    Route::view('/admin/new', "pages2.admin.admin-new")->name('admin.new');
-    Route::view('/admin/edit/{adminId}', "pages2.admin.admin-edit")->name('admin.edit');
-});
+//     Route::get('/admin', [ AdminController::class, "index_view" ])->name('admin');
+//     Route::view('/admin/new', "pages2.admin.admin-new")->name('admin.new');
+//     Route::view('/admin/edit/{adminId}', "pages2.admin.admin-edit")->name('admin.edit');
+// });
 
 //buat login admin
 Route::get('/dashboard/admin', function(){
     return view("login_admin");
 });
-Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
+Route::post('/dashboard/admin', [ AdminController::class, "handleLogin" ])
     ->middleware(['guest']);
 
 //buat upload bukti bayar
-Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ])
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
-Route::post('/uploadbukti/proses', [ UploadbuktiController::class, "proses_upload" ]);
+    Route::post('/uploadbukti', [ UploadbuktiController::class, "proses_upload" ]);
+});
 
 //buat upload file gambar lomba
-Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ])
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ])
     ->middleware(['auth:sanctum', 'verified']);
-Route::post('/uploadfile/proses', [ UploadFileLombaController::class, "proses_upload" ]);
-Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
+    Route::post('/uploadfile', [ UploadFileLombaController::class, "proses_upload" ]);
+    Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
+});
 
 //akses gambar bukti
 Route::get('/images/bukti/{file}', [ function ($file) {
@@ -89,5 +93,16 @@ Route::get('/images/filelomba/{file}', [ function ($file) {
 
 }]);
 
-//verifikasi pembayaran
-Route::get('/verifypembayaran/{userId}', [ UserController::class, "verify_pembayaran" ])->name('verifikasi_pembayaran');
+//dashboard peserta
+Route::get('/peserta', function () {
+    return view('dashpeserta');
+});
+
+//artstep
+Route::get('/galeri', function(){
+    return view("artstep");
+});
+
+//detail tim
+Route::get('/akun', [ UserController::class, "show_account" ])
+    ->middleware(['auth:sanctum', 'verified']);

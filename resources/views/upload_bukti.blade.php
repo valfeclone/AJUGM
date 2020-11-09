@@ -16,7 +16,7 @@
             </div>
         @endif
 
-        <form method="POST" action="/uploadbukti/proses" enctype="multipart/form-data">
+        <form method="POST" action="/uploadbukti" enctype="multipart/form-data">
             @csrf
 
             <div>
