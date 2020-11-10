@@ -25,14 +25,20 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-    Route::view('/dashboard', "dashboard")->name('dashboard');
+//akses dashboard admin, harus pake admin ya hehehe
+Route::group([ "middleware" => ['auth:admins', 'verified'] ], function() {
+    Route::view('/admin/dashboard', "dashboard")->name('dashboard');
 
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
 });
 
+Route::get('/admin/login', function(){
+    return view("login_admin");
+})->name('admin.login');
+Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
+    ->middleware(['guest']);
 // Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 //     Route::view('/dashboard', "dashboard")->name('dashboard');
 
@@ -42,11 +48,6 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 // });
 
 //buat login admin
-Route::get('/dashboard/admin', function(){
-    return view("login_admin");
-});
-Route::post('/dashboard/admin', [ AdminController::class, "handleLogin" ])
-    ->middleware(['guest']);
 
 //buat upload bukti bayar
 Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
@@ -106,3 +107,8 @@ Route::get('/galeri', function(){
 //detail tim
 Route::get('/akun', [ UserController::class, "show_account" ])
     ->middleware(['auth:sanctum', 'verified']);
+
+//update detail tim
+Route::get('/akun/update', function() {
+    return view("update_user");
+});
