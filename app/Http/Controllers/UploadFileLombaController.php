@@ -9,7 +9,7 @@ class UploadFileLombaController extends Controller
 	public function upload(){
 		$user = auth()->user();
 		$lomba = $user->lomba;
-		return view('upload_file')->with('lomba', $lomba);
+		return view('dashboard_peserta.upload_file')->with('lomba', $lomba);
 	}
  
 	public function proses_upload(Request $request){

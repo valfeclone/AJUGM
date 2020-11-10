@@ -15,7 +15,7 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('team_id')->references('id')->on('users');
+            $table->foreignId('team_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('name');
             $table->string('fakultas');
             $table->string('jurusan');

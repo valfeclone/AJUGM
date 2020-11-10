@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class UploadbuktiController extends Controller
 {
 	public function upload(){
-		return view('upload_bukti');
+		return view('dashboard_peserta.upload_bukti');
 	}
  
 	public function proses_upload(Request $request){

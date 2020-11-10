@@ -29,7 +29,7 @@ class UserController extends Controller
     public function show_account(){
         $user = auth()->user();
         // return ($user);
-        return view('akun', [
+        return view('dashboard_peserta.akun', [
             'user' => $user
         ]);
     }
