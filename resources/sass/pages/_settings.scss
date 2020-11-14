@@ -1,0 +1,56 @@
+.settings {
+    padding: 15rem 5rem 9rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -11rem;
+
+    background-image: url('/images/adolfo-felix.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__form-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-row-gap: 2rem;
+        align-items: flex-start;
+        border-radius: 3.5rem;
+    }
+
+    &__form {
+        height: 100%;
+    }
+
+    &__sidebar {
+        // width: 30%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-left: 1px solid $color-grey;
+        padding: 1rem 2.5rem 0 4.5rem;
+        // width: 70%;
+    }
+
+    &__geometry {
+        &--square {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 13rem;
+            transform: translate(-40%, -15%);
+        }
+
+        &--circle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25rem;
+            transform: translate(60%, -30%);
+        }
+    }
+}

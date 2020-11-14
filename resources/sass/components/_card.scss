@@ -51,6 +51,13 @@
         padding: 7rem;
     }
 
+    &-xxl {
+        width: 65rem !important;
+        height: 60rem !important;
+        padding: 7rem 5rem;
+    }
+
+
     &__image {
 
         @extend %card-img;

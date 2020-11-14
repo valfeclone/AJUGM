@@ -15,7 +15,8 @@
 }
 
 .input-file-label {
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
     color: $color-grey;
     margin-bottom: 0 !important;
