@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 //akses dashboard admin, harus pake admin ya hehehe
 Route::group([ "middleware" => ['auth:admins', 'verified'] ], function() {
-    Route::view('/admin/dashboard', "dashboard")->name('dashboard');
+    Route::view('/admin/dashboard', "dashboard")->name('admin.dashboard');
 
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
@@ -50,24 +50,19 @@ Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
 // });
 
 //buat upload bukti bayar
-// Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-//     Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ]);
-//     // ->middleware(['auth:sanctum', 'verified']);
-//     Route::post('/uploadbukti', [ UploadbuktiController::class, "proses_upload" ]);
-// });
-Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ]);
-Route::post('/uploadbukti', [ UploadbuktiController::class, "proses_upload" ]);
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ]);
+    // ->middleware(['auth:sanctum', 'verified']);
+    Route::post('/uploadbukti', [ UploadbuktiController::class, "proses_upload" ]);
+});
 
-//buat upload file gambar lomba
-// Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
-//     Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ]);
-//     // ->middleware(['auth:sanctum', 'verified']);
-//     Route::post('/uploadfile', [ UploadFileLombaController::class, "proses_upload" ]);
-//     Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
-// });
-Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ]);
-Route::post('/uploadfile', [ UploadFileLombaController::class, "proses_upload" ]);
-Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
+// buat upload file gambar lomba
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+    Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ]);
+    // ->middleware(['auth:sanctum', 'verified']);
+    Route::post('/uploadfile', [ UploadFileLombaController::class, "proses_upload" ]);
+    Route::post('/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
+});
 
 //akses gambar bukti
 Route::get('/images/bukti/{file}', [ function ($file) {

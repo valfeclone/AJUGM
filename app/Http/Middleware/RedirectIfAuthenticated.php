@@ -53,7 +53,7 @@ class RedirectIfAuthenticated
                 return redirect(RouteServiceProvider::DASHADMIN);
 
             default:
-                return redirect(RouteServiceProvider::DASHADMIN);
+                return redirect(RouteServiceProvider::DASHPESERTA);
             }
         }
 

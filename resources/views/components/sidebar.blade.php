@@ -1,7 +1,7 @@
 @php
 $links = [
     [
-        "href" => "dashboard",
+        "href" => "admin.dashboard",
         "text" => "Dashboard",
         "is_multi" => false,
     ],
@@ -25,10 +25,10 @@ $navigation_links = array_to_object($links);
 <div class="main-sidebar">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="{{ route('dashboard') }}">Dashboard</a>
+            <a href="{{ route('admin.dashboard') }}">Dashboard</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('admin.dashboard') }}">
                 <img class="d-inline-block" width="32px" height="30.61px" src="" alt="">
             </a>
         </div>

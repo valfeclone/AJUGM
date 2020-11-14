@@ -19,7 +19,7 @@ class AdminController extends Controller
         $credentials = $req->only('email', 'password');
         
         if (Auth::guard('admins')->attempt($credentials)) {
-            return redirect()->intended('dashboard');
+            return redirect()->intended('/admin/dashboard');
         } 
         else{
             return back()->withErrors(['field_name' => ['Login Gagal']]);
