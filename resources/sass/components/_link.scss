@@ -1,22 +1,46 @@
+// Single link
+
 .link:link,
 .link:visited {
-    text-decoration: none;
-}
-
-.link:hover{
-    cursor: pointer;
-}
-
-.link-item:link,
-.link-item:visited {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     height: 100%;
     cursor: pointer;
+    list-style-type: none;
+    word-wrap: none;
+}
+
+.link:hover{
+    cursor: pointer;
+}
+
+// Vertical lists of links
+
+.link-item-wrapper {
+    list-style-type: none;
+    margin-bottom: 0;
+
+    > * {
+        text-align: left;
+    }
+
+    > *:not(:last-child) {
+        margin-bottom: .7rem;
+    }
+}
+
+.link-item:link,
+.link-item:visited {
+    text-decoration: none;
 }
 
 .link-item:hover{
+    color: $color-black;
     cursor: pointer;
+}
+
+.link-item--active {
+    color: $color-black !important;
 }
