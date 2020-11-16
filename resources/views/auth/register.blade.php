@@ -38,7 +38,7 @@
                         <div class="arrow"></div>
                     </div>
                     <div class="select-options" id="opt-comp">
-                        <span class="select-option" name="lomba" data-value="choose">Competition</span>
+                        <span class="select-option" data-value="choose">Please choose the category first</span>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                         <input type="text" placeholder="Name" name="member-name-1" class="input width-60" required>
                         <input type="text" placeholder="Faculty" name="member-faculty-1" class="input width-60" required>
                         <input type="text" placeholder="Major" name="member-major-1" class="input width-60" required>
-                        <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM</label>
+                        <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM <span>+</span></label>
                         <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload" required>
                         <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60" required>
                         <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60" required>
