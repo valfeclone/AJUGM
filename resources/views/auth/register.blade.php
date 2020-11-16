@@ -6,37 +6,39 @@
 
 @section ('content')
 <div class="register">
-    <form action="{{ route('register') }}" class="register__form">
+    <form method="POST" action="/buatregister" class="register__form" id="theform">
         @csrf
         <div class="card card-xl form-card register-main-card">
             <h3 class="subheading text-grey text-uppercase margin-bottom-l align-self-start">Register</h3>
 
             <input type="text" placeholder="Team Name" name="name" class="input" required autofocus>
 
-            <input type="text" placeholder="University" name="university" class="input" required>
+            <input type="text" placeholder="University" name="universitas" class="input" required>
 
-            <div class="select-wrapper">
+            <div class="select-wrapper" name="kategori_lomba">
                 <div class="select">
                     <div class="select__trigger"><span id="select-cat">Category</span>
                         <div class="arrow"></div>
                     </div>
-                    <div class="select-options" id="opt-cat">
-                        <span class="select-option" data-value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</span>
-                        <span class="select-option" data-value="Kresna">Kresna (Kreasi Insan Sinema)</span>
-                        <span class="select-option" data-value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</span>
-                        <span class="select-option" data-value="Nakula">Nakula (Penelitian Kawula Muda)</span>
-                        <span class="select-option" data-value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</span>
-                    </div>
+                    <select id="choose_kategori" name="kategori_lomba" form="theform">
+                        <div class="select-options" id="opt-cat">
+                            <option><span class="select-option" data-value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</span></option>
+                            <option><span class="select-option" data-value="Kresna">Kresna (Kreasi Insan Sinema)</span></option>
+                            <option><span class="select-option" data-value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</span></option>
+                            <option><span class="select-option" data-value="Nakula">Nakula (Penelitian Kawula Muda)</span></option>
+                            <option><span class="select-option" data-value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</span></option>
+                        </div>
+                    </select>
                 </div>
             </div>
 
-            <div class="select-wrapper">
+            <div class="select-wrapper" name="lomba">
                 <div class="select">
                     <div class="select__trigger"><span>Competition</span>
                         <div class="arrow"></div>
                     </div>
                     <div class="select-options" id="opt-comp">
-                        <span class="select-option" data-value="choose">Competition</span>
+                        <span class="select-option" name="lomba" data-value="choose">Competition</span>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UploadbuktiController;
 use App\Http\Controllers\UploadFileLombaController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -127,4 +128,16 @@ Route::get('/uplodcok', function() {
 });
 Route::get('/uplodlagicok', function() {
     return view("dashboard_peserta.uplodlagicok");
+});
+
+//buat register
+Route::post('/buatregister', [ RegisterController::class, "validator" ])
+    ->middleware(['guest']);
+
+//buat creative market
+Route::get('/creativemarket', function() {
+    return view("creative_market");
+});
+Route::get('/virtualmuseum', function() {
+    return view("virtual_museum");
 });
