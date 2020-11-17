@@ -21,7 +21,7 @@ class CreateMembersTable extends Migration
             $table->string('jurusan');
             $table->string('path_foto_ktm');
             $table->string('email')->unique();
-            $table->string('linkedin');
+            $table->string('linkedin')->nullable();
             $table->timestamps();
         });
     }

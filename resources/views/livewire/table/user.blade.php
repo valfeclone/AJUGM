@@ -39,10 +39,10 @@
                     Status Pembayaran
                     @include('components.sort-icon', ['field' => 'validasi_pembayaran'])
                 </a></th>
-                <th><a wire:click.prevent="sortBy('created_at')" role="button" href="#">
+                <!-- <th><a wire:click.prevent="sortBy('created_at')" role="button" href="#">
                     Tanggal Dibuat
                     @include('components.sort-icon', ['field' => 'created_at'])
-                </a></th>
+                </a></th> -->
                 <th>Action</th>
             </tr>
         </x-slot>
@@ -85,23 +85,35 @@
                             <p style="color:red">Belum Tersedia</p>
                         @endif
                     </td>
-                    <td>{{ $user->created_at->format('d M Y H:i') }}</td>
+                    <!-- <td>{{ $user->created_at->format('d M Y H:i') }}</td> -->
                     <td class="whitespace-no-wrap row-action--icon">
-                        
-                        @if ($user->path_bukti_bayar)
-                            @if ($user->validasi_pembayaran == false)
-                            <form method="POST" action="/admin/verify/{{$user->id}}">
-                                @csrf
-                                <button type="submit"><i class="fa fa-16px fa-check text-green-500" ></i></button>
-                            </form> 
+                        <form method="POST" action="/admin/verify/{{$user->id}}" class="fa fa-16px">
+                            @csrf
+                            @if ($user->path_bukti_bayar)
+                                @if ($user->validasi_pembayaran == false)
+                                    <button type="submit"><i class="fa fa-16px fa-check text-green-500 mr-3" ></i></button>
+                                @endif
                             @endif
-                        @endif
-                        <a role="button" href="/user/edit/{{ $user->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
-                        <a role="button" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
-                        
+                            <a role="button" href="/user/edit/{{ $user->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
+                            <a role="button" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
+                        </form> 
                     </td>
                 </tr>
             @endforeach
         </x-slot>
     </x-data-table>
+    @if (\Session::has('success'))
+    <div class="alert alert-success">
+        <ul>
+            <li>{!! \Session::get('success') !!}</li>
+        </ul>
+    </div>
+    @endif
+    @if (\Session::has('error'))
+    <div class="alert alert-error">
+        <ul>
+            <li>{!! \Session::get('error') !!}</li>
+        </ul>
+    </div>
+    @endif
 </div>

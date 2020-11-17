@@ -22,7 +22,6 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::post('/admin/verify/{id}', [ UserController::class, "verify_pembayaran" ]);
 
 Route::get('/', function () {
     return view('landing');
@@ -31,10 +30,10 @@ Route::get('/', function () {
 //akses dashboard admin, harus pake admin ya hehehe
 Route::group([ "middleware" => ['auth:admins', 'verified'] ], function () {
     Route::view('/admin/dashboard', "dashboard")->name('admin.dashboard');
-
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
+    Route::post('/admin/verify/{id}', [ UserController::class, "verify_pembayaran" ]);
 });
 
 //buat login admin
