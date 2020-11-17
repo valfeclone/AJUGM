@@ -34,10 +34,13 @@
                 <a href="" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
             </div>
             <div class="header__util">
+                @guest
                 <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a>
+                @else
+                {{auth()->User()->name}}   
+                @endguest
             </div>
         </nav>
-
         @yield('content')
 
         <footer class="footer">

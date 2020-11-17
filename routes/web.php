@@ -22,12 +22,14 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::post('/admin/verify/{id}', [ UserController::class, "verify_pembayaran" ]);
+
 Route::get('/', function () {
     return view('landing');
 });
 
 //akses dashboard admin, harus pake admin ya hehehe
-Route::group([ "middleware" => ['auth:admins', 'verified'] ], function() {
+Route::group([ "middleware" => ['auth:admins', 'verified'] ], function () {
     Route::view('/admin/dashboard', "dashboard")->name('admin.dashboard');
 
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
@@ -36,7 +38,7 @@ Route::group([ "middleware" => ['auth:admins', 'verified'] ], function() {
 });
 
 //buat login admin
-Route::get('/admin/login', function(){
+Route::get('/admin/login', function () {
     return view("login_admin");
 })->name('admin.login');
 Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
@@ -51,14 +53,14 @@ Route::post('/admin/login', [ AdminController::class, "handleLogin" ])
 // });
 
 //buat upload bukti bayar
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function () {
     Route::get('/uploadbukti', [ UploadbuktiController::class, "upload" ]);
     // ->middleware(['auth:sanctum', 'verified']);
     Route::post('/uploadbukti', [ UploadbuktiController::class, "proses_upload" ]);
 });
 
 // buat upload file gambar lomba
-Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
+Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function () {
     Route::get('/uploadfile', [ UploadFileLombaController::class, "upload" ]);
     // ->middleware(['auth:sanctum', 'verified']);
     Route::post('/uploadfile', [ UploadFileLombaController::class, "proses_upload" ]);
@@ -67,32 +69,24 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function() {
 
 //akses gambar bukti
 Route::get('/images/bukti/{file}', [ function ($file) {
-
     $path = storage_path('app/bukti_pembayaran/'.$file);
 
     if (file_exists($path)) {
-
         return response()->file($path, array('Content-Type' =>'image/jpeg'));
-
     }
 
     abort(404);
-
 }]);
 
 //akses file lomba
 Route::get('/images/filelomba/{file}', [ function ($file) {
-
     $path = storage_path('app/file_lomba/'.$file);
 
     if (file_exists($path)) {
-
         return response()->file($path, array('Content-Type' =>'image/jpeg'));
-
     }
 
     abort(404);
-
 }]);
 
 //dashboard peserta
@@ -101,7 +95,7 @@ Route::get('/tim', function () {
 });
 
 //artstep
-Route::get('/galeri', function(){
+Route::get('/galeri', function () {
     return view("artstep");
 });
 
@@ -110,23 +104,23 @@ Route::get('/tim/detail', [ UserController::class, "show_account" ])
     ->middleware(['auth:sanctum', 'verified']);
 
 //update detail tim
-Route::get('/tim/update', function() {
+Route::get('/tim/update', function () {
     return view("dashboard_peserta.update_user");
 });
 
 //member tim
-Route::get('/tim/member', function() {
+Route::get('/tim/member', function () {
     return view("dashboard_peserta.member");
 });
 
 //temporary route demi achong
-Route::get('/detailcok', function() {
+Route::get('/detailcok', function () {
     return view("dashboard_peserta.detailcok");
 });
-Route::get('/uplodcok', function() {
+Route::get('/uplodcok', function () {
     return view("dashboard_peserta.uplodcok");
 });
-Route::get('/uplodlagicok', function() {
+Route::get('/uplodlagicok', function () {
     return view("dashboard_peserta.uplodlagicok");
 });
 
@@ -135,9 +129,9 @@ Route::post('/buatregister', [ RegisterController::class, "validator" ])
     ->middleware(['guest']);
 
 //buat creative market
-Route::get('/creativemarket', function() {
+Route::get('/creativemarket', function () {
     return view("creative_market");
 });
-Route::get('/virtualmuseum', function() {
+Route::get('/virtualmuseum', function () {
     return view("virtual_museum");
 });

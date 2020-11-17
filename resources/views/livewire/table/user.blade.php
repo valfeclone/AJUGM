@@ -56,7 +56,7 @@
                     <td>{{ $user->lomba }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
-                        <?php if($user->path_bukti_bayar): ?>
+                        <?php if ($user->path_bukti_bayar): ?>
                             <a href="/images/bukti/{{ $user->path_bukti_bayar }}" download>Click to view</a>
                         <?php else: ?>
                             belum tersedia
@@ -87,13 +87,18 @@
                     </td>
                     <td>{{ $user->created_at->format('d M Y H:i') }}</td>
                     <td class="whitespace-no-wrap row-action--icon">
+                        
                         @if ($user->path_bukti_bayar)
                             @if ($user->validasi_pembayaran == false)
-                                <a role="button" href="{{ route('verifikasi_pembayaran',[$user->id]) }}" class="mr-3"><i class="fa fa-16px fa-check text-green-500" ></i></a>
+                            <form method="POST" action="/admin/verify/{{$user->id}}">
+                                @csrf
+                                <button type="submit"><i class="fa fa-16px fa-check text-green-500" ></i></button>
+                            </form> 
                             @endif
                         @endif
                         <a role="button" href="/user/edit/{{ $user->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
                         <a role="button" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
+                        
                     </td>
                 </tr>
             @endforeach

@@ -17,16 +17,16 @@
 
             <div class="select-wrapper" name="kategori_lomba">
                 <div class="select">
-                    <div class="select__trigger"><span id="select-cat">Category</span>
+                <div class="select__trigger"><span id="select-cat">category</span> 
                         <div class="arrow"></div>
                     </div>
                     <select id="choose_kategori" name="kategori_lomba" form="theform">
                         <div class="select-options" id="opt-cat">
-                            <option><span class="select-option" data-value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</span></option>
-                            <option><span class="select-option" data-value="Kresna">Kresna (Kreasi Insan Sinema)</span></option>
-                            <option><span class="select-option" data-value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</span></option>
-                            <option><span class="select-option" data-value="Nakula">Nakula (Penelitian Kawula Muda)</span></option>
-                            <option><span class="select-option" data-value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</span></option>
+                            <option class="select-option" data-value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</option>
+                            <option class="select-option" data-value="Kresna">Kresna (Kreasi Insan Sinema)</option>
+                            <option class="select-option" data-value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</option>
+                            <option class="select-option" data-value="Nakula">Nakula (Penelitian Kawula Muda)</option>
+                            <option class="select-option" data-value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
                         </div>
                     </select>
                 </div>
