@@ -22,11 +22,28 @@
                     </div>
                     <select id="choose_kategori" name="kategori_lomba" form="theform">
                         <div class="select-options" id="opt-cat">
-                            <option class="select-option" data-value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</option>
-                            <option class="select-option" data-value="Kresna">Kresna (Kreasi Insan Sinema)</option>
-                            <option class="select-option" data-value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</option>
-                            <option class="select-option" data-value="Nakula">Nakula (Penelitian Kawula Muda)</option>
-                            <option class="select-option" data-value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
+                            <option class="select-option" value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</option>
+                            <option class="select-option" value="Kresna">Kresna (Kreasi Insan Sinema)</option>
+                            <option class="select-option" value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</option>
+                            <option class="select-option" value="Nakula">Nakula (Penelitian Kawula Muda)</option>
+                            <option class="select-option" value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
+                        </div>
+                    </select>
+                </div>
+            </div>
+
+            <div class="select-wrapper" name="lomba">
+                <div class="select">
+                <div class="select__trigger"><span id="select-cat">Lomba</span> 
+                        <div class="arrow"></div>
+                    </div>
+                    <select id="choose_kategori" name="lomba" form="theform">
+                        <div class="select-options" id="opt-cat">
+                            <option class="select-option" data-value="Skip Ad">Skip Ad</option>
+                            <option class="select-option" data-value="Film Dokumenter">Film Dokumenter</option>
+                            <option class="select-option" data-value="Film Fiksi">Film Fiksi</option>
+                            <option class="select-option" data-value="Homeless Media">Homeless Media</option>
+                            <option class="select-option" data-value="Comic Strip">Comic Strip</option>
                         </div>
                     </select>
                 </div>
