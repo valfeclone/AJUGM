@@ -28,31 +28,23 @@
 
                 <input type="text" placeholder="University" name="university" class="input margin-top-xs" required autofocus>
 
-                <div class="select-wrapper margin-top-xs">
-                    <div class="select">
-                        <div class="select__trigger"><span>Competition</span>
-                            <div class="arrow"></div>
-                        </div>
-                        <div class="select-options">
-                            <span class="select-option" data-value="Homeless Media">Homeless Media</span>
-                            <span class="select-option" data-value="Comic Strip">Comic Strip</span>
-                            <span class="select-option" data-value="Podcast">Podcast</span>
-                            <span class="select-option" data-value="Film Fiksi">Film Fiksi</span>
-                            <span class="select-option" data-value="Movie Scoring">Movie Scoring</span>
-                            <span class="select-option" data-value="Film Dokumenter">Film Dokumenter</span>
-                            <span class="select-option" data-value="Penulisan Naskah">Penulisan Naskah</span>
-                            <span class="select-option" data-value="PR Campaign">PR Campaign</span>
-                            <span class="select-option" data-value="Press Conference">Press Conference</span>
-                            <span class="select-option" data-value="Risk Management">Risk Management</span>
-                            <span class="select-option" data-value="Riset Strategis Akademik">Riset Strategis Akademik</span>
-                            <span class="select-option" data-value="Fun Research">Fun Research</span>
-                            <span class="select-option" data-value="Social Media Activation">Social Media Activation</span>
-                            <span class="select-option" data-value="Unconventional Media">Unconventional Media</span>
-                            <span class="select-option" data-value="Brandbook">Brandbook</span>
-                            <span class="select-option" data-value="Skip Ad">Skip Ad</span>
-
-                        </div>
-                    </div>
+                <div class="select margin-top-xs">
+                    <option value="Homeless Media">Homeless Media</option>
+                    <option value="Comic Strip">Comic Strip</option>
+                    <option value="Podcast">Podcast</option>
+                    <option value="Film Fiksi">Film Fiksi</option>
+                    <option value="Movie Scoring">Movie Scoring</option>
+                    <option value="Film Dokumenter">Film Dokumenter</option>
+                    <option value="Penulisan Naskah">Penulisan Naskah</option>
+                    <option value="PR Campaign">PR Campaign</option>
+                    <option value="Press Conference">Press Conference</option>
+                    <option value="Risk Management">Risk Management</option>
+                    <option value="Riset Strategis Akademik">Riset Strategis Akademik</option>
+                    <option value="Fun Research">Fun Research</option>
+                    <option value="Social Media Activation">Social Media Activation</option>
+                    <option value="Unconventional Media">Unconventional Media</option>
+                    <option value="Brandbook">Brandbook</option>
+                    <option value="Skip Ad">Skip Ad</option>
                 </div>
 
                 <input type="password" placeholder="Password" name="password" class="input margin-top-xs margin-bottom-s" required autofocus>

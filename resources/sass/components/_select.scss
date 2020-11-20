@@ -1,78 +1,56 @@
 .select {
+    @extend %utility;
+
     position: relative;
     display: flex;
-    flex-direction: column;
-    border-width: 0 0 1px 0px;
-    border-style: solid;
-    border-color: $color-grey;
-    z-index: 200;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    background: #ffffff;
+    cursor: pointer;
+    color: $color-grey;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $color-grey;
 
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        calc(100% - 2.5em) 0.5em;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
 
-    &.open .select-options  {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-    }
-
-    &-wrapper {
-        position: relative;
-        user-select: none;
-        width: 100%;
-        z-index: 200;
-    }
-
-    &__trigger {
-        @extend %utility;
-
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 0;
-        background: #ffffff;
-        cursor: pointer;
-        color: $color-grey;
-    }
-
-    &-options {
-        position: absolute;
-        display: block;
-        top: 100%;
-        left: 0;
-        right: 0;
-        border-width: 0 0 1px 0px;
-        border-style: solid;
+    &:focus{
+        background-image:
+            linear-gradient(45deg, $color-grey 50%, transparent 50%),
+            linear-gradient(135deg, transparent 50%, $color-grey 50%),
+            linear-gradient(to right, #ccc, #ccc);
+        background-position:
+            calc(100% - 15px) 1em,
+            calc(100% - 20px) 1em,
+            calc(100% - 2.5em) 0.5em;
+        background-size:
+            5px 5px,
+            5px 5px,
+            1px 1.5em;
+        background-repeat: no-repeat;
         border-color: $color-grey;
-        background: #fff;
-        transition: all 0.5s;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        z-index: 200;
+        outline: 0;
     }
 
-    &-option {
-        @extend %utility;
-
-        position: relative;
-        display: block;
-        padding: 1rem 0;
-        color: $color-black;
-        cursor: pointer;
-        transition: all 0.5s;
-        z-index: 200;
-
-        &:hover {
-            cursor: pointer;
-            background-color: #d3d3d3;
-        }
-
-        &.selected {
-            color: $color-black;
-            background-color: #d3d3d3;
-        }
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
     }
 }
+
 
 .arrow {
     background-image: url('/assets/arrow-right.png');

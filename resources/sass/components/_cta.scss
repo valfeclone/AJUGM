@@ -1,19 +1,14 @@
-.button {
+.cta {
     @extend %utility;
 
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     border: 1px solid $color-black;
     padding: .8rem 2.4rem;
     width: max-content;
 }
 
-.button--white {
+.cta--white {
     color: $color-black !important;
     background-color: white !important;
     border-color: $color-grey;
-}
-
-.button--borderless {
-    padding: 0 !important;
-    border: none !important;
 }

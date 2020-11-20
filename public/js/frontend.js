@@ -36,7 +36,7 @@ $(document).ready(() => {
                     <input type="text" placeholder="Faculty" name="member-faculty-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Major" name="member-major-${n+1}" class="input width-60" required>
                     <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM  <span>+</span></label>
-                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload" required>
+                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload">
                     <input type="email" placeholder="E-mail" name="member-email-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Linked In" name="member-linkedin-${n+1}" class="input width-60" required>
                 </div>
@@ -75,10 +75,10 @@ $(document).ready(() => {
     }
 
     // Event listener to change the competition dropdown options based on category
-    $("#select-cat").bind('DOMSubtreeModified', function() {
+    $("#select-cat").change(function() {
 
-        var $category = $("#opt-cat .selected");
-        var key = $category.data().value;
+        var $category = document.getElementById('select-cat');
+        var key = $category.value;
         var vals = [];
                             
         switch(key) {
@@ -101,24 +101,13 @@ $(document).ready(() => {
                 vals = ['Please choose from above'];
         }
 
-        var $competition = $("#opt-comp");
+        var $competition = $("#select-comp");
         $competition.empty();
+        $competition.append(`<option selected hidden>Competition</option>`);
 
         $.each(vals, function(index, value) {
-            $competition.append(`<span class="select-option" data-value="${value}">${value}</span>`);
+            $competition.append(`<option value="${value}">${value}</option>`);
         });
-
-        for (const option of document.querySelectorAll(".select-option")) {
-            option.addEventListener('click', function() {
-                if (!this.classList.contains('selected')) {
-                    if (this.parentNode.querySelector('.select-option.selected') != null) {
-                        this.parentNode.querySelector('.select-option.selected').classList.remove('selected');
-                    }
-                    this.classList.add('selected');
-                    this.closest('.select').querySelector('.select__trigger span').textContent = this.textContent;
-                }
-            })
-        }
     });
     
     // Event listener for 'Next' button in Registration Page

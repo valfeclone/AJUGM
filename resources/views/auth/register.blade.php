@@ -3,7 +3,7 @@
 @section('meta-title')
     Register
 @endsection
-
+ 
 @section ('content')
 <div class="register">
     <form method="POST" action="/buatregister" class="register__form" id="theform">
@@ -15,33 +15,19 @@
 
             <input type="text" placeholder="University" name="universitas" class="input" required>
 
-            <div class="select-wrapper" name="kategori_lomba">
-                <div class="select">
-                <div class="select__trigger"><span id="select-cat">category</span> 
-                        <div class="arrow"></div>
-                    </div>
-                    <select id="choose_kategori" name="kategori_lomba" form="theform">
-                        <div class="select-options" id="opt-cat">
-                            <option class="select-option" data-value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</option>
-                            <option class="select-option" data-value="Kresna">Kresna (Kreasi Insan Sinema)</option>
-                            <option class="select-option" data-value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</option>
-                            <option class="select-option" data-value="Nakula">Nakula (Penelitian Kawula Muda)</option>
-                            <option class="select-option" data-value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
-                        </div>
-                    </select>
-                </div>
-            </div>
+            <select class="select" id="select-cat" name="select-cat">
+                <option selected hidden>Category <span class="arrow"></span></option> 
+                <option value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</option>
+                <option value="Kresna">Kresna (Kreasi Insan Sinema)</option>
+                <option value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</option>
+                <option value="Nakula">Nakula (Penelitian Kawula Muda)</option>
+                <option value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
+            </select>
 
-            <div class="select-wrapper" name="lomba">
-                <div class="select">
-                    <div class="select__trigger"><span>Competition</span>
-                        <div class="arrow"></div>
-                    </div>
-                    <div class="select-options" id="opt-comp">
-                        <span class="select-option" data-value="choose">Please choose the category first</span>
-                    </div>
-                </div>
-            </div>
+            <select class="select" id="select-comp" name="select-opt">
+                <option selected hidden>Competition<span class="arrow"></span></option> 
+                <option>Please select the category first</option>
+            </select>
 
             <input type="email" placeholder="E-mail" name="email" class="input" required >
 
@@ -66,7 +52,7 @@
                         <input type="text" placeholder="Faculty" name="member-faculty-1" class="input width-60" required>
                         <input type="text" placeholder="Major" name="member-major-1" class="input width-60" required>
                         <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM <span>+</span></label>
-                        <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload" required>
+                        <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload">
                         <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60" required>
                         <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60" required>
                     </div>

@@ -28,10 +28,10 @@
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
             <div class="header__link-box">
-                <a href="" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
-                <a href="" class="link-item"><p class="text-bold text-white text-uppercase">Matlom</p></a>
-                <a href="" class="link-item"><p class="text-bold text-white text-uppercase">Events</p></a>
-                <a href="" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
+                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
+                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">Matlom</p></a>
+                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">Events</p></a>
+                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
             </div>
             <div class="header__util">
                 @guest
@@ -48,10 +48,10 @@
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </div>
             <div class="header__link-box">
-                <a href="" class="link-item"><p class="text-regular text-grey text-uppercase">About</p></a>
-                <a href="" class="link-item"><p class="text-regular text-grey text-uppercase">Matlom</p></a>
-                <a href="" class="link-item"><p class="text-regular text-grey text-uppercase">Events</p></a>
-                <a href="" class="link-item"><p class="text-regular text-grey text-uppercase">Contact</p></a>
+                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
+                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Matlom</p></a>
+                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
+                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
             </div>
             <div class="header__util">
                 <p class="text-regular text-grey">&#169;2020-Form | All Rights Reserved</p>
