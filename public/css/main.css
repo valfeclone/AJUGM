@@ -44,8 +44,8 @@
 
 .input,
 .button,
-.select__trigger,
-.select-option {
+.select,
+.cta {
   font-family: Avenir Next Regular;
   display: inline-block;
   height: -webkit-max-content;
@@ -132,7 +132,7 @@ body {
 }
 
 .text-white {
-  color: #EBEBED !important;
+  color: white !important;
 }
 
 .text-grey {
@@ -474,11 +474,15 @@ input[type="file"] {
   border-radius: 1rem;
   border: 1px solid #111111;
   padding: .8rem 2.4rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .button--white {
   color: #111111 !important;
   background-color: white !important;
+  border-color: #858586;
 }
 
 .button--borderless {
@@ -539,75 +543,33 @@ input[type="file"] {
 .select {
   position: relative;
   display: flex;
-  flex-direction: column;
-  border-width: 0 0 1px 0px;
-  border-style: solid;
-  border-color: #858586;
-  z-index: 200;
-}
-
-.select.open .select-options {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-.select-wrapper {
-  position: relative;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  width: 100%;
-  z-index: 200;
-}
-
-.select__trigger {
-  position: relative;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
   background: #ffffff;
   cursor: pointer;
   color: #858586;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #858586;
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
 }
 
-.select-options {
-  position: absolute;
-  display: block;
-  top: 100%;
-  left: 0;
-  right: 0;
-  border-width: 0 0 1px 0px;
-  border-style: solid;
+.select:focus {
+  background-image: linear-gradient(45deg, #858586 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #858586 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
   border-color: #858586;
-  background: #fff;
-  transition: all 0.5s;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 200;
+  outline: 0;
 }
 
-.select-option {
-  position: relative;
-  display: block;
-  padding: 1rem 0;
-  color: #111111;
-  cursor: pointer;
-  transition: all 0.5s;
-  z-index: 200;
-}
-
-.select-option:hover {
-  cursor: pointer;
-  background-color: #d3d3d3;
-}
-
-.select-option.selected {
-  color: #111111;
-  background-color: #d3d3d3;
+.select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 
 .arrow {
@@ -630,6 +592,21 @@ input[type="file"] {
   border-radius: 1rem;
   padding: .5rem 1rem;
   border: 1px solid #858586;
+}
+
+.cta {
+  border-radius: 1.5rem;
+  border: 1px solid #111111;
+  padding: .8rem 2.4rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.cta--white {
+  color: #111111 !important;
+  background-color: white !important;
+  border-color: #858586;
 }
 
 .header {
@@ -656,6 +633,8 @@ input[type="file"] {
 }
 
 .header__link-box > * {
+  display: flex;
+  align-items: center;
   height: 100%;
 }
 
@@ -1089,5 +1068,62 @@ input[type="file"] {
   right: 0;
   width: 25rem;
   transform: translate(60%, -30%);
+}
+
+.virtual-museum {
+  padding: 20rem 5rem 12rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(-webkit-min-content, 65vw) 1fr;
+  grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+  overflow: hidden;
+  margin-top: -11rem;
+  background-image: url("/images/museum.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.virtual-museum__content {
+  position: relative;
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.virtual-museum__media {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+
+.virtual-museum__media-container {
+  width: 40%;
+}
+
+.virtual-museum__media-content {
+  width: 50%;
+}
+
+.virtual-museum__title {
+  position: relative;
+  z-index: 100;
+}
+
+.virtual-museum__geometry--triangle {
+  width: 25rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  transform: translate(-30%, 40%);
+}
+
+.virtual-museum__geometry--circle {
+  width: 12rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  transform: translate(-20%, 30%);
 }
 
