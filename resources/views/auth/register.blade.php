@@ -24,6 +24,7 @@
                 <option value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
             </select>
 
+
             <select class="select" id="select-comp" name="select-opt">
                 <option selected hidden>Competition<span class="arrow"></span></option> 
                 <option>Please select the category first</option>
