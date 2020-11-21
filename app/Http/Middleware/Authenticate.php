@@ -13,6 +13,8 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
+
+    //redirect kalo blom login
     protected function redirectTo($request)
     {
         if (! $request->expectsJson()) {
