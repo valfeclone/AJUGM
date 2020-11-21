@@ -52,34 +52,49 @@ class RegisterController extends Controller
 
         ddd($request);
 
-        $validated = request()->validate([
+        $validatedTeam = request()->validate([
             'name' => 'required',
             'universitas' => 'required',
             'kategori_lomba' => 'required',
             'lomba' => 'required',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8'],
+        ]);
+        
+        $validatedMember = request()->validate([
+            'member-name-1' => 'required',
+            'member-faculty-1' => 'required',
+            'member-major-1' => 'required',
+            'member-ktm-1' => 'required',
+            'member-email-1' => ['required', 'string', 'email', 'max:255'],
         ]);
 
-        ddd($validated);
+        // $strTeam = implode(', ', $validatedTeam);
+        // $strMember = implode(', ', $validatedMember);
+        // ddd($strTeam.$strMember);
 
-        // $this->validate($request, [
-        //     'file_bukti_pembayaran' => 'required',
-        //     'name' => 'required',
-        //     'universitas' => 'required',
-        //     'kategori_lomba' => ['required', 'numeric'],
-        //     'lomba' => 'required',
-        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        //     'password' => ['required', 'string', 'min:8', 'confirmed'],
-        // ]);
-        
-        // return User::create([
-        //     'name' => $request['name'],
-        //     'universitas' => $request['universitas'],
-        //     'kategori_lomba' => $request['kategori_lomba'],
-        //     'lomba' => $request['lomba'],
-        //     'email' => $request['email'],
-        //     'password' => Hash::make($request['password']),
-        // ]);
+        $newTeam = User::create([
+            'name' => $request['name'],
+            'universitas' => $request['universitas'],
+            'kategori_lomba' => $request['kategori_lomba'],
+            'lomba' => $request['lomba'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
+
+        $newMember = Member::create([
+            'team_id' => $newTeam['id'],
+            'name' => $request['member-name-1'],
+            'fakultas' => $request['member-faculty-1'],
+            'jurusan' => $request['member-major-1'],
+            'path_foto_ktm' => $request['member-ktm-1'],
+            'email' => $request['member-email-1'],
+            'linkedin' => $request['member-linkedin-1'],
+        ]);
+
+        $newTeam->ketua_id = $newMember->id;
+        $newTeam->save();
+
+        return($newTeam.$newMember);
     }
 }
