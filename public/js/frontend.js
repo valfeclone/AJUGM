@@ -35,8 +35,8 @@ $(document).ready(() => {
                     <input type="text" placeholder="Name" name="member-name-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Faculty" name="member-faculty-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Major" name="member-major-${n+1}" class="input width-60" required>
-                    <label for="file-upload" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM  <span>+</span></label>
-                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload">
+                    <label for="file-upload-${n+1}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM  <span>+</span></label>
+                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload-${n+1}">
                     <input type="email" placeholder="E-mail" name="member-email-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Linked In" name="member-linkedin-${n+1}" class="input width-60" required>
                 </div>
@@ -48,31 +48,43 @@ $(document).ready(() => {
     });
 
     // Event listener for Select / Dropdown
-    window.addEventListener('click', function(e) {
-        for (const select of document.querySelectorAll('.select')) {
-            if (!select.contains(e.target)) {
-                select.classList.remove('open');
+    // window.addEventListener('click', function(e) {
+    //     for (const select of document.querySelectorAll('.select')) {
+    //         if (!select.contains(e.target)) {
+    //             select.classList.remove('open');
+    //         }
+    //     }
+    // });
+
+    // for (const dropdown of document.querySelectorAll(".select-wrapper")) {
+    //     dropdown.addEventListener('click', function() {
+    //         this.querySelector('.select').classList.toggle('open');
+    //     })
+    // }
+
+    // for (const option of document.querySelectorAll(".select-option")) {
+    //     option.addEventListener('click', function() {
+    //         if (!this.classList.contains('selected')) {
+    //             if (this.parentNode.querySelector('.select-option.selected') != null) {
+    //                 this.parentNode.querySelector('.select-option.selected').classList.remove('selected');
+    //             }
+    //             this.classList.add('selected');
+    //             this.closest('.select').querySelector('.select__trigger span').textContent = this.textContent;
+    //         }
+    //     })
+    // }
+
+    // Event listener to change file name
+    $('input[type="file"]').change(function(e){
+        var fileName = e.target.files[0].name;
+        var labels = document.getElementsByTagName('LABEL');
+
+        for (var i = 0; i < labels.length; i++) {
+            if (labels[i].htmlFor === e.target.id) {
+                labels[i].innerHTML = fileName;
             }
         }
     });
-
-    for (const dropdown of document.querySelectorAll(".select-wrapper")) {
-        dropdown.addEventListener('click', function() {
-            this.querySelector('.select').classList.toggle('open');
-        })
-    }
-
-    for (const option of document.querySelectorAll(".select-option")) {
-        option.addEventListener('click', function() {
-            if (!this.classList.contains('selected')) {
-                if (this.parentNode.querySelector('.select-option.selected') != null) {
-                    this.parentNode.querySelector('.select-option.selected').classList.remove('selected');
-                }
-                this.classList.add('selected');
-                this.closest('.select').querySelector('.select__trigger span').textContent = this.textContent;
-            }
-        })
-    }
 
     // Event listener to change the competition dropdown options based on category
     $("#select-cat").change(function() {
