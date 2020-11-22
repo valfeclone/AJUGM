@@ -64,7 +64,7 @@ class RegisterController extends Controller
         'member-faculty-1' => 'required',
         'member-major-1' => 'required',
         'member-ktm-1' => 'required',
-        'member-email-1' => ['required', 'string', 'email', 'max:255'],
+        'member-email-1' => ['required', 'string', 'email', 'max:255', 'unique:members,email'],
         ]);
         
         // $strTeam = implode(', ', $validatedTeam);
@@ -110,7 +110,7 @@ class RegisterController extends Controller
                     'member-faculty-'.$x => 'required',
                     'member-major-'.$x => 'required',
                     'member-ktm-'.$x => 'required',
-                    'member-email-'.$x => ['required', 'string', 'email', 'max:255'],
+                    'member-email-'.$x => ['required', 'string', 'email', 'max:255', 'unique:members,email'],
                 ]);
                 $newMember2 = Member::create([
                     'team_id' => $newTeam['id'],
