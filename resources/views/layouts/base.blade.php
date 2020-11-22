@@ -35,7 +35,24 @@
             </div>
             <div class="header__util">
                 @guest
-                <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a>
+                <!-- <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a> -->
+
+                <div class="dropdown">
+                    <button class="dropdown-button"><p class="text-bold text-white text-uppercase">Team A</p></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <a href="/tim/update" class="dropdown-option">Account</a>
+                            <a href="/tim/member" class="dropdown-option">Team Members</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <a href="/uplodlagicok" class="dropdown-option">Bukti Pembayaran</a>
+                            <a href="/uplodcok" class="dropdown-option">Upload Karya</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <a href="#" class="dropdown-option">Log Out</a>          
+                        </div>
+                    </div>
+                </div>
                 @else
                 {{auth()->User()->name}}   
                 @endguest
