@@ -6,7 +6,7 @@
  
 @section ('content')
 <div class="register">
-    <form method="POST" action="/buatregister" class="register__form" id="theform">
+    <form method="POST" action="/buatregister" class="register__form" id="theform" enctype="multipart/form-data">
         @csrf
         <div class="card card-xl form-card register-main-card">
             <h3 class="subheading text-grey text-uppercase margin-bottom-l align-self-start">Register</h3>
@@ -52,8 +52,8 @@
                         <input type="text" placeholder="Name" name="member-name-1" class="input width-60" required>
                         <input type="text" placeholder="Faculty" name="member-faculty-1" class="input width-60" required>
                         <input type="text" placeholder="Major" name="member-major-1" class="input width-60" required>
-                        <label for="file-upload-1" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM <span>+</span></label>
-                        <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload-1">
+                        <label for="file-upload-1" class="input width-60 input-file-label">Upload KTM <span>+</span></label>
+                        <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload-1" accept=".jpg,.jpeg,.png">
                         <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60" required>
                         <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60" required>
                     </div>

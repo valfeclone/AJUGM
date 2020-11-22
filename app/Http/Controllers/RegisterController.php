@@ -40,7 +40,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
+    
     /**
      * Get a validator for an incoming registration request.
      *
@@ -49,52 +49,93 @@ class RegisterController extends Controller
      */
     protected function validator(Request $request)
     {
-
-        ddd($request);
-
+        // ddd($request);
         $validatedTeam = request()->validate([
-            'name' => 'required',
-            'universitas' => 'required',
-            'kategori_lomba' => 'required',
-            'lomba' => 'required',
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8'],
+        'name' => 'required',
+        'universitas' => 'required',
+        'select-cat' => 'required',
+        'select-opt' => 'required',
+        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        'password' => ['required', 'string', 'min:8'],
         ]);
         
         $validatedMember = request()->validate([
-            'member-name-1' => 'required',
-            'member-faculty-1' => 'required',
-            'member-major-1' => 'required',
-            'member-ktm-1' => 'required',
-            'member-email-1' => ['required', 'string', 'email', 'max:255'],
+        'member-name-1' => 'required',
+        'member-faculty-1' => 'required',
+        'member-major-1' => 'required',
+        'member-ktm-1' => 'required',
+        'member-email-1' => ['required', 'string', 'email', 'max:255'],
         ]);
-
+        
         // $strTeam = implode(', ', $validatedTeam);
         // $strMember = implode(', ', $validatedMember);
         // ddd($strTeam.$strMember);
-
+        
         $newTeam = User::create([
-            'name' => $request['name'],
-            'universitas' => $request['universitas'],
-            'kategori_lomba' => $request['kategori_lomba'],
-            'lomba' => $request['lomba'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-        ]);
-
+            'name' => $validatedTeam['name'],
+            'universitas' => $validatedTeam['universitas'],
+            'kategori_lomba' => $validatedTeam['select-cat'],
+            'lomba' => $validatedTeam['select-opt'],
+            'email' => $validatedTeam['email'],
+            'password' => Hash::make($validatedTeam['password']),
+            ]);
+            
         $newMember = Member::create([
             'team_id' => $newTeam['id'],
-            'name' => $request['member-name-1'],
-            'fakultas' => $request['member-faculty-1'],
-            'jurusan' => $request['member-major-1'],
-            'path_foto_ktm' => $request['member-ktm-1'],
-            'email' => $request['member-email-1'],
+            'name' => $validatedMember['member-name-1'],
+            'fakultas' => $validatedMember['member-faculty-1'],
+            'jurusan' => $validatedMember['member-major-1'],
+            'path_foto_ktm' => $validatedMember['member-ktm-1'],
+            'email' => $validatedMember['member-email-1'],
             'linkedin' => $request['member-linkedin-1'],
-        ]);
-
+            ]);
+                
         $newTeam->ketua_id = $newMember->id;
         $newTeam->save();
+        
+        // define variable buat simpan foto
+        $file = $request->file('member-ktm-1');
+        $tujuan_upload = storage_path('app/public/foto_ktm');
+        
+        // menyimpan file foto ktm yang diupload ke variabel $file
+        $file->move($tujuan_upload,$file->getClientOriginalName());
+        $newMember->path_foto_ktm = $file->getClientOriginalName();
+        $newMember->save();
+                
+        //bikin logic loop
+        for ($x = 2; $x <= 4; $x+=1) {
+            if('member-name-'.$x){
+                $newValidatedMember = request()->validate([
+                    'member-name-'.$x => 'required',
+                    'member-faculty-'.$x => 'required',
+                    'member-major-'.$x => 'required',
+                    'member-ktm-'.$x => 'required',
+                    'member-email-'.$x => ['required', 'string', 'email', 'max:255'],
+                ]);
+                $newMember2 = Member::create([
+                    'team_id' => $newTeam['id'],
+                    'name' => $newValidatedMember['member-name-'.$x],
+                    'fakultas' => $newValidatedMember['member-faculty-'.$x],
+                    'jurusan' => $newValidatedMember['member-major-'.$x],
+                    'path_foto_ktm' => $newValidatedMember['member-ktm-'.$x],
+                    'email' => $newValidatedMember['member-email-'.$x],
+                    'linkedin' => $request['member-linkedin-'.$x],
+                ]);
 
+                // define variable buat simpan foto
+                $file2 = $request->file('member-ktm-'.$x);
+                $tujuan_upload2 = storage_path('app/public/foto_ktm');
+
+                // menyimpan file foto ktm yang diupload ke variabel $file
+                $file2->move($tujuan_upload2,$file2->getClientOriginalName());
+                $newMember2->path_foto_ktm = $file2->getClientOriginalName();
+                $newMember2->save();
+            }
+            else{
+                break;
+            }
+        }
+                    
         return($newTeam.$newMember);
     }
 }
