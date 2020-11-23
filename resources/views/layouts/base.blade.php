@@ -61,9 +61,9 @@
         @yield('content')
 
         <footer class="footer">
-            <div class="logo-box">
+            <a href="/" class="logo-box">
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
-            </div>
+            </a>
             <div class="header__link-box">
                 <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
                 <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Matlom</p></a>
