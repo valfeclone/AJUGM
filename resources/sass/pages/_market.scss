@@ -1,0 +1,13 @@
+.market {
+    padding-top: 20rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+    grid-template-rows: repeat(2, max-content);
+    overflow: hidden;
+    margin-top: -11rem;
+
+    background-image: url('/images/market.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

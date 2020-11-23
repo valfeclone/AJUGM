@@ -1,0 +1,30 @@
+.pagination {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > *:not(:last-child) {
+        margin-right: 1.2rem;
+    }
+}
+
+.page {
+
+    &:link,
+    &:visited {
+        font-family: $font-body;
+        color: $color-grey;
+        font-size: 1.2rem;
+        text-decoration: none;
+        cursor: pointer;
+        word-wrap: none;
+    }
+
+    &--active {
+        font-family: $font-heading !important;
+        color: $color-black !important;
+        font-size: 1.4rem !important;
+    }
+}

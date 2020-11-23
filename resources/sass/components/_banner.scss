@@ -1,0 +1,28 @@
+.banner {
+    grid-row: banner-start / banner-end;
+    height: 90vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__content {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100% !important;
+        object-fit: contain;
+        overflow: hidden;
+        
+    }
+}

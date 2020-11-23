@@ -20,6 +20,8 @@
 @import 'components/status';
 @import 'components/cta';
 @import 'components/dropdown';
+@import 'components/banner';
+@import 'components/pagination';
 
 @import 'layouts/header';
 @import 'layouts/footer';
@@ -29,9 +31,12 @@
 @import 'layouts/landing-register';
 @import 'layouts/register-main';
 @import 'layouts/register-detail';
+@import 'layouts/market-banner';
+@import 'layouts/market-tenants';
 
 @import 'pages/landing';
 @import 'pages/login';
 @import 'pages/register';
 @import 'pages/settings';
 @import 'pages/virtual-museum';
+@import 'pages/market';
