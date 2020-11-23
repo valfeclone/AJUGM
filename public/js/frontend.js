@@ -40,8 +40,8 @@ $(document).ready(() => {
                     <input type="text" placeholder="Name" name="member-name-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Faculty" name="member-faculty-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Major" name="member-major-${n+1}" class="input width-60" required>
-                    <label for="file-upload-${n+1}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM  <span>+</span></label>
-                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload-${n+1}">
+                    <label for="file-upload-${n+1}" class="input width-60 input-file-label">Upload KTM  <span>+</span></label>
+                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload-${n+1}" accept=".jpg,.jpeg,.png">
                     <input type="email" placeholder="E-mail" name="member-email-${n+1}" class="input width-60" required>
                     <input type="text" placeholder="Linked In" name="member-linkedin-${n+1}" class="input width-60" required>
                 </div>

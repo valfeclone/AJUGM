@@ -19,7 +19,7 @@ class UploadbuktiController extends Controller
 	    $file = $request->file('file_bukti_pembayaran');
 
 		// menyimpan data file yang diupload ke variabel $file
-        $tujuan_upload = storage_path('app/bukti_pembayaran');
+        $tujuan_upload = storage_path('app/public/bukti_pembayaran');
         $file->move($tujuan_upload,$file->getClientOriginalName());
 
 		$user = auth()->user();
