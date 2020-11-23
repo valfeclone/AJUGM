@@ -296,7 +296,6 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  height: 100%;
   cursor: pointer;
   list-style-type: none;
   word-wrap: none;
@@ -350,11 +349,16 @@ body {
   align-self: center !important;
 }
 
+.media-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .media__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 7.5rem 0;
+  width: 50%;
 }
 
 .media-left {
@@ -377,6 +381,16 @@ body {
   margin-bottom: 2rem;
 }
 
+.card-wrapper--grid-xs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(-webkit-min-content, 20rem));
+  grid-template-columns: repeat(5, minmax(min-content, 20rem));
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-wrapper--grid-m {
   display: grid;
   grid-template-columns: repeat(3, minmax(-webkit-min-content, 30rem));
@@ -394,6 +408,11 @@ body {
   align-items: center;
   text-align: center;
   border: none;
+}
+
+.card-xs {
+  width: 20rem !important;
+  height: 20rem !important;
 }
 
 .card-s {
@@ -419,6 +438,11 @@ body {
   width: 65rem !important;
   height: 60rem !important;
   padding: 7rem 5rem;
+}
+
+.card__image--xs {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .card__image--s {
@@ -671,6 +695,62 @@ input[type="file"] {
   text-decoration: none;
 }
 
+.banner {
+  grid-row: banner-start / banner-end;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner__content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination > *:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+.page:link,
+.page:visited {
+  font-family: "Avenir Next Regular", "sans-serif";
+  color: #858586;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  word-wrap: none;
+}
+
+.page--active {
+  font-family: "Gilroy Bold", "sans-serif" !important;
+  color: #111111 !important;
+  font-size: 1.4rem !important;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -814,7 +894,6 @@ input[type="file"] {
 .landing-about__media-container {
   display: inline-block;
   position: relative;
-  width: 250%;
 }
 
 .landing-about__about-text {
@@ -993,6 +1072,57 @@ input[type="file"] {
 .register-detail-utilities {
   margin-top: auto;
   justify-self: flex-end;
+}
+
+.market-banner {
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 85vh;
+}
+
+.market-banner__media {
+  width: 40rem;
+}
+
+.market-banner__media-container {
+  position: relative;
+}
+
+.market-banner__media-heading {
+  position: relative;
+  z-index: 90;
+}
+
+.market-banner__media-heading > div {
+  z-index: 90;
+}
+
+.market-banner__media-heading > img {
+  z-index: -1;
+}
+
+.market-banner__geometry--wave {
+  width: 22rem;
+  position: absolute;
+  bottom: 0;
+  transform: translate(-60%, -75%);
+}
+
+.market-banner__geometry--square {
+  width: 8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate(0, -50%);
+}
+
+.market-tenants {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 5.5rem 15rem;
+  margin-top: 1px solid #858586;
+  background-color: #EBEBED;
 }
 
 .landing {
@@ -1188,5 +1318,20 @@ input[type="file"] {
   top: 0;
   z-index: 50;
   transform: translate(-20%, 30%);
+}
+
+.market {
+  padding-top: 20rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(-webkit-min-content, 65vw) 1fr;
+  grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+  grid-template-rows: repeat(2, -webkit-max-content);
+  grid-template-rows: repeat(2, max-content);
+  overflow: hidden;
+  margin-top: -11rem;
+  background-image: url("/images/market.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
