@@ -5,11 +5,16 @@
     object-fit: cover;
     align-self: center !important;
 
+    &-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 7.5rem 0;
+        width: 50%;
     }
 }
 

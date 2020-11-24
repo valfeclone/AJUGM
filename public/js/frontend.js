@@ -20,6 +20,11 @@ const json = {
 }
 
 $(document).ready(() => {
+
+    // Event listener to close dropdown and select when clicking body
+    $(window).click(function(e) {
+
+    })
     
     // Event listener for 'Add Team Member' button in Registration Page
     let n = $('.collapsible').length;
@@ -47,32 +52,22 @@ $(document).ready(() => {
         }
     });
 
-    // Event listener for Select / Dropdown
-    window.addEventListener('click', function(e) {
-        for (const select of document.querySelectorAll('.select')) {
-            if (!select.contains(e.target)) {
-                select.classList.remove('open');
+    // Event listener to change file name
+    $('input[type="file"]').change(function(e){
+        var fileName = e.target.files[0].name;
+        var labels = document.getElementsByTagName('LABEL');
+
+        for (var i = 0; i < labels.length; i++) {
+            if (labels[i].htmlFor === e.target.id) {
+                labels[i].innerHTML = fileName;
             }
         }
     });
 
-    for (const dropdown of document.querySelectorAll(".select-wrapper")) {
-        dropdown.addEventListener('click', function() {
-            this.querySelector('.select').classList.toggle('open');
-        })
-    }
-
-    for (const option of document.querySelectorAll(".select-option")) {
-        option.addEventListener('click', function() {
-            if (!this.classList.contains('selected')) {
-                if (this.parentNode.querySelector('.select-option.selected') != null) {
-                    this.parentNode.querySelector('.select-option.selected').classList.remove('selected');
-                }
-                this.classList.add('selected');
-                this.closest('.select').querySelector('.select__trigger span').textContent = this.textContent;
-            }
-        })
-    }
+    // Event listener for dropdown
+    $('.dropdown-button').click(function() {
+        $(this).find('.dropdown-menu').toggleClass('open');
+    })
 
     // Event listener to change the competition dropdown options based on category
     $("#select-cat").change(function() {
@@ -118,6 +113,11 @@ $(document).ready(() => {
             $('.register__geometry--circle').addClass('show');
         }
     })
-    
 });
 
+$(document).click(function(event){
+    var $trigger = $(".dropdown");
+    if($trigger !== event.target && !$trigger.has(event.target).length){
+        $(".dropdown-menu").removeClass("open");
+    }            
+});

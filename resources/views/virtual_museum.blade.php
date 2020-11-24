@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('meta-title')
+@section('meta-title') 
     Virtual Museum
 @endsection
 

@@ -5,9 +5,9 @@
 @endsection
 
 @section ('content')
-
+ 
 <div class="login">
-    <div class="card card-xl form-card login__form-card">
+    <div class="card card-xl login__form-card">
         <h3 class="subheading text-grey text-uppercase margin-bottom-l align-self-start">Login</h3>
 
         <form action="{{ route('login') }}" class="form" method="POST">
@@ -21,7 +21,9 @@
 
             <input type="submit" class="button button--white align-self-center margin-bottom-xs" value="Login >">
         </form>
-        <a href="/register" class="link align-self-center"><p class="text-regular text-black">Register .</p></a>
+        <div class="align-self-center">
+            <a href="/register" class="link"><p class="text-regular text-black">Register .</p></a>
+        </div>
 
         @if ($errors->any())
             <div class="alert alert-danger">
