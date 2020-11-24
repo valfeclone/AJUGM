@@ -27,17 +27,14 @@
     <div class="market-tenants">
         <h3 class="heading-3 text-uppercase text-black margin-bottom-m text-center">The Tenants</h3>
         <div class="card-wrapper--grid-xs margin-bottom-s">
-            @for ($i = 0; $i < 10; $i++)
+            @foreach($umkms as $umkm)
                 <div class="card card-xs">
-                    <a href="#"><img src="{{ asset('images/tenants-placeholder.jpg') }}" alt="Tenant logo" class="card__image card__image--xs"></a>
+                    <a href="#"><img src="{{ asset($umkm->path_photo) }}" alt="" class="card__image card__image--xs"></a>
                 </div>
-            @endfor
+            @endforeach
         </div>
         <div class="pagination">
             {{ $umkms->links('vendor.pagination.custom') }}
-            <!-- <a href="#" class="page">1</a>
-            <a href="#" class="page page--active">2</a>
-            <a href="#" class="page">3</a> -->
         </div>
     </div>
 </div>

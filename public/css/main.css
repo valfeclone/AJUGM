@@ -751,6 +751,10 @@ input[type="file"] {
   font-size: 1.4rem !important;
 }
 
+.page--disabled {
+  pointer-events: none;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
