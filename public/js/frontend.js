@@ -37,13 +37,13 @@ $(document).ready(() => {
                     <span class="collapsible__arrow"></span>
                 </button>
                 <div class="collapse" id="collapse${n+1}" data-parent="#accordion">
-                    <input type="text" placeholder="Name" name="member-name-${n+1}" class="input width-60" required>
-                    <input type="text" placeholder="Faculty" name="member-faculty-${n+1}" class="input width-60" required>
-                    <input type="text" placeholder="Major" name="member-major-${n+1}" class="input width-60" required>
+                    <input type="text" placeholder="Name" name="member-name-${n+1}" class="input width-60 no-symbols" required>
+                    <input type="text" placeholder="Faculty" name="member-faculty-${n+1}" class="input width-60 no-symbols" required>
+                    <input type="text" placeholder="Major" name="member-major-${n+1}" class="input width-60 no-symbols" required>
                     <label for="file-upload-${n+1}" class="input width-60 input-file-label">Upload KTM  <span>+</span></label>
-                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload-${n+1}" accept=".jpg,.jpeg,.png">
+                    <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload-${n+1}" class="ktm" accept=".jpg,.jpeg,.png">
                     <input type="email" placeholder="E-mail" name="member-email-${n+1}" class="input width-60" required>
-                    <input type="text" placeholder="Linked In" name="member-linkedin-${n+1}" class="input width-60" required>
+                    <input type="text" placeholder="Linked In" name="member-linkedin-${n+1}" class="input width-60 linkedin" required>
                 </div>
             </div>`);
         n++;
@@ -98,7 +98,7 @@ $(document).ready(() => {
 
         var $competition = $("#select-comp");
         $competition.empty();
-        $competition.append(`<option selected hidden>Competition</option>`);
+        $competition.append(`<option selected hidden value="default">Competition</option>`);
 
         $.each(vals, function(index, value) {
             $competition.append(`<option value="${value}">${value}</option>`);
