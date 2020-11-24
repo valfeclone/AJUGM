@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UploadbuktiController;
 use App\Http\Controllers\UploadFileLombaController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UMKMController;
+use App\Models\umkm;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -128,9 +130,8 @@ Route::post('/buatregister', [ RegisterController::class, "validator" ])
     ->middleware(['guest']);
 
 //buat creative market
-Route::get('/creativemarket', function () {
-    return view("creative_market");
-});
+Route::get('/creativemarket', [ UMKMController::class, "index" ]);
+
 Route::get('/virtualmuseum', function () {
     return view("virtual_museum");
 });
