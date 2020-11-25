@@ -22,11 +22,11 @@
             <form action="#" class="form settings__form" method="#">
             @csrf
 
-                <input type="text" placeholder="Team Name" name="team-name" class="input" required autofocus>
+                <input type="text" placeholder="Team Name" name="team-name" class="input no-symbols" required autofocus>
 
                 <input type="email" placeholder="E-mail" name="email" class="input margin-top-xs" required autofocus>
 
-                <input type="text" placeholder="University" name="university" class="input margin-top-xs" required autofocus>
+                <input type="text" placeholder="University" name="university" class="input margin-top-xs no-symbols" required autofocus>
 
                 <select class="select margin-top-xs" name="select-comp">
                     <option value="Homeless Media">Homeless Media</option>
@@ -47,7 +47,7 @@
                     <option value="Skip Ad">Skip Ad</option>
                 </select>
 
-                <input type="password" placeholder="Password" name="password" class="input margin-top-xs margin-bottom-s" required autofocus>
+                <input type="password" placeholder="Password" name="password" id="password" class="input margin-top-xs margin-bottom-s" required autofocus>
 
                 <p class="status text-regular text-black">Paid / Belum Verifikasi</p>
 
