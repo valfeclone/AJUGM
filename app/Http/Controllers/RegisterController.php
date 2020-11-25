@@ -49,8 +49,7 @@ class RegisterController extends Controller
      */
     protected function validator(Request $request)
     {
-        // ddd($request);
-        $validatedTeam = request()->validate([
+        $validatedTeam = $request->validate([
         'name' => 'required',
         'universitas' => 'required',
         'select-cat' => 'required',
@@ -59,7 +58,7 @@ class RegisterController extends Controller
         'password' => ['required', 'string', 'min:8'],
         ]);
         
-        $validatedMember = request()->validate([
+        $validatedMember = $request->validate([
         'member-name-1' => 'required',
         'member-faculty-1' => 'required',
         'member-major-1' => 'required',
@@ -74,8 +73,8 @@ class RegisterController extends Controller
         $newTeam = User::create([
             'name' => $validatedTeam['name'],
             'universitas' => $validatedTeam['universitas'],
-            'kategori_lomba' => $validatedTeam['select-cat'],
-            'lomba' => $validatedTeam['select-opt'],
+            'kompetisi' => $validatedTeam['select-cat'],
+            'kategori' => $validatedTeam['select-opt'],
             'email' => $validatedTeam['email'],
             'password' => Hash::make($validatedTeam['password']),
             ]);
@@ -89,7 +88,7 @@ class RegisterController extends Controller
             'email' => $validatedMember['member-email-1'],
             'linkedin' => $request['member-linkedin-1'],
             ]);
-                
+        
         $newTeam->ketua_id = $newMember->id;
         $newTeam->save();
         
@@ -101,11 +100,11 @@ class RegisterController extends Controller
         $file->move($tujuan_upload,$file->getClientOriginalName());
         $newMember->path_foto_ktm = $file->getClientOriginalName();
         $newMember->save();
-                
+        
         //bikin logic loop
         for ($x = 2; $x <= 4; $x+=1) {
-            if('member-name-'.$x){
-                $newValidatedMember = request()->validate([
+            if($request['member-name-'.$x]){
+                $newValidatedMember = $request->validate([
                     'member-name-'.$x => 'required',
                     'member-faculty-'.$x => 'required',
                     'member-major-'.$x => 'required',
@@ -135,7 +134,6 @@ class RegisterController extends Controller
                 break;
             }
         }
-                    
-        return($newTeam.$newMember);
+        return redirect(RouteServiceProvider::DASHPESERTA);
     }
 }

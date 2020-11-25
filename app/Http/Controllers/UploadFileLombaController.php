@@ -8,8 +8,8 @@ class UploadFileLombaController extends Controller
 {
 	public function upload(){
 		$user = auth()->user();
-		$lomba = $user->lomba;
-		return view('dashboard_peserta.upload_file')->with('lomba', $lomba);
+		$kategori = $user->kategori;
+		return view('dashboard_peserta.upload_file')->with('kategori', $kategori);
 	}
  
 	public function proses_upload(Request $request){
