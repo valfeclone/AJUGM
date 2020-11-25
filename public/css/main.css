@@ -751,6 +751,10 @@ input[type="file"] {
   font-size: 1.4rem !important;
 }
 
+.page--disabled {
+  pointer-events: none;
+}
+
 .header {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -1329,6 +1333,8 @@ input[type="file"] {
   grid-template-rows: repeat(2, max-content);
   overflow: hidden;
   margin-top: -11rem;
+  margin-left: -1px;
+  z-index: 1;
   background-image: url("/images/market.png");
   background-position: top;
   background-repeat: no-repeat;

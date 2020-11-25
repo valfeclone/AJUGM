@@ -34,10 +34,7 @@
             @endforeach
         </div>
         <div class="pagination">
-            {{$umkms->links()}}
-            <!-- <a href="#" class="page">1</a>
-            <a href="#" class="page page--active">2</a>
-            <a href="#" class="page">3</a> -->
+            {{ $umkms->links('vendor.pagination.custom') }}
         </div>
     </div>
 </div>

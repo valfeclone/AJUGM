@@ -19,7 +19,8 @@
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="/js/frontend.js"></script>
+    <script src="{{ asset('js/frontend.js') }}"></script>
+    <script src="{{ asset('js/validation.js') }}"></script>
 </head>
 <body>
     <div class="app">
@@ -35,10 +36,10 @@
             </div>
             <div class="header__util">
                 @guest
-                <!-- <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a> -->
-
+                <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a>
+                @else
                 <div class="dropdown">
-                    <button class="dropdown-button"><p class="text-bold text-white text-uppercase">Team A</p></a>
+                    <button class="dropdown-button"><p class="text-bold text-white text-uppercase">{{auth()->User()->name}}</p></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-section">
                             <a href="/tim/update" class="dropdown-option">Account</a>
@@ -49,12 +50,13 @@
                             <a href="/uplodcok" class="dropdown-option">Upload Karya</a>
                         </div>
                         <div class="dropdown-section">
-                            <a href="#" class="dropdown-option">Log Out</a>          
+                            <form action="/logout" method="POST">
+                                @csrf
+                            <button class="dropdown-option">Logout</button>
+                            </form>          
                         </div>
                     </div>
                 </div>
-                @else
-                {{auth()->User()->name}}   
                 @endguest
             </div>
         </nav>
