@@ -133,6 +133,7 @@ Route::post('/buatregister', [ RegisterController::class, "validator" ])
 
 //buat creative market
 Route::get('/creativemarket', [ UMKMController::class, "index" ]);
+Route::get('/creativemarket/specific', [ UMKMController::class, "show" ]);
 
 Route::get('/virtualmuseum', function () {
     return view("virtual_museum");
