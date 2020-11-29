@@ -22,8 +22,8 @@ class CreateNewUser implements CreatesNewUsers
         Validator::make($input, [
             'name' => ['required', 'string', 'max:255'],
             'universitas' => ['required', 'string', 'max:255'],
-            'kategori_lomba' => ['required', 'string', 'max:255'],
-            'lomba' => ['required', 'string', 'max:255'],
+            'kompetisi' => ['required', 'string', 'max:255'],
+            'kategori' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
         ])->validate();
@@ -32,8 +32,8 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $input['name'],
             'universitas' => $input['universitas'],
             'email' => $input['email'],
-            'kategori_lomba' => $input['kategori_lomba'],
-            'lomba' => $input['lomba'],
+            'kompetisi' => $input['kompetisi'],
+            'kategori' => $input['kategori'],
             'password' => Hash::make($input['password']),
         ]);
     }

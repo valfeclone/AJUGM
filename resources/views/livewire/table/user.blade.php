@@ -15,13 +15,13 @@
                     Universitas
                     @include('components.sort-icon', ['field' => 'universitas'])
                 </a></th>
-                <th><a wire:click.prevent="sortBy('kategori_lomba')" role="button" href="#">
-                    Kategori Lomba
-                    @include('components.sort-icon', ['field' => 'kategori_lomba'])
+                <th><a wire:click.prevent="sortBy('kompetisi')" role="button" href="#">
+                    Kompetisi
+                    @include('components.sort-icon', ['field' => 'kompetisi'])
                 </a></th>
-                <th><a wire:click.prevent="sortBy('lomba')" role="button" href="#">
-                    Lomba
-                    @include('components.sort-icon', ['field' => 'Lomba'])
+                <th><a wire:click.prevent="sortBy('kategori')" role="button" href="#">
+                    Kategori
+                    @include('components.sort-icon', ['field' => 'kategori'])
                 </a></th>
                 <th><a wire:click.prevent="sortBy('email')" role="button" href="#">
                     Email Ketua Tim
@@ -52,8 +52,8 @@
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->universitas }}</td>
-                    <td>{{ $user->kategori_lomba }}</td>
-                    <td>{{ $user->lomba }}</td>
+                    <td>{{ $user->kompetisi }}</td>
+                    <td>{{ $user->kategori }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
                         <?php if ($user->path_bukti_bayar): ?>

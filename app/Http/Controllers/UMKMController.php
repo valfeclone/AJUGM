@@ -12,4 +12,9 @@ class UMKMController extends Controller
         $umkms=umkm::paginate(10);
         return view('creative_market', compact('umkms'));
     }
+
+    public function show()
+    {
+        return view('specific_creative_market');
+    }
 }

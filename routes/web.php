@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\UploadbuktiController;
 use App\Http\Controllers\UploadFileLombaController;
 use App\Http\Controllers\RegisterController;
@@ -33,6 +34,7 @@ Route::get('/', function () {
 Route::group([ "middleware" => ['auth:admins', 'verified'] ], function () {
     Route::view('/admin/dashboard', "dashboard")->name('admin.dashboard');
     Route::get('/user', [ UserController::class, "index_view" ])->name('user');
+    Route::get('/member', [ MemberController::class, "index_view" ])->name('member');
     Route::view('/user/new', "pages.user.user-new")->name('user.new');
     Route::view('/user/edit/{userId}', "pages.user.user-edit")->name('user.edit');
     Route::post('/admin/verify/{id}', [ UserController::class, "verify_pembayaran" ]);
@@ -131,6 +133,7 @@ Route::post('/buatregister', [ RegisterController::class, "validator" ])
 
 //buat creative market
 Route::get('/creativemarket', [ UMKMController::class, "index" ]);
+Route::get('/creativemarket/specific', [ UMKMController::class, "show" ]);
 
 Route::get('/virtualmuseum', function () {
     return view("virtual_museum");

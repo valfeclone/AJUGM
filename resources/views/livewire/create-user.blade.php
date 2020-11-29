@@ -24,24 +24,24 @@
             </div>
 
             <div class="form-group col-span-6 sm:col-span-5">
-                <x-jet-label for="kategori_lomba" value="{{ __('Kategori Lomba') }}" />
-                <small>Kategori Lomba yang Diikuti</small>
-                <x-jet-input id="kategori_lomba" list="kategori-kategori" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.kategori_lomba" />
-                <datalist id="kategori-kategori">
+                <x-jet-label for="kompetisi_lomba" value="{{ __('Kompetisi') }}" />
+                <small>Kompetisi Lomba yang Diikuti</small>
+                <x-jet-input id="kompetisi_lomba" list="kompetisi-kompetisi" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.kompetisi" />
+                <datalist id="kompetisi-kompetisi">
                     <option value="Arjuna">
                     <option value="Kresna">
                     <option value="Prahasta">
                     <option value="Nakula">
                     <option value="Sadewa">
                 </datalist>
-                <x-jet-input-error for="user.kategori_lomba" class="mt-2" />
+                <x-jet-input-error for="user.kompetisi" class="mt-2" />
             </div>
 
             <div class="form-group col-span-6 sm:col-span-5">
-                <x-jet-label for="lomba" value="{{ __('Lomba') }}" />
-                <small>Lomba yang Diikuti</small>
-                <x-jet-input id="lomba" list="lomba-lomba" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.lomba" />
-                <datalist id="lomba-lomba">
+                <x-jet-label for="kategori" value="{{ __('Kategori Lomba') }}" />
+                <small>Kategori Lomba yang Diikuti</small>
+                <x-jet-input id="kategori" list="kategori-kategori" class="mt-1 block w-full form-control shadow-none" wire:model.defer="user.kategori" />
+                <datalist id="kategori-kategori">
                     <option value="Homeless Media">
                     <option value="Comic Strip">
                     <option value="Podcast">
@@ -59,7 +59,7 @@
                     <option value="Brandbook">
                     <option value="Skip Ad">
                 </datalist>
-                <x-jet-input-error for="user.lomba" class="mt-2" />
+                <x-jet-input-error for="user.kategori" class="mt-2" />
             </div>
 
             <div class="form-group col-span-6 sm:col-span-5">
