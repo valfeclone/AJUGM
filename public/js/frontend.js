@@ -85,14 +85,14 @@ $(document).ready(() => {
     })
 
     // Event listener for dropdown hover
-    $('.dropdown-button--hover').mouseenter(function() {
+    $('.dropdown-button--hover').mouseover(function() {
         $('.dropdown-menu').removeClass('open');
 
         if (!$(this).find('.dropdown-menu').hasClass('open'))
             $(this).find('.dropdown-menu').addClass('open');
     })
 
-    $('.dropdown-button--hover > .dropdown-menu').mouseleave(function() {
+    $('.dropdown-button--hover > .dropdown-menu').mouseout(function() {
         $(this).removeClass('open');
     })
 
