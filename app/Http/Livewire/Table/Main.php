@@ -51,7 +51,24 @@ class Main extends Component
                     ])
                 ];
                 break;
-
+                case 'member':
+                    $members = $this->model::search($this->search)
+                        ->orderBy($this->sortField, $this->sortAsc ? 'asc' : 'desc')
+                        ->paginate($this->perPage);
+    
+                    return [
+                        "view" => 'livewire.table.member',
+                        "members" => $members,
+                        "data" => array_to_object([
+                            'href' => [
+                                'create_new' => '#',
+                                'create_new_text' => 'List Member',
+                                'export' => '#',
+                                'export_text' => 'Export'
+                            ]
+                        ])
+                    ];
+                    break;
             default:
                 # code...
                 break;

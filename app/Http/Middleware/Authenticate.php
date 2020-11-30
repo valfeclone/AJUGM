@@ -23,6 +23,12 @@ class Authenticate extends Middleware
             if(preg_match('/admin\.*/i', $routeName)){
                 return route('admin.login');
             }
+            if(preg_match('/member\.*/i', $routeName)){
+                return route('admin.login');
+            }
+            if(preg_match('/user\.*/i', $routeName)){
+                return route('admin.login');
+            }
         }
         else {
             return route('login');
