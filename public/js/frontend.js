@@ -64,9 +64,36 @@ $(document).ready(() => {
         }
     });
 
+    $("#accordion").bind("DOMSubtreeModified", function() {
+        $('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].name;
+            var labels = document.getElementsByTagName('LABEL');
+    
+            for (var i = 0; i < labels.length; i++) {
+                if (labels[i].htmlFor === e.target.id) {
+                    labels[i].innerHTML = fileName;
+                }
+            }
+        });
+    });
+
     // Event listener for dropdown
     $('.dropdown-button').click(function() {
+        $('.dropdown-menu').removeClass('open');
+        
         $(this).find('.dropdown-menu').toggleClass('open');
+    })
+
+    // Event listener for dropdown hover
+    $('.dropdown-button--hover').mouseenter(function() {
+        $('.dropdown-menu').removeClass('open');
+
+        if (!$(this).find('.dropdown-menu').hasClass('open'))
+            $(this).find('.dropdown-menu').addClass('open');
+    })
+
+    $('.dropdown-button--hover > .dropdown-menu').mouseleave(function() {
+        $(this).removeClass('open');
     })
 
     // Event listener to change the competition dropdown options based on category

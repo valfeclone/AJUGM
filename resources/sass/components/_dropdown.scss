@@ -12,14 +12,32 @@
         }
     }
 
+    &-button--hover {
+        background-color: rgba(255, 255, 255, 0);
+        border: 0;
+        cursor: pointer;
+        position: relative;
+
+        &:focus {
+            outline: none;
+        }
+
+        > .dropdown-menu {
+            position: absolute;
+            bottom: 0;
+            transform: translate(0, .5rem) !important;
+        }
+    }
+
     &-menu {
         position: absolute;
-        transform: translate(-65%, 5%);
+        transform: translate(-68%, .5rem);
+        bottom: 0;
         opacity: 0;
         display: none;
-        width: max-content;
+        width: 15rem;
         height: max-content;
-        padding: 1rem 0;
+        padding: .5rem 0;
         border: 0;
         cursor: initial;
 
@@ -43,7 +61,8 @@
     &-option {
         @extend %utility;
 
-        color: $color-grey;
+        background-color: white;
+        color: $color-grey !important;
         transition: all .2s;
         padding: .8rem 1.6rem;
         cursor: pointer;
@@ -55,4 +74,10 @@
             text-decoration: none;
         }
     }
+}
+
+input.dropdown-option {
+    width: 100%;
+    text-align: left;
+    border: 0;
 }
