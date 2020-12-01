@@ -29,7 +29,7 @@
         <div class="tenant-product tenant-product--1">
             <img src="{{ asset('assets/Group 73.png') }}" class="tenant-product--1__circle"/>
             <div class="media-container">
-                <div class="carousel tenant-product--1__carousel">
+                <div class="slideshow tenant-product--1__carousel">
                     <div class="slideshow-container">
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides tenant-product--1__image" style="display: block">
@@ -70,7 +70,7 @@
 
         <div class="tenant-product tenant-product--2">
             <div class="media-container">
-                <div class="carousel relative">
+                <div class="slideshow relative">
                     <div class="slideshow-container">
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides tenant-product--2__image" style="display: block">
@@ -106,7 +106,7 @@
 
         <div class="tenant-product tenant-product--3">
             <div class="media-container">
-                <div class="carousel relative z-min">
+                <div class="slideshow relative z-min">
                     <div class="slideshow-container z-max">
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides tenant-product--3__image" style="display: block">
@@ -143,7 +143,7 @@
 
         <div class="tenant-product tenant-product--4">
             <div class="media-container">
-                <div class="carousel relative">
+                <div class="slideshow relative">
                     <div class="slideshow-container">
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides tenant-product--4__image" style="display: block">
@@ -179,7 +179,7 @@
 
         <div class="tenant-product tenant-product--5">
             <div class="media-container">
-                <div class="carousel relative z-min">
+                <div class="slideshow relative z-min">
                     <div class="slideshow-container z-max">
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides tenant-product--5__image" style="display: block">
@@ -198,7 +198,7 @@
                     <!-- The dots/circles -->
                     <div style="text-align:center">
                         <span class="dot tenant-product--5__dot active" onclick="currentSlide(1, 5)"></span>
-                        <span class="dot tenant-product--5__dot" onclick="currentSlide(2, 5)"></s5an>
+                        <span class="dot tenant-product--5__dot" onclick="currentSlide(2, 5)"></span>
                         <span class="dot tenant-product--5__dot" onclick="currentSlide(3, 5)"></span>
                     </div>
 
