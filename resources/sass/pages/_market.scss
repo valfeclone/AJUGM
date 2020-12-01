@@ -5,12 +5,11 @@
     grid-template-rows: repeat(2, max-content);
     overflow: hidden;
     margin-top: -11rem;
-    margin-left: -1px;
     z-index: 1;
 
     background-image: url('/images/market.png');
     background-position: top;
-    background-repeat: no-repeat;
+    // background-repeat: no-repeat;
     background-size: contain;
 
 }
