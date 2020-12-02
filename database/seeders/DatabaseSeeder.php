@@ -20,7 +20,9 @@ class DatabaseSeeder extends Seeder
         DB::table('umkms')->insert([
             'name'=>'Berdistraksi',
             'path_photo'=>'images/umkm/berdistraksi.jpg',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.
+            'description'=>'Berdistraksi is a brand that established to accommodate productivity and creativity issues in Indonesia. Delivering ideas about "Everyone can be a creator" and "There is no right and wrong in art" we came out with our main product: DIY Kit Merangkai. We design every aspect in the product to make it as easy as possible to understand and also make it environmentally friendly through the waste management from the waste product.
+            <br><br>
+            We are not just selling DIY Kit, we also sell beaded basic accessories: bag, choker, and bracelet. Because the majority of our market are women, we try to deliver women empowerment campaigns through our collections.
             <br><br>
             Kode Promo : HAVEAWONDERFULDAY',
             'instagram_link'=>'https://www.instagram.com/berdistraksi_____/'
@@ -57,7 +59,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('umkms')->insert([
             'name'=>'Gambarnya Dong Kak',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.
+            'description'=>'Gambarnyadongkak merupakan jasa pembuatan vektor desain wajah dengan harga yang terjangkau dan hasil terbaik. Gambarnyadongkak merupakan alternatif pemberian hadiah, ataupun acara-acara penting bagi orang tersayang.
             <br><br>
             Gunakan kode GAMBARNYADONGKAKDISC akan mendapatkan potongan sebesar 5% disetiap pembelian vector jenis apapun',
             'path_photo'=>'images/umkm/gambarnyadongkak.jpg',
@@ -77,14 +79,16 @@ class DatabaseSeeder extends Seeder
         DB::table('umkms')->insert([
             //masih kosong
             'name'=>'Kanigara Books',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.',
+            'description'=>'Kanigara adalah small business yang bergerak pada bidang office supplies. Kanigara menyediakan buku tulis vintage yang dapat memenuhi kebutuhan produktivitas para konsumen.
+            Kanigara menerima pesanan dalam jumlah besar untuk kebutuhan sovenir wedding, ulang tahun, dan wisuda. Anda dapat mengirimkan custom design anda pada email kami. <br> Kanigara bekerja sama dengan AJISAKA UGM 2020 dan terdapat berlaku diskon sebesar 20% dengan promotion code: KNGR2020 berlaku hanya pada tanggal 26 Desember 2020-31 Januari 2021. <br>
+            Untuk pemesanan dapat melalui <a href="https://msha.ke/kanigara">Link Disini</a>',
             'path_photo'=>'images/umkm/kanigara.jpg',
             'instagram_link'=>'https://www.instagram.com/'
         ]);
         DB::table('umkms')->insert([
             //masih kosong
             'name'=>'Kia.clo',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.',
+            'description'=>'@kia.clo adalah brand pakaian yang menjual produk-produk handmade, yaitu tiedye yang dikemas dalam bentuk piyama, kemeja, celana, ataupun outer. Produk ini dapat dibeli melalui shopee @kia.clo atau WhatsApp.',
             'path_photo'=>'images/umkm/kiaclo.png',
             'instagram_link'=>'https://www.instagram.com/'
         ]);
@@ -136,7 +140,7 @@ class DatabaseSeeder extends Seeder
         DB::table('umkms')->insert([
             //kosong
             'name'=>'Merekat Di Jiwa',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.',
+            'description'=>'Merekat di Jiwa adalah fashion brand yang memiliki tujuan untuk mengeksplorasi tekstil Indonesia dan mengempower pengrajin lokal yang ada di Indonesia dengan konsep play-fair dan sustainable bisnis! Sebagai small brand kami ingin ikut serta dalam event Pasaraya yang akan diselenggarakan oleh Ajisaka UGM! Berikut kami sertakan informasi terkait brand dan product kamiii!',
             'instagram_link'=>'https://www.instagram.com/',
             'path_photo'=>'images/umkm/merekatdijiwa.jpg',
         ]);
@@ -154,9 +158,9 @@ class DatabaseSeeder extends Seeder
         DB::table('umkms')->insert([
             //description sama instagram
             'name'=>'Peculiar Moods',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.
+            'description'=>"Peculiarmoods is an artsy-craftsy business managed by two 'nona' based in Yogyakarta. Established in April 16th, 2019, Peculiarmoods is such a new babyborn excited for another journey ahead. The trigger came when we recognized the lack of artsy local pride among our society. We initiated to provide artsy-cutesy local products with affordable price which later being accepted and got such unexpected responses.  
             <br><br>
-            Kode Unik : PECULIAR1',
+            Kode Unik : PECULIAR1",
             'instagram_link'=>'https://www.instagram.com/',
             'path_photo'=>'images/umkm/peculiarmoods.jpg',
         ]);
