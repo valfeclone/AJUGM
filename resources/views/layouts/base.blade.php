@@ -11,6 +11,9 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -30,8 +33,27 @@
             </a>
             <div class="header__link-box">
                 <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
-                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">Matlom</p></a>
-                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">Events</p></a>
+                <div class="dropdown">
+                    <button class="dropdown-button--hover"><p class="text-bold text-white text-uppercase">Matlom</p></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <a href="#" class="dropdown-option">Arjuna</a>
+                            <a href="#" class="dropdown-option">Kresna</a>
+                            <a href="#" class="dropdown-option">Nakula</a>
+                            <a href="#" class="dropdown-option">Prahasta</a>
+                            <a href="#" class="dropdown-option">Sadewa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropdown-button--hover"><p class="text-bold text-white text-uppercase">Events</p></a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <a href="/creativemarket" class="dropdown-option">Creative Market</a>
+                            <a href="/museum" class="dropdown-option">Museum</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
             </div>
             <div class="header__util">
@@ -52,7 +74,7 @@
                         <div class="dropdown-section">
                             <form action="/logout" method="POST">
                                 @csrf
-                            <button class="dropdown-option">Logout</button>
+                                <input type="submit" class="dropdown-option" value="Log out">
                             </form>          
                         </div>
                     </div>

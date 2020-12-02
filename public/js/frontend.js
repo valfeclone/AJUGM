@@ -64,9 +64,36 @@ $(document).ready(() => {
         }
     });
 
+    $("#accordion").bind("DOMSubtreeModified", function() {
+        $('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].name;
+            var labels = document.getElementsByTagName('LABEL');
+    
+            for (var i = 0; i < labels.length; i++) {
+                if (labels[i].htmlFor === e.target.id) {
+                    labels[i].innerHTML = fileName;
+                }
+            }
+        });
+    });
+
     // Event listener for dropdown
     $('.dropdown-button').click(function() {
+        $('.dropdown-menu').removeClass('open');
+        
         $(this).find('.dropdown-menu').toggleClass('open');
+    })
+
+    // Event listener for dropdown hover
+    $('.dropdown-button--hover').mouseover(function() {
+        $('.dropdown-menu').removeClass('open');
+
+        if (!$(this).find('.dropdown-menu').hasClass('open'))
+            $(this).find('.dropdown-menu').addClass('open');
+    })
+
+    $('.dropdown-button--hover > .dropdown-menu').mouseout(function() {
+        $(this).removeClass('open');
     })
 
     // Event listener to change the competition dropdown options based on category
@@ -113,7 +140,34 @@ $(document).ready(() => {
             $('.register__geometry--circle').addClass('show');
         }
     })
+
+    
 });
+
+// Carousel
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Thumbnail image controls
+function currentSlide(n, carousel) {
+    showSlides(slideIndex = n, carousel);
+}
+
+function showSlides(n, carousel) {
+    var i;
+    var slides = document.getElementsByClassName(`tenant-product--${carousel}__image`);
+    var dots = document.getElementsByClassName(`tenant-product--${carousel}__dot`);
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
 
 $(document).click(function(event){
     var $trigger = $(".dropdown");
