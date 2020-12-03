@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\product;
+use Products;
+use App\Models\umkm;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +18,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        // \App\Models\product::factory(30)->create();
         
         DB::table('umkms')->insert([
             'name'=>'Berdistraksi',
@@ -27,6 +29,77 @@ class DatabaseSeeder extends Seeder
             Kode Promo : HAVEAWONDERFULDAY',
             'instagram_link'=>'https://www.instagram.com/berdistraksi_____/'
             ]);
+        product::create([
+            'name'=>'Iris Bag DIY Kit',
+            'umkm_id'=>umkm::where('name', 'Berdistraksi')->first()->id,
+            'description'=>'Delivering idea about "Everyone can be a creator” we came out with DIY Kit MERANGKAI #1 to make our beaded
+            bag, IRIS BAG. You can see the bag’s model on <a href="https://www.instagram.com/p/CCh-1aeB_jI/?igshid=100an3q4bbv8x">Instagram</a> <br>
+            We design every aspect in the product as easy as possible to understand.
+            <br><br>
+            This DIY kit include <br>
+            1. Beads    <br>
+            2. Clear thread <br>
+            3. Booklet and its QR code for online access <br>
+            4. Stickers
+            <br><br>
+            Varians (10% off discount) : <br>
+            — clear beads : <s>IDR 120.000</s> 108.000<br>
+            — pearl beads : <s>IDR 90.000</s> 81.000<br>
+            — black beads : <s>IDR 100.000</s> 90.000',
+            'path_photo'=>'images/umkm/products/berdistraksi-1.jpg'
+        ]);
+        product::create([
+            'name'=>'4PM Choker',
+            'umkm_id'=>umkm::where('name', 'Berdistraksi')->first()->id,
+            'description'=>"In frame, 4pm Choker<br>
+            It is close to the end, we barely hanging on. Things aren't exactly easy but we always try our best. Grab 4pm choker to
+            accompany your rush hour but keep it fabulous.<br>
+            #IWearWhatIWant
+            <br><br>
+            Materials : Acrylic Beads<br>
+            Color : Brown<br>
+            Price (10% off discount) : <s>IDR 50.000</s> 45.000 ",
+            'path_photo'=>'images/umkm/products/berdistraksi-2.png'
+        ]);
+        product::create([
+            'name'=>'12pm Choker',
+            'umkm_id'=>umkm::where('name', 'Berdistraksi')->first()->id,
+            'description'=>"In frame, 12pm Choker<br>
+            Amidst the chaotic disorganization, 12pm choker bring you a momentary inspiration. Grab your 12pm choker to
+            accompany your day or a gift for your beloved one.<br>
+            #IWearWhatIWant
+            <br><br>
+            Materials : Crystal Dope Beads<br>
+            Color : Lavender Purple<br>
+            Price (10% off discount) : <s>IDR 50.000</s> 45.000 ",
+            'path_photo'=>'images/umkm/products/berdistraksi-3.png'
+        ]);
+        product::create([
+            'name'=>'Silhoutte Bag',
+            'umkm_id'=>umkm::where('name', 'Berdistraksi')->first()->id,
+            'description'=>"In frame, Silhouette Bag<br>
+            Keep it elegant but functional, bring your notebook, pen, lip cream, and ready to go.<br>
+            #IWearWhatIWant
+            <br><br>
+            Materials : Acrylic Beads<br>
+            Color : Black<br>
+            Price (10% off discount) : <s>IDR 250.000</s> 225.000 ",
+            'path_photo'=>'images/umkm/products/berdistraksi-4.png'
+        ]);
+        product::create([
+            'name'=>'Alloy Choker Collection',
+            'umkm_id'=>umkm::where('name', 'Berdistraksi')->first()->id,
+            'description'=>"In frame, Alloy Choker Collection, suit you for date night, party, and formal dinner.<br>
+            An alloy is a combination of metals. This collection consist of two different colour of chokers, clear and silver. It shine and
+            fluorescent but also mechanically strong. It is more like us we are beautiful and strong at the same time, no one can bring
+            you down.
+            <br><br>
+            Available in clear and silver<br>
+            Materials : Crystal Beads<br>
+            Price : IDR 50.000 each<br>
+            Bundling (clear and silver) : <s>IDR 100.000</s> 75.000 ",
+            'path_photo'=>'images/umkm/products/berdistraksi-5.png'
+        ]);
         DB::table('umkms')->insert([
             'name'=>'By Lily',
             'description'=>'By Lily Studio dan By Lily Beauty merupakan sebuah karya dari Priscillia Judithia dibilang kreatif dan kecantikan. By Lily Studio berfokus pada kerajinan tangan kreatif (all handmade stuff), dan By Lily Beauty merupakan line kosmetik dari founder sebagai bentuk kecintaannya terhadap dunia kosmetika. Jika digabungkan nama toko menjadi By Lily Store dengan tagline “made by love” dimana semua produk yang dihasilkan dibuat langsung dari tangan founder dengan sepenuh hati. Melalui perencanaan kurang lebih satu tahun, By Lily Studio dan By Lily Beauty dibuka secara resmi diplatform Instagram maupun e-commerce Shopee pada tanggal 21 Juni 2020
@@ -34,6 +107,62 @@ class DatabaseSeeder extends Seeder
             Kode diskon yang tersedia : PASARAYAXBLS untuk mendapatkan pesanan dengan harga spesial Pasaraya melalui semua platform By Lily Store (Line, Whatsapp, Shopee).',
             'path_photo'=>'images/umkm/bylily.png',
             'instagram_link'=>'https://www.instagram.com/bylilyofficial/'
+        ]);
+        product::create([
+            'name'=>'[By Lily Beauty] stain me 2in1 lip and cheek cream',
+            'umkm_id'=>umkm::where('name', 'By Lily')->first()->id,
+            'description'=>"Merupakan produk 2in1 dimana bias dijadikan sebagai cream blush maupun lipcream.
+            Dengan warna yang pigmented, maka hanya dibutuhkan sedikit produk untuk
+            memakainya.
+            <br><br>
+            Harga : <s>IDR 40.000</s> 38.500<br>
+            Bundle: Rp 60.000",
+            'path_photo'=>'images/umkm/products/bylily-1.jpg'
+        ]);
+        product::create([
+            'name'=>'[By Lily Studio] Gummy Bear Hook Earrings',
+            'umkm_id'=>umkm::where('name', 'By Lily')->first()->id,
+            'description'=>"Aksesoris anting kait yang kekinian dan lucu dengan harga yang terjangkau. Tersedia
+            dalam berbagai warna pelangi, bias sepasang sama warna maupun sepasang campur
+            warna.
+            <br><br>
+            Harga : <s>IDR 25.000</s> 20.000<br>",
+            'path_photo'=>'images/umkm/products/bylily-2.jpg'
+        ]);
+        product::create([
+            'name'=>'[By Lily Studio] Gummy Bear Hoop Earrings',
+            'umkm_id'=>umkm::where('name', 'By Lily')->first()->id,
+            'description'=>"Aksesoris anting tusuk yang lucu dan merupakan model lain dari gummy bear earring
+            sebelumnya. Tersedia dalam warna pelangi (namun saat ini hanya tersedia 4 warna saja
+            seperti digambar).
+            <br><br>
+            Harga : <s>IDR 25.000</s> 20.000<br>",
+            'path_photo'=>'images/umkm/products/bylily-3.jpg'
+        ]);
+        product::create([
+            'name'=>'[By Lily Studio] Polaroid Deco set',
+            'umkm_id'=>umkm::where('name', 'By Lily')->first()->id,
+            'description'=>"Merupakan set foto polaroid (kertas foto biasa maupun kertas polaroid Fujifilm asli)
+            yang didekorasi seunik mungkin sehingga cocok untuk dijadikan hadiah maupun
+            dikoleksi pribadi. Yang menjadikan produk ini special adalah karena dekorasi tidak
+            akan pernah sama dari satu foto dengan foto lain didalam set sehingga pula tidak akan
+            pernah sama dengan set lainnya
+            <br><br>
+            Photo Paper : <s>IDR 25.000</s> 20.000<br>
+            Fujifilm    : <s>IDR 45.000</s> 40.000",
+            'path_photo'=>'images/umkm/products/bylily-4.jpg'
+        ]);
+        product::create([
+            'name'=>'[By Lily Studio] Beads Keyring',
+            'umkm_id'=>umkm::where('name', 'By Lily')->first()->id,
+            'description'=>"Merupakan gantungan kecil yang bias digunakan sebagai (khususnya) gantungan
+            binder, hiasan gantungan tas maupun gantungan kunci. Dibuat khusus untuk pembeli
+            yang menjadikan beads keyring berbeda untuk satu customer ke costumer lainnya.
+            Hanya bisa request nuansa warna yang diinginkan, namun creator akan meminta
+            feedback pembeli (apakah sudah deal atau belum) dengan maksimal 3x revisi.
+            <br><br>
+            Harga : <s>IDR 30.000</s> 28.500",
+            'path_photo'=>'images/umkm/products/bylily-5.jpg'
         ]);
         DB::table('umkms')->insert([
             'name'=>'desoyjoy',
@@ -44,18 +173,91 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/desoyjoy.png',
             'instagram_link'=>'https://www.instagram.com/desoyjoy/'
         ]);
+        product::create([
+            'name'=>'Cat "Felis"',
+            'umkm_id'=>umkm::where('name', 'desoyjoy')->first()->id,
+            'description'=>"Harga Rp 100.000 diskon 5%",
+            'path_photo'=>'images/umkm/products/desoyjoy-1.jpg'
+        ]);
+        product::create([
+            'name'=>'Doggy " Little Canis"',
+            'umkm_id'=>umkm::where('name', 'desoyjoy')->first()->id,
+            'description'=>"harga Rp 100.000 diskon 5%",
+            'path_photo'=>'images/umkm/products/desoyjoy-2.jpg'
+        ]);
+        product::create([
+            'name'=>'Bunga "Sunflower Head"',
+            'umkm_id'=>umkm::where('name', 'desoyjoy')->first()->id,
+            'description'=>"harga Rp 100.000 diskon 5%",
+            'path_photo'=>'images/umkm/products/desoyjoy-3.jpg'
+        ]);
+        product::create([
+            'name'=>'Dino "Claire Dino"',
+            'umkm_id'=>umkm::where('name', 'desoyjoy')->first()->id,
+            'description'=>"harga Rp 100.000 diskon 5%",
+            'path_photo'=>'images/umkm/products/desoyjoy-4.jpg'
+        ]);
         DB::table('umkms')->insert([
             'name'=>'Djoealin',
             'description'=>'Brand (Online Store) yang menjual produk handmade & heartmade aksesoris unik dengan material dari berbagai macam manik-manik yang cantik seperti nostalgia tren pada era 90an.
             <br><br>
-            Find Us on<br>
-            <a href="https://shopee.co.id/drheaky">Shopee</a>
+            Find Us on <a href="https://shopee.co.id/drheaky" style="user-select: none;">Shopee</a>
             <br><br>
             Contact Person<br>
             Thea – 085850711261 (WhatsApp Active)<br>
             Email nurrafa.dhea@gmail.com ',
             'path_photo'=>'images/umkm/djoealin.jpg',
             'instagram_link'=>'https://www.instagram.com/djoealin/'
+        ]);
+        product::create([
+            'name'=>'COLORFUL BEADED STRAP',
+            'umkm_id'=>umkm::where('name', 'Djoealin')->first()->id,
+            'description'=>"Tali manik-manik warna-warni, bisa sebagai tali utk menggantungkan masker atau kacamata dan bisa juga dijadikan kalung ataupun gelang lilit
+            <br><br>
+            IDR 65.000/pcs 
+            <br><br>
+            Beli Colorful Beaded Strap bonus 1 Flotalla Ring (Variasi Random)",
+            'path_photo'=>'images/umkm/products/djoealin-1.jpg'
+        ]);
+        product::create([
+            'name'=>'FLOWER GARDEN RING',
+            'umkm_id'=>umkm::where('name', 'Djoealin')->first()->id,
+            'description'=>"Cincin berbentuk sekumpulan bunga seperti di taman yang terbuat dari manik pasir dan manik batang dengan perpaduan warna pastel yang lembut dan cantik.
+            <br><br>
+            IDR 25.000/pcs
+            <br><br>
+            Bundling IDR 60.000 Beli 3 pcs Flotalla Ring atau Flower Garden Ring (Boleh Mix)",
+            'path_photo'=>'images/umkm/products/djoealin-2.jpg'
+        ]);
+        product::create([
+            'name'=>'Flotalla Ring',
+            'umkm_id'=>umkm::where('name', 'Djoealin')->first()->id,
+            'description'=>"Cincin berbentuk bunga yang terbuat dari manik kristal cantik yang berkilau.
+            <br><br>
+            IDR 25.000/pcs
+            <br><br>
+            Bundling IDR 60.000 Beli 3 pcs Flotalla Ring atau Flower Garden Ring (Boleh Mix)",
+            'path_photo'=>'images/umkm/products/djoealin-3.jpg'
+        ]);
+        product::create([
+            'name'=>'Flotalla Bracelet',
+            'umkm_id'=>umkm::where('name', 'Djoealin')->first()->id,
+            'description'=>"Gelang berbentuk bunga yang terbuat dari manik kristal cantik yang berkilau.
+            <br><br>
+            IDR 55.000/pcs
+            <br><br>
+            Discount 20% Untuk pembelian minimal 2pcs Purple Holo Bracelet atau Flotalla Bracelet",
+            'path_photo'=>'images/umkm/products/djoealin-4.jpg'
+        ]);
+        product::create([
+            'name'=>'Purple Holo Bracelet',
+            'umkm_id'=>umkm::where('name', 'Djoealin')->first()->id,
+            'description'=>"Gelang holo bernuansa ungu yang terbuat dari manik bentuk hati atau bintang dengan kombinasi mutiara berwarna gradasi ungu-silver.
+            <br><br>
+            IDR 45.000/pcs
+            <br><br>
+            Discount 20% Untuk pembelian minimal 2pcs Purple Holo Bracelet atau Flotalla Bracelet",
+            'path_photo'=>'images/umkm/products/djoealin-5.jpg'
         ]);
         DB::table('umkms')->insert([
             'name'=>'Gambarnya Dong Kak',
@@ -67,17 +269,31 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('umkms')->insert([
             'name'=>'Gemash Daily',
-            'description'=>'Gemash Daily. Co adalah sebuah brand celana pendek unisex gemes gituu yang bisa bikin kamu ngerasa makin unch tiap pake celana gemash. Gemash Daily menghadirkan berbagai motif lucu, unik dan menggemashkan biar kamu nggak bosen pake celana yang itu itu aja selama kuliah online di rumah. Dan bikin kamu makin uwu ngadepin tugas-tugas dari dosen. 
-            <br><br>
-            More information 
-            WA : 085157956682 
-            <br><br>
-            Potongan 5% untuk pembelian dengan kode : GEMASHXAJISAKA',
+            'description'=>'.',
             'path_photo'=>'images/umkm/gemashdaily.png',
             'instagram_link'=>'https://www.instagram.com/gemashdaily.co/'
         ]);
+        product::create([
+            'name'=>'Purple Holo Bracelet',
+            'umkm_id'=>umkm::where('name', 'Gemash Daily')->first()->id,
+            'description'=>"Gelang holo bernuansa ungu yang terbuat dari manik bentuk hati atau bintang dengan kombinasi mutiara berwarna gradasi ungu-silver.
+            <br><br>
+            IDR 45.000/pcs
+            <br><br>
+            Discount 20% Untuk pembelian minimal 2pcs Purple Holo Bracelet atau Flotalla Bracelet",
+            'path_photo'=>'images/umkm/products/djoealin-5.jpg'
+        ]);
+        product::create([
+            'name'=>'Purple Holo Bracelet',
+            'umkm_id'=>umkm::where('name', 'Gemash Daily')->first()->id,
+            'description'=>"Gelang holo bernuansa ungu yang terbuat dari manik bentuk hati atau bintang dengan kombinasi mutiara berwarna gradasi ungu-silver.
+            <br><br>
+            IDR 45.000/pcs
+            <br><br>
+            Discount 20% Untuk pembelian minimal 2pcs Purple Holo Bracelet atau Flotalla Bracelet",
+            'path_photo'=>'images/umkm/products/djoealin-5.jpg'
+        ]);
         DB::table('umkms')->insert([
-            //masih kosong
             'name'=>'Kanigara Books',
             'description'=>'Kanigara adalah small business yang bergerak pada bidang office supplies. Kanigara menyediakan buku tulis vintage yang dapat memenuhi kebutuhan produktivitas para konsumen.
             Kanigara menerima pesanan dalam jumlah besar untuk kebutuhan sovenir wedding, ulang tahun, dan wisuda. Anda dapat mengirimkan custom design anda pada email kami. <br> Kanigara bekerja sama dengan AJISAKA UGM 2020 dan terdapat berlaku diskon sebesar 20% dengan promotion code: KNGR2020 berlaku hanya pada tanggal 26 Desember 2020-31 Januari 2021. <br>
@@ -113,7 +329,12 @@ class DatabaseSeeder extends Seeder
         DB::table('umkms')->insert([
             //description kosong
             'name'=>'Made By Tempa',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.
+            'description'=>'MADE BY TEMPA is a creative project of artist TEMPA. With its colorful, graphic-led approach, MADE BY TEMPA takes its cues from pop culture, product design, craft, and the spirit of visual art itself.<br>
+            The brand is MADE FOR EVERYBODY who got the spirit of art as a whole. 
+            <br><br>
+            Play It Heavy And Loud.
+            <br><br>
+            MADE BY TEMPA 
             <br><br>
             Discount 5% selama event berlangsung dengan Kode: MBTXPASARAYA',
             'instagram_link'=>'https://www.instagram.com/madebytempa/',
