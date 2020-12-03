@@ -6,7 +6,7 @@
  
 @section ('content')
 <div class="register">
-    <form method="POST" action="/buatregister" class="register__form" id="theform" enctype="multipart/form-data">
+    <form method="POST" action="/register" class="register__form" id="theform" enctype="multipart/form-data">
         @csrf
         <div class="card card-xl form-card register-main-card">
             <h3 class="subheading text-grey text-uppercase margin-bottom-l align-self-start">Register</h3>

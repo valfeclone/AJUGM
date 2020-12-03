@@ -6,10 +6,14 @@ use Illuminate\Http\Request;
  
 class UploadbuktiController extends Controller
 {
-	public function upload(){
-		return view('dashboard_peserta.upload_bukti');
-	}
+	// public function upload(){
+	// 	return view('dashboard_peserta.upload_bukti');
+	// }
  
+	public function upload(){
+		return view('dashboard_peserta.uplodlagicok');
+	}
+
 	public function proses_upload(Request $request){
 		$this->validate($request, [
 			'file_bukti_pembayaran' => 'required',
@@ -28,6 +32,6 @@ class UploadbuktiController extends Controller
 			$user->save();
 		}
 
-        echo "upload bukti sukses";
+        return redirect('/tim/update')->with('success', 'Upload bukti sukses');
 	}
 }

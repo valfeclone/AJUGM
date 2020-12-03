@@ -56,16 +56,16 @@
                     <td>{{ $user->kategori }}</td>
                     <td>{{ $user->email }}</td>
                     <td>
-                        <?php if ($user->path_bukti_bayar): ?>
-                            <a href="/images/bukti/{{ $user->path_bukti_bayar }}" download>Click to view</a>
-                        <?php else: ?>
+                        @if ($user->path_bukti_bayar)
+                            <a href="/storage/bukti_pembayaran/{{ $user->path_bukti_bayar }}" download>Click to view</a>
+                        @else
                             belum tersedia
-                        <?php endif; ?>
+                        @endif
                     </td>
                     <td>
                         @if ($user->path_file_lomba)
                             @if ($user->lomba !== "Skip Ad" and $user->lomba !== "Film Dokumenter" and $user->lomba !== "Film Fiksi")
-                                <a href="/images/filelomba/{{ $user->path_file_lomba }}" download>Click to view</a>
+                                <a href="storage/file_lomba/{{ $user->path_file_lomba }}" download>Click to view</a>
                             @else
                             <!-- Harus pake https:// -->
                                 <a href="{{ $user->path_file_lomba }}" target="_blank">Click to open file link</a>
@@ -91,11 +91,11 @@
                             @csrf
                             @if ($user->path_bukti_bayar)
                                 @if ($user->validasi_pembayaran == false)
-                                    <button type="submit"><i class="fa fa-16px fa-check text-green-500 mr-3" ></i></button>
+                                    <button title="verifikasi pembayaran" type="submit"><i class="fa fa-16px fa-check text-green-500 mr-3" ></i></button>
                                 @endif
                             @endif
-                            <a role="button" href="/user/edit/{{ $user->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
-                            <a role="button" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
+                            <a role="button" title="edit tim" href="/user/edit/{{ $user->id }}" class="mr-3"><i class="fa fa-16px fa-pen"></i></a>
+                            <a role="button" title="hapus tim" x-on:click.prevent="deleteItem" href="#"><i class="fa fa-16px fa-trash text-red-500"></i></a>
                         </form> 
                     </td>
                 </tr>
