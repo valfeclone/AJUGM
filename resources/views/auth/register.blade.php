@@ -41,7 +41,7 @@
             <img src="/assets/Rectangle 18.png" class="register__geometry--square" alt="">
         </div>
 
-        <div class="card card-xl form-card register-detail-card">
+        <div class="card card-xl form-card register-detail-card"> 
             <div class="register-detail-inputs" id="accordion">
                 <div class="collapsible">
                     <button class="collapsible__button collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">

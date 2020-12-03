@@ -1,0 +1,112 @@
+.tenant-products {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+
+    > *:not(:first-child) {
+        border-top: 1px solid $color-grey;
+    }
+}
+
+.tenant-product {
+   
+    width: 100%;
+    padding: 12rem 0;
+
+    > * {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    &--1 {
+        position: relative;
+        overflow: hidden;
+
+        &__carousel {
+            position: relative;
+
+            & > *:not(:last-child) {
+                z-index: 999;
+            }
+        }
+
+        &__triangle {
+            width: 25rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            transform: translate(-50%, 25%)
+        }
+
+        &__circle {
+            width: 50rem;
+            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translate(35%, 35%);
+        }
+
+        &__red {
+            width: 4rem;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(70%, -60%);
+        }
+    }
+
+    &--2 {
+        overflow: hidden;
+
+        &__circle {
+            width: 12rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(-40%, 30%);
+        }
+    }
+
+    &--3 {
+        overflow: hidden;
+
+        &__triangle {
+            width: 25rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+            transform: translate(55%, -40%)
+        }
+    }
+
+    &--4 {
+        overflow: hidden;
+
+        &__circle {
+            width: 12rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    &--5 {
+        overflow: hidden;
+
+        &__triangle {
+            width: 25rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            transform: translate(50%, 30%)
+        }
+    }
+}

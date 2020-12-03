@@ -290,6 +290,22 @@ body {
   justify-self: flex-end !important;
 }
 
+.relative {
+  position: relative !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.z-max {
+  z-index: 999 !important;
+}
+
+.z-min {
+  z-index: 1 !important;
+}
+
 .link:link,
 .link:visited {
   display: flex;
@@ -629,6 +645,10 @@ input[type="file"] {
   width: max-content;
 }
 
+.cta:hover {
+  text-decoration: none;
+}
+
 .cta--white {
   color: #111111 !important;
   background-color: white !important;
@@ -650,18 +670,34 @@ input[type="file"] {
   outline: none;
 }
 
+.dropdown-button--hover {
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown-button--hover:focus {
+  outline: none;
+}
+
+.dropdown-button--hover > .dropdown-menu {
+  position: absolute;
+  bottom: 0;
+  transform: translate(0, 0.5rem) !important;
+}
+
 .dropdown-menu {
   position: absolute;
-  transform: translate(-65%, 5%);
+  transform: translate(-68%, 0.5rem);
+  bottom: 0;
   opacity: 0;
   display: none;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 15rem;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 1rem 0;
+  padding: .5rem 0;
   border: 0;
   cursor: initial;
 }
@@ -683,7 +719,8 @@ input[type="file"] {
 }
 
 .dropdown-option {
-  color: #858586;
+  background-color: white;
+  color: #858586 !important;
   transition: all .2s;
   padding: .8rem 1.6rem;
   cursor: pointer;
@@ -693,6 +730,12 @@ input[type="file"] {
   background-color: #f1f1f1;
   color: #858586;
   text-decoration: none;
+}
+
+input.dropdown-option {
+  width: 100%;
+  text-align: left;
+  border: 0;
 }
 
 .banner {
@@ -753,6 +796,61 @@ input[type="file"] {
 
 .page--disabled {
   pointer-events: none;
+}
+
+.slideshow {
+  width: 50rem;
+  margin-right: 7rem;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+
+.mySlides {
+  width: 100%;
+  display: none;
+}
+
+.mySlides > img {
+  width: 50rem !important;
+  height: 40rem !important;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 3px;
+  background-color: #EBEBED;
+  border: 1px solid #5d5d5d;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #5d5d5d;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #111111;
 }
 
 .header {
@@ -1105,6 +1203,12 @@ input[type="file"] {
   z-index: -1;
 }
 
+.market-banner__media-heading.adaptive {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .market-banner__geometry--wave {
   width: 22rem;
   position: absolute;
@@ -1121,12 +1225,129 @@ input[type="file"] {
   transform: translate(0, -50%);
 }
 
+.market-banner__geometry--square.adaptive {
+  width: 7rem !important;
+  transform: translate(95%, -60%) !important;
+}
+
 .market-tenants {
   grid-column: 1 / -1;
   width: 100%;
   padding: 5.5rem 15rem;
   margin-top: 1px solid #858586;
   background-color: #EBEBED;
+}
+
+.tenant-products {
+  grid-column: 1 / -1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #EBEBED;
+}
+
+.tenant-products > *:not(:first-child) {
+  border-top: 1px solid #858586;
+}
+
+.tenant-product {
+  width: 100%;
+  padding: 12rem 0;
+}
+
+.tenant-product > * {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.tenant-product--1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.tenant-product--1__carousel {
+  position: relative;
+}
+
+.tenant-product--1__carousel > *:not(:last-child) {
+  z-index: 999;
+}
+
+.tenant-product--1__triangle {
+  width: 25rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: translate(-50%, 25%);
+}
+
+.tenant-product--1__circle {
+  width: 50rem;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(35%, 35%);
+}
+
+.tenant-product--1__red {
+  width: 4rem;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(70%, -60%);
+}
+
+.tenant-product--2 {
+  overflow: hidden;
+}
+
+.tenant-product--2__circle {
+  width: 12rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-40%, 30%);
+}
+
+.tenant-product--3 {
+  overflow: hidden;
+}
+
+.tenant-product--3__triangle {
+  width: 25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate(55%, -40%);
+}
+
+.tenant-product--4 {
+  overflow: hidden;
+}
+
+.tenant-product--4__circle {
+  width: 12rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.tenant-product--5 {
+  overflow: hidden;
+}
+
+.tenant-product--5__triangle {
+  width: 25rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  transform: translate(50%, 30%);
 }
 
 .landing {
@@ -1333,11 +1554,9 @@ input[type="file"] {
   grid-template-rows: repeat(2, max-content);
   overflow: hidden;
   margin-top: -11rem;
-  margin-left: -1px;
   z-index: 1;
   background-image: url("/images/market.png");
   background-position: top;
-  background-repeat: no-repeat;
   background-size: contain;
 }
 

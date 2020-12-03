@@ -21,6 +21,10 @@
             & > img {
                 z-index: -1;
             }
+
+            &.adaptive {
+                width: max-content;
+            }
         }
     }
 
@@ -39,6 +43,11 @@
             right: 0;
             z-index: 1;
             transform: translate(0, -50%);
+
+            &.adaptive {
+                width: 7rem !important;
+                transform: translate(95%, -60%) !important;
+            }
         }
     }
 }

@@ -74,12 +74,24 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/peculiarmoods.jpg',
         ]);
         DB::table('umkms')->insert([
+            'name'=>'Potlot Studio',
+            'path_photo'=>'images/umkm/potlot.jpg',
+        ]);
+        DB::table('umkms')->insert([
             'name'=>'Relaxine',
             'path_photo'=>'images/umkm/relaxine.jpg',
         ]);
         DB::table('umkms')->insert([
             'name'=>'Suns and Sea',
             'path_photo'=>'images/umkm/sunsandsea.png',
+        ]);
+        DB::table('umkms')->insert([
+            'name'=>'Sundara Gonicraft',
+            'path_photo'=>'images/umkm/sundara.jpg',
+        ]);
+        DB::table('umkms')->insert([
+            'name'=>'Veeda',
+            'path_photo'=>'images/umkm/veeda.jpg',
         ]);
         DB::table('umkms')->insert([
             'name'=>'Vert Terre',

@@ -165,3 +165,23 @@
 .justify-self-end {
     justify-self: flex-end !important;
 }
+
+
+// Position
+.relative {
+    position: relative !important;
+}
+
+// Overflow
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+// Z-index
+.z-max {
+    z-index: 999 !important;
+}
+
+.z-min {
+    z-index: 1 !important;
+}
