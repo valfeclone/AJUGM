@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        
         DB::table('umkms')->insert([
             'name'=>'Berdistraksi',
             'path_photo'=>'images/umkm/berdistraksi.jpg',
