@@ -6,12 +6,18 @@ use Illuminate\Http\Request;
  
 class UploadFileLombaController extends Controller
 {
+	// public function upload(){
+	// 	$user = auth()->user();
+	// 	$kategori = $user->kategori;
+	// 	return view('dashboard_peserta.upload_file')->with('kategori', $kategori);
+	// }
+ 
 	public function upload(){
 		$user = auth()->user();
 		$kategori = $user->kategori;
-		return view('dashboard_peserta.upload_file')->with('kategori', $kategori);
+		return view('dashboard_peserta.uplodcok')->with('kategori', $kategori);
 	}
- 
+
 	public function proses_upload(Request $request){
 		$this->validate($request, [
 			'file_lomba' => 'required',
@@ -30,7 +36,7 @@ class UploadFileLombaController extends Controller
 			$user->save();
 		}
 
-        echo "upload file sukses";
+        return redirect('/tim/update')->with('success', 'Upload file sukses');
 	}
 
 	public function proses_upload_link(Request $request){
@@ -44,6 +50,6 @@ class UploadFileLombaController extends Controller
 			$user->save();
 		}
 
-        echo "upload link sukses";
+        return redirect('/tim/update')->with('success', 'Upload file sukses');
 	}
 }

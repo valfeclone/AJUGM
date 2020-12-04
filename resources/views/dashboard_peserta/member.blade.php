@@ -10,10 +10,10 @@
     <div class="card card-xxl form-card settings__form-card">
         <div class="settings__sidebar">
             <ul class="link-item-wrapper">
-                <li><a href="#" class="link-item text-regular">Account</a></li>
-                <li><a href="#" class="link-item text-regular link-item--active">Members</a></li>
-                <li><a href="#" class="link-item text-regular">Bukti Pembayaran</a></li>
-                <li><a href="#" class="link-item text-regular">Upload Karya</a></li>
+                <li><a href="/tim/update" class="link-item text-regular">Account</a></li>
+                <li><a href="/tim/member" class="link-item text-regular link-item--active">Members</a></li>
+                <li><a href="/tim/uploadbukti" class="link-item text-regular">Bukti Pembayaran</a></li>
+                <li><a href="/tim/uploadkarya" class="link-item text-regular">Upload Karya</a></li>
             </ul>
         </div>
         <div class="settings__content">
@@ -47,6 +47,16 @@
             </form>
         </div>
         
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <img src="/assets/Rectangle 18.png" class="settings__geometry--square" alt="">
         <img src="/assets/Ellipse 10.png" class="settings__geometry--circle" alt="">
     </div>
