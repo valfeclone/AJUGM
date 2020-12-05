@@ -28,8 +28,8 @@
 
                     <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required>
 
-                    <label for="file-upload" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
-                    <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
+                    <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
+                    <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
 
                     <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
 
@@ -38,13 +38,13 @@
                 <form action="/tim/uploadlink/proses" class="form settings__form" method="POST" enctype="multipart/form-data">
                     @csrf
 
-                    <label for="file-upload" class="input input-file-label">Upload Karya <span>+</span></label>
+                    <label for="file-upload" class="input">Upload Karya <span>+</span></label>
                     <input type="text" placeholder="Upload Karya" name="link_file_lomba" id="file-upload" required>
 
                     <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required>
 
-                    <!-- <label for="file-upload" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
-                    <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required> -->
+                    <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
+                    <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf">
 
                     <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
 

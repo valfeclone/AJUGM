@@ -31,6 +31,7 @@ class User extends Authenticatable
         'kategori',
         'path_bukti_bayar',
         'path_file_lomba',
+        'path_file_pendukung',
         'email',
         'password',
     ];
@@ -77,6 +78,7 @@ class User extends Authenticatable
 
     public function member()
     {
-        return $this->hasMany('App\Models\Member');
+        return $this->hasMany(Member::class, 'team_id');
+        // return $this->hasMany('App\Models\Member');
     }
 }
