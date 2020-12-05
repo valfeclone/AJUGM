@@ -68,8 +68,8 @@
                             <a href="/tim/member" class="dropdown-option">Team Members</a>
                         </div>
                         <div class="dropdown-section">
-                            <a href="/uplodlagicok" class="dropdown-option">Bukti Pembayaran</a>
-                            <a href="/uplodcok" class="dropdown-option">Upload Karya</a>
+                            <a href="/tim/uploadbukti" class="dropdown-option">Bukti Pembayaran</a>
+                            <a href="/tim/uploadkarya" class="dropdown-option">Upload Karya</a>
                         </div>
                         <div class="dropdown-section">
                             <form action="/logout" method="POST">

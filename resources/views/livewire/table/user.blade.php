@@ -64,7 +64,7 @@
                     </td>
                     <td>
                         @if ($user->path_file_lomba)
-                            @if ($user->lomba !== "Skip Ad" and $user->lomba !== "Film Dokumenter" and $user->lomba !== "Film Fiksi")
+                            @if ($user->lomba == "Skip Ad" and $user->lomba == "Film Dokumenter" and $user->lomba == "Film Fiksi")
                                 <a href="storage/file_lomba/{{ $user->path_file_lomba }}" download>Click to view</a>
                             @else
                             <!-- Harus pake https:// -->
