@@ -11,7 +11,7 @@ class UploadbuktiController extends Controller
 	// }
  
 	public function upload(){
-		return view('dashboard_peserta.uploadfile');
+		return view('dashboard_peserta.uploadbukti');
 	}
 
 	public function proses_upload(Request $request){
