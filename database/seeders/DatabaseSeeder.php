@@ -272,26 +272,6 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/gemashdaily.png',
             'instagram_link'=>'https://www.instagram.com/gemashdaily.co/'
         ]);
-        product::create([
-            'name'=>'Purple Holo Bracelet',
-            'umkm_id'=>umkm::where('name', 'Gemash Daily')->first()->id,
-            'description'=>"Gelang holo bernuansa ungu yang terbuat dari manik bentuk hati atau bintang dengan kombinasi mutiara berwarna gradasi ungu-silver.
-            <br><br>
-            IDR 45.000/pcs
-            <br><br>
-            Discount 20% Untuk pembelian minimal 2pcs Purple Holo Bracelet atau Flotalla Bracelet",
-            'path_photo'=>'images/umkm/products/djoealin-5.jpg'
-        ]);
-        product::create([
-            'name'=>'Purple Holo Bracelet',
-            'umkm_id'=>umkm::where('name', 'Gemash Daily')->first()->id,
-            'description'=>"Gelang holo bernuansa ungu yang terbuat dari manik bentuk hati atau bintang dengan kombinasi mutiara berwarna gradasi ungu-silver.
-            <br><br>
-            IDR 45.000/pcs
-            <br><br>
-            Discount 20% Untuk pembelian minimal 2pcs Purple Holo Bracelet atau Flotalla Bracelet",
-            'path_photo'=>'images/umkm/products/djoealin-5.jpg'
-        ]);
         DB::table('umkms')->insert([
             'name'=>'Kanigara Books',
             'description'=>'Kanigara adalah small business yang bergerak pada bidang office supplies. Kanigara menyediakan buku tulis vintage yang dapat memenuhi kebutuhan produktivitas para konsumen.
