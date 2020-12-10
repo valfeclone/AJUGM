@@ -20,6 +20,10 @@
         margin: 0 auto;
     }
 
+    & .media__content {
+        z-index: 999;
+    }
+
     &--1 {
         position: relative;
         overflow: hidden;
