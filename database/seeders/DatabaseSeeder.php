@@ -359,6 +359,36 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/kanigara.jpg',
             'instagram_link'=>'https://www.instagram.com/'
         ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kanigara Books')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/Kanigara-1.png'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kanigara Books')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/Kanigara-2.png'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kanigara Books')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/Kanigara-3.png'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kanigara Books')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/Kanigara-4.png'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kanigara Books')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/Kanigara-5.png'
+        ]);
         DB::table('umkms')->insert([
             //masih kosong
             'name'=>'Kia.clo',
