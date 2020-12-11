@@ -266,6 +266,40 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/gambarnyadongkak.jpg',
             'instagram_link'=>'https://www.instagram.com/gambarnyadongkak/'
         ]);
+        product::create([
+            'name'=>'BASIC STYLE (untuk 1 wajah atau lebih)',
+            'umkm_id'=>umkm::where('name', 'Gambarnya Dong Kak')->first()->id,
+            'description'=>"vector wajah simple dengan pemakaian warna dasar tetapi di buat lebih soft. Pengerjaan 1-2 hari setelah payment.<br><br>
+            What you get :<br>
+            1. softcopy to your email<br>
+            2. custom size<br>
+            3. High quality desing<br>
+            4. Hard copy ( for request only)<br><br>
+            SIZE :<br>
+            1. 15x20cm (6r)<br>
+            2. 20x25 cm (8r)<br>
+            3. 30x30 cm (recommended)<br><br>
+            Pricelist:<br>
+            1. IDR 35K/Face (half body)<br>
+            2. IDR 40k/Face (fullbody)<br>
+            3. IDR 10K/ Caption(custom)<br>
+            4. IDR 50K/frame and print (by request)<br>",
+            'path_photo'=>'images/umkm/products/GambarnyaDongKak-1.jpg'
+        ]);
+        product::create([
+            'name'=>'FRAMING STYLE (untuk 1 wajah atau lebih)',
+            'umkm_id'=>umkm::where('name', 'Gambarnya Dong Kak')->first()->id,
+            'description'=>"Vector wajah dengan penggunaan water colour dan tekstur, beserta hiasan sehingga menambah kesan manis dan indah. Sangat cocok untuk hadiah. Pengerjaan 2-3 hari setelah payment<br><br>
+            SIZE :<br>
+            1. 15x20cm (6r)<br>
+            2. 20x25 cm (8r)<br>
+            3. 30x30 cm (recommended)<br><br>
+            Pricelist:<br>
+            1. IDR 40k/Face (halbody only)<br>
+            2. IDR 10K/ Caption(custom)<br>
+            3. IDR 50K/frame and print (by request)",
+            'path_photo'=>'images/umkm/products/GambarnyaDongKak-2.jpg'
+        ]);
         DB::table('umkms')->insert([
             'name'=>'Gemash Daily',
             'description'=>'Gemash Daily. Co adalah sebuah brand celana pendek unisex gemes gituu yang bisa bikin kamu ngerasa makin unch tiap pake celana gemash. Gemash Daily menghadirkan berbagai motif lucu, unik dan menggemashkan biar kamu nggak bosen pake celana yang itu itu aja selama kuliah online di rumah. Dan bikin kamu makin uwu ngadepin tugas-tugas dari dosen.
@@ -439,6 +473,56 @@ class DatabaseSeeder extends Seeder
             Discount 5% selama event berlangsung dengan Kode: MBTXPASARAYA',
             'instagram_link'=>'https://www.instagram.com/madebytempa/',
             'path_photo'=>'images/umkm/madebytempa.jpg',
+        ]);
+        product::create([
+            'name'=>'DESERT	SOCK',
+            'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
+            'description'=>"Socks Rajut<br>
+            All	Size<br>
+            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	75.000<br>
+            DISCOUNT	:Rp.	71.250",
+            'path_photo'=>'images/umkm/products/MadebyTempa-1.jpg'
+        ]);
+        product::create([
+            'name'=>'KISS	THE	LIGHT',
+            'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
+            'description'=>"Socks Rajut<br>
+            All	Size<br>
+            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	75.000<br>
+            DISCOUNT	:Rp.	71.250",
+            'path_photo'=>'images/umkm/products/MadebyTempa-2.jpg'
+        ]);
+        product::create([
+            'name'=>'Patch 3',
+            'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
+            'description'=>"Patches<br>
+            11,6cm x 6,7cm dan 8,6cm x 6,6cm<br>
+            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	120.000<br>
+            DISCOUNT	:Rp.	114.000",
+            'path_photo'=>'images/umkm/products/MadebyTempa-3.jpg'
+        ]);
+        product::create([
+            'name'=>'Sankes and Sunn',
+            'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
+            'description'=>"Enamel Pin<br>
+            4cm x 3cm<br>
+            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	70.000<br>
+            DISCOUNT	:Rp.	66.500",
+            'path_photo'=>'images/umkm/products/MadebyTempa-4.jpg'
+        ]);
+        product::create([
+            'name'=>'Heavy and Loud',
+            'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
+            'description'=>"Enamel Pin<br>
+            4cm x 3cm<br>
+            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	70.000<br>
+            DISCOUNT	:Rp.	66.500",
+            'path_photo'=>'images/umkm/products/MadebyTempa-5.jpg'
         ]);
         DB::table('umkms')->insert([
             'name'=>'Magna',
@@ -742,12 +826,67 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('umkms')->insert([
             //description foto
-            'name'=>'Relaxine',
-            'description'=>'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae rerum pariatur, sequi voluptas tempora voluptatem illo unde aperiam numquam mollitia deleniti autem non nam quasi aliquam quisquam vitae assumenda.
+            'name'=>'Relaxine.',
+            'description'=>'New Approach of Beauty<br>
+            Beauty is special because it\'s so personal and can be extremely grounding during times of uncertainty. In Relaxine, we bridge fun and personal narratives to own your daily beauty experience that are fun, easy, imperfect, personal and relaxing.<br>
+            Small things, big purpose. The little things that is often overlooked.<br>
+            While beauty trends, tools and products evolved and contantly change, some words of wisdom have stood to the test of time.<br>
+            Relaxine. was started after going through a year of research. We\'re inspired by colours, little things that made us feel the joy, the hectic busy lifestyle most of us have, and realizing the fact that people love beautiful things. Using a handmade press-on nails is not a culture yet here in Indonesia, but people love cute nails!<br>
+            We had a vision of making a new community-driven beauty space, where we can help to remind people to take a breather amidst the busy and chaotic time we live in. Doing our nails was quite the answer in our heads.<br>
+            Everything has its own momentum.<br>
+            But the economy is not doing well, we don\'t know if people would buy things as trivial as press-on nails in this trying times. Just like everyting worth doing, starting Relaxine. was not an easy task. Failures are bound to happen -- but we\'re grateful for this little community that you and us build together.<br>
+            Nails are the period at the end of the sentence. They complete the look.<br>
+            Our press-on nails are made of high quality components (the brilliant team and the materials). We value sustainability and people driven business, hence our products can be used over and over without damaging the natural nails itself. Plus, it is affordable and good manicures at home is now possible.<br>
+            Lightweight, and indeed very comfortable. You will forget that you\'re wearing a press-on<br><br>
+            Meet the OG!<br>
+            Our original nail designs that are always on a readystock situation<br>
+            All the orders are customizeable<br>
+            We acknowledge that some people have their own style preference, so we accept a customized design orders too!<br>
+            Our Social Media<br>
+            Our medium platform is mainly the social media. These are our social media platforms, where we connect as well as sell our products to the community.<br>
+            Instagram is our main platform to build, engage, and connect Relaxine. with the audience<br>
+            Instagram : __relaxine<br>
+            Visit us on : <a href = "https://relaxine-inc.com/">Relaxine.</a>
             <br><br>
             Kode Promo : RELAXINEDIAJISAKA',
             'instagram_link'=>'https://www.instagram.com/__relaxine/',
             'path_photo'=>'images/umkm/relaxine.jpg',
+        ]);
+        product::create([
+            'name'=>'La Casa',
+            'umkm_id'=>umkm::where('name', 'Relaxine.')->first()->id,
+            'description'=>"Short oval nail shape, with multi-color o tips to give a \"my nails but better\" look and instant comfort<br><br>
+            Our Press On Nails Nails cost 129K/set that includes 1 liquid nail glue, 1 jelly tabs glue, 1 cuticle pusher, 1 nail buffer, 1 instruction card, and 1 alcohol swabs. BUT  for this event, we would like to give a 10K discount for all the attached 5 products. Thus, our price for this event would be 119K.",
+            'path_photo'=>'images/umkm/products/Relaxine-1.jpg'
+        ]);
+        product::create([
+            'name'=>'Milky Dye',
+            'umkm_id'=>umkm::where('name', 'Relaxine.')->first()->id,
+            'description'=>"Coffin nail shape with a pastel tie dye art for a casual and calming look that you won't get enough on staring at.<br><br>
+            Our Press On Nails Nails cost 129K/set that includes 1 liquid nail glue, 1 jelly tabs glue, 1 cuticle pusher, 1 nail buffer, 1 instruction card, and 1 alcohol swabs. BUT  for this event, we would like to give a 10K discount for all the attached 5 products. Thus, our price for this event would be 119K ",
+            'path_photo'=>'images/umkm/products/Relaxine-2.jpg'
+        ]);
+        product::create([
+            'name'=>'The Mood',
+            'umkm_id'=>umkm::where('name', 'Relaxine.')->first()->id,
+            'description'=>"Coffin nail shape with cow prints that will give a pop out on your daily looks!<br><br>
+            Our Press On Nails Nails cost 129K/set that includes 1 liquid nail glue, 1 jelly tabs glue, 1 cuticle pusher, 1 nail buffer, 1 instruction card, and 1 alcohol swabs. BUT  for this event, we would like to give a 10K discount for all the attached 5 products. Thus, our price for this event would be 119K ",
+            'path_photo'=>'images/umkm/products/Relaxine-3.jpg'
+        ]);
+        product::create([
+            'name'=>'Aladdine',
+            'umkm_id'=>umkm::where('name', 'Relaxine.')->first()->id,
+            'description'=>"Pre-fall nails will never go outdated with lilac and a colorful pastel tips.<br>
+            Get the ultimate pastel perfection with the touch of Aladdine.<br><br>
+            Our Press On Nails Nails cost 129K/set that includes 1 liquid nail glue, 1 jelly tabs glue, 1 cuticle pusher, 1 nail buffer, 1 instruction card, and 1 alcohol swabs. BUT  for this event, we would like to give a 10K discount for all the attached 5 products. Thus, our price for this event would be 119K ",
+            'path_photo'=>'images/umkm/products/Relaxine-4.jpg'
+        ]);
+        product::create([
+            'name'=>'The Balance-Thing',
+            'umkm_id'=>umkm::where('name', 'Relaxine.')->first()->id,
+            'description'=>"Combination of curated patterns that act as a mindful expression and a reminder to always be in a balance state whenever we look down.<br><br>
+            Our Press On Nails Nails cost 129K/set that includes 1 liquid nail glue, 1 jelly tabs glue, 1 cuticle pusher, 1 nail buffer, 1 instruction card, and 1 alcohol swabs. BUT  for this event, we would like to give a 10K discount for all the attached 5 products. Thus, our price for this event would be 119K ",
+            'path_photo'=>'images/umkm/products/Relaxine-5.jpg'
         ]);
         DB::table('umkms')->insert([
             'name'=>'Sun Sand Sea',
