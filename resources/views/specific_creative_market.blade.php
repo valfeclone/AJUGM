@@ -142,7 +142,7 @@
                 </div>
                
                 <div class="media__content z-max">
-                    <h4 class="subheading text-uppercase text-black margin-bottom-xs relative width-max z-max">Product Name</h4>
+                    <h4 class="subheading text-uppercase text-black margin-bottom-xs relative width-max">Product Name</h4>
                     <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptate, amet magni dicta doloribus temporibus! Numquam consequatur quia eos quis similique magni aliquid libero molestias?</p>
                     <a href="#" class="link width-max margin-bottom-s"><i class="fab fa-instagram icon"></i></a>
                     <a href="#" class="cta cta--white"><h3 class="text-bold text-grey-dark">Go to Details</h3></a>
@@ -211,11 +211,11 @@
                         <span class="dot tenant-product--5__dot" onclick="currentSlide(3, 5)"></span>
                     </div>
 
-                    <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--5__triangle"/>
+                    <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--5__triangle z-min"/>
                 </div>
                
                 <div class="media__content z-max">
-                    <h4 class="subheading text-uppercase text-black margin-bottom-xs relative width-max z-max">Product Name</h4>
+                    <h4 class="subheading text-uppercase text-black margin-bottom-xs relative width-max">Product Name</h4>
                     <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptate, amet magni dicta doloribus temporibus! Numquam consequatur quia eos quis similique magni aliquid libero molestias?</p>
                     <a href="#" class="link width-max margin-bottom-s"><i class="fab fa-instagram icon"></i></a>
                     <a href="#" class="cta cta--white"><h3 class="text-bold text-grey-dark">Go to Details</h3></a>

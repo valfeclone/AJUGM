@@ -1260,6 +1260,10 @@ input.dropdown-option {
   margin: 0 auto;
 }
 
+.tenant-product .media__content {
+  z-index: 999;
+}
+
 .tenant-product--1 {
   position: relative;
   overflow: hidden;
@@ -1557,6 +1561,7 @@ input.dropdown-option {
   z-index: 1;
   background-image: url("/images/market.png");
   background-position: top;
+  background-repeat: no-repeat;
   background-size: contain;
 }
 
