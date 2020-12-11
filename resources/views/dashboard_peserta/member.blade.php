@@ -19,7 +19,7 @@
         <div class="settings__content">
             <h3 class="heading-3 margin-bottom-s align-self-start text-black">Members</h3>
 
-            <form action="#" class="form settings__form" method="#">
+            <form action="/tim/member" class="form settings__form" method="POST" enctype="multipart/form-data">
             @csrf
 
                 <div class="register-detail-inputs" id="accordion">
@@ -29,13 +29,13 @@
                             <span class="collapsible__arrow"></span>
                         </button>
                         <div class="collapse" id="collapse1" data-parent="#accordion">
-                            <input type="text" placeholder="Name" name="member-name-1" class="input width-60 no-symbols" required>
-                            <input type="text" placeholder="Faculty" name="member-faculty-1" class="input width-60 no-symbols" required>
-                            <input type="text" placeholder="Major" name="member-major-1" class="input width-60 no-symbols" required>
+                            <input type="text" value="{{ $user->member[0]->name }}" placeholder="Name" name="member-name-1" class="input width-60 no-symbols" required>
+                            <input type="text" value="{{ $user->member[0]->fakultas }}" placeholder="Faculty" name="member-faculty-1" class="input width-60 no-symbols" required>
+                            <input type="text" value="{{ $user->member[0]->jurusan }}" placeholder="Major" name="member-major-1" class="input width-60 no-symbols" required>
                             <label for="file-upload-1" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM <span>+</span></label>
-                            <input type="file" placeholder="Upload KTM" name="member-ktm-1" class="ktm" id="file-upload-1" required>
-                            <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60" required>
-                            <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60 linkedin required">
+                            <input type="file" placeholder="Upload KTM" name="member-ktm-1" class="ktm" id="file-upload-1">
+                            <input type="email" value="{{ $user->member[0]->email }}" placeholder="E-mail" name="member-email-1" class="input width-60" required>
+                            <input type="text" value="{{ $user->member[0]->linkedin }}" placeholder="Linked In" name="member-linkedin-1" class="input width-60 linkedin">
                         </div>
                     </div>
                 </div>

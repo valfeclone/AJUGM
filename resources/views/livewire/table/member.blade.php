@@ -41,8 +41,7 @@
         <x-slot name="body">
             @foreach ($members as $member)
                 <tr x-data="window.__controller.dataTableController({{ $member->id }})">
-                    <!-- <td>{{ $member->id }}</td> -->
-                    <td>{{ $member->team_id }}</td>
+                    <td>{{ $member->user->name }}</td>
                     <td>{{ $member->name }}</td>
                     <td>{{ $member->fakultas }}</td>
                     <td>{{ $member->jurusan }}</td>

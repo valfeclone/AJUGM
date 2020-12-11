@@ -84,15 +84,12 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function () {
     Route::get('/tim/update', [ UserController::class, "show_account"]);
     Route::post('/tim/update', [ UserController::class, "updateUser"]);
     
-    //detail tim
-    Route::get('/tim/detail', function(){
-        return view("dashboard_peserta.detailcok");
-    });
-    
     //member tim
     Route::get('/tim/member', function () {
         return view("dashboard_peserta.member");
     });
+    Route::get('/tim/member', [ UserController::class, "show_member"]);
+    Route::post('/tim/member', [ UserController::class, "updateMember"]);
     
     //temporary route demi achong
     Route::get('/detailcok', function () {
