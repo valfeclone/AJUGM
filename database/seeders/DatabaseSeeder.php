@@ -632,6 +632,48 @@ class DatabaseSeeder extends Seeder
             'instagram_link'=>'https://www.instagram.com/',
             'path_photo'=>'images/umkm/merekatdijiwa.jpg',
         ]);
+        product::create([
+            'name'=>'DIZANO',
+            'umkm_id'=>umkm::where('name', 'Merekat Di Jiwa')->first()->id,
+            'description'=>"Handpainted white dots and made from super comfortable rayon, is the best way to express our best seller DIZANO shirt!<br><br>
+            Normal Price: 189.000<br>
+            Promo Price: 175.000",
+            'path_photo'=>'images/umkm/products/MerekatDiJiwa-1.jpg'
+        ]);
+        product::create([
+            'name'=>'NATUNA from #LirikLurikCollection',
+            'umkm_id'=>umkm::where('name', 'Merekat Di Jiwa')->first()->id,
+            'description'=>"Specially made for this tropical weather like in Indonesia! Made from linen combined with lurik from Yogyakarta<br><br>
+            Normal Price: 149.000<br>
+            Promo Price: 140.000<br>
+            Bundling with kelana pants: 310.000",
+            'path_photo'=>'images/umkm/products/MerekatDiJiwa-2.jpeg'
+        ]);
+        product::create([
+            'name'=>'Kelana Pants from #LirikLurikCollection',
+            'umkm_id'=>umkm::where('name', 'Merekat Di Jiwa')->first()->id,
+            'description'=>"Made from linen combined with lurik from Yogyakarta Breathable A line pants that is suitable for any occasions<br><br>
+            Normal Price: 149.000<br>
+            Promo Price: 140.000<br>
+            Bundling with natuna tank: 310.000",
+            'path_photo'=>'images/umkm/products/MerekatDiJiwa-3.jpeg'
+        ]);
+        product::create([
+            'name'=>'ARKANA from our #LirikLurikCollection',
+            'umkm_id'=>umkm::where('name', 'Merekat Di Jiwa')->first()->id,
+            'description'=>"It is made from cotton linen and signature Yogyakarta’s lurik!<br><br>
+            Normal Price: 169.000<br>
+            Promo Price: 149.000",
+            'path_photo'=>'images/umkm/products/MerekatDiJiwa-4.jpeg'
+        ]);
+        product::create([
+            'name'=>'KIYA',
+            'umkm_id'=>umkm::where('name', 'Merekat Di Jiwa')->first()->id,
+            'description'=>"KIYA Shirt is made from cotton linen fabric combined with white stripes Yogyakarta Lurik, it can be wear as a shirt or outer!<br><br>
+            Normal Price: 189.000<br>
+            Promo Price: 169.000",
+            'path_photo'=>'images/umkm/products/MerekatDiJiwa-5.jpeg'
+        ]);
         DB::table('umkms')->insert([
             'name'=>'Mon Cherri',
             'description'=>"Another local brand (online based shop) who creates handmade accessories with love. Prioritizing the quality of materials, affordability of prices, so that all women can appear more colorful nor elegant. #WomenSupportingWomen
