@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -37,8 +38,21 @@ class UserController extends Controller
     {
         $user = auth()->user();
         // return ($user);
-        return view('dashboard_peserta.akun', [
+        return view('dashboard_peserta.update_user', [
             'user' => $user
         ]);
+    }
+
+    public function updateUser(Request $request){
+        $user = auth()->user();
+        if($user){
+            $validated = $request->validate([
+                'name' => 'required',
+                'universitas' => 'required',
+                'email' => 'required',
+            ]);
+            $user->update($validated);
+            return redirect()->back()->with('success', 'Update sukses');
+        }
     }
 }

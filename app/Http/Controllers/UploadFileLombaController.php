@@ -19,7 +19,7 @@ class UploadFileLombaController extends Controller
 	}
 
 	public function proses_upload(Request $request){
-		ddd($request);
+		// ddd($request);
 		$this->validate($request, [
 			'file_lomba' => 'required',
 			'file-pendukung' => 'required',
@@ -35,12 +35,12 @@ class UploadFileLombaController extends Controller
 
 		// menyimpan data file pendukung yang diupload ke variabel $file-pendukung
         $tujuan_pendukung = storage_path('app/public/file_pendukung');
-        $file->move($tujuan_pendukung,$filependukung->getClientOriginalName());
+        $filependukung->move($tujuan_pendukung,$filependukung->getClientOriginalName());
 		
 		$user = auth()->user();
 		if($user) {
 			$user->path_file_lomba = $file->getClientOriginalName();
-			$user->path_file_pendukung = $file->getClientOriginalName();
+			$user->path_file_pendukung = $filependukung->getClientOriginalName();
 			$user->save();
 		}
 
@@ -53,14 +53,17 @@ class UploadFileLombaController extends Controller
 			'file-pendukung' => 'required',
 		]);
 
+	    // menyimpan data file yang diupload ke variabel $file
+	    $filependukung = $request->file('file-pendukung');
+
 		// menyimpan data file pendukung yang diupload ke variabel $file-pendukung
         $tujuan_pendukung = storage_path('app/public/file_pendukung');
-        $file->move($tujuan_pendukung,$filependukung->getClientOriginalName());
+        $filependukung->move($tujuan_pendukung,$filependukung->getClientOriginalName());
 	
 		$user = auth()->user();
 		if($user) {
 			$user->path_file_lomba = $request->link_file_lomba;
-			$user->path_file_pendukung = $file->getClientOriginalName();
+			$user->path_file_pendukung = $filependukung->getClientOriginalName();
 			$user->save();
 		}
 

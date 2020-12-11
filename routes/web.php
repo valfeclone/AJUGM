@@ -79,16 +79,10 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function () {
     Route::get('/tim/uploadkarya', [ UploadFileLombaController::class, "upload" ]);
     Route::post('/tim/uploadkarya', [ UploadFileLombaController::class, "proses_upload" ]);
     Route::post('/tim/uploadlink/proses', [ UploadFileLombaController::class, "proses_upload_link" ]);
-    
-    //dashboard peserta
-    Route::get('/tim', function () {
-        return view('dashboard_peserta.dashpeserta');
-    });
 
     //update detail tim
-    Route::get('/tim/update', function () {
-        return view("dashboard_peserta.update_user");
-    });
+    Route::get('/tim/update', [ UserController::class, "show_account"]);
+    Route::post('/tim/update', [ UserController::class, "updateUser"]);
     
     //detail tim
     Route::get('/tim/detail', function(){
