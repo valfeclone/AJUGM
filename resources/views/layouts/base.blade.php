@@ -50,7 +50,7 @@
                     <div class="dropdown-menu">
                         <div class="dropdown-section">
                             <a href="/creativemarket" class="dropdown-option">Creative Market</a>
-                            <a href="/museum" class="dropdown-option">Museum</a>
+                            <a href="/virtualmuseum" class="dropdown-option">Museum</a>
                         </div>
                     </div>
                 </div>
