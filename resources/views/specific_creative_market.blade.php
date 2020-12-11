@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title') 
-    Creative Market - Tenant A
+    Creative Market - {{$umkm->name}}
 @endsection
 
 @section('content')
@@ -66,14 +66,15 @@
                
                 <div class="media__content">
                     <div class="relative width-max">
-                        <h4 class="subheading text-uppercase text-black margin-bottom-xs relative width-max z-max">{{$product->name}}</h4>
+                        <h4 class="subheading text-uppercase text-black margin-bottom-xs relative width-max z-max">{!!$product->name!!}</h4>
                         @if($loop->index+1==1)
                             <img src="{{ asset('assets/Group 71.png') }}" class="tenant-product--1__red"/>
                         @endif
                     </div>
-                    <p class="text-regular margin-bottom-xs">{!!$product->description!!}</p>
-                    <a href="#" class="link width-max margin-bottom-s"><i class="fab fa-instagram icon"></i></a>
-                    <a href="#" class="cta cta--white"><h3 class="text-bold text-grey-dark">Go to Details</h3></a>
+                    <p class="text-regular margin-bottom-xs" style="text-align: justify;">{!!$product->description!!}</p>
+                    <br>
+                    <!-- <a href="#" class="link width-max margin-bottom-s"><i class="fab fa-instagram icon"></i></a> -->
+                    <a href="{{$umkm->instagram_link}}" class="cta cta--white"><h3 class="text-bold text-grey-dark">Go to Instagram Page</h3></a>
                 </div>
             </div>
         </div>

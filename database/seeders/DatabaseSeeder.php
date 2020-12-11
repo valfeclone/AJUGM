@@ -317,7 +317,7 @@ class DatabaseSeeder extends Seeder
             <br>
             - 3 pcs celana pendek gemash
             <br>
-            - dilengkapi dengan pandemic's starter pack(1 handsannitizer dan 1 daily use mask)
+            -dilengkapi dengan pandemic's starter pack(1 handsannitizer dan 1 daily use mask)
             <br><br>
             Oiya kamu bisa custom isi hampersnya lho, misal mau ditambah makanan atau barang lainnya, langsung kasih tau aja ke admin nya. Akan kami berikan pelayanan terbaik!
             <br>
@@ -328,18 +328,6 @@ class DatabaseSeeder extends Seeder
             'name'=>'Celana Gemash',
             'umkm_id'=>umkm::where('name', 'Gemash Daily')->first()->id,
             'description'=>"Hallo sobat Gemash! Sekarang kamu ga perlu bingung cari celana pendek yang gemash dan bisa bikin kamu makin unch beraktivitas sehari-hari. Karena @gemashdaily.co punya celana yang gemes-gemes yang bisa bikin kamu makin uwu.
-            <br><br>
-            Bahan :
-            <br>
-            - Soft Cotton / cvc
-            <br>
-            All Size
-            <br>
-            👉🏼Panjang Celana +- 40 cm<br>
-            👉🏼Muat sampai 80 Kilogram<br>
-            👉🏼Tingkat kemelaran diameter 110 cm<br>
-            👉🏼Ada 1 Kantong di Kanan<br>
-            👉🏼UNISEX<br>
             <br><br>
             HARGA:<br>
             Beli 1 = 30K<br>
@@ -354,7 +342,9 @@ class DatabaseSeeder extends Seeder
         DB::table('umkms')->insert([
             'name'=>'Kanigara Books',
             'description'=>'Kanigara adalah small business yang bergerak pada bidang office supplies. Kanigara menyediakan buku tulis vintage yang dapat memenuhi kebutuhan produktivitas para konsumen.
-            Kanigara menerima pesanan dalam jumlah besar untuk kebutuhan sovenir wedding, ulang tahun, dan wisuda. Anda dapat mengirimkan custom design anda pada email kami. <br> Kanigara bekerja sama dengan AJISAKA UGM 2020 dan terdapat berlaku diskon sebesar 20% dengan promotion code: KNGR2020 berlaku hanya pada tanggal 26 Desember 2020-31 Januari 2021. <br>
+            Kanigara menerima pesanan dalam jumlah besar untuk kebutuhan sovenir wedding, ulang tahun, dan wisuda. Anda dapat mengirimkan custom design anda pada email kami. 
+            <br><br> 
+            Kanigara bekerja sama dengan AJISAKA UGM 2020 dan terdapat berlaku diskon sebesar 20% dengan promotion code: KNGR2020 berlaku hanya pada tanggal 26 Desember 2020-31 Januari 2021. <br>
             Untuk pemesanan dapat melalui <a href="https://msha.ke/kanigara">Link Disini</a>',
             'path_photo'=>'images/umkm/kanigara.jpg',
             'instagram_link'=>'https://www.instagram.com/'
@@ -453,7 +443,7 @@ class DatabaseSeeder extends Seeder
         product::create([
             'name'=>'Macrame Ukulele Hanger - Mahogra',
             'umkm_id'=>umkm::where('name', 'Macrame')->first()->id,
-            'description'=>"Price : Rp 50.000, disc 5% = Rp 47.500
+            'description'=>"Price : <s>Rp 50.000</s> Rp 47.500
             <br><br>
             Ini dia produk best seller kami, hanger ukulele yang unik. Kami beri nama \"Mahogra\" yang dalam Bahasa Sanskerta artinya \"sangat kuat\". Menggunakan material twisted cotton rope 4mm dan stik kayu jati, berukuran 95 x 15 cm, dapat digunakan untuk ukulele soprano maupun concerto. Daripada ukulelemu tergeletak dan tidak terawat, kamu bisa pakai macrame hanger ini sebagai gantungan ukulele sekaligus membuat ruanganmu tampak lebih estetik!",
             'path_photo'=>'images/umkm/products/Macrame-1.jpg'
@@ -461,7 +451,7 @@ class DatabaseSeeder extends Seeder
         product::create([
             'name'=>'Macrame Coaster Kombinasi',
             'umkm_id'=>umkm::where('name', 'Macrame')->first()->id,
-            'description'=>"Price : Rp 25.000, disc 5% = Rp 23.750
+            'description'=>"Price : Rp <s>25.000</s> Rp 23.750
             <br><br>
             Musim hujan gini enaknya minum kopi atau teh panas sambil Netflix n chill, ya kan? Jangan lupa pakai macrame coaster dari Macrame Njonjae supaya minumanmu tetap hangat. Selain itu coaster ini juga dapat digunakan sebagai properti foto lho. Buat kamu pemilik online shop yuk pakai macrame coaster ini agar foto produkmu makin estetik! Bisa request warna ya! Material twisted cotton rope 4mm, diameter 15 cm include tassel.",
             'path_photo'=>'images/umkm/products/Macrame-2.jpg'
@@ -469,7 +459,7 @@ class DatabaseSeeder extends Seeder
         product::create([
             'name'=>'Macrame Headband One Color',
             'umkm_id'=>umkm::where('name', 'Macrame')->first()->id,
-            'description'=>"Price : Rp 28.000, disc 7% = Rp 26.040
+            'description'=>"Price : <s>Rp 28.000</s> Rp 26.040
             <br><br>
             Aduh, punya bandana tapi nggak estetik banget nih, nggak bisa dipakai buat nongkrong~ Tenang, kami punya macrame headband yang desainnya cantik dan warnanya menggemaskan, cocok buat OOTD. Menggunakan material twisted cotton rope 4mm dan pengait dari karet, sehingga dapat menyesuaikan ukuran kepala. Bisa pilih warna lain selama stok masih ada yaa!",
             'path_photo'=>'images/umkm/products/Macrame-3.jpg'
@@ -477,7 +467,7 @@ class DatabaseSeeder extends Seeder
         product::create([
             'name'=>'Macrame Rainbow Bubble Gum',
             'umkm_id'=>umkm::where('name', 'Macrame')->first()->id,
-            'description'=>"Price : Rp 55.000, disc 5% = Rp 52.250
+            'description'=>"Price : <s>Rp 55.000</s> Rp 52.250
             <br><br>
             Wow gemas sekali warnanya! Cocok digunakan sebagai hiasan dinding kamar anak perempuan, nursery room, buat kado ulang tahun orang tersayang juga lucu banget. Bisa juga digunakan sebagai essential oil diffuser. Materialnya twisted cotton rope 13mm dan 4mm. Ukuran 21 x 25 cm. Yuk dekor ruanganmu dengan macrame rainbow wall hanging ini!",
             'path_photo'=>'images/umkm/products/Macrame-4.jpg'
@@ -485,7 +475,7 @@ class DatabaseSeeder extends Seeder
         product::create([
             'name'=>'Macrame Wall Hanging - Niagara',
             'umkm_id'=>umkm::where('name', 'Macrame')->first()->id,
-            'description'=>"Price : Rp 150.000, disc 7% = Rp 140.000
+            'description'=>"Price : Rp <s>150.000</s> Rp 140.000
             <br><br>
             Dinamakan Niagara karena bentuknya menyerupai tiga air terjun besar. Kombinasi warna yang disusun secara acak tetapi polanya simetris membuat wall hanging ini sangat unik. Menggunakan material twisted cotton rope 4mm, single strand, dan stik kayu jati. Ukuran 78 x 36 cm. Sangat cocok digunakan untuk menghias ruangan yang bertema earth tone. Aesthetic banget kan?",
             'path_photo'=>'images/umkm/products/Macrame-5.jpg'
@@ -575,11 +565,6 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Magna')->first()->id,
             'description'=>"Magna Hair Mask is here to solve your hair problems, with different variants. Magna Hair Mask works by nourishing the hair shaft to the ends to repair split ends and soften hair. Suitable for those of you who have problems with dry, split ends and tend to fall out. If you are a person who frequently dyes, straightens, or perms your hair, Magna Hair Mask can be the best treatment because Magna Hair Mask acts as a deep treatment to repair damaged hair that you experience.",
             'path_photo'=>'images/umkm/products/Magna-2.jpeg'
-        ]);product::create([
-            'name'=>'Grape Hair Mask',
-            'umkm_id'=>umkm::where('name', 'Magna')->first()->id,
-            'description'=>"Magna Hair Mask is here to solve your hair problems, with different variants. Magna Hair Mask works by nourishing the hair shaft to the ends to repair split ends and soften hair. Suitable for those of you who have problems with dry, split ends and tend to fall out. If you are a person who frequently dyes, straightens, or perms your hair, Magna Hair Mask can be the best treatment because Magna Hair Mask acts as a deep treatment to repair damaged hair that you experience.",
-            'path_photo'=>'images/umkm/products/Magna-3.jpeg'
         ]);
         product::create([
             'name'=>'Belgian Chocolate Hair Mask',
@@ -611,48 +596,59 @@ class DatabaseSeeder extends Seeder
             Tengok kerajinan bunga kering Mantrapuspa di galeri Instagram: @mantrapuspa.id. Alamat surel kami: mantrapuspa@gmail.com. May the flowers bloom in your heart!
             <br><br>
             Diskon Khusus Pasaraya Ajisaka<br>
-            - Tiap pembelian journal mendapat bonus 3 pcs pressed flower for journaling (random flower)<br>
-            -	Diskon 5% untuk setiap pembelian jewelry<br>
-            &nbsp&nbsp&nbsp o	Necklace IDR 75.000 >>> IDR 71.200/pcs<br>
-            &nbsp&nbsp&nbsp o	Bracelet IDR 50.000 >>> IDR 47.500/pcs<br>
-            &nbsp&nbsp&nbsp o	Earrings IDR 75.000 >>> IDR 71.200/pair<br>
-            -	Jewelry Bundling Package (varian bebas memilih di galeri Instagram @mantrapuspa.id!)<br>
-            &nbsp&nbsp&nbsp o	Puspita Package: Get 10% discount for 1 necklace + 1 bracelet<br>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp IDR 125.000 >>> IDR 112.500    |     Kode Voucher: PUSPITA<br>
-            &nbsp&nbsp&nbsp o	Kesuma Package: Get 10% discount for 1 pair of earrings + 1 bracelet<br>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp IDR 125.000 >>> IDR 112.500    |     Kode Voucher: KESUMA<br>
-            -	Get 10% discount for each Mini Bouquet in the Tube | IDR 40.000 >>> IDR 36.000",
+            - Diskon 5% untuk setiap pembelian jewelry<br>
+            -Jewelry Bundling Package (varian bebas memilih di Instagram @mantrapuspa.id!)<br>
+            - Puspita Package: Get 10% discount for 1 necklace + 1 bracelet<br>
+              IDR <s>125.000</s> 112.500    |     Kode Voucher: PUSPITA<br>
+            - Kesuma Package: Get 10% discount for 1 pair of earrings + 1 bracelet<br>
+              IDR <s>125.000</s> 112.500    |     Kode Voucher: KESUMA<br>",
             'instagram_link'=>'https://www.instagram.com/mantrapuspa.id/',
             'path_photo'=>'images/umkm/mantrapuspa.png',
         ]);
         product::create([
-            'name'=>'Handmade Journal (Kode Voucher: JURNALMANTRA)',
+            'name'=>'Handmade Journal',
             'umkm_id'=>umkm::where('name', 'Mantra Puspa')->first()->id,
-            'description'=>"Buku catatan buatan tangan dengan ukuran ukuran B6 (14cm x 18cm) dengan 40 lembar kertas bookpaper di dalamnya, dijahit dengan hati-hati 💫 yang bikin istimewa, energi bunga asli tersimpan pada sampulnya. Tenang, sampul buku catatan ini dilapisi plastik tebal transparan untuk mempertahankan keutuhan bunga di dalamnya. Tersedia dalam 2 warna: baby pink dan baby blue, dengan ragam desain sampul edisi terbatas!",
+            'description'=>"Buku catatan buatan tangan dengan ukuran ukuran B6 (14cm x 18cm) dengan 40 lembar kertas bookpaper di dalamnya, dijahit dengan hati-hati 💫 yang bikin istimewa, energi bunga asli tersimpan pada sampulnya. Tenang, sampul buku catatan ini dilapisi plastik tebal transparan untuk mempertahankan keutuhan bunga di dalamnya. Tersedia dalam 2 warna: baby pink dan baby blue, dengan ragam desain sampul edisi terbatas!
+            <br><br>
+            Kode Voucher: JURNALMANTRA
+            <br><br>
+            Tiap pembelian journal mendapat bonus 3 pcs pressed flower for journaling (random flower)",
             'path_photo'=>'images/umkm/products/mantra puspa-1.png'
         ]);
         product::create([
-            'name'=>'Bougainvillea Earrings (Kode Voucher: BUGENVIL)',
+            'name'=>'Bougainvillea Earrings',
             'umkm_id'=>umkm::where('name', 'Mantra Puspa')->first()->id,
-            'description'=>"Mahkota bunga bugenvil asli yang sudah dikeringkan, terabadikan dalam sepasang anting untuk menunjang tampilan eleganmu. Warnanya yang cerah lembut akan menjadikan harimu berbunga. Pembelian dilengkapi pouch silver. Selain berfungsi untuk mewadahi anting-anting agar terlindungi dari goresan, kita juga berkontribusi mengurangi penggunaan plastik sekali pakai lhoo kawan ;)",
+            'description'=>"Price <s>IDR 75.000</s> IDR 71.200/pair<br><br>
+            Mahkota bunga bugenvil asli yang sudah dikeringkan, terabadikan dalam sepasang anting untuk menunjang tampilan eleganmu. Warnanya yang cerah lembut akan menjadikan harimu berbunga. Pembelian dilengkapi pouch silver. Selain berfungsi untuk mewadahi anting-anting agar terlindungi dari goresan, kita juga berkontribusi mengurangi penggunaan plastik sekali pakai lhoo kawan ;)
+            <br><br>
+            Kode Voucher: BUGENVIL",
             'path_photo'=>'images/umkm/products/mantra puspa-2.png'
         ]);
         product::create([
-            'name'=>'Daisy Necklace (Kode Voucher: KALUNGMANTRA)',
+            'name'=>'Daisy Necklace',
             'umkm_id'=>umkm::where('name', 'Mantra Puspa')->first()->id,
-            'description'=>"Bunga daisy asli yang sudah dikeringkan diabadikan dalam sebuah liontin untuk membuat hari-harimu jadi berbunga, dibuat dengan kasih oleh Mantrapuspa. Dihubungkan oleh rantai silver manis sepanjang 20 cm + 5 cm yang dapat diatur, memungkinkan kalungmu tetap on point bagi yang berhijab maupun tidak. Pembelian dilengkapi pouch silver.",
+            'description'=>"Price IDR <s>75.000</s> IDR 71.200/pcs<br><br>
+            Bunga daisy asli yang sudah dikeringkan diabadikan dalam sebuah liontin untuk membuat hari-harimu jadi berbunga, dibuat dengan kasih oleh Mantrapuspa. Dihubungkan oleh rantai silver manis sepanjang 20 cm + 5 cm yang dapat diatur, memungkinkan kalungmu tetap on point bagi yang berhijab maupun tidak. Pembelian dilengkapi pouch silver.
+            <br><br>
+            Kode Voucher: KALUNGMANTRA",
             'path_photo'=>'images/umkm/products/mantra puspa-3.png'
         ]);
         product::create([
-            'name'=>'Flower Bracelet (Kode Voucher: GELANGMANTRA)',
+            'name'=>'Flower Bracelet',
             'umkm_id'=>umkm::where('name', 'Mantra Puspa')->first()->id,
-            'description'=>"Bunga-bunga liar asli—dipetik di tengah perjalanan, entah terencana maupun tidak—diabadikan dalam sebuah mata gelang. Izinkan ia melingkari pergelangan tanganmu, dan menghangatkan hari-harimu! Talinya berupa rantai silver sepanjang 11 cm + 5 cm (dapat diatur). Dilengkapi pouch silver untuk menyimpan kekuatan mantra si bunga.",
+            'description'=>"Price IDR <s>50.000</s> IDR 47.500/pcs<br><br>
+            Bunga-bunga liar asli—dipetik di tengah perjalanan, entah terencana maupun tidak—diabadikan dalam sebuah mata gelang. Izinkan ia melingkari pergelangan tanganmu, dan menghangatkan hari-harimu! Talinya berupa rantai silver sepanjang 11 cm + 5 cm (dapat diatur). Dilengkapi pouch silver untuk menyimpan kekuatan mantra si bunga.
+            <br><br>
+            Kode Voucher: GELANGMANTRA",
             'path_photo'=>'images/umkm/products/mantra puspa-4.png'
         ]);
         product::create([
-            'name'=>'Mini Bouquet in the Tube (Kode Voucher: MINIBOUQUET)',
+            'name'=>'Mini Bouquet in the Tube',
             'umkm_id'=>umkm::where('name', 'Mantra Puspa')->first()->id,
-            'description'=>"Karena bunga mampu berbahasa, kehadirannya sering menjadi tanda apresiasi maupun kasih sayang. Hadiahkan rangkaian baby breath kering dalam tabung untuk mereka yang terkasih, kelak ungkapan kasihmu terkenang selalu. Tabung mika setinggi 20 cm siap untuk melindungi buket bungamu.",
+            'description'=>"Get 10% discount for each Mini Bouquet in the Tube | <s>IDR 40.000</s> IDR 36.000 <br><br>
+            Karena bunga mampu berbahasa, kehadirannya sering menjadi tanda apresiasi maupun kasih sayang. Hadiahkan rangkaian baby breath kering dalam tabung untuk mereka yang terkasih, kelak ungkapan kasihmu terkenang selalu. Tabung mika setinggi 20 cm siap untuk melindungi buket bungamu.
+            <br><br>
+            Kode Voucher: MINIBOUQUET",
             'path_photo'=>'images/umkm/products/mantra puspa-5.png'
         ]);
         DB::table('umkms')->insert([
@@ -722,7 +718,7 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/products/moncherri.id-1.png'
         ]);
         product::create([
-            'name'=>'Silk Cotton Brocade Masks( Start from IDR 8K)',
+            'name'=>'Silk Cotton Brocade Masks (Start from IDR 8K)',
             'umkm_id'=>umkm::where('name', 'Mon Cherri')->first()->id,
             'description'=>"Keep your mask chic! The masks: Made with 3ply fabric, with various fabric and design. Air-blow tested fashionably checked. Shop with code #CherishAjisaka and enjoy 5% discount for your total purchases. (and surprise free gift from us) ",
             'path_photo'=>'images/umkm/products/moncherri.id-2.png'
@@ -740,7 +736,8 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/products/moncherri.id-4.png'
         ]);
         product::create([
-            'name'=>'Beads Strap Masker and Beads Bracelets (start from IDR 12K)',
+            'name'=>'Beads Strap Masker and Beads Bracelets 
+            <br>(start from IDR 12K)',
             'umkm_id'=>umkm::where('name', 'Mon Cherri')->first()->id,
             'description'=>"Shop the trend! The straps for your masks: Made from colourful beads, with custom-able pastels and vibrant colors. Shop with code #CherishAjisaka and enjoy 5% discount for your total purchases. (and surprise free gift from us)",
             'path_photo'=>'images/umkm/products/moncherri.id-5.png'
@@ -871,8 +868,8 @@ class DatabaseSeeder extends Seeder
             Tali kalung bisa di perkecil dan di perbesar
             lingkarnya sehingga memudahkan dalam
             penggunaan kalung tersebut<br><br>
-            ukuran dari kepala kalung sendiri kurang
-            lebi 2,5cm X 4cm",
+            Ukuran dari kepala kalung sendiri kurang
+            lebih 2,5cm X 4cm",
             'path_photo'=>'images/umkm/products/Potlot Studio-3.jpg'
         ]);
         product::create([
@@ -899,25 +896,11 @@ class DatabaseSeeder extends Seeder
         DB::table('umkms')->insert([
             //description foto
             'name'=>'Relaxine.',
-            'description'=>'New Approach of Beauty<br>
-            Beauty is special because it\'s so personal and can be extremely grounding during times of uncertainty. In Relaxine, we bridge fun and personal narratives to own your daily beauty experience that are fun, easy, imperfect, personal and relaxing.<br>
+            'description'=>'Beauty is special because it\'s so personal and can be extremely grounding during times of uncertainty. In Relaxine, we bridge fun and personal narratives to own your daily beauty experience that are fun, easy, imperfect, personal and relaxing.<br>
             Small things, big purpose. The little things that is often overlooked.<br>
             While beauty trends, tools and products evolved and contantly change, some words of wisdom have stood to the test of time.<br>
             Relaxine. was started after going through a year of research. We\'re inspired by colours, little things that made us feel the joy, the hectic busy lifestyle most of us have, and realizing the fact that people love beautiful things. Using a handmade press-on nails is not a culture yet here in Indonesia, but people love cute nails!<br>
             We had a vision of making a new community-driven beauty space, where we can help to remind people to take a breather amidst the busy and chaotic time we live in. Doing our nails was quite the answer in our heads.<br>
-            Everything has its own momentum.<br>
-            But the economy is not doing well, we don\'t know if people would buy things as trivial as press-on nails in this trying times. Just like everyting worth doing, starting Relaxine. was not an easy task. Failures are bound to happen -- but we\'re grateful for this little community that you and us build together.<br>
-            Nails are the period at the end of the sentence. They complete the look.<br>
-            Our press-on nails are made of high quality components (the brilliant team and the materials). We value sustainability and people driven business, hence our products can be used over and over without damaging the natural nails itself. Plus, it is affordable and good manicures at home is now possible.<br>
-            Lightweight, and indeed very comfortable. You will forget that you\'re wearing a press-on<br><br>
-            Meet the OG!<br>
-            Our original nail designs that are always on a readystock situation<br>
-            All the orders are customizeable<br>
-            We acknowledge that some people have their own style preference, so we accept a customized design orders too!<br>
-            Our Social Media<br>
-            Our medium platform is mainly the social media. These are our social media platforms, where we connect as well as sell our products to the community.<br>
-            Instagram is our main platform to build, engage, and connect Relaxine. with the audience<br>
-            Instagram : __relaxine<br>
             Visit us on : <a href = "https://relaxine-inc.com/">Relaxine.</a>
             <br><br>
             Kode Promo : RELAXINEDIAJISAKA',
@@ -971,7 +954,8 @@ class DatabaseSeeder extends Seeder
         product::create([
             'name'=>'Sun Sand Sea Tie Dye T-Shirt',
             'umkm_id'=>umkm::where('name', 'Sun Sand Sea')->first()->id,
-            'description'=>"T-shirt yang diproduksi dengan teknik tie dye serta berbahan Cotton Combed 24s yang relatif tebal tetapi sangat nyaman digunakan. Tie Dye T-shirt Sun Sand Sea dilengkapi dengan sablon brand Sun Sand Sea dengan tinta rubber. Tie Dye T-shirt Sun Sand Sea memiliki bermacam-macam variasi warna, bahkan bahan dasar kaos juga memiliki 4 warna dasar yaitu putih, hitam, biru dongker, dan merah maroon. Tie Dye T-Shirt Sun Sand Sea dijual dengan harga Rp.59.000,- per pcs dan untuk harga diskon menjadi Rp.52.500,- per pcs.",
+            'description'=>"T-shirt yang diproduksi dengan teknik tie dye serta berbahan Cotton Combed 24s yang relatif tebal tetapi sangat nyaman digunakan. Tie Dye T-shirt Sun Sand Sea dilengkapi dengan sablon brand Sun Sand Sea dengan tinta rubber. Tie Dye T-shirt Sun Sand Sea memiliki bermacam-macam variasi warna, bahkan bahan dasar kaos juga memiliki 4 warna dasar yaitu putih, hitam, biru dongker, dan merah maroon. 
+            Tie Dye T-Shirt Sun Sand Sea dijual dengan harga Rp.59.000,- per pcs dan untuk harga diskon menjadi Rp.52.500,- per pcs.",
             'path_photo'=>'images/umkm/products/Sun Sand Sea-1.jpg'
         ]);
         product::create([
@@ -1006,40 +990,35 @@ class DatabaseSeeder extends Seeder
         product::create([
             'name'=>'Anandhita Totebag vol 2 ',
             'umkm_id'=>umkm::where('name', 'Sundara Gonicraft')->first()->id,
-            'description'=>"IDR Rp 80.000,00<br>
-            Diskon 10% 	Rp 72.000,00<br>
+            'description'=>"<s>IDR Rp 80.000,00</s> Rp 72.000,00<br>
             Sebuah totebag ramah lingkungan dari Sundara yang unik, rustic dan ramah lingkungan ini akan memberikan kesan tersendiri bagi pemakainya. Ukuran nya yang cukup besar bisa muat banyak barang, dapat membantu teman-teman yang harus membawa banyak barang tapi tetap ingin terlihat simple. Di kerjakan secara professional dan sepenuh hati serta penggunaan bahan-bahan dan goni pilihan,tas ini memberikan kenyamanan dan nilai estetik bagi para penggunanya.",
             'path_photo'=>'images/umkm/products/Sundara Gonicraft-1.jpg'
         ]);
         product::create([
             'name'=>'Arysakayla Bucket Hat',
             'umkm_id'=>umkm::where('name', 'Sundara Gonicraft')->first()->id,
-            'description'=>"IDR Rp 66.500,00<br>
-            Diskon 10%	Rp 59.850,00<br>
+            'description'=>"<s>IDR Rp 66.500,00</s> Rp 59.850,00<br>
             Alternative baru untuk topi yang kami berikan ini adalah hasil pemanfaatan alam yang kami wujudkan dalam bentuki bucket hat. Dengan memadukan motif pilihan menambah kesan rustic dan unik pada topi ini. Stylish, nyaman dan unik adalah hal yang kami angkat pada setiap produk kami tanpa mengurangi kegunaan dasar nya,begitu pula pada topi ini.",
             'path_photo'=>'images/umkm/products/Sundara Gonicraft-2.jpg'
         ]);
         product::create([
             'name'=>'Arimbi Waist Bag vol 3',
             'umkm_id'=>umkm::where('name', 'Sundara Gonicraft')->first()->id,
-            'description'=>"IDR Rp 78.000,00<br>
-            Diskon 10%	Rp 70.200,00<br>
+            'description'=>"<s>IDR Rp 78.000,00</s> Rp 70.200,00<br>
             Pemanfaatan alam kali ini kami wujudkan dalam bentuk waist bag, tas selempang yang simple dan mudah di bawa kemana-mana, tas jenis ini memiliki cukup banyak peminat karena kepraktisan nya. Maka dari itu kami turut menghadirkan waist bag versi kami yang berbahan dasar dari goni tapi juga kuat. Dengan ukuran yang cukup luas tas ini mampu memuat banyak barang untuk sebuah waist bag, di dukung dengan design unik dan rustic yang kami tampilkan pada produk ini bisa menambah kesan stylish bagi penggunanya.",
             'path_photo'=>'images/umkm/products/Sundara Gonicraft-3.jpg'
         ]);
         product::create([
             'name'=>'Sundara Pouch',
             'umkm_id'=>umkm::where('name', 'Sundara Gonicraft')->first()->id,
-            'description'=>"IDR Rp 35.000,00<br>
-            Diskon 10%	Rp 31.500,00<br>
+            'description'=>"<s>IDR Rp 35.000,00</s> Rp 31.500,00<br>
             Simple,nyaman,mudah dibawa dan stylish adalah poin-poin yang kami munculkan pada produk kali ini. Bagaimana memanfaatkan alam untuk menjadi produk pouch yang simple tapi juga stylish, kami menjawab nya dengan menghadirkan Sundara Pouch. Dengan ukuran yang cukup besar mampu memuat beragam jenis barang. Permukaan yang nyaman di pegang walaupun berbahan dasar goni menjadi bukti bahwa kami selalu memikirkan kenyamanan dalam setiap pembuatan produk kami. Dengan produk-produk ini kami mencoba mengajak teman-teman kaum muda semua untuk menjadi unjung tombak dalam menjaga dan memanfaatkan lingkungan kita.",
             'path_photo'=>'images/umkm/products/Sundara Gonicraft-4.jpg'
         ]);
         product::create([
             'name'=>'Burlap Shoes Sundara',
             'umkm_id'=>umkm::where('name', 'Sundara Gonicraft')->first()->id,
-            'description'=>"IDR Rp 210.000,00<br>
-            Diskon 10%	Rp 189.000,00<br>
+            'description'=>"<s>IDR Rp 210.000,00</s> Rp 189.000,00<br>
             Sepatu termasuk barang yang memiliki permintaan yang cukup tinggi. Terbukti banyak sekali brand-brand lokal maupun luar berlomba-lomba untuk mengeluarkan berbgai jenis dan model sepatu unggulan. Kami ikut serta dalam meramaikan nya dengan mengusung sepatu yang ber material dari alam. Dengan material goni membuat produk kami berbeda dari produk-produk yang ada di pasaran. Model dan bahan yang kami pilih secara selektif juga menjadi nilai tambah pada sepatu ini, selain itu pengerjaan nya masih menggunakan tangan manusia, bisa di katakan sepatu kami 99% hand made ,sehingga setiap sepatu ini adalah hasil kerja keras dan cinta pengerajin yang disalurkan melalui tangan mereka kedalam sepatu ini.",
             'path_photo'=>'images/umkm/products/Sundara Gonicraft-5.jpg'
         ]);
@@ -1139,8 +1118,7 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Weekdays Club')->first()->id,
             'description'=>"“Stay Safe” t-shirt merupakan artikel yang keluar dalam series volume 2 bertajuk “Brave New World”. “Stay Safe” datang untuk menfasilitasi The Weekdays agar selalu nyaman dalam berkegiatan sehari-hari. Dengan bahan cotton combed 30, “Stay Safe” t-shirt diyakini dapat membuat nyaman para penggunanya. “Stay Safe” t-shirt bisa dibeli melalui DM ke @weekdays.club, menghubungi admin melalui Whatsapp, atau melalui akun Shopee WEEKDAYSCLUB. Dapatkan “Stay Safe” t-shirt dengan harga spesial yaitu Rp94.000 hanya di Pasaraya, dengan memasukkan kode “RAYACLUB”. Go get yours!<br><br>
             Harga asli = Rp99.000<br>
-            Harga Pasaraya = Rp94.000<br>
-            Potongan = 5% atau Rp5.000",
+            Harga Pasaraya = Rp94.000",
             'path_photo'=>'images/umkm/products/WeekdaysClub-1.jpg'
         ]);
         product::create([
@@ -1148,8 +1126,7 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Weekdays Club')->first()->id,
             'description'=>"“Brave New World” t-shirt merupakan artikel yang keluar dalam series volume 2 bertajuk “Brave New World”. “Brave New World” datang untuk menfasilitasi The Weekdays agar selalu nyaman dalam berkegiatan sehari-hari. Dengan bahan cotton combed 30, “Brave New World” t-shirt diyakini dapat membuat nyaman para penggunanya. “Brave New World” t-shirt bisa dibeli melalui DM ke @weekdays.club, menghubungi admin melalui Whatsapp, atau melalui akun Shopee WEEKDAYSCLUB. Dapatkan “Stay Safe” t-shirt dengan harga spesial yaitu Rp94.000 hanya di Pasaraya, dengan memasukkan kode “RAYACLUB”. Go get yours!<br><br>
             Harga asli = Rp99.000<br>
-            Harga Pasaraya = Rp94.000<br>
-            Potongan = 5% atau Rp5.000",
+            Harga Pasaraya = Rp94.000",
             'path_photo'=>'images/umkm/products/WeekdaysClub-2.jpg'
         ]);
         product::create([
@@ -1157,8 +1134,7 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Weekdays Club')->first()->id,
             'description'=>"“Demi Sesuap Ilmu dan Koneksi” notebook merupakan artikel lanjutan dari artikel volume 2 dengan tajuk yang sama. Pada produk ini WEEKDAYSCLUB berusaha menangkap isu mengenai masih banyaknya pelajar, mahasiswa, atau pekerja yang masih susah mendapat koneksi internet yang layak, atau dalam metafora “koneksi” dalam hal teman, lingkungan kerja, atau lingkungan pendidikan. Oleh karena itu WEEKDAYSCLUB berusaha menfasilitasi para #PejuangKoneksi tersebut dengan notebook yang multiguna. Dengan bahan cover ivory dan isi bookpaper dengan 40 lembar A5, diharap bisa membantu #PejuangKoneksi menghadapi hari-hari. Notebook ini dibandrol dengan harga spesial yaitu Rp15.000 dengan menyantumkan kode “RAYACLUB”.<br><br>
             Harga asli = Rp17.000<br>
-            Harga Pasaraya = Rp15.000<br>
-            Potongan = 10% atau Rp2.000",
+            Harga Pasaraya = Rp15.000",
             'path_photo'=>'images/umkm/products/WeekdaysClub-3.jpg'
         ]);
         product::create([
@@ -1166,8 +1142,7 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Weekdays Club')->first()->id,
             'description'=>"“Demi Sesuap Ilmu dan Koneksi” fabric mask merupakan artikel lanjutan dari artikel volume 2 dengan tajuk yang sama. Pada produk ini WEEKDAYSCLUB berusaha menangkap isu mengenai masih banyaknya pelajar, mahasiswa, atau pekerja yang masih susah mendapat koneksi internet yang layak, atau dalam metafora “koneksi” dalam hal teman, lingkungan kerja, atau lingkungan pendidikan. Oleh karena itu WEEKDAYSCLUB berusaha menfasilitasi para #PejuangKoneksi tersebut dengan masker yang aman dan nyaman. Dengan bahan satin silk dan katun halus dengan tiga lapis kain, diharap bisa membantu #PejuangKoneksi menghadapi hari-hari. Masker kain ini dibandrol dengan harga spesial yaitu Rp18.000 dengan menyantumkan kode “RAYACLUB”.<br><br>
             Harga asli = Rp20.000<br>
-            Harga Pasaraya = Rp18.000<br>
-            Potongan = 10% atau Rp2.000",
+            Harga Pasaraya = Rp18.000",
             'path_photo'=>'images/umkm/products/WeekdaysClub-4.jpg'
         ]);
         product::create([
@@ -1175,8 +1150,7 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Weekdays Club')->first()->id,
             'description'=>"“Demi Sesuap Ilmu dan Koneksi” mug merupakan artikel lanjutan dari artikel volume 2 dengan tajuk yang sama. Pada produk ini WEEKDAYSCLUB berusaha menangkap isu mengenai masih banyaknya pelajar, mahasiswa, atau pekerja yang masih susah mendapat koneksi internet yang layak, atau dalam metafora “koneksi” dalam hal teman, lingkungan kerja, atau lingkungan pendidikan. Oleh karena itu WEEKDAYSCLUB berusaha menfasilitasi para #PejuangKoneksi tersebut dengan masker yang aman dan nyaman. Dengan bahan satin silk dan katun halus dengan tiga lapis kain, diharap bisa membantu #PejuangKoneksi menghadapi hari-hari. Masker kain ini dibandrol dengan harga spesial yaitu Rp28.500 dengan menyantumkan kode “RAYACLUB”.<br><br>
             Harga asli = Rp30.000<br>
-            Harga Pasaraya = Rp28.500<br>
-            Potongan = 5% atau Rp1.500",
+            Harga Pasaraya = Rp28.500",
             'path_photo'=>'images/umkm/products/WeekdaysClub-5.jpg'
         ]);
         DB::table('umkms')->insert([
