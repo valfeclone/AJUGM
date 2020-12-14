@@ -34,7 +34,7 @@
             <div class="header__link-box">
                 <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
                 <div class="dropdown">
-                    <button class="dropdown-button--hover"><p class="text-bold text-white text-uppercase">Matlom</p></a>
+                    <button class="dropdown-button--hover"><p class="text-bold text-white text-uppercase">Kompetisi</p></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-section">
                             <a href="#" class="dropdown-option">Arjuna</a>
@@ -90,7 +90,7 @@
             </a>
             <div class="header__link-box">
                 <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
-                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Matlom</p></a>
+                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Kompetisi</p></a>
                 <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
                 <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
             </div>
