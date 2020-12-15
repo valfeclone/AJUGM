@@ -24,7 +24,7 @@ class ProductFactory extends Factory
     {
         return [
             'name'=>$this->faker->state,
-            'umkm_id'=>UMKM::factory()->create()->id,
+            'umkm_id'=>UMKM::find(rand(1, 5))->id,
             'description'=>$this->faker->sentence,
             'path_photo'=>'images/tenants-placeholder.jpg',
         ];
