@@ -16,14 +16,14 @@
                             <div class="landing-banner__carousel-text">
                                 <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
                                 <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
-                                <a href="#" class="link"><p class="text-bold text-white">Learn More .</p></a>
+                                <a href="/virtualmuseum" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="landing-banner__carousel-text">
-                                <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
+                                <h1 class="heading-caps text-white margin-bottom-m">Creative Market</h1>
                                 <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
-                                <a href="#" class="link"><p class="text-bold text-white">Learn More .</p></a>
+                                <a href="/creativemarket" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
                         <div class="carousel-item">
