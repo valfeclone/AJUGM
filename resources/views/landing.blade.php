@@ -56,7 +56,7 @@
                 <div class="media__content margin-left-xl">
                     <h3 class="heading-3 text-black text-uppercase landing-about__about-text margin-bottom-s">About Ajisaka</h3>
                     <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo fuga reiciendis maiores temporibus officiis qui corporis sed? Placeat, sit quae odit sequi aperiam aut. Doloribus obcaecati sunt perferendis nam asperiores dolores eos repellendus.</p>
-                    <a href="#" class="link align-self-start"><h3 class="heading-3 text-black">Learn more .</h3></a>
+                    <a href="/about" class="link align-self-start"><h3 class="heading-3 text-black">Learn more .</h3></a>
                 </div>
             </div>
             <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">
@@ -67,16 +67,52 @@
             <div class="landing-matlom__content">
                 <h2 class="heading-2 text-black text-uppercase margin-bottom-l">Mata Lomba Ajisaka</h2>
                 <div class="card-wrapper card-wrapper--grid-m">
-                    @for ($i = 0; $i < 6; $i++)
+                    
                     <div class="card card-m">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
-                        <p class="text-bold margin-bottom-xs">Great UI kit</p>
+                        <p class="text-bold margin-bottom-xs">Arjuna</p>
                         <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
-                        <a href="#" class="link"><p class="text-bold text-black">Learn more .</p></a>
+                        <a href="/kompetisi/arjuna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
-                    @endfor
+
+                    <div class="card card-m">
+                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
+                        <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div>
+                        <p class="text-bold margin-bottom-xs">Kresna</p>
+                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <a href="/kompetisi/kresna" class="link"><p class="text-bold text-black">Learn more .</p></a>
+                    </div>
+
+                    <div class="card card-m">
+                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
+                        <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div>
+                        <p class="text-bold margin-bottom-xs">Nakula</p>
+                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <a href="/kompetisi/nakula" class="link"><p class="text-bold text-black">Learn more .</p></a>
+                    </div>
+
+                    <div class="card card-m">
+                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
+                        <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div>
+                        <p class="text-bold margin-bottom-xs">Prahasta</p>
+                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <a href="/kompetisi/prahasta" class="link"><p class="text-bold text-black">Learn more .</p></a>
+                    </div>
+
+                    <div class="card card-m">
+                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
+                        <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div>
+                        <p class="text-bold margin-bottom-xs">Sadewa</p>
+                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <a href="/kompetisi/sadewa" class="link"><p class="text-bold text-black">Learn more .</p></a>
+                    </div>
+                    
                 </div>
             </div>
             <img src="/assets/Group 68.png" alt="" class="landing-matlom__geometry--dots">
@@ -88,22 +124,49 @@
             <div class="landing-register__content">
                 <h2 class="heading-2 text-black margin-bottom-l">How to Register?</h2>
                 <div class="card-wrapper--flex margin-bottom-s landing-register__card-wrapper">
-                    @for ($i = 0; $i < 4; $i++)
+                    
                     <div class="card card-s landing-register__card">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-register__card-image margin-bottom-m">
                         </div>
-                        <h3 class="heading-3 text-grey margin-bottom-s">Step {{$i + 1}}</p>
-                        <p class="text-regular">Lorem ipsum dolor sit amet consectetur.</p>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Step 1</p>
+                        <p class="text-regular">Click on Login Button on The Upper Left Corner</p>
+                    </div>
+
+                    <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
+                    <div class="card card-s landing-register__card">
+                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
+                        <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Step 2</p>
+                        <p class="text-regular">If you havent created an account, click register, otherwise, click login.</p>
                     </div>
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
-                    @endfor
+
                     <div class="card card-s landing-register__card">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-register__card-image margin-bottom-m">
                         </div>
-                        <h3 class="heading-3 text-grey margin-bottom-s">Step {{$i + 1}}</p>
-                        <p class="text-regular">Lorem ipsum dolor sit amet consectetur.</p>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Step 3</p>
+                        <p class="text-regular">Enter your team and your member credentials.</p>
+                    </div>
+                    <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
+
+                    <div class="card card-s landing-register__card">
+                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
+                        <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Step 4</p>
+                        <p class="text-regular">Pay the amount required to the listed available accounts.</p>
+                    </div>
+                    <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
+                    
+                    <div class="card card-s landing-register__card">
+                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
+                        <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Step 5</p>
+                        <p class="text-regular">Upload your work and hope for the best!</p>
                     </div>
                     <img src="/assets/Path 57.png" alt="" class="landing-register__geometry--boxes">
                 </div>
