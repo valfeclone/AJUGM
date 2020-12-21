@@ -32,16 +32,16 @@
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
             <div class="header__link-box">
-                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
+                <a href="/about" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
                 <div class="dropdown">
                     <button class="dropdown-button--hover"><p class="text-bold text-white text-uppercase">Kompetisi</p></a>
                     <div class="dropdown-menu">
                         <div class="dropdown-section">
-                            <a href="#" class="dropdown-option">Arjuna</a>
-                            <a href="#" class="dropdown-option">Kresna</a>
-                            <a href="#" class="dropdown-option">Nakula</a>
-                            <a href="#" class="dropdown-option">Prahasta</a>
-                            <a href="#" class="dropdown-option">Sadewa</a>
+                            <a href="/kompetisi/arjuna" class="dropdown-option">Arjuna</a>
+                            <a href="/kompetisi/kresna" class="dropdown-option">Kresna</a>
+                            <a href="/kompetisi/nakula" class="dropdown-option">Nakula</a>
+                            <a href="/kompetisi/prahasta" class="dropdown-option">Prahasta</a>
+                            <a href="/kompetisi/sadewa" class="dropdown-option">Sadewa</a>
                         </div>
                     </div>
                 </div>
@@ -50,11 +50,12 @@
                     <div class="dropdown-menu">
                         <div class="dropdown-section">
                             <a href="/creativemarket" class="dropdown-option">Creative Market</a>
+                            <a href="/webinar" class="dropdown-option">Webinar</a>
                             <a href="/virtualmuseum" class="dropdown-option">Museum</a>
                         </div>
                     </div>
                 </div>
-                <a href="#" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
             </div>
             <div class="header__util">
                 @guest
@@ -89,10 +90,10 @@
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
             <div class="header__link-box">
-                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
-                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Kompetisi</p></a>
-                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
-                <a href="" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
+                <a href="/about" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
+                <a href="/#landing-matlom" class="link-item"><p class="text-bold text-grey text-uppercase">Kompetisi</p></a>
+                <a href="/#" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
             </div>
             <div class="header__util">
                 <p class="text-regular text-grey">&#169;2020-Form | All Rights Reserved</p>

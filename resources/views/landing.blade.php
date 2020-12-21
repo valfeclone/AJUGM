@@ -63,7 +63,7 @@
             <img src="/assets/Group 73.png" alt="" class="landing-about__geometry--white-circle">
         </section>
 
-        <section class="landing-matlom">
+        <section class="landing-matlom" id="landing-matlom">
             <div class="landing-matlom__content">
                 <h2 class="heading-2 text-black text-uppercase margin-bottom-l">Mata Lomba Ajisaka</h2>
                 <div class="card-wrapper card-wrapper--grid-m">
