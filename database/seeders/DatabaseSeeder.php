@@ -386,6 +386,36 @@ class DatabaseSeeder extends Seeder
             'path_photo'=>'images/umkm/kiaclo.png',
             'instagram_link'=>'https://www.instagram.com/'
         ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kia.clo')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/kiaclo-1.jpg'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kia.clo')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/kiaclo-2.jpg'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kia.clo')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/kiaclo-3.jpg'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kia.clo')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/kiaclo-4.jpg'
+        ]);
+        product::create([
+            'name'=>'',
+            'umkm_id'=>umkm::where('name', 'Kia.clo')->first()->id,
+            'description'=>"",
+            'path_photo'=>'images/umkm/products/kiaclo-5.jpg'
+        ]);
         DB::table('umkms')->insert([
             'name'=>'Langitsoremu.co',
             'description'=>"Langitsoremu merupakan small creative business yang berdiri sejak tahun 2019. Nama brand ini terinspirasi dari indahnya langit sore yang selalu owner lihat dari jendela kereta commuter line saat sepulang kuliah. Seluruh desain orisinil pada produk Langitsoremu digambar secara digital oleh founder Langitsoremu yaitu @shafarizqitha. Kalian dapat terus mengikuti update-an karya dan produk terbaru kami, dengan cara follow instagram kami @langitsoremu.co!
