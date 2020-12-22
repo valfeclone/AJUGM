@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title') 
-    Creative Market - {{$umkm->name}}
+    Ajisaka | Creative Market - {{$umkm->name}}
 @endsection
 
 @section('content')

@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title')
-    Settings | Member
+    Ajisaka | Members Settings
 @endsection
 
 @section ('content')

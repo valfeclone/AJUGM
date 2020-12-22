@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title')
-    Home
+    Ajisaka | Home
 @endsection
 
 @section('content')

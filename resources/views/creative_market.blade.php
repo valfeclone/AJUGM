@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title') 
-    Creative Market
+    Ajisaka | Creative Market
 @endsection
 
 @section('content')

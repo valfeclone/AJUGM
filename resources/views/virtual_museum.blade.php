@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title') 
-    Virtual Museum
+    Ajisaka | Virtual Museum
 @endsection
 
 @section('content')
