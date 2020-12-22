@@ -54,7 +54,7 @@
                         <input type="text" placeholder="Major" name="member-major-1" class="input width-60 no-symbols" required>
                         <label for="file-upload-1" class="input width-60 input-file-label">Upload KTM <span>+</span></label>
                         <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload-1" class="ktm" accept=".jpg,.jpeg,.png">
-                        <input type="email" placeholder="E-mail" name="member-email-1" class="input width-60" required>
+                        <input type="email" placeholder="Same as team E-Mail" name="member-email-1" class="input width-60" disabled>
                         <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60 linkedin" required>
                     </div>
                 </div>

@@ -90,17 +90,6 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function () {
     });
     Route::get('/tim/member', [ UserController::class, "show_member"]);
     Route::post('/tim/member', [ UserController::class, "updateMember"]);
-    
-    //temporary route demi achong
-    Route::get('/detailcok', function () {
-        return view("dashboard_peserta.detailcok");
-    });
-    Route::get('/uplodcok', function () {
-        return view("dashboard_peserta.uplodcok");
-    });
-    Route::get('/uplodlagicok', function () {
-        return view("dashboard_peserta.uplodlagicok");
-    });
 });
 
 //artstep
