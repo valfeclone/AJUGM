@@ -15,22 +15,15 @@
                         <div class="carousel-item active">
                             <div class="landing-banner__carousel-text">
                                 <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
-                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
+                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Sebagai bentuk apresiasi terhadap karya peserta, seluruh output kreatif akan dipamerkan melalui ekshibisi online. Festival Ajisaka 2020+ mengambil konsep 3D, di mana pengunjung dapat menghadiri ekshibisi selayaknya menjelajahi musem sungguhan. Rasakan sensasi berbeda mengunjungi <i>creative museum</i> dalam bentuk digital!</p>
                                 <a href="/virtualmuseum" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="landing-banner__carousel-text">
                                 <h1 class="heading-caps text-white margin-bottom-m">Creative Market</h1>
-                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
+                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Pasaraya merupakan festival belanja online yang merupakan salah satu kontribusi Festival Ajisaka 2020+ untuk membantu UMKM terdampak Covid-19. Festival Ajisaka 2020+ memberikan <i>platform</i> online secara gratis kepada para pemilik <i>creative brand</i> untuk dapat memperluas jangkauan pemasarannya.</p>
                                 <a href="/creativemarket" class="link"><p class="text-bold text-white">Learn More .</p></a>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="landing-banner__carousel-text">
-                                <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
-                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, explicabo! Dolorem soluta facere sit, in accusamus dolores! Ipsam veniam cumque consequatur dolores quibusdam a, magni quia tempore animi, necessitatibus, vel praesentium explicabo. Reiciendis dolores.</p>
-                                <a href="#" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
                     </div>
