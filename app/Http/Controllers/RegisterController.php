@@ -63,7 +63,6 @@ class RegisterController extends Controller
         'member-faculty-1' => 'required',
         'member-major-1' => 'required',
         'member-ktm-1' => 'required',
-        'member-email-1' => ['required', 'string', 'email', 'max:255', 'unique:members,email'],
         ]);
         
         // $strTeam = implode(', ', $validatedTeam);
@@ -85,7 +84,7 @@ class RegisterController extends Controller
             'fakultas' => $validatedMember['member-faculty-1'],
             'jurusan' => $validatedMember['member-major-1'],
             'path_foto_ktm' => $validatedMember['member-ktm-1'],
-            'email' => $validatedMember['member-email-1'],
+            'email' => $validatedTeam['email'],
             'linkedin' => $request['member-linkedin-1'],
             ]);
         
