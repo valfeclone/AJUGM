@@ -26,7 +26,7 @@
                     <label for="file-upload" class="input input-file-label">Upload Karya <span>+</span></label>
                     <input type="file" placeholder="Upload Karya" name="file_lomba" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
 
-                    <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required>
+                    <!-- <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required> -->
 
                     <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
                     <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>

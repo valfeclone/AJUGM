@@ -25,8 +25,14 @@
                 <label for="file-upload" class="input input-file-label" accept=".jpg,.jpeg,.png,.pdf">Upload Pembayaran <span>+</span></label>
                 <input type="file" placeholder="Upload Pembayaran" name="file_bukti_pembayaran" id="file-upload" required>
 
-                <p class="text-regular text-left text-black margin-top-s">Bisa menghubungi contact person di bawah ini:</p>
-                <p class="text-regular text-left text-black">01829172804710437</p>
+                <p class="text-regular text-left text-black margin-top-s" >Untuk pembayaran bisa dilakukan dengan cara mentransfer ke akun dibawah ini :</p>
+                <br>
+                <p class="text-regular text-left text-black">059001019819504
+                <br>
+                BRI / a.n Ni Kadek Ayu Pratiwi
+                <br><br>
+                Harap menuliskan keterangan transaksi sebagai berikut: Nama Tim - Ajisaka
+                </p>
 
                 <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
 
