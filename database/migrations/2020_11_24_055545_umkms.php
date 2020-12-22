@@ -16,6 +16,8 @@ class Umkms extends Migration
         Schema::create('umkms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->text('description')->nullable();
+            $table->text('instagram_link')->nullable();
             $table->string('path_photo');
             $table->timestamps();
         });

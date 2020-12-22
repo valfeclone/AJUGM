@@ -13,8 +13,9 @@ class UMKMController extends Controller
         return view('creative_market', compact('umkms'));
     }
 
-    public function show()
+    public function show(umkm $umkm)
     {
-        return view('specific_creative_market');
+        $products =$umkm->products;
+        return view('specific_creative_market', compact('umkm', 'products'));
     }
 }
