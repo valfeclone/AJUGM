@@ -25,7 +25,7 @@
             @foreach ($user->member as $members)
                 <div class="register-detail-inputs" id="accordion">
                     <div class="collapsible">
-                        <button class="collapsible__button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index+1}}" aria-expanded="true" aria-controls="collapse1">
+                        <button class="collapsible__button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index+1}}" aria-expanded="true" aria-controls="collapse{{$loop->index+1}}">
                             @if($loop->index == 0)
                                 <p class="text-regular text-black">Team Leader</p>
                             @else
@@ -37,7 +37,7 @@
                             <input type="text" value="{{ $members->name }}" placeholder="Name" name="member-name-{{$loop->index+1}}" class="input width-60 no-symbols" required>
                             <input type="text" value="{{ $members->fakultas }}" placeholder="Faculty" name="member-faculty-{{$loop->index+1}}" class="input width-60 no-symbols" required>
                             <input type="text" value="{{ $members->jurusan }}" placeholder="Major" name="member-major-{{$loop->index+1}}" class="input width-60 no-symbols" required>
-                            <label for="file-upload-1" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">Upload KTM <span>+</span></label>
+                            <label for="file-upload-{{$loop->index+1}}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">{{$members->path_foto_ktm}}<span>+</span></label>
                             <input type="file" placeholder="Upload KTM" name="member-ktm-{{$loop->index+1}}" class="ktm" id="file-upload-{{$loop->index+1}}">
                             <input type="email" value="{{ $members->email }}" placeholder="E-mail" name="member-email-{{$loop->index+1}}" class="input width-60" required>
                             <input type="text" value="{{ $members->linkedin }}" placeholder="Linked In" name="member-linkedin-{{$loop->index+1}}" class="input width-60 linkedin">

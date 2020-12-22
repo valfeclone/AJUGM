@@ -8,20 +8,19 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function index_view ()
+    public function index_view()
     {
         return view('pages2.admin.admin-data', [
             'admin' => Admin::class
         ]);
     }
-    public function handleLogin (Request $req)
+    public function handleLogin(Request $req)
     {
         $credentials = $req->only('email', 'password');
         
         if (Auth::guard('admins')->attempt($credentials)) {
-            return redirect()->intended('/admin/dashboard');
-        } 
-        else{
+            return redirect()->intended('/user');
+        } else {
             return back()->withErrors(['field_name' => ['Login Gagal']]);
         }
     }

@@ -43,23 +43,28 @@ class UserController extends Controller
         ]);
     }
 
-    public function updateUser(Request $request){
+    public function updateUser(Request $request)
+    {
         $user = auth()->user();
-        if($user){
+        if ($user) {
             $validated = $request->validate([
                 'name' => 'required',
                 'universitas' => 'required',
-                'email' => 'required',
+                'email' => 'required|email',
+                'select-comp'=>'required',
             ]);
             $user->update($validated);
+            $user->kategori = $validated['select-comp'];
+            $user->save();
             return redirect()->back()->with('success', 'Update sukses');
         }
     }
 
-    public function updateMember(Request $request){
+    public function updateMember(Request $request)
+    {
         // ddd($user->member[0]);
         $user = auth()->user();
-        if($user){
+        if ($user) {
             $validated = $request->validate([
                 'member-name-1' => 'required',
                 'member-faculty-1' => 'required',
@@ -74,20 +79,20 @@ class UserController extends Controller
             $user->member[0]->linkedin = $request['member-linkedin-1'];
             $user->member[0]->save();
 
-            if($request['member-ktm-1']){
+            if ($request['member-ktm-1']) {
                 // define variable buat simpan foto
                 $file = $request->file('member-ktm-1');
                 $tujuan_upload = storage_path('app/public/foto_ktm');
 
                 // menyimpan file foto ktm yang diupload ke variabel $file
-                $file->move($tujuan_upload,$file->getClientOriginalName());
+                $file->move($tujuan_upload, $file->getClientOriginalName());
                 $user->member[0]->path_foto_ktm = $file->getClientOriginalName();
                 $user->member[0]->save();
             }
     
             //bikin logic loop
             for ($x = 2; $x <= 4; $x+=1) {
-                if($request['member-name-'.$x]){
+                if ($request['member-name-'.$x]) {
                     $newValidatedMember = $request->validate([
                         'member-name-'.$x => 'required',
                         'member-faculty-'.$x => 'required',
@@ -95,7 +100,7 @@ class UserController extends Controller
                         'member-email-'.$x => ['required', 'string', 'email', 'max:255'],
                     ]);
                     //member already exist
-                    if($user->member[($x-1)]){
+                    if ($user->member[($x-1)]) {
                         $user->member[($x-1)]->name = $newValidatedMember['member-name-'.$x];
                         $user->member[($x-1)]->fakultas = $newValidatedMember['member-faculty-'.$x];
                         $user->member[($x-1)]->jurusan = $newValidatedMember['member-major-'.$x];
@@ -103,13 +108,13 @@ class UserController extends Controller
                         $user->member[($x-1)]->linkedin = $request['member-linkedin-'.$x];
                         $user->member[($x-1)]->save();
                     
-                        if($request['member-ktm-'.$x]){
+                        if ($request['member-ktm-'.$x]) {
                             // define variable buat simpan foto
                             $file = $request->file('member-ktm-'.$x);
                             $tujuan_upload = storage_path('app/public/foto_ktm');
                         
                             // menyimpan file foto ktm yang diupload ke variabel $file
-                            $file->move($tujuan_upload,$file->getClientOriginalName());
+                            $file->move($tujuan_upload, $file->getClientOriginalName());
                             $user->member[($x-1)]->path_foto_ktm = $file->getClientOriginalName();
                             $user->member[($x-1)]->save();
                         }
@@ -136,8 +141,7 @@ class UserController extends Controller
                     //     $newMember2->path_foto_ktm = $file2->getClientOriginalName();
                     //     $newMember2->save();
                     // }
-                }
-                else{
+                } else {
                     break;
                 }
             }

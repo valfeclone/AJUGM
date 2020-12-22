@@ -29,22 +29,22 @@
                     <input type="text" value="{{$user->universitas}}" placeholder="Universitas" name="universitas" class="input margin-top-xs no-symbols" required autofocus>
 
                     <select class="select margin-top-xs" name="select-comp">
-                        <option value="Homeless Media">Homeless Media</option>
-                        <option value="Comic Strip">Comic Strip</option>
-                        <option value="Podcast">Podcast</option>
-                        <option value="Film Fiksi">Film Fiksi</option>
-                        <option value="Movie Scoring">Movie Scoring</option>
-                        <option value="Film Dokumenter">Film Dokumenter</option>
-                        <option value="Penulisan Naskah">Penulisan Naskah</option>
-                        <option value="PR Campaign">PR Campaign</option>
-                        <option value="Press Conference">Press Conference</option>
-                        <option value="Risk Management">Risk Management</option>
-                        <option value="Riset Strategis Akademik">Riset Strategis Akademik</option>
-                        <option value="Fun Research">Fun Research</option>
-                        <option value="Social Media Activation">Social Media Activation</option>
-                        <option value="Unconventional Media">Unconventional Media</option>
-                        <option value="Brandbook">Brandbook</option>
-                        <option value="Skip Ad">Skip Ad</option>
+                        <option value="Homeless Media"@if($user->kategori=="Homeless Media")selected @endif>Homeless Media</option>
+                        <option value="Comic Strip" @if($user->kategori=="Comic Strip")selected @endif>Comic Strip</option>
+                        <option value="Podcast"@if($user->kategori=="Podcast")selected @endif>Podcast</option>
+                        <option value="Film Fiksi"@if($user->kategori=="Film Fiksi")selected @endif>Film Fiksi</option>
+                        <option value="Movie Scoring"@if($user->kategori=="Movie Scoring")selected @endif>Movie Scoring</option>
+                        <option value="Film Dokumenter"@if($user->kategori=="Film Dokumenter")selected @endif>Film Dokumenter</option>
+                        <option value="Penulisan Naskah"@if($user->kategori=="Penulisan Naskah")selected @endif>Penulisan Naskah</option>
+                        <option value="PR Campaign"@if($user->kategori=="PR Campaign")selected @endif>PR Campaign</option>
+                        <option value="Press Conference"@if($user->kategori=="Press Conference")selected @endif>Press Conference</option>
+                        <option value="Risk Management"@if($user->kategori=="Risk Management")selected @endif>Risk Management</option>
+                        <option value="Riset Strategis Akademik"@if($user->kategori=="Riset Strategis Akademik")selected @endif>Riset Strategis Akademik</option>
+                        <option value="Fun Research"@if($user->kategori=="Fun Research")selected @endif>Fun Research</option>
+                        <option value="Social Media Activation"@if($user->kategori=="Social media Activation")selected @endif>Social Media Activation</option>
+                        <option value="Unconventional Media" @if($user->kategori=="Unconventional Media")selected @endif>Unconventional Media</option>
+                        <option value="Brandbook"@if($user->kategori=="Brandbook")selected @endif>Brandbook</option>
+                        <option value="Skip Ad"@if($user->kategori=="Skip Ad")selected @endif>Skip Ad</option>
                     </select>
 
                     <input type="password" placeholder="Password" name="password" id="password" class="input margin-top-xs margin-bottom-s" autofocus>
