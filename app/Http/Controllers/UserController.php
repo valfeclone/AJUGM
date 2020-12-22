@@ -64,7 +64,7 @@ class UserController extends Controller
                 'member-name-1' => 'required',
                 'member-faculty-1' => 'required',
                 'member-major-1' => 'required',
-                'member-email-1' => ['required', 'string', 'email', 'max:255', 'unique:members,email'],
+                'member-email-1' => ['required', 'string', 'email', 'max:255'],
             ]);
 
             $user->member[0]->name = $validated['member-name-1'];
@@ -84,62 +84,62 @@ class UserController extends Controller
                 $user->member[0]->path_foto_ktm = $file->getClientOriginalName();
                 $user->member[0]->save();
             }
-        }
-
-        //bikin logic loop
-        for ($x = 2; $x <= 4; $x+=1) {
-            if($request['member-name-'.$x]){
-                $newValidatedMember = $request->validate([
-                    'member-name-'.$x => 'required',
-                    'member-faculty-'.$x => 'required',
-                    'member-major-'.$x => 'required',
-                    'member-email-'.$x => ['required', 'string', 'email', 'max:255', 'unique:members,email'],
-                ]);
-                //member already exist
-                if($user->member[($x-1)]){
-                    $user->member[($x-1)]->name = $newValidatedMember['member-name-'.$x];
-                    $user->member[($x-1)]->fakultas = $newValidatedMember['member-faculty-'.$x];
-                    $user->member[($x-1)]->jurusan = $newValidatedMember['member-major-'.$x];
-                    $user->member[($x-1)]->email = $newValidatedMember['member-email-'.$x];
-                    $user->member[($x-1)]->linkedin = $request['member-linkedin-'.$x];
-                    $user->member[($x-1)]->save();
     
-                    if($request['member-ktm-'.$x]){
-                        // define variable buat simpan foto
-                        $file = $request->file('member-ktm-'.$x);
-                        $tujuan_upload = storage_path('app/public/foto_ktm');
-        
-                        // menyimpan file foto ktm yang diupload ke variabel $file
-                        $file->move($tujuan_upload,$file->getClientOriginalName());
-                        $user->member[($x-1)]->path_foto_ktm = $file->getClientOriginalName();
-                        $user->member[($x-1)]->save();
-                    }
-                }
-                //member not exist, create new member
-                else{
-                    $theTeam = auth()->user();
-                    $newMember2 = Member::create([
-                        'team_id' => $theTeam['id'],
-                        'name' => $newValidatedMember['member-name-'.$x],
-                        'fakultas' => $newValidatedMember['member-faculty-'.$x],
-                        'jurusan' => $newValidatedMember['member-major-'.$x],
-                        'path_foto_ktm' => $newValidatedMember['member-ktm-'.$x],
-                        'email' => $newValidatedMember['member-email-'.$x],
-                        'linkedin' => $request['member-linkedin-'.$x],
+            //bikin logic loop
+            for ($x = 2; $x <= 4; $x+=1) {
+                if($request['member-name-'.$x]){
+                    $newValidatedMember = $request->validate([
+                        'member-name-'.$x => 'required',
+                        'member-faculty-'.$x => 'required',
+                        'member-major-'.$x => 'required',
+                        'member-email-'.$x => ['required', 'string', 'email', 'max:255'],
                     ]);
+                    //member already exist
+                    if($user->member[($x-1)]){
+                        $user->member[($x-1)]->name = $newValidatedMember['member-name-'.$x];
+                        $user->member[($x-1)]->fakultas = $newValidatedMember['member-faculty-'.$x];
+                        $user->member[($x-1)]->jurusan = $newValidatedMember['member-major-'.$x];
+                        $user->member[($x-1)]->email = $newValidatedMember['member-email-'.$x];
+                        $user->member[($x-1)]->linkedin = $request['member-linkedin-'.$x];
+                        $user->member[($x-1)]->save();
+                    
+                        if($request['member-ktm-'.$x]){
+                            // define variable buat simpan foto
+                            $file = $request->file('member-ktm-'.$x);
+                            $tujuan_upload = storage_path('app/public/foto_ktm');
+                        
+                            // menyimpan file foto ktm yang diupload ke variabel $file
+                            $file->move($tujuan_upload,$file->getClientOriginalName());
+                            $user->member[($x-1)]->path_foto_ktm = $file->getClientOriginalName();
+                            $user->member[($x-1)]->save();
+                        }
+                    }
+                    //member not exist, create new member
+                    // else{
+                    //     $theTeam = auth()->user();
+                    //     $newMember2 = Member::create([
+                    //         'team_id' => $theTeam['id'],
+                    //         'name' => $newValidatedMember['member-name-'.$x],
+                    //         'fakultas' => $newValidatedMember['member-faculty-'.$x],
+                    //         'jurusan' => $newValidatedMember['member-major-'.$x],
+                    //         'path_foto_ktm' => $newValidatedMember['member-ktm-'.$x],
+                    //         'email' => $newValidatedMember['member-email-'.$x],
+                    //         'linkedin' => $request['member-linkedin-'.$x],
+                    //     ]);
 
-                    // define variable buat simpan foto
-                    $file2 = $request->file('member-ktm-'.$x);
-                    $tujuan_upload2 = storage_path('app/public/foto_ktm');
+                    //     // define variable buat simpan foto
+                    //     $file2 = $request->file('member-ktm-'.$x);
+                    //     $tujuan_upload2 = storage_path('app/public/foto_ktm');
 
-                    // menyimpan file foto ktm yang diupload ke variabel $file
-                    $file2->move($tujuan_upload2,$file2->getClientOriginalName());
-                    $newMember2->path_foto_ktm = $file2->getClientOriginalName();
-                    $newMember2->save();
+                    //     // menyimpan file foto ktm yang diupload ke variabel $file
+                    //     $file2->move($tujuan_upload2,$file2->getClientOriginalName());
+                    //     $newMember2->path_foto_ktm = $file2->getClientOriginalName();
+                    //     $newMember2->save();
+                    // }
                 }
-            }
-            else{
-                break;
+                else{
+                    break;
+                }
             }
         }
         return redirect()->back()->with('success', 'Update sukses');
