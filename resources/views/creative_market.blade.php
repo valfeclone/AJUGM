@@ -19,7 +19,7 @@
                     </div>
                     <img src="{{ asset('assets/Rectangle 77.png') }}" alt="" class="market-banner__geometry--square">
                 </div>
-                <p class="text-regular text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab laboriosam error ratione? Magnam ab inventore voluptatibus error et. Delectus, veniam consectetur error libero, esse eveniet saepe accusamus voluptas assumenda obcaecati, necessitatibus maiores rerum unde id.</p>
+                <p class="text-regular text-white" style="text-align: justify;">Pasaraya merupakan festival belanja online yang merupakan salah satu kontribusi Festival Ajisaka 2020+ untuk membantu UMKM terdampak Covid-19. Festival Ajisaka 2020+ memberikan <i>platform</i> online secara gratis kepada para pemilik <i>creative brand</i> untuk dapat memperluas jangkauan pemasarannya. Melalui proses kurasi yang detail, <i>creative brand</i> akan menampilkan produk terbaik untuk para insan kreatif. Festival belanja online ini akan dilaksanakan selama 35 hari dengan menggunakan <i>platform</i> digital web Festival Ajisaka 2020+. Dengan berbagai penawaran serta diskon menarik mulai dari 5% sampai dengan 60% yang diberikan oleh <i>creative brand</i>, diharapkan insan kreatif dapat turut serta berkontribusi dalam kemajuan UMKM. </p>
             </div>
         </div>
     </div>
