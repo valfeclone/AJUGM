@@ -6,9 +6,17 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+        
+        &.evenly {
+            justify-content: space-evenly;
+        }
+
+        &.center {
+            justify-content: center;
+        }
 
         & > * {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
     }
 
@@ -17,6 +25,15 @@
         &-xs {
             display: grid;
             grid-template-columns: repeat(5, minmax(min-content, 20rem));
+            grid-row-gap: 2rem;
+            grid-column-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-s {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(min-content, 30rem));
             grid-row-gap: 2rem;
             grid-column-gap: 2rem;
             justify-content: center;
@@ -42,6 +59,7 @@
     text-align: center;
     border: none;
 
+    
     &-xs {
         width: 20rem !important;
         height: 20rem !important;
@@ -87,6 +105,12 @@
             height: 3rem;
             border-radius: 1rem;
         }
+
+        &--gallery {
+            width: 32rem !important;
+            height: 20rem !important;
+        }
+    
     }
         
     

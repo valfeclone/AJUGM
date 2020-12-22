@@ -35,6 +35,11 @@
     text-align: left !important;
 }
 
+// Margin horizontal
+.mx-s {
+    margin: 0 1.5rem;
+}
+
 // Margin Top
 .margin-top-auto {
     margin-top: auto !important;
@@ -124,6 +129,10 @@
 }
 
 // Width
+.width-100 {
+    width: 100% !important;
+}
+
 .width-60 {
     width: 60% !important;
 }
@@ -136,8 +145,18 @@
     width: 40% !important;
 }
 
+.width-25 {
+    width: 25% !important;
+}
+
+
 .width-max {
     width: max-content !important;
+}
+
+// Flex
+.flex {
+    display: flex;
 }
 
 // Align self

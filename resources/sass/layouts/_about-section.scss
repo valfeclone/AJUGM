@@ -1,0 +1,27 @@
+.about-section {
+    grid-column: 1 / -1;
+    width: 100%;
+    background-color: $color-white;
+
+    padding: 10rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+    
+    &__content {
+        grid-column: 2 / 3;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+
+        &.column {
+            flex-direction: column;
+        }
+    }
+
+    &__image {
+        width: 40rem !important;
+        height: 40rem !important;
+    }
+}
