@@ -105,7 +105,7 @@ Route::post('/register', [ RegisterController::class, "validator" ])
 Route::get('/creativemarket', [ UMKMController::class, "index" ]);
 Route::get('/creativemarket/{umkm}', [ UMKMController::class, "show" ]);
 
-Route::get('/virtualmuseum', function () {
+Route::get('/exhibition', function () {
     return view("virtual_museum");
 });
 
