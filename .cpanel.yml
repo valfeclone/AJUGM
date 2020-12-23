@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/u1262811/
+    - export DEPLOYPATH= ~/home/u1262811/
     - /bin/cp -r * $DEPLOYPATH #copy all from root#
     - /bin/cp -r ~/AJUGM/public/* $DEPLOYPATH/public_html/
     - /bin/cp ~/AJUGM/public/js/*.js $DEPLOYPATH/public_html/js
