@@ -66,7 +66,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Arjuna</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Ajang Citra Sejuta Warn</p>
                         <a href="/kompetisi/arjuna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
@@ -75,7 +75,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Kresna</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Kreasi Insan Sinema.</p>
                         <a href="/kompetisi/kresna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
@@ -84,7 +84,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Nakula</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Penelitian Kawula Muda</p>
                         <a href="/kompetisi/nakula" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
                     
@@ -93,7 +93,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Prahasta</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Pertempuran Humas Nusantara</p>
                         <a href="/kompetisi/prahasta" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
@@ -102,7 +102,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Sadewa</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Sayembara Dewa Pariwara</p>
                         <a href="/kompetisi/sadewa" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
                 </div>
@@ -169,3 +169,6 @@
         </section>
     </div>
 @endsection
+
+
+

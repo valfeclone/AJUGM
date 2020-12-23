@@ -19,30 +19,27 @@
                     </div>
                     <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="museum-banner__geometry--circle adaptive">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                <p class="text-regular text-white" style="text-align: justify;">Nakula (Penelitian Kawula Muda) merupakan salah satu mata lomba di Festival Ajisaka 2020+ yang berfokus pada bidang penelitian. Pada Festival Ajisaka 2020+, Nakula mengangkat subtema “Temukan Solusi Bencana dengan Komunikasi”. Terdapat dua kategori dalam mata lomba Nakula yang meliputi Riset Konvensional dan Riset Fun. Melalui dua kategori tersebut, para insan kreatif diharapkan dapat menemukan solusi dari bencana yang ada.</p>
             </div>
         </div>
     </section>
 
-    @for($i = 0; $i < 3; $i++)
+    <!-- Item 1 -->
     <section class="lomba-desc">
-        @if ($i % 2 != 0)
         <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Nakula</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Konvensional</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori ini mendorong para insan kreatif untuk menemukan solusi dari bencana yang terjadi. Secara umum riset ini berorientasi pada kesimpulan. Tujuan dari riset ini adalah memperoleh generalisasi pengetahuan berdasarkan perumusan dan pengujian hipotesis.</p>
         </div>
-
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
-        @else
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
-
-        <div class="media__content margin-left-xl width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
-        </div>
-        @endif
     </section>
-    @endfor
+    <!-- Item 2 -->
+    <section class="lomba-desc">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <div class="media__content margin-left-xl width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Fun</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori ini membebaskan insan kreatif untuk menemukan solusi dari bencana yang terjadi dengan mengutamakan kreativitas dan humor. Meskipun mengutamakan humor, peserta diharapkan tetap berpegang pada metode penelitian ilmiah. Tujuan dari riset ini adalah memperoleh solusi permasalahan bencana dengan solusi yang ringan dan humoristis. </p>
+        </div>
+    </section>
 
 </div>
 @endsection
