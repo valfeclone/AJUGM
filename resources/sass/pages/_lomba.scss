@@ -1,0 +1,17 @@
+.lomba {
+    padding-top: 20rem;
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+    overflow: hidden;
+    margin-top: -11rem;
+    z-index: 1;
+
+    background-image: url('/images/museum.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    & > *:not(:first-child) {
+        border-top: 1px solid $color-grey;
+    }
+}

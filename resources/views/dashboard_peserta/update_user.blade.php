@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title')
-    Settings | Account
+    Ajisaka | Account Settings
 @endsection
 
 @section ('content')

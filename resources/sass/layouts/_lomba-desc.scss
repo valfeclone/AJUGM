@@ -1,0 +1,22 @@
+.lomba-desc {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 12rem 0;
+
+    background-color: $color-white;
+
+    & >:first-child {
+        margin-left: auto;
+    }
+
+    & >:last-child {
+        margin-right: auto;
+    }
+
+    &__video {
+        width: 50rem !important;
+    }
+}

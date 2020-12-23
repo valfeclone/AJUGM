@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title')
-    Settings | Upload Bukti Pembayaran
+    Ajisaka | Upload Bukti Pembayaran
 @endsection
 
 @section ('content')

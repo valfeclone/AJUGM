@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title')
-    Settings | Upload Karya
+    Ajisaka | Upload Karya
 @endsection
 
 @section ('content')

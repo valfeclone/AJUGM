@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('meta-title')
-    Home
+    Ajisaka | Home
 @endsection
 
 @section('content')
@@ -59,9 +59,9 @@
         <section class="landing-matlom" id="landing-matlom">
             <div class="landing-matlom__content">
                 <h2 class="heading-2 text-black text-uppercase margin-bottom-l">Mata Lomba Ajisaka</h2>
-                <div class="card-wrapper card-wrapper--grid-m">
+                <div class="card-wrapper card-wrapper--flex center">
                     
-                    <div class="card card-m">
+                    <div class="card card-m mx-s">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
@@ -70,7 +70,7 @@
                         <a href="/kompetisi/arjuna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
-                    <div class="card card-m">
+                    <div class="card card-m mx-s">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
@@ -79,7 +79,7 @@
                         <a href="/kompetisi/kresna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
-                    <div class="card card-m">
+                    <div class="card card-m mx-s">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
@@ -87,8 +87,8 @@
                         <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
                         <a href="/kompetisi/nakula" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
-
-                    <div class="card card-m">
+                    
+                    <div class="card card-m mx-s">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
@@ -97,7 +97,7 @@
                         <a href="/kompetisi/prahasta" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
-                    <div class="card card-m">
+                    <div class="card card-m mx-s">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
@@ -105,7 +105,6 @@
                         <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
                         <a href="/kompetisi/sadewa" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
-                    
                 </div>
             </div>
             <img src="/assets/Group 68.png" alt="" class="landing-matlom__geometry--dots">
