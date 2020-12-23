@@ -66,7 +66,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Arjuna</p>
-                        <p class="text-regular margin-bottom-xs">Ajang Citra Sejuta Warn</p>
+                        <p class="text-regular margin-bottom-xs">Ajang Citra Sejuta Warna</p>
                         <a href="/kompetisi/arjuna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
@@ -162,7 +162,7 @@
                     </div>
                     <img src="/assets/Path 57.png" alt="" class="landing-register__geometry--boxes">
                 </div>
-                <a href="#" class="link"><p class="text-bold text-black">Learn more .</p></a>
+                <a href="/register" class="link"><p class="text-bold text-black">Learn more .</p></a>
             </div>
             <img src="/assets/Ellipse 8.png" alt="" class="landing-register__geometry--circle">
             <img src="/assets/Path 25.png" alt="" class="landing-register__geometry--triangle">
