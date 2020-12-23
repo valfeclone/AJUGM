@@ -24,25 +24,37 @@
         </div>
     </section>
 
-    @for($i = 0; $i < 3; $i++)
     <section class="lomba-desc">
-        @if ($i % 2 != 0)
         <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Brand Book</h3>
+            <p class="text-regular" style="text-align: justify;">Brand Book meminta insan kreatif untuk merancang brand identity dari suatu brand dan merangkumnya dalam sebuah brand book. Insan kreatif ditantang untuk menunjukkan kemampuan branding dan desain mereka. </p>
         </div>
-
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
-        @else
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
-
-        <div class="media__content margin-left-xl width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
-        </div>
-        @endif
     </section>
-    @endfor
+    <!-- Item 2 -->
+    <section class="lomba-desc">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <div class="media__content margin-left-xl width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Skip Ad</h3>
+            <p class="text-regular" style="text-align: justify;">Skip Ad mengajak insan kreatif untuk membuat Video Ads yang nantinya akan ditayangkan sebagai Skippable Ads di platform YouTube. Dengan audiens yang bisa melewati iklan setelah lima detik pertama, insan kreatif ditantang untuk membuat iklan yang bisa menangkap atensi audiens.</p>
+        </div>
+    </section>
+    <!-- Item 3 -->
+    <section class="lomba-desc">
+        <div class="media__content width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Social Media Activation</h3>
+            <p class="text-regular" style="text-align: justify;">Social Media Activation meminta insan kreatif untuk membuat sebuah kampanye yang akan dijalankan di media sosial. Insan kreatif ditantang untuk membuat kampanye yang berbasiskan riset dengan ide yang kreatif dan inovatif.</p>
+        </div>
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
+    </section>
+    <!-- Item 4 -->
+    <section class="lomba-desc">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <div class="media__content margin-left-xl width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Unconventional Media</h3>
+            <p class="text-regular" style="text-align: justify;">Unconventional Media mengajak insan kreatif untuk merancang kampanye dengan media yang tidak konvensional. Insan kreatif ditantang untuk berpikir outside the box untuk merancang strategi yang efektif dengan media yang tidak terpikirkan sebelumnya.</p>
+        </div>
+    </section>
 
 </div>
 @endsection

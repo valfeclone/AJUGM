@@ -24,25 +24,30 @@
         </div>
     </section>
 
-    @for($i = 0; $i < 3; $i++)
+    <!-- Item 1 -->
     <section class="lomba-desc">
-        @if ($i % 2 != 0)
         <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">PR Campaign</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori PR Campaign mengajak insan kreatif untuk memberikan kontribusinya dalam menyelesaikan permasalahan kehumasan. Insan kreatif akan ditantang untuk mengeluarkan gagasan-gagasan kreatif dalam menentukan strategi dan media komunikasi yang tepat dan efektif untuk mencapai tujuan dari Kampanye Kehumasan.</p>
         </div>
-
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
-        @else
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
-
-        <div class="media__content margin-left-xl width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
-        </div>
-        @endif
     </section>
-    @endfor
+    <!-- Item 2 -->
+    <section class="lomba-desc">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <div class="media__content margin-left-xl width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Press Conference Simulation</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori Press Conference Simulation mengajak insan kreatif berperan aktif dengan tanggap dan kritis dalam menyikapi suatu permasalahan. Insan kreatif akan ditantang untuk menggagaskan ide atau pemikiran dan menuangkannya dengan kompetensi riset yang menjadi landasan dari sebuah konferensi pers. Selain itu, insan kreatif juga ditantang untuk membuktikan kemampuannya sebagai seorang praktisi public relations dalam membangun hubungan dengan media atau pers.</p>
+        </div>
+    </section>
+    <!-- Item 3 -->
+    <section class="lomba-desc">
+        <div class="media__content width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Risk Management</h3>
+            <p class="text-regular" style="text-align: justify;">Risk management mengajak insan kreatif untuk menjadi praktisi public relations yang proaktif, dengan menyusun pemetaan dan penanganan risiko yang ada dari suatu organisasi atau perusahaan. Insan kreatif akan ditantang untuk merancang strategi kehumasan yang efektif, sistematis, terencana, kreatif, dan didasari pada riset yang kuat untuk meminimalisir risiko yang dapat menjadi sebuah krisis.</p>
+        </div>
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
+    </section>
 
 </div>
 @endsection

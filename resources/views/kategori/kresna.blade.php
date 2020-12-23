@@ -24,25 +24,38 @@
         </div>
     </section>
 
-    @for($i = 0; $i < 3; $i++)
+    <!-- Item 1 -->
     <section class="lomba-desc">
-        @if ($i % 2 != 0)
         <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Kresna</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Film Fiksi Pendek</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori Film Fiksi Pendek membebaskan para insan kreatif untuk mengeksplorasi ide-idenya dalam ruang lingkup dampak sosial dan budaya yang akan atau mungkin timbul akibat bencana tertentu. </p>
         </div>
-
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
-        @else
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
-
-        <div class="media__content margin-left-xl width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
-        </div>
-        @endif
     </section>
-    @endfor
+    <!-- Item 2 -->
+    <section class="lomba-desc">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <div class="media__content margin-left-xl width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Film Dokumenter Pendek</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori Film Dokumenter Pendek memberikan ruang kepada para insan kreatif untuk mengeksplorasi berbagai perspektif dalam ruang lingkup dampak sosial dan budaya yang timbul akibat bencana yang pernah terjadi sebelumnya. Dalam pembuatan karya, sineas diberikan kebebasan dalam eksplorasi ide dan  penyampaian makna atau pesan. Namun data dan riset tetap diperlukan sebagai dasar pembuatan  karya agar esensi film dokumenter sebagai karya yang faktual tetap terjaga.</p>
+        </div>
+    </section>
+    <!-- Item 3 -->
+    <section class="lomba-desc">
+        <div class="media__content width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Penulisan Skenario Pendek</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori Penulisan Skenario Film membebaskan para insan kreatif untuk mengeksplorasi ide-idenya dalam ruang lingkup  dampak sosial dan budaya yang akan atau mungkin timbul akibat bencana tertentu. Dalam karya skenario film fiksi, imajinasi dan cara penyampaian makna atau pesan tidak dibatasi oleh keadaan faktual. </p>
+        </div>
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
+    </section>
+    <!-- Item 4 -->
+    <section class="lomba-desc">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <div class="media__content margin-left-xl width-25">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Scoring Film</h3>
+            <p class="text-regular" style="text-align: justify;">Kategori Scoring Film membebaskan para insan kreatif untuk mengasah sense untuk membuat adegan dalam film menjadi powerful. Dengan menambahkan unsur score dalam suatu film, diharapkan pesan film dapat tersampaikan secara menyeluruh.</p>
+        </div>
+    </section>
 
 </div>
 @endsection
