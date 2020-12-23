@@ -15,11 +15,11 @@
             <div class="media__content">
                 <div class="museum-banner__media-heading adaptive">
                     <div class="width-max">
-                        <h1 class="heading-caps text-white margin-bottom-s width-max">Prahasta</h1>
+                        <h1 class="heading-caps text-white margin-bottom-s width-max">PRahasta</h1>
                     </div>
                     <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="museum-banner__geometry--circle adaptive">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                <p class="text-regular text-white" style="text-align: justify;">Pertarungan Humas Nusantara (PRahasta) merupakan salah satu mata lomba di Festival Ajisaka 2020+ yang berfokus pada bidang Kehumasan. Membawa tema besar dari Festival Ajisaka 2020+, PRahasta mengangkat berbagai isu “<i>Disaster Risk Reduction</i>” pada setiap kategori lombanya. Terdapat tiga kategori lomba dalam PRahasta yang meliputi PR Campaign, Press Conference, dan Risk Management. Melalui ketiga kategori lomba tersebut, para insan kreatif ditantang untuk dapat mengeluarkan inovasi dan ide kreatifnya dalam menyusun strategi kehumasan yang efektif.</p>
             </div>
         </div>
     </section>

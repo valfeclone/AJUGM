@@ -19,7 +19,7 @@
                     </div>
                     <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="museum-banner__geometry--circle adaptive">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                <p class="text-regular text-white" style="text-align: justify;">Ajang Citra Sejuta Warna (Arjuna) merupakan mata lomba Festival Ajisaka 2020+ yang berfokus pada bidang jurnalistik. Terdapat tiga kategori dalam Arjuna yang meliputi Comic Strip, Homeless Media, dan Podcast. Melalui tiga kategori lomba tersebut, insan kreatif ditantang untuk menyampaikan informasi dan menuangkan ide kreatifnya namun tetap mengedepankan fakta sebagaimana hakikat jurnalistik.</p>
             </div>
         </div>
     </section>

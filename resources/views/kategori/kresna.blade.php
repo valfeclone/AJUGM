@@ -19,7 +19,7 @@
                     </div>
                     <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="museum-banner__geometry--circle adaptive">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                <p class="text-regular text-white" style="text-align: justify;">Kresna (Kreasi Insan Sinema) merupakan salah satu mata lomba di Festival Ajisaka 2020+ yang berfokus pada bidang perfilman. Pada Festival Ajisaka 2020+ Kresna mengangkat subtema “<i>Social and Cultural Impact  on Disasters</i>”. Terdapat empat kategori dalam mata lomba Kresna yang meliputi Film Fiksi Pendek, Film Dokumenter Pendek, Penulisan Naskah, dan Scoring Film. Melalui empat kategori tersebut, para insan kreatif diharapkan dapat mengeksplorasi ide-idenya. /p>
             </div>
         </div>
     </section>

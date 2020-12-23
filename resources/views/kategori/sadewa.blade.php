@@ -19,7 +19,7 @@
                     </div>
                     <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="museum-banner__geometry--circle adaptive">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                <p class="text-regular text-white" style="text-align: justify;">Sayembara Dewa Pariwara (Sadewa) merupakan mata lomba Festival Ajisaka 2020+ yang berfokus pada bidang periklanan. Membawa tema besar dari Festival Ajisaka 2020+, Sadewa mengangkat isu “<i>Disaster Risk Reduction</i>”. Terdapat empat kategori lomba dalam Sadewa yang meliputi Brand Book, Skip Ad, Social Media Activation, dan Unconventional Media. Melalui keempat kategori tersebut, insan kreatif ditantang untuk mengeluarkan inovasi dan kreativitasnya.</p>
             </div>
         </div>
     </section>
