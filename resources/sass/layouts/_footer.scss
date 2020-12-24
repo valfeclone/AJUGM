@@ -11,7 +11,67 @@
     align-items: center;
     padding: 6rem 10rem;
 
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+        padding: 6rem 7.5rem;
+    }
+
+    @include respond(phone) {
+        padding: 6rem 7rem;
+    }
+
+
     & > * {
         height: 100%;
+    }
+
+    & > *:first-child {
+        @include respond(tab-port) {
+            justify-self: center;
+        }
+    }
+
+    &__link-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(tab-port) {
+            width: 60%;
+            justify-self: center;
+        }
+
+        & > * {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            flex-wrap: wrap;
+
+            @include respond(tab-port) {
+                width: 50% !important;
+            }
+        }
+
+        & > *:not(:last-child) {
+            margin-right: 4.5rem;
+        }
+    }
+
+    &__util {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @include respond(tab-port) {
+            grid-column: 1 / - 1;
+            justify-content: center;
+        }
+
+        & > * {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
     }
 }

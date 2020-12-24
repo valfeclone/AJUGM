@@ -1,15 +1,37 @@
 .market {
-    padding-top: 20rem;
+    padding-top: 8rem;
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
-    grid-template-rows: repeat(2, max-content);
+    grid-template-rows: [banner-start] minmax(min-content, 80vh) [banner-end] repeat(2, max-content);
     overflow: hidden;
-    margin-top: -11rem;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
 
-    background-image: url('/images/market.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include respond(tab-land) {
+        padding-top: 5rem;
+        grid-template-rows: [banner-start] minmax(min-content, 75vh) [banner-end] repeat(2, max-content);
+        grid-template-columns: 1fr minmax(min-content, 75vw) 1fr;
+    }
 
+    @include respond(tab-port) {
+        padding: 0;
+        grid-template-columns: 1fr minmax(min-content, 87vw) 1fr;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr minmax(min-content, 90vw) 1fr;
+    }
+
+    &__media-content {
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        & * {
+            @include respond(tab-port) {
+                text-align: center !important;
+            }
+        }
+    }
 }

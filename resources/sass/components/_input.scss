@@ -12,6 +12,10 @@
         outline: none;
         border-bottom: 1px solid $color-black;
     }
+
+    @include respond(tab-port) {
+        padding: 1.5rem 0;
+    }
 }
 
 .input-file-label {

@@ -1,17 +1,54 @@
 .about {
-    padding-top: 20rem;
+    padding-top: 18rem;
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+    grid-template-rows: [banner-start] minmax(min-content, 75vh) [banner-end] repeat(2, max-content);
+    align-items: center;
     overflow: hidden;
     margin-top: -11rem;
     z-index: 1;
 
-    background-image: url('/images/market.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include respond(desktop) {
+        padding-top: 16rem;
+        grid-template-rows: [banner-start] minmax(min-content, 85vh) [banner-end] repeat(2, max-content);
+    }
+
+    @include respond(tab-land) {
+        padding-top: 15rem;
+        grid-template-columns: 1fr minmax(min-content, 75vw) 1fr;
+        grid-template-rows: [banner-start] minmax(min-content, 75vh) [banner-end] repeat(2, max-content);
+    }
+
+    @include respond(tab-port) {
+        grid-template-rows: [banner-start] minmax(min-content, 75vh) [banner-end] repeat(2, max-content);
+    }
 
     & > *:not(:first-child) {
         border-top: 1px solid $color-grey-dark;
+    }
+
+    &__heading {
+
+        @include respond(tab-port) {
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__media-content {
+        @include respond(tab-port) {
+            width: 80% !important;
+        }
+
+        @include respond(phone) {
+            width: 100% !important;
+        }
+
+        & * {
+            @include respond(tab-port) {
+                text-align: center !important;
+            }
+        }
     }
 }

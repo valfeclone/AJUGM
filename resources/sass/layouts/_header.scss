@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     height: max-content;
 
     display: grid;
@@ -8,17 +9,144 @@
     padding: 2.5rem 10rem;
     z-index: 100;
 
+    @include respond(tab-port) {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 7.5rem;
+    }
+
+    &.responsive {
+        @include respond(tab-port) {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 4rem;
+            background-color: $color-grey-light;
+            height: max-content;
+            z-index: 999;
+
+            & .logo-box {
+                align-self: flex-start;
+            }
+
+            > *:not(:first-child) {
+                width: 85vw;
+            } 
+
+            & .header__link-box--responsive {
+                position: absolute;
+                width: 100vw;
+                height: max-content;
+                display: block;
+                background-color: $color-grey-light;
+                padding-bottom: 3rem;
+                z-index: 999;
+
+                & * {
+                    text-align: center !important;
+                    margin: 0 !important;
+                    height: max-content !important;
+                    padding: .5rem 0;
+                    display: flex;
+                    justify-content: center;
+
+                    &:not(:last-child):hover {
+                        background-color: $color-white;
+                    }
+                }
+
+                & > .hr {
+                    border-top: 1px solid $color-white;
+                    margin-top: 2rem !important;
+                    margin-bottom: 1rem !important;
+                }
+
+                & .nested-menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__arrow {
+                        color: $color-black;
+                        font-size: 1rem !important;
+                        margin-left: 1rem !important;
+                    }
+
+                    & > .menu {
+                        display: none;
+
+                        
+
+                        &.show {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                & .close-button {
+                    display: block;
+                    font-size: 2rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: $color-black;
+                    margin-top: 3rem !important;
+                }
+            }
+
+            & .header__hamburger {
+                display: none;
+                justify-self: flex-start;
+            }
+
+            & + * {
+                padding-top: 6rem;
+            }
+        }
+    }
+
+    &__hamburger {
+        text-align: right;
+        display: none;
+
+        @include respond(tab-port) {
+            z-index: 999;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(-50%);
+            font-size: 3rem;
+            color: $color-white;
+            background-color: transparent;
+            border: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        &-button {
+            @include respond(tab-port) {
+                position: relative;
+            }
+        }
+    }
+
     & > * {
         height: 100%;
+        z-index: 10;
     }
 
 
     &__link-box {
-        height: 100%;
-
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &--responsive {
+            display: none;
+        }
 
         & > * {
             display: flex;
@@ -29,20 +157,30 @@
         & > *:not(:last-child) {
             margin-right: 4.5rem;
         }
+
+        @include respond(tab-port) {
+            display: none;
+        }
     }
 
     &__util {
-        height: 100%;
-
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        z-index: 10;
+
+        &.show {
+            display: block;
+            background-color: $color-white;
+        }
 
         & > * {
             display: flex;
             align-items: center;
             height: 100%;
+        }
+
+        @include respond(tab-port) {
+            display: none;
         }
     }
 }

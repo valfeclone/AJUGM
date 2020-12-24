@@ -11,17 +11,17 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // 1 rem = 10px; 10px / 16px = 62.5%
 
-    // @include respond(tab-land) {
-    //     font-size: 56.25%; // 1rem = 9px
-    // }
+    @include respond(tab-land) {
+        font-size: 56.25%; // 1rem = 9px
+    }
 
-    // @include respond(tab-port) {
-    //     font-size: 50%; // 1rem = 8px
-    // }
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px
+    }
 
-    // @include respond(big-desktop) {
-    //     font-size: 100%; // 1rem = 16px
-    // }
+    @include respond(big-desktop) {
+        font-size: 100%; // 1rem = 16px
+    }
 }
 
 body {

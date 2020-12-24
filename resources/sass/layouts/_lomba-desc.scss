@@ -10,13 +10,63 @@
 
     & >:first-child {
         margin-left: auto;
+
+        @include respond(tab-port) {
+            margin-left: 0;
+        }
     }
 
     & >:last-child {
         margin-right: auto;
+
+        @include respond(tab-port) {
+            margin-right: 0;
+        }
     }
 
     &__video {
-        width: 50rem !important;
+        width: 64rem;
+        height: 48rem;
+
+        @include respond(tab-port) {
+            width: 56rem;
+            height: 42rem;
+        }
+
+        @include respond(phone) {
+            width: 49rem;
+            height: 36rem;
+        }
+
+        @include respond(small-phone) {
+            width: 44rem;
+            height: 33rem;
+        }
+    }
+
+    &__media-content {
+        width: 25%;
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+
+        &--right {
+            margin-left: 7rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__media {
+        &--right {
+            margin-left: 7rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="settings__content">
-            <h3 class="heading-3 margin-bottom-s align-self-start text-black">Upload Karya</h3>
+            <h3 class="heading-3 margin-bottom-s settings__heading text-black">Upload Karya</h3>
 
             @if ($kategori !== "Skip Ad" and $kategori !== "Film Dokumenter" and $kategori !== "Film Fiksi")
                 <form action="/tim/uploadkarya" class="form settings__form" method="POST" enctype="multipart/form-data">
@@ -26,12 +26,25 @@
                     <label for="file-upload" class="input input-file-label">Upload Karya <span>+</span></label>
                     <input type="file" placeholder="Upload Karya" name="file_lomba" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
 
+                    @error('file_lomba')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                     <!-- <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required> -->
 
                     <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
                     <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
+                    @error('file-pendukung')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
 
-                    <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
+
+                    <input type="submit" class="button button--white" value="Update >"/>
 
                 </form>
             @else
@@ -52,16 +65,6 @@
             @endif
 
         </div>
-        
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
         <img src="/assets/Rectangle 18.png" class="settings__geometry--square" alt="">
         <img src="/assets/Ellipse 10.png" class="settings__geometry--circle" alt="">

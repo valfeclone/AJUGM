@@ -15,5 +15,40 @@
 
     &__image {
         border: 1px solid $color-grey;
+
+        @include respond(tab-land) {
+            width: 35rem;
+            height: 35rem;
+        }
+
+        @include respond(tab-port) {
+            width: 30rem;
+            height: 30rem;
+        }
+    }
+
+    &__media-content {
+        @include respond(phone) {
+            width: 100% !important;
+        }
+
+        & * {
+            @include respond(tab-port) {
+                text-align: center !important;
+            }
+        }
+    }
+
+    &__heading {
+        @include respond(tab-port) {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        @include respond(phone) {
+            width: max-content !important;
+            margin-right: auto;
+            margin-left: auto;
+        }
     }
 }

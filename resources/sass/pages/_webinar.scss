@@ -1,17 +1,25 @@
 .webinar {
-    padding-top: 20rem;
+    padding-top: 18rem;
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
     overflow: hidden;
     margin-top: -11rem;
     z-index: 1;
 
-    background-image: url('/images/museum.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include respond(tab-land) {
+        padding-top: 12rem;
+        grid-template-columns: 1fr minmax(min-content, 75vw) 1fr;
+    }
 
-    &__video {
+    @include respond(tab-port) {
+        grid-template-columns: 1fr minmax(min-content, 85vw) 1fr;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr minmax(min-content, 90vw) 1fr;
+    }
+
+    &__video-container {
         grid-column: 1 / -1;
 
         display: flex;
@@ -20,5 +28,33 @@
         padding: 12rem 0;
 
         background-color: $color-white;
+    }
+
+    &__video {
+        width: 72em;
+        height: 54rem;
+
+        @include respond(tab-port) {
+            width: 56rem;
+            height: 42rem;
+        }
+
+        @include respond(phone) {
+            width: 48rem;
+            height: 36rem;
+        }
+
+        @include respond(small-phone) {
+            width: 44rem;
+            height: 33rem;
+        }
+    }
+
+    &__media-content {
+        margin-left: 7rem;
+        
+        @include respond(tab-land) {
+            margin-left: 4rem;
+        }
     }
 }

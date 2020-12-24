@@ -1,10 +1,18 @@
 .webinar-banner {
     grid-column: 2 / 3;
     width: 100%;
-    height: 85vh;
+    padding-bottom: 17rem;
+
+    @include respond(tab-port) {
+        padding-bottom: 10rem;
+    }
 
     &__media {
         width: 40rem;
+
+        @include respond(tab-port) {
+            width: 30rem;
+        }
 
         &-container {
             position: relative;
@@ -37,6 +45,10 @@
             left: 0;
             z-index: -1;
             transform: translate(-25%, 35%);
+
+            @include respond(tab-port) {
+                display: none;
+            }
         }
 
         &--circle {
@@ -46,6 +58,10 @@
             right: 0;
             z-index: 1;
             transform: translate(65%, -60%) !important;
+
+            @include respond(tab-port) {
+                width: 12rem;
+            }
         }
     }
 }

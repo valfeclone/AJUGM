@@ -6,7 +6,8 @@
 
 @section('content')
 <div class="lomba">
-    <section class="museum-banner">
+    <section class="museum-banner z-min">
+        <img src="{{ asset('images/museum.png')}}" alt="" class="landing-banner__image">
         <div class="media-container museum-banner__media-container">
             <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" class="media media-left museum-banner__media z-max"/>
 
@@ -24,30 +25,37 @@
         </div>
     </section>
 
-    <!-- Item 1 -->
-    <section class="lomba-desc">
-        <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Comic Strip</h3>
-            <p class="text-regular" style="text-align: justify;">Merupakan kategori dalam Arjuna yang menantang insan kreatif untuk menyampaikan pesan dan informasi dalam panel komik yang berisikan edukasi dan mitigasi kebencanaan.</p>
-        </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
-    </section>
-    <!-- Item 2 -->
-    <section class="lomba-desc">
+    <section class="lomba-desc media-container z-max">
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
-        <div class="media__content margin-left-xl width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Homeless Media</h3>
-            <p class="text-regular" style="text-align: justify;">Homeless Media mengajak insan kreatif untuk merancang konten untuk media sosial Instagram. Konten dirancang sedemikian rupa sehingga berisi informasi yang edukatif, kreatif, dan mengandung fakta sebagaimana produk jurnalistik.</p>
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+        <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Comic Strip</h3>
+            <p class="text-regular">Merupakan kategori dalam Arjuna yang menantang insan kreatif untuk menyampaikan pesan dan informasi dalam panel komik yang berisikan edukasi dan mitigasi kebencanaan.</p>
         </div>
-    </section>
-    <!-- Item 3 -->
-    <section class="lomba-desc">
-        <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Podcast</h3>
-            <p class="text-regular" style="text-align: justify;">Podcast meminta insan kreatif untuk menyampaikan informasi jurnalistik berupa audio dalam durasi tertentu. Melalui kategori Podcast ini, diharapkan insan kreatif mampu menyampaikan informasi yang edukatif dan inovatif dalam membantu mengurangi risiko kebencanaan kepada audiens.</p>
-        </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
     </section>
 
+    <section class="lomba-desc media-container z-max">
+        <div class="media__content lomba-desc__media-content">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Homeless Media</h3>
+            <p class="text-regular">Homeless Media mengajak insan kreatif untuk merancang konten untuk media sosial Instagram. Konten dirancang sedemikian rupa sehingga berisi informasi yang edukatif, kreatif, dan mengandung fakta sebagaimana produk jurnalistik.</p>
+        </div>
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+    </section>
+
+    <section class="lomba-desc media-container z-max">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+        <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Podcast</h3>
+            <p class="text-regular">Podcast meminta insan kreatif untuk menyampaikan informasi jurnalistik berupa audio dalam durasi tertentu. Melalui kategori Podcast ini, diharapkan insan kreatif mampu menyampaikan informasi yang edukatif dan inovatif dalam membantu mengurangi risiko kebencanaan kepada audiens.</p>
+        </div>
+    </section>
 </div>
 @endsection

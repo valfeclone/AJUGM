@@ -5,5 +5,13 @@
     display: grid;
     grid-template-rows: [banner-start] minmax(min-content, 90vh) [banner-end about-start] minmax(min-content, 70vh) [about-end matlom-start] minmax(min-content, 70vh) [matlom-end register-start] minmax(min-content, 70vh) [register-end];
 
-    overflow: hidden;
+    overflow: hidden !important;
+
+    @include respond(tab-land) {
+        grid-template-rows: [banner-start] minmax(min-content, 75vh) [banner-end about-start] minmax(min-content, 80vh) [about-end matlom-start] minmax(min-content, 80vh) [matlom-end register-start] minmax(min-content, 80vh) [register-end];
+    }
+
+    @include respond(tab-port) {
+        grid-template-rows: [banner-start] minmax(min-content, 80vh) [banner-end about-start] minmax(min-content, 80vh) [about-end matlom-start] minmax(min-content, 80vh) [matlom-end register-start] minmax(min-content, 80vh) [register-end];
+    }
 }
