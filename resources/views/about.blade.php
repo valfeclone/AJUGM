@@ -25,7 +25,15 @@
                 bencana di Indonesia. Kami mengangkat tema Disaster Risk Reduction dengan tajuk “Biwara Bumandhala: Berita Baik untuk Bumi” 
                 dan tagline Melek Bencana. Insan kreatif bangsa diharapkan dapat menjadi agen perubahan untuk menanamkan kesadaran di masyarakat 
                 bahwa komunikasi memiliki peran krusial dalam segala aspek kehidupan manusia, salah satunya dalam pemulihan situasi pasca krisis.
-                <br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="about-section__content column">
+            <h1 class="heading-caps text-black margin-bottom-s">More About Ajisaka</h1>
+            <p class="text-regular text-black" style="text-align: justify;">
                 Festival Ajisaka 2020+ menyajikan berbagai macam program yang dikemas dengan kreatif dan inovatif untuk menyuarakan ajakan bagi insan 
                 kreatif untuk berkarya dan turut serta dalam upaya disaster risk reduction di Indonesia. Insan kreatif Nusantara diharapkan dapat
                 mempersembahkan karya terbaik mereka melalui lima mata lomba, yaitu Sadewa, Prahasta, Kresna, Arjuna, dan Nakula. Kelak, solusi yang 
@@ -36,10 +44,9 @@
                 Kini, Festival Ajisaka 2020+ hadir untuk menantang insan kreatif Nusantara berkontribusi dalam memecahkan masalah kebencanaan 
                 di Indonesia melalui pendekatan komunikasi. Dengan sepenuh hati, kami berkomitmen untuk berkarya dan berkontribusi untuk mendukung 
                 kemajuan insan kreatif Nusantara.
-                </p>
-            </div>
+            </p>
         </div>
-    </div>
+    </section>
 
     <section class="about-section">
         <div class="about-section__content media-container">

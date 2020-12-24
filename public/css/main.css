@@ -794,6 +794,7 @@ body {
 .card__image--xs {
   width: 100% !important;
   height: 100% !important;
+  overflow: hidden;
 }
 
 .card__image--s {
