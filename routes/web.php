@@ -118,4 +118,4 @@ Route::view('/kompetisi/sadewa', "kategori.sadewa");
 
 Route::view('/about', "about");
 Route::view('/contact', "contact");
-Route::view('/webinar', "webinar");
+//Route::view('/webinar', "webinar");

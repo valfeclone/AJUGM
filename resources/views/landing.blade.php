@@ -14,8 +14,8 @@
                     <div class="carousel-inner landing-banner__carousel-inner">
                         <div class="carousel-item active">
                             <div class="landing-banner__carousel-text">
-                                <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
-                                <p class="text-bold text-grey-dark margin-bottom-s">Sebagai bentuk apresiasi terhadap karya peserta, seluruh output kreatif akan dipamerkan melalui ekshibisi online. Festival Ajisaka 2020+ mengambil konsep 3D, di mana pengunjung dapat menghadiri ekshibisi selayaknya menjelajahi musem sungguhan. Rasakan sensasi berbeda mengunjungi <i>creative museum</i> dalam bentuk digital!</p>
+                                <h1 class="heading-caps text-white margin-bottom-m">3D Exhibition</h1>
+                                <p class="text-bold text-white width-40 margin-bottom-s">Sebagai bentuk apresiasi terhadap karya peserta, seluruh output kreatif akan dipamerkan melalui ekshibisi online. Festival Ajisaka 2020+ mengambil konsep 3D, di mana pengunjung dapat menghadiri ekshibisi selayaknya menjelajahi musem sungguhan. Rasakan sensasi berbeda mengunjungi <i>creative museum</i> dalam bentuk digital!</p>
                                 <a href="/virtualmuseum" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
