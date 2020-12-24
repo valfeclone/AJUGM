@@ -51,10 +51,7 @@
                 <form action="/tim/uploadlink/proses" class="form settings__form" method="POST" enctype="multipart/form-data">
                     @csrf
 
-                    <label for="file-upload" class="input">Upload Karya <span>+</span></label>
-                    <input type="text" placeholder="Upload Karya" name="link_file_lomba" id="file-upload" required>
-
-                    <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required>
+                    <input type="text" class="input input-file-label"placeholder="Upload Karya" name="file_lomba" id="file-upload"  required>
 
                     <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
                     <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf">
