@@ -12,8 +12,20 @@
             <h3 class="subheading text-grey text-uppercase margin-bottom-l align-self-start">Register</h3>
 
             <input type="text" placeholder="Team Name" name="name" class="input no-symbols" required autofocus>
+            @error('name')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
             <input type="text" placeholder="University" name="universitas" class="input no-symbols" required>
+            @error('universitas')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
             <select class="select" id="select-cat" name="select-cat">
                 <option value="default" selected hidden>Category</option> 
@@ -23,18 +35,48 @@
                 <option value="Nakula">Nakula (Penelitian Kawula Muda)</option>
                 <option value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
             </select>
+            @error('select-cat')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
 
             <select class="select" id="select-comp" name="select-opt">
                 <option selected value="default" hidden>Competition</option> 
                 <option disabled value="default">Please select the category first</option>
             </select>
+            @error('select-opt')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
             <input type="email" placeholder="E-mail" name="email" class="input" required >
+            @error('email')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
             <input type="password" placeholder="Password" name="password" class="input" id="password" required>
+            @error('password')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
             <input type="password" placeholder="Re-Password" name="repassword" class="input margin-bottom-l" id="repassword" required>
+            @error('repassword')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
 
             <button type="button" class="button button--white align-self-end margin-bottom-xs" id="nextStepButton">NEXT ></button>
 
@@ -71,14 +113,5 @@
             <img src="/assets/Ellipse 10.png" class="register__geometry--circle" alt="">
         </div>
     </form>
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 </div>
 @endsection

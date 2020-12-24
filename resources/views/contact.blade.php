@@ -103,7 +103,6 @@
                         IG&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <a href="https://instagram.com/ajisakaugm">@ajisakaugm</a><br>
                         Line&nbsp&nbsp&nbsp: @ajisakaugm
                         </p>
-                        <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="market-banner__geometry--circle adaptive">
                     </div>
                 </div>
             </section>

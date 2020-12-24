@@ -35,12 +35,53 @@
                         </button>
                         <div class="collapse" id="collapse{{$loop->index+1}}" data-parent="#accordion">
                             <input type="text" value="{{ $members->name }}" placeholder="Name" name="member-name-{{$loop->index+1}}" class="input width-60 no-symbols" required>
+                            @error('member-name-{{$loop->index+1}}')
+                                <span class="alert-text alert-text--failed" role="alert">
+                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                            
                             <input type="text" value="{{ $members->fakultas }}" placeholder="Faculty" name="member-faculty-{{$loop->index+1}}" class="input width-60 no-symbols" required>
+                            @error('member-faculty-{{$loop->index+1}}')
+                                <span class="alert-text alert-text--failed" role="alert">
+                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                            
                             <input type="text" value="{{ $members->jurusan }}" placeholder="Major" name="member-major-{{$loop->index+1}}" class="input width-60 no-symbols" required>
-                            <label for="file-upload-{{$loop->index+1}}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">{{$members->path_foto_ktm}}<span>+</span></label>
+                            @error('member-major-{{$loop->index+1}}')
+                                <span class="alert-text alert-text--failed" role="alert">
+                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                            
+                            <label for="file-upload-{{$loop->index+1}}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">{{$members->path_foto_ktm}}<span>+</span></label>                            
                             <input type="file" placeholder="Upload KTM" name="member-ktm-{{$loop->index+1}}" class="ktm" id="file-upload-{{$loop->index+1}}">
+                            @error('member-ktm-{{$loop->index+1}}')
+                                <span class="alert-text alert-text--failed" role="alert">
+                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+
                             <input type="email" value="{{ $members->email }}" placeholder="E-mail" name="member-email-{{$loop->index+1}}" class="input width-60" required>
+                            @error('member-email-{{$loop->index+1}}')
+                                <span class="alert-text alert-text--failed" role="alert">
+                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                            
                             <input type="text" value="{{ $members->linkedin }}" placeholder="Linked In" name="member-linkedin-{{$loop->index+1}}" class="input width-60 linkedin">
+                            @error('member-linkedin-{{$loop->index+1}}')
+                                <span class="alert-text alert-text--failed" role="alert">
+                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -52,16 +93,6 @@
 
             </form>
         </div>
-        
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
         <img src="/assets/Rectangle 18.png" class="settings__geometry--square" alt="">
         <img src="/assets/Ellipse 10.png" class="settings__geometry--circle" alt="">

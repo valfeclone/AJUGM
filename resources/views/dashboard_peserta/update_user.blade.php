@@ -24,9 +24,30 @@
                 @if ($user->validasi_pembayaran == false)
                     <input type="text" value="{{$user->name}}" placeholder="Nama Tim" name="name" class="input no-symbols" required autofocus>
 
+                    @error('name')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                     <input type="email" value="{{$user->email}}" placeholder="Email Tim" name="email" class="input margin-top-xs" required autofocus>
 
+                    @error('email')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                     <input type="text" value="{{$user->universitas}}" placeholder="Universitas" name="universitas" class="input margin-top-xs no-symbols" required autofocus>
+
+                    @error('universitas')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
 
                     <select class="select margin-top-xs" name="select-comp">
                         <option value="Homeless Media"@if($user->kategori=="Homeless Media")selected @endif>Homeless Media</option>
@@ -47,7 +68,21 @@
                         <option value="Skip Ad"@if($user->kategori=="Skip Ad")selected @endif>Skip Ad</option>
                     </select>
 
+                    @error('select-comp')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                     <input type="password" placeholder="Password" name="password" id="password" class="input margin-top-xs margin-bottom-s" autofocus>
+
+                    @error('password')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
 
                     @if($user->path_bukti_bayar)
                         @if($user->validasi_pembayaran == true)
@@ -108,16 +143,6 @@
 
             </form> -->
         </div>
-        
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
         <img src="/assets/Rectangle 18.png" class="settings__geometry--square" alt="">
         <img src="/assets/Ellipse 10.png" class="settings__geometry--circle" alt="">

@@ -27,7 +27,7 @@
 </head>
 <body>
     <div class="app">
-        <nav class="header">
+        <nav class="header z-max">
             <a href="/" class="logo-box">
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
@@ -83,12 +83,24 @@
                 @endguest
             </div>
 
-            <i class="fa fa-bars header__hamburger">
-            </i>
+            <div class="header__link-box--responsive">
+                <a href="/about" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Kompetisi</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Events</p></a>
+                @guest
+                <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a>
+                @else
+                <a href="/tim/update" class="dropdown-option">Dashboard Settings</a>
+                @endguest
+            </div>
+            <a href="javascript:void(0);" class="icon header__hamburger-button">
+                <i class="fa fa-bars header__hamburger"></i>
+            </a>
         </nav>
         @yield('content')
 
-        <footer class="footer">
+        <footer class="footer z-max">
             <a href="/" class="logo-box">
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>

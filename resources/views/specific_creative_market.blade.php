@@ -34,24 +34,10 @@
             @endif
             <div class="media-container">
                 <div class="slideshow tenant-product--1__carousel">
-                    <div class="slideshow-container">
                         <!-- Full-width images with number and caption text -->
-                        <div class="mySlides tenant-product--{{$loop->index+1}}__image" style="display: block">
-                            <img src="{{ asset($product->path_photo) }}">
+                        <div class="tenant-product--{{$loop->index+1}}__image w-100" style="display: inline-block">
+                            <img src="{{ asset($product->path_photo) }}" class="tenant-product__image"> 
                         </div>
-                        <!-- <div class="mySlides tenant-product--1__image">
-                            <img src="{{ asset('images/tenant-placeholder-cuy.jpg') }}">
-                        </div>
-                        <div class="mySlides tenant-product--1__image">
-                            <img src="{{ asset('images/tenants-placeholder.jpg') }}">
-                        </div> -->
-                    </div>
-                    <!-- The dots/circles -->
-                    <!-- <div style="text-align:center">
-                        <span class="dot tenant-product--1__dot active" onclick="currentSlide(1, 1)"></span>
-                        <span class="dot tenant-product--1__dot" onclick="currentSlide(2, 1)"></span>
-                        <span class="dot tenant-product--1__dot" onclick="currentSlide(3, 1)"></span>
-                    </div> -->
                     @if($loop->index+1==1)
                         <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--1__triangle"/>
                     @elseif($loop->index+1==2)

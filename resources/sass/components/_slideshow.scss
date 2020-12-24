@@ -1,6 +1,10 @@
 .slideshow {
     width: 50rem;
     margin-right: 7rem;
+
+    @include respond(tab-port) {
+        margin-right: 0;
+    }
 }
 
 /* Slideshow container */
@@ -14,17 +18,8 @@
 /* Hide the images by default */
 .mySlides {
     width: 100%;
-    display: none;
+    // display: none;
     // border: 1px solid $color-grey;
-
-    & > img {
-        width: 50rem !important;
-        height: 50rem !important;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        object-fit: cover;
-    }
 }
   
 /* The dots/bullets/indicators */

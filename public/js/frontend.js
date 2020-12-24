@@ -27,7 +27,7 @@ $(document).ready(() => {
     })
 
     $('.header__hamburger').click(function() {
-        $('.header').addClass('responsive');
+        $('.header').toggleClass('responsive');
     })
     
     // Event listener for 'Add Team Member' button in Registration Page

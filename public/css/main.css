@@ -992,6 +992,23 @@ input[type="file"] {
   border: 1px solid #858586;
 }
 
+.alert-text {
+  display: inline-block;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  font-family: "Avenir Next Regular", "sans-serif";
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.alert-text--failed {
+  color: #dc3545;
+}
+
+.alert-text--success {
+  color: #28a745;
+}
+
 .cta {
   border-radius: 1.5rem;
   border: 1px solid #111111;
@@ -1159,6 +1176,12 @@ input.dropdown-option {
   margin-right: 7rem;
 }
 
+@media (max-width: 56.25em) {
+  .slideshow {
+    margin-right: 0;
+  }
+}
+
 /* Slideshow container */
 
 .slideshow-container {
@@ -1172,17 +1195,6 @@ input.dropdown-option {
 
 .mySlides {
   width: 100%;
-  display: none;
-}
-
-.mySlides > img {
-  width: 50rem !important;
-  height: 50rem !important;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 /* The dots/bullets/indicators */
@@ -1210,6 +1222,7 @@ input.dropdown-option {
 }
 
 .header {
+  position: relative;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -1223,49 +1236,65 @@ input.dropdown-option {
 
 @media (max-width: 56.25em) {
   .header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 3rem 7.5rem;
   }
 }
 
 @media (max-width: 56.25em) {
   .header.responsive {
-    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding-bottom: 4rem;
+    background-color: #D02344;
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    z-index: 999;
   }
 
-  .header.responsive > * {
-    width: 85vw;
-  }
-
-  .header.responsive .header__link {
-    width: 100%;
-    display: block;
-    text-align: left;
-    padding: 1.25rem 7.5vw;
-    text-align: center;
-  }
-
-  .header.responsive .header__hamburger {
-    position: absolute;
-    right: 7.5vw;
-    top: 3rem;
-  }
-
-  .header.responsive .header__link-box {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .header.responsive .header__link-box :first-child {
+  .header.responsive .logo-box {
+    position: relative;
     align-self: flex-start;
   }
 
-  .header.responsive .header__util {
+  .header.responsive > *:not(:first-child) {
+    width: 85vw;
+  }
+
+  .header.responsive .header__link-box--responsive {
+    position: absolute;
+    width: 100vw;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: block;
+    background-color: #D02344;
+    z-index: 999;
+  }
+
+  .header.responsive .header__link-box--responsive * {
+    text-align: center !important;
+    margin: 0 !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
+    padding: .5rem 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header.responsive .header__link-box--responsive *:hover {
+    background-color: #f1f1f1;
+  }
+
+  .header.responsive .header__hamburger {
+    justify-self: flex-start;
   }
 
   .header.responsive + * {
@@ -1273,25 +1302,30 @@ input.dropdown-option {
   }
 }
 
-@media (max-width: 56.25em) {
-  .header > *:not(:last-child) {
-    display: none;
-  }
-}
-
 .header__hamburger {
-  text-align: left;
+  text-align: right;
   display: none;
 }
 
 @media (max-width: 56.25em) {
   .header__hamburger {
-    font-size: 4rem;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 3rem;
     color: #EBEBED;
     background-color: transparent;
     border: none;
     display: inline-block;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .header__hamburger-button {
+    position: relative;
   }
 }
 
@@ -1306,6 +1340,10 @@ input.dropdown-option {
   align-items: center;
 }
 
+.header__link-box--responsive {
+  display: none;
+}
+
 .header__link-box > * {
   display: flex;
   align-items: center;
@@ -1316,16 +1354,33 @@ input.dropdown-option {
   margin-right: 4.5rem;
 }
 
+@media (max-width: 56.25em) {
+  .header__link-box {
+    display: none;
+  }
+}
+
 .header__util {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
+.header__util.show {
+  display: block;
+  background-color: #EBEBED;
+}
+
 .header__util > * {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+@media (max-width: 56.25em) {
+  .header__util {
+    display: none;
+  }
 }
 
 .footer {
@@ -2044,13 +2099,84 @@ input.dropdown-option {
   padding: 12rem 0;
 }
 
+@media (max-width: 56.25em) {
+  .tenant-product {
+    padding: 10rem 0;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .tenant-product {
+    padding: 7rem 0;
+  }
+}
+
 .tenant-product > * {
   width: 60%;
   margin: 0 auto;
 }
 
+@media (max-width: 75em) {
+  .tenant-product > * {
+    width: 70%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .tenant-product > * {
+    width: 80%;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .tenant-product > * {
+    width: 90%;
+  }
+}
+
 .tenant-product .media__content {
   z-index: 999;
+}
+
+@media (max-width: 56.25em) {
+  .tenant-product .media__container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.tenant-product__image {
+  width: 50rem !important;
+  height: 50rem !important;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 75em) {
+  .tenant-product__image {
+    width: 40rem !important;
+    height: 40rem !important;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .tenant-product__image {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 3rem auto !important;
+    width: 35rem !important;
+    height: 35rem !important;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .tenant-product__image {
+    width: 30rem !important;
+    height: 30rem !important;
+  }
 }
 
 .tenant-product--1 {

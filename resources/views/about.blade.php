@@ -5,7 +5,7 @@
 @endsection
 
 @section('content') 
-<div class="about">
+<div class="about z-min">
     <div class="market-banner">
         <img src="{{ asset('images/market.png')}}" alt="" class="landing-banner__image">
         <div class="media-container market-banner__media-container">

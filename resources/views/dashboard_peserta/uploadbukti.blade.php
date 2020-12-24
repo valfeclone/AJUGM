@@ -25,6 +25,13 @@
                 <label for="file-upload" class="input input-file-label" accept=".jpg,.jpeg,.png,.pdf">Upload Pembayaran <span>+</span></label>
                 <input type="file" placeholder="Upload Pembayaran" name="file_bukti_pembayaran" id="file-upload" required>
 
+                @error('file_bukti_pembayaran')
+                    <span class="alert-text alert-text--failed" role="alert">
+                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
                 <p class="text-regular text-left text-black margin-top-s" >Untuk pembayaran bisa dilakukan dengan cara mentransfer ke akun dibawah ini :</p>
                 <br>
                 <p class="text-regular text-left text-black">059001019819504
@@ -38,16 +45,6 @@
 
             </form>
         </div>
-        
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
         <img src="/assets/Rectangle 18.png" class="settings__geometry--square" alt="">
         <img src="/assets/Ellipse 10.png" class="settings__geometry--circle" alt="">
