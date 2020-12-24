@@ -20,37 +20,31 @@
                     </div>
                     <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="museum-banner__geometry--circle adaptive">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                <p class="text-regular text-white" style="text-align: justify;">Nakula (Penelitian Kawula Muda) merupakan salah satu mata lomba di Festival Ajisaka 2020+ yang berfokus pada bidang penelitian. Pada Festival Ajisaka 2020+, Nakula mengangkat subtema “Temukan Solusi Bencana dengan Komunikasi”. Terdapat dua kategori dalam mata lomba Nakula yang meliputi Riset Konvensional dan Riset Fun. Melalui dua kategori tersebut, para insan kreatif diharapkan dapat menemukan solusi dari bencana yang ada.</p>
             </div>
         </div>
     </section>
 
-    @for($i = 0; $i < 3; $i++)
     <section class="lomba-desc media-container z-max">
-        @if ($i % 2 != 0)
-        <div class="media__content lomba-desc__media-content">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+        <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Konvensional</h3>
+            <p class="text-regular">Kategori ini mendorong para insan kreatif untuk menemukan solusi dari bencana yang terjadi. Secara umum riset ini berorientasi pada kesimpulan. Tujuan dari riset ini adalah memperoleh generalisasi pengetahuan berdasarkan perumusan dan pengujian hipotesis.</p>
         </div>
+    </section>
 
+    <section class="lomba-desc media-container z-max">
+        <div class="media__content lomba-desc__media-content">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Fun</h3>
+            <p class="text-regular">Kategori ini membebaskan insan kreatif untuk menemukan solusi dari bencana yang terjadi dengan mengutamakan kreativitas dan humor. Meskipun mengutamakan humor, peserta diharapkan tetap berpegang pada metode penelitian ilmiah. Tujuan dari riset ini adalah memperoleh solusi permasalahan bencana dengan solusi yang ringan dan humoristis.</p>
+        </div>
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
-        @else
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
-
-        <!-- <video class="media media-left lomba-desc__video" controls>
-            <source src="movie.mp4" type="video/mp4">
-        </video> -->
-
-        <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
-            <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
-        </div>
-        @endif
     </section>
-    @endfor
-
 </div>
 @endsection

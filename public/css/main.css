@@ -2887,6 +2887,7 @@ input.dropdown-option {
 
 @media (max-width: 56.25em) {
   .lomba {
+    padding-top: 9rem;
     grid-template-columns: 1fr minmax(-webkit-min-content, 87vw) 1fr;
     grid-template-columns: 1fr minmax(min-content, 87vw) 1fr;
   }

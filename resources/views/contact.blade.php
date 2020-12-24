@@ -97,7 +97,13 @@
                             </div>
                             <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="market-banner__geometry--circle adaptive">
                         </div>
-                        <p class="text-regular">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                        <p class="text-regular">
+                        Jika ada pertanyaan, kritik, dan/atau saran, kami akan membantu kalian dengan senang hati. Silakan hubungi kami melalui:<br><br>
+                        Email : ajisaka.fisipol@ugm.ac.id <br>
+                        IG&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <a href="https://instagram.com/ajisakaugm">@ajisakaugm</a><br>
+                        Line&nbsp&nbsp&nbsp: @ajisakaugm
+                        </p>
+                        <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="market-banner__geometry--circle adaptive">
                     </div>
                 </div>
             </section>

@@ -48,7 +48,7 @@
                 </div>
                 <div class="media__content landing-about__text">
                     <h3 class="heading-3 text-black text-uppercase landing-about__about-text margin-bottom-s">About Ajisaka</h3>
-                    <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo fuga reiciendis maiores temporibus officiis qui corporis sed? Placeat, sit quae odit sequi aperiam aut. Doloribus obcaecati sunt perferendis nam asperiores dolores eos repellendus.</p>
+                    <p class="text-regular margin-bottom-m" style="text-align: justify;">Festival Ajisaka UGM 2020+ hadir untuk memotivasi pemuda-pemudi bangsa dalam menyumbang ide inovatif terkait penanggulangan bencana di Indonesia. Kami mengangkat tema Disaster Risk Reduction dengan tajuk “Biwara Bumandhala: Berita Baik untuk Bumi” dan tagline Melek Bencana. Insan kreatif bangsa diharapkan dapat menjadi agen perubahan untuk menanamkan kesadaran di masyarakat bahwa komunikasi memiliki peran krusial dalam segala aspek kehidupan manusia, salah satunya dalam pemulihan situasi pasca krisis.</p>
                     <a href="/about" class="link align-self-start"><h3 class="heading-3 text-black">Learn more .</h3></a>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Arjuna</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Ajang Citra Sejuta Warna</p>
                         <a href="/kompetisi/arjuna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
@@ -75,7 +75,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Kresna</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Kreasi Insan Sinema</p>
                         <a href="/kompetisi/kresna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
@@ -84,7 +84,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Nakula</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Penelitian Kawula Muda</p>
                         <a href="/kompetisi/nakula" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
                     
@@ -93,7 +93,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Prahasta</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Pertempuran Humas Nusantara</p>
                         <a href="/kompetisi/prahasta" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
@@ -102,7 +102,7 @@
                         <div class="card__image landing-matlom__card-image margin-bottom-s">
                         </div>
                         <p class="text-bold margin-bottom-xs">Sadewa</p>
-                        <p class="text-regular margin-bottom-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa alias facilis dolores.</p>
+                        <p class="text-regular margin-bottom-xs">Sayembara Dewa Pariwara</p>
                         <a href="/kompetisi/sadewa" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
                 </div>
@@ -162,10 +162,13 @@
                     </div>
                     <img src="/assets/Path 57.png" alt="" class="landing-register__geometry--boxes">
                 </div>
-                <a href="#" class="link"><p class="text-bold text-black">Learn more .</p></a>
+                <a href="/register" class="link"><p class="text-bold text-black">Register Now ></p></a>
             </div>
             <img src="/assets/Ellipse 8.png" alt="" class="landing-register__geometry--circle">
             <img src="/assets/Path 25.png" alt="" class="landing-register__geometry--triangle">
         </section>
     </div>
 @endsection
+
+
+

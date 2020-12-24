@@ -18,6 +18,7 @@
     }
 
     @include respond(tab-port) {
+        padding-top: 9rem;
         grid-template-columns: 1fr minmax(min-content, 87vw) 1fr;
     }
 

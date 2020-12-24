@@ -96,13 +96,13 @@ class RegisterController extends Controller
         $tujuan_upload = storage_path('app/public/foto_ktm');
         
         // menyimpan file foto ktm yang diupload ke variabel $file
-        $file->move($tujuan_upload,$file->getClientOriginalName());
+        $file->move($tujuan_upload, $file->getClientOriginalName());
         $newMember->path_foto_ktm = $file->getClientOriginalName();
         $newMember->save();
         
         //bikin logic loop
         for ($x = 2; $x <= 4; $x+=1) {
-            if($request['member-name-'.$x]){
+            if ($request['member-name-'.$x]) {
                 $newValidatedMember = $request->validate([
                     'member-name-'.$x => 'required',
                     'member-faculty-'.$x => 'required',
@@ -125,11 +125,10 @@ class RegisterController extends Controller
                 $tujuan_upload2 = storage_path('app/public/foto_ktm');
 
                 // menyimpan file foto ktm yang diupload ke variabel $file
-                $file2->move($tujuan_upload2,$file2->getClientOriginalName());
+                $file2->move($tujuan_upload2, $file2->getClientOriginalName());
                 $newMember2->path_foto_ktm = $file2->getClientOriginalName();
                 $newMember2->save();
-            }
-            else{
+            } else {
                 break;
             }
         }
