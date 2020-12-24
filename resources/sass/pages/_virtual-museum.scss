@@ -1,14 +1,19 @@
 .virtual-museum {
     padding: 20rem 5rem 12rem 5rem;
-    display: grid;
-    grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
     overflow: hidden;
     margin-top: -11rem;
+
+    display: grid;
+    grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
 
     background-image: url('/images/museum.png');
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover;
+
+    @include respond(tab-land) {
+        padding: 15rem 5rem 10rem 5rem;
+    }
 
     &__content {
         position: relative;
@@ -28,7 +33,18 @@
         }
 
         &-content {
-            width: 50%;
+            margin-left: 7rem;
+
+            @include respond(tab-port) {
+                width: 80%;
+                margin-left: 0;
+            }
+
+            & * {
+                @include respond(tab-port){
+                    text-align: center !important;
+                }
+            }
         }
     }
 
@@ -54,6 +70,19 @@
             top: 0;
             z-index: 50;
             transform: translate(-20%, 30%);
+
+            @include respond(tab-land) {
+                transform: translate(-20%, 0);
+            }
+
+            @include respond(tab-port) {
+                width: 10rem;
+                transform: translate(-20%, -50%);
+            }
+
+            @include respond(phone) {
+                transform: translate(-100%, -50%);
+            }
         }
     }
 }

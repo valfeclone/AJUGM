@@ -90,14 +90,14 @@
                     <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" alt="" class="media media-left contact__image z-max">
                     <img src="{{ asset('assets/Path 25.png') }}" alt="" class="market-banner__geometry--triangle z-min">
 
-                    <div class="media__content">
-                        <div class="market-banner__media-heading adaptive">
-                        <div class="width-max">
-                            <h1 class="heading-caps text-black margin-bottom-s width-max">Contact</h1>
+                    <div class="media__content contact__media-content z-mid">
+                        <div class="market-banner__media-heading adaptive contact__heading">
+                            <div class="width-max">
+                                <h1 class="heading-caps text-black margin-bottom-s width-max">Contact</h1>
+                            </div>
+                            <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="market-banner__geometry--circle adaptive">
                         </div>
-                        <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="market-banner__geometry--circle adaptive">
-                    </div>
-                        <p class="text-regular" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                        <p class="text-regular">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
                     </div>
                 </div>
             </section>
@@ -107,13 +107,13 @@
             <a href="/" class="logo-box">
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
-            <div class="header__link-box">
+            <div class="footer__link-box">
                 <a href="/about" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
                 <a href="/#landing-matlom" class="link-item"><p class="text-bold text-grey text-uppercase">Kompetisi</p></a>
                 <a href="/#" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
                 <a href="/contact" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
             </div>
-            <div class="header__util">
+            <div class="footer__util">
                 <p class="text-regular text-grey">&#169;2020-Form | All Rights Reserved</p>
             </div>
         </footer>

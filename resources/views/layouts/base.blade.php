@@ -82,6 +82,9 @@
                 </div>
                 @endguest
             </div>
+
+            <i class="fa fa-bars header__hamburger">
+            </i>
         </nav>
         @yield('content')
 
@@ -89,13 +92,13 @@
             <a href="/" class="logo-box">
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
-            <div class="header__link-box">
+            <div class="footer__link-box">
                 <a href="/about" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
                 <a href="/#landing-matlom" class="link-item"><p class="text-bold text-grey text-uppercase">Kompetisi</p></a>
                 <a href="/#" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
                 <a href="/contact" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
             </div>
-            <div class="header__util">
+            <div class="footer__util">
                 <p class="text-regular text-grey">&#169;2020-Form | All Rights Reserved</p>
             </div>
         </footer>

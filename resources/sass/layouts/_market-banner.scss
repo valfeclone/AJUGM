@@ -1,13 +1,40 @@
 .market-banner {
     grid-column: 2 / 3;
     width: 100%;
-    height: 85vh;
+    height: 100%;
 
     &__media {
         width: 40rem;
+        height: 40rem;
+
+        @include respond(tab-land) {
+            width: 35rem;
+            height: 35rem;
+        }
+
+        @include respond(tab-port) {
+            width: 30rem;
+            height: 30rem;
+        }
+
+        @include respond(phone) {
+            width: 22rem;
+            height: 22rem;
+        }
 
         &-container {
             position: relative;
+
+            @include respond(tab-land) {
+                padding-bottom: 8rem;
+            }
+
+            @include respond(tab-port) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 5rem;
+            }
         }
 
         &-heading {
@@ -34,6 +61,16 @@
             position: absolute;
             bottom: 0;
             transform: translate(-60%, -75%);
+            
+            @include respond(tab-port) {
+                width: 18rem;
+                transform: translate(-60%, -350%);
+            }
+
+            @include respond(phone) {
+                width: 15rem;
+                transform: translate(-60%, -450%);
+            }
         }
 
         &--square {
@@ -48,6 +85,10 @@
                 width: 7rem !important;
                 transform: translate(95%, -60%) !important;
             }
+
+            @include respond(tab-port) {
+                display: none;
+            }
         }
 
         &--triangle {
@@ -57,11 +98,15 @@
             left: 0;
             z-index: -1;
             transform: translate(-25%, 30%);
+
+            @include respond(tab-port) {
+                display: none;
+            }
         }
 
         &--circle {
             width: 11rem;
-            position: absolute;
+            position: absolute !important;
             top: 0;
             right: 0;
             z-index: 1;
@@ -70,6 +115,16 @@
             &.adaptive {
                 width: 10rem !important;
                 transform: translate(65%, -60%) !important;
+
+                @include respond(tab-port) {
+                    width: 7rem;
+                    transform: translate(-150%, -60%) !important;
+                }
+
+                @include respond(phone) {
+                    width: 4rem;
+                    transform: translate(-100%, -60%) !important;
+                }
             }
         }
     }

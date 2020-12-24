@@ -29,6 +29,14 @@
             grid-column-gap: 2rem;
             justify-content: center;
             align-items: center;
+
+            @include respond(tab-land) {
+                grid-template-columns: repeat(5, minmax(min-content, 15rem));
+            }
+
+            @include respond(phone) {
+                grid-template-columns: repeat(2, minmax(min-content, 20rem));
+            }
         }
 
         &-s {
@@ -38,6 +46,10 @@
             grid-column-gap: 2rem;
             justify-content: center;
             align-items: center;
+
+            @include respond(phone) {
+                grid-template-columns: repeat(2, minmax(min-content, 30rem));
+            }
         }
         
         &-m {
@@ -61,20 +73,32 @@
 
     
     &-xs {
-        width: 20rem !important;
-        height: 20rem !important;
+        width: 100% !important;
+        height: 100% !important;
     }
 
     &-s {
         width: 17rem !important;
+        height: 28rem !important;
         padding: 3rem 1.5rem;
         background-color: white;
+
+        @include respond(tab-land) {
+            width: 17rem !important;
+            height: 28rem !important;
+        }
+
+        
+        @include respond(phone) {
+            height: 30rem !important;
+        }
     }
 
     &-m {
         width: 25rem !important;
         padding: 4rem 2rem;
         background-color: white;
+
     }
 
     &-xl {
@@ -82,6 +106,11 @@
         height: 55rem !important;
         border-radius: 2rem;
         padding: 7rem;
+
+        @include respond(phone) {
+            padding: 5rem;
+            height: 60rem;
+        }
     }
 
     &-xxl {
@@ -109,6 +138,10 @@
         &--gallery {
             width: 32rem !important;
             height: 20rem !important;
+
+            @include respond(tab-port) {
+                height: 16rem !important;
+            }
         }
     
     }

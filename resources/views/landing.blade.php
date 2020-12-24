@@ -15,14 +15,14 @@
                         <div class="carousel-item active">
                             <div class="landing-banner__carousel-text">
                                 <h1 class="heading-caps text-white margin-bottom-m">Virtual Museum</h1>
-                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Sebagai bentuk apresiasi terhadap karya peserta, seluruh output kreatif akan dipamerkan melalui ekshibisi online. Festival Ajisaka 2020+ mengambil konsep 3D, di mana pengunjung dapat menghadiri ekshibisi selayaknya menjelajahi musem sungguhan. Rasakan sensasi berbeda mengunjungi <i>creative museum</i> dalam bentuk digital!</p>
+                                <p class="text-bold text-grey-dark margin-bottom-s">Sebagai bentuk apresiasi terhadap karya peserta, seluruh output kreatif akan dipamerkan melalui ekshibisi online. Festival Ajisaka 2020+ mengambil konsep 3D, di mana pengunjung dapat menghadiri ekshibisi selayaknya menjelajahi musem sungguhan. Rasakan sensasi berbeda mengunjungi <i>creative museum</i> dalam bentuk digital!</p>
                                 <a href="/virtualmuseum" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="landing-banner__carousel-text">
                                 <h1 class="heading-caps text-white margin-bottom-m">Creative Market</h1>
-                                <p class="text-bold text-grey-dark width-40 margin-bottom-s">Pasaraya merupakan festival belanja online yang merupakan salah satu kontribusi Festival Ajisaka 2020+ untuk membantu UMKM terdampak Covid-19. Festival Ajisaka 2020+ memberikan <i>platform</i> online secara gratis kepada para pemilik <i>creative brand</i> untuk dapat memperluas jangkauan pemasarannya.</p>
+                                <p class="text-bold text-grey-dark margin-bottom-s">Pasaraya merupakan festival belanja online yang merupakan salah satu kontribusi Festival Ajisaka 2020+ untuk membantu UMKM terdampak Covid-19. Festival Ajisaka 2020+ memberikan <i>platform</i> online secara gratis kepada para pemilik <i>creative brand</i> untuk dapat memperluas jangkauan pemasarannya.</p>
                                 <a href="/creativemarket" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
@@ -36,8 +36,8 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <img src="/assets/Group 72.png" alt="" class="landing-banner__geometry--red">
             </div>
+            <img src="/assets/Group 72.png" alt="" class="landing-banner__geometry--red">
         </section>
 
         <section class="landing-about">
@@ -46,7 +46,7 @@
                     <img src="/images/video-image.png" alt="" class="media media-left landing-about__video">
                     <img src="/assets/Group 71.png" alt="" class="landing-about__geometry--red-circle">
                 </div>
-                <div class="media__content margin-left-xl">
+                <div class="media__content landing-about__text">
                     <h3 class="heading-3 text-black text-uppercase landing-about__about-text margin-bottom-s">About Ajisaka</h3>
                     <p class="text-regular margin-bottom-m">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo fuga reiciendis maiores temporibus officiis qui corporis sed? Placeat, sit quae odit sequi aperiam aut. Doloribus obcaecati sunt perferendis nam asperiores dolores eos repellendus.</p>
                     <a href="/about" class="link align-self-start"><h3 class="heading-3 text-black">Learn more .</h3></a>
@@ -58,7 +58,7 @@
 
         <section class="landing-matlom" id="landing-matlom">
             <div class="landing-matlom__content">
-                <h2 class="heading-2 text-black text-uppercase margin-bottom-l">Mata Lomba Ajisaka</h2>
+                <h2 class="heading-2 text-black text-uppercase margin-bottom-l text-center">Mata Lomba Ajisaka</h2>
                 <div class="card-wrapper card-wrapper--flex center">
                     
                     <div class="card card-m mx-s">
@@ -115,7 +115,7 @@
         <section class="landing-register">
             <div class="landing-register__content">
                 <h2 class="heading-2 text-black margin-bottom-l">How to Register?</h2>
-                <div class="card-wrapper--flex margin-bottom-s landing-register__card-wrapper">
+                <div class="card-wrapper--flex evenly margin-bottom-s landing-register__card-wrapper">
                     
                     <div class="card card-s landing-register__card">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->

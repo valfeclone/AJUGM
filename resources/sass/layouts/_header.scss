@@ -8,14 +8,83 @@
     padding: 2.5rem 10rem;
     z-index: 100;
 
+    @include respond(tab-port) {
+        padding: 3rem 7.5rem;
+    }
+
+    &.responsive {
+        @include respond(tab-port) {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 4rem;
+    
+            > * {
+                width: 85vw;
+            } 
+    
+            & .header__link {
+                width: 100%;
+                display: block;
+                text-align: left;
+                padding: 1.25rem 7.5vw;
+                text-align: center;
+            }
+    
+            & .header__hamburger {
+                position: absolute;
+                right: 7.5vw;
+                top: 3rem;
+            }
+    
+            & .header__link-box {
+                display: flex;
+                flex-direction: column;
+    
+                :first-child {
+                    align-self: flex-start;
+                }
+            }
+    
+            & .header__util {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            & + * {
+                padding-top: 6rem;
+            }
+        }
+    }
+
+    & > *:not(:last-child) {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__hamburger {
+        text-align: left;
+        display: none;
+
+        @include respond(tab-port) {
+            font-size: 4rem;
+            color: $color-white;
+            background-color: transparent;
+            border: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
     & > * {
         height: 100%;
+        z-index: 10;
     }
 
 
     &__link-box {
-        height: 100%;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -32,12 +101,9 @@
     }
 
     &__util {
-        height: 100%;
-
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        z-index: 10;
 
         & > * {
             display: flex;

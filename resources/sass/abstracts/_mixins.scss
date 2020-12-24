@@ -1,3 +1,24 @@
+@mixin respond($breakpoint) {
+    @if $breakpoint == small-phone {
+        @media (max-width: 25em) { @content }; // 400px
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content }; // 600px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content }; // 900px
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content }; // 1200px
+    }
+    @if $breakpoint == desktop {
+        @media (max-width: 100em) { @content }; // 1600px
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 125em) { @content }; // 2000px
+    }
+}
+
 %heading {
     font-family: $font-heading;
     color: $color-blue;
@@ -22,4 +43,8 @@
     line-height: normal !important;
 
     -webkit-appearance: none;
+
+    @include respond(tab-port) {
+        font-size: 1.3rem;
+    }
 }

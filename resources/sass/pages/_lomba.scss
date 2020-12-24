@@ -1,15 +1,29 @@
 .lomba {
-    padding-top: 20rem;
+    padding-top: 18rem;
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+    grid-template-rows: minmax(min-content, 70vh);
     overflow: hidden;
     margin-top: -11rem;
     z-index: 1;
 
-    background-image: url('/images/museum.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: contain;
+    @include respond(desktop) {
+        grid-template-rows: minmax(min-content, 85vh);
+    }
+
+    @include respond(tab-land) {
+        padding-top: 12rem;
+        grid-template-rows: minmax(min-content, 75vh);
+        grid-template-columns: 1fr minmax(min-content, 75vw) 1fr;
+    }
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr minmax(min-content, 87vw) 1fr;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr minmax(min-content, 90vw) 1fr;
+    }
 
     & > *:not(:first-child) {
         border-top: 1px solid $color-grey;

@@ -2,5 +2,9 @@
     &-card {
         border-radius: 2rem;
         position: relative;
+
+        @include respond(tab-port) {
+            margin-bottom: 3rem;
+        }
     }
 }

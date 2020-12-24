@@ -25,6 +25,10 @@ $(document).ready(() => {
     $(window).click(function(e) {
 
     })
+
+    $('.header__hamburger').click(function() {
+        $('.header').addClass('responsive');
+    })
     
     // Event listener for 'Add Team Member' button in Registration Page
     let n = $('.collapsible').length;

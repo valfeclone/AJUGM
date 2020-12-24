@@ -7,12 +7,13 @@
 @section('content')
 <div class="market">
     <div class="market-banner">
+        <img src="{{ asset('images/market.png')}}" alt="" class="landing-banner__image">
         <div class="media-container market-banner__media-container">
             <img src="{{ asset('assets/Rectangle 71.png')}}" class="media media-left market-banner__media"/>
 
             <img src="{{ asset('assets/Group 77.png') }}" alt="" class="market-banner__geometry--wave">
 
-            <div class="media__content">
+            <div class="media__content market__media-content"> 
                 <div class="market-banner__media-heading">
                     <div>
                         <h1 class="heading-caps text-white margin-bottom-s">Creative Market</h1>

@@ -6,7 +6,8 @@
 
 @section('content')
 <div class="lomba">
-    <section class="museum-banner">
+    <section class="museum-banner z-min">
+        <img src="{{ asset('images/museum.png')}}" alt="" class="landing-banner__image">
         <div class="media-container museum-banner__media-container">
             <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" class="media media-left museum-banner__media z-max"/>
 
@@ -25,18 +26,25 @@
     </section>
 
     @for($i = 0; $i < 3; $i++)
-    <section class="lomba-desc">
+    <section class="lomba-desc media-container z-max">
         @if ($i % 2 != 0)
-        <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Kresna</h3>
+        <div class="media__content lomba-desc__media-content">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
             <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
         </div>
 
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
         @else
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
 
-        <div class="media__content margin-left-xl width-25">
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+
+        <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Product Name</h3>
             <p class="text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore error veritatis eligendi ullam harum porro aliquid quam distinctio provident nobis. Sapiente blanditiis odit, rem totam laudantium consectetur officia sequi excepturi?</p>
         </div>
