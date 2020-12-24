@@ -35,21 +35,21 @@
             <div class="media-container">
                 <div class="slideshow tenant-product--1__carousel">
                         <!-- Full-width images with number and caption text -->
-                        <div class="tenant-product--{{$loop->index+1}}__image w-100" style="display: inline-block">
-                            <img src="{{ asset($product->path_photo) }}" class="tenant-product__image"> 
+                        <div class="tenant-product--{{$loop->index+1}}__image w-100 z-max" style="display: inline-block">
+                            <img src="{{ asset($product->path_photo) }}" class="tenant-product__image z-max"> 
                         </div>
                     @if($loop->index+1==1)
-                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--1__triangle"/>
+                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--1__triangle z-min"/>
                     @elseif($loop->index+1==2)
-                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--2__circle"/>
+                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--2__circle z-min"/>
                     @elseif($loop->index+1==3)
-                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--3__triangle"/>
+                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--3__triangle z-min"/>
                     @elseif($loop->index+1==4)
-                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--4__circle"/>
+                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--4__circle z-min"/>
                     @elseif($loop->index+1==5)
-                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--5__triangle"/>
+                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--5__triangle z-min"/>
                     @endif
-                </div>
+                </div>D
                
                 <div class="media__content">
                     <div class="relative width-max">
