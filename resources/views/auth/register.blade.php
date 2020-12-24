@@ -28,7 +28,7 @@
             @enderror
 
             <select class="select" id="select-cat" name="select-cat">
-                <option value="default" selected hidden>Category</option> 
+                <option value="" selected hidden>Category</option> 
                 <option value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</option>
                 <option value="Kresna">Kresna (Kreasi Insan Sinema)</option>
                 <option value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</option>
@@ -44,7 +44,7 @@
 
 
             <select class="select" id="select-comp" name="select-opt">
-                <option selected value="default" hidden>Competition</option> 
+                <option selected value="" hidden>Competition</option> 
                 <option disabled value="default">Please select the category first</option>
             </select>
             @error('select-opt')
