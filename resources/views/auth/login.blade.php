@@ -16,9 +16,6 @@
             <input type="email" placeholder="E-mail" name="email" class="input" required autofocus>
 
             <input type="password" placeholder="Password" name="password" class="input margin-bottom-xs" required autofocus>
-
-            <a href="{{ route('password.request') }}" class="link"><p class="text-regular margin-bottom-l">forgot password?</p></a>
-
             <input type="submit" class="button button--white align-self-center margin-bottom-xs" value="Login >">
         </form>
         <div class="align-self-center">

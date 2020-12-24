@@ -8,7 +8,7 @@
 <div class="about">
     <div class="market-banner">
         <div class="media-container market-banner__media-container">
-            <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" class="media media-left market-banner__media z-max"/>
+            <img src="images/about-2.jpg" class="media media-left market-banner__media z-max"/>
 
             <img src="{{ asset('assets/Path 25.png') }}" alt="" class="market-banner__geometry--triangle z-min">
 
@@ -56,9 +56,12 @@
             <h1 class="heading-caps text-black margin-bottom-l text-center">Gallery</h1>
 
             <div class="card-wrapper--grid-s">
-                @for ($i = 0; $i < 6; $i++)
-                    <img src="https://dummyimage.com/300x200/fff/fff.png&text=X" alt="" class="card__image card__image--gallery">
-                @endfor
+                    <img src="images/gallery-1.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery-2.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery-3.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery-4.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery-5.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery-6.jpg" alt="" class="card__image card__image--gallery">
             </div>
         </div>
     </section>
