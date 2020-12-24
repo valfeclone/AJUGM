@@ -64,12 +64,12 @@
             
             @include respond(tab-port) {
                 width: 18rem;
-                transform: translate(-60%, -350%);
+                transform: translate(-60%, -450%);
             }
 
             @include respond(phone) {
                 width: 15rem;
-                transform: translate(-60%, -450%);
+                transform: translate(-60%, -550%);
             }
         }
 

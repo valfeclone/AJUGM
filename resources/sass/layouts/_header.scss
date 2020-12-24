@@ -21,17 +21,13 @@
         @include respond(tab-port) {
             display: flex;
             flex-direction: column;
-            // align-items: center;
             padding-bottom: 4rem;
-            background-color: $color-red;
-            backdrop-filter: blur(2px);
+            background-color: $color-grey-light;
             height: max-content;
             z-index: 999;
 
             & .logo-box {
-                position: relative;
                 align-self: flex-start;
-                // width: 50%;
             }
 
             > *:not(:first-child) {
@@ -43,7 +39,8 @@
                 width: 100vw;
                 height: max-content;
                 display: block;
-                background-color: $color-red;
+                background-color: $color-grey-light;
+                padding-bottom: 3rem;
                 z-index: 999;
 
                 & * {
@@ -54,13 +51,54 @@
                     display: flex;
                     justify-content: center;
 
-                    &:hover {
-                        background-color: $color-grey-light;
+                    &:not(:last-child):hover {
+                        background-color: $color-white;
                     }
+                }
+
+                & > .hr {
+                    border-top: 1px solid $color-white;
+                    margin-top: 2rem !important;
+                    margin-bottom: 1rem !important;
+                }
+
+                & .nested-menu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &__arrow {
+                        color: $color-black;
+                        font-size: 1rem !important;
+                        margin-left: 1rem !important;
+                    }
+
+                    & > .menu {
+                        display: none;
+
+                        
+
+                        &.show {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                & .close-button {
+                    display: block;
+                    font-size: 2rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: $color-black;
+                    margin-top: 3rem !important;
                 }
             }
 
             & .header__hamburger {
+                display: none;
                 justify-self: flex-start;
             }
 

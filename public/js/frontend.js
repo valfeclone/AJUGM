@@ -21,11 +21,6 @@ const json = {
 
 $(document).ready(() => {
 
-    // Event listener to close dropdown and select when clicking body
-    $(window).click(function(e) {
-
-    })
-
     $('.header__hamburger').click(function() {
         $('.header').toggleClass('responsive');
     })
@@ -145,37 +140,26 @@ $(document).ready(() => {
         }
     })
 
-    
+    // Event listener to close hamburger menu when close button is clicked
+    $('.close-button').click(function() {
+        $('.header').removeClass('responsive');
+    })
+
+    // Event listener to open nested menu
+    $('.nested-menu').click(function() {
+        $(this).find('.menu').toggleClass('show');
+        // $(this).toggleClass('show');
+    })
 });
-
-// Carousel
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Thumbnail image controls
-function currentSlide(n, carousel) {
-    showSlides(slideIndex = n, carousel);
-}
-
-function showSlides(n, carousel) {
-    var i;
-    var slides = document.getElementsByClassName(`tenant-product--${carousel}__image`);
-    var dots = document.getElementsByClassName(`tenant-product--${carousel}__dot`);
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
 
 $(document).click(function(event){
     var $trigger = $(".dropdown");
     if($trigger !== event.target && !$trigger.has(event.target).length){
         $(".dropdown-menu").removeClass("open");
     }            
+
+    var $trigger2 = $(".header.responsive");
+    if($trigger2 !== event.target && !$trigger2.has(event.target).length){
+        $(".header.responsive").removeClass("responsive");
+    }   
 });

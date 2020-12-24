@@ -5,7 +5,7 @@
 @endsection
 
 @section('content') 
-<div class="virtual-museum">
+<div class="virtual-museum z-mid">
     <div class="virtual-museum__content media-container">
         <div class="virtual-museum__media-container">
             <img src="/images/Rectangle 71.png" alt="" class="virtual-museum__media media media-left">
@@ -13,8 +13,8 @@
         </div>
         <div class="virtual-museum__media-content media__content">
             <h3 class="heading-1 text-white text-uppercase margin-bottom-m virtual-museum__title z-mid">Virtual Museum</h3>
-            <p class="text-bold text-white margin-bottom-s z-max" style="text-align: justify;">Sebagai bentuk apresiasi terhadap karya peserta, seluruh output kreatif akan dipamerkan melalui ekshibisi online. Festival Ajisaka 2020+ mengambil konsep 3D, di mana pengunjung dapat menghadiri ekshibisi selayaknya menjelajahi musem sungguhan. Rasakan sensasi berbeda mengunjungi <i>creative museum</i> dalam bentuk digital!</p>
-            <a href="#" class="cta cta--white  margin-top-xs z-max"><h3 class="text-bold text-grey">Learn more .</h3></a>
+            <p class="text-bold text-white margin-bottom-s z-mid" style="text-align: justify;">Sebagai bentuk apresiasi terhadap karya peserta, seluruh output kreatif akan dipamerkan melalui ekshibisi online. Festival Ajisaka 2020+ mengambil konsep 3D, di mana pengunjung dapat menghadiri ekshibisi selayaknya menjelajahi musem sungguhan. Rasakan sensasi berbeda mengunjungi <i>creative museum</i> dalam bentuk digital!</p>
+            <a href="#" class="cta cta--white  margin-top-xs z-mid"><h3 class="text-bold text-grey">Learn more .</h3></a>
             <img src="/assets/Ellipse 24.png" alt="" class="virtual-museum__geometry--circle z-min">
         </div>
     </div>

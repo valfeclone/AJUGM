@@ -84,15 +84,38 @@
             </div>
 
             <div class="header__link-box--responsive">
-                <a href="/about" class="link-item"><p class="text-bold text-white text-uppercase">About</p></a>
-                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
-                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Kompetisi</p></a>
-                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Events</p></a>
+                <a href="/about" class="link-item"><p class="text-bold text-black text-uppercase">About</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-black text-uppercase">Contact</p></a>
+                <div class="link-item nested-menu">
+                    <p class="text-bold text-black text-uppercase">Kompetisi <i class="fas fa-angle-down nested-menu__arrow"></i></p>
+                    <div class="menu">
+                        <a href="/kompetisi/arjuna" class="link-item"><p class="text-bold text-black text-uppercase">Arjuna</p></a>
+                        <a href="/kompetisi/kresna" class="link-item"><p class="text-bold text-black text-uppercase">Kresna</p></a>
+                        <a href="/kompetisi/nakula" class="link-item"><p class="text-bold text-black text-uppercase">Nakula</p></a>
+                        <a href="/kompetisi/prahasta" class="link-item"><p class="text-bold text-black text-uppercase">Prahasta</p></a>
+                        <a href="/kompetisi/sadewa" class="link-item"><p class="text-bold text-black text-uppercase">Sadewa</p></a>
+                    </div>
+                </div>
+                <div class="link-item nested-menu">
+                    <p class="text-bold text-black text-uppercase">Events <i class="fas fa-angle-down nested-menu__arrow"></i></p>
+                    <div class="menu">
+                        <a href="/creativemarket" class="link-item"><p class="text-bold text-black text-uppercase">Creative Market</p></a>
+                        <a href="/webinar" class="link-item"><p class="text-bold text-black text-uppercase">Webinar</p></a>
+                        <a href="/exhibition" class="link-item"><p class="text-bold text-black text-uppercase">3D Exhibition</p></a>
+                    </div>
+                </div>
+                <div class="hr"></div>
                 @guest
-                <a href="/login" class="link-item"><p class="text-bold text-white text-uppercase">Login</p></a>
+                <a href="/login" class="link-item"><p class="text-bold text-black text-uppercase">Login</p></a>
                 @else
-                <a href="/tim/update" class="dropdown-option">Dashboard Settings</a>
+                <a href="/tim/update" class="link-item"><p class="text-bold text-black text-uppercase">{{auth()->User()->name}}'s Dashboard</p></a>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <input type="submit" class="link-item text-bold text-black text-uppercase no-border" value="Log out">
+                </form> 
                 @endguest
+
+                <i class="fas fa-times-circle close-button"></i>
             </div>
             <a href="javascript:void(0);" class="icon header__hamburger-button">
                 <i class="fa fa-bars header__hamburger"></i>

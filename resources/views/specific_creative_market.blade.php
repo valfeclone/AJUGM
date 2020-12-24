@@ -11,16 +11,16 @@
         <div class="media-container market-banner__media-container">
             <img src="{{ asset('assets/Rectangle 71.png')}}" class="media media-left market-banner__media"/>
 
-            <img src="{{ asset('assets/Group 77.png') }}" alt="" class="market-banner__geometry--wave">
+            <img src="{{ asset('assets/Group 77.png') }}" alt="" class="market-banner__geometry--wave z-min">
 
-            <div class="media__content">
+            <div class="media__content market__media-content">
                 <div class="market-banner__media-heading adaptive">
                     <div class="width-max">
                         <h1 class="heading-caps text-white margin-bottom-s width-max">{{$umkm->name}}</h1>
                     </div>
-                    <img src="{{ asset('assets/Rectangle 77.png') }}" alt="" class="market-banner__geometry--square adaptive">
+                    <img src="{{ asset('assets/Rectangle 77.png') }}" alt="" class="market-banner__geometry--square adaptive z-min">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">{!!$umkm->description!!}</p>
+                <p class="text-regular text-white z-mid" style="text-align: justify;">{!!$umkm->description!!}</p>
                 <a href="{{$umkm->instagram_link}}" class="cta cta--white  margin-top-s" target="_blank"><h3 class="text-bold text-grey-dark text-uppercase">Contact</h3></a>
             </div>
         </div>

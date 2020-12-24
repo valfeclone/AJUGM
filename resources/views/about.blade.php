@@ -9,7 +9,7 @@
     <div class="market-banner">
         <img src="{{ asset('images/market.png')}}" alt="" class="landing-banner__image">
         <div class="media-container market-banner__media-container">
-            <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" class="media media-left market-banner__media z-max"/>
+            <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" class="media media-left market-banner__media z-mid"/>
 
             <img src="{{ asset('assets/Path 25.png') }}" alt="" class="market-banner__geometry--triangle z-min">
 
@@ -32,7 +32,7 @@
 
     <section class="about-section">
         <div class="about-section__content column">
-            <h1 class="heading-caps text-black margin-bottom-s">More About Ajisaka</h1>
+            <h1 class="heading-caps text-black margin-bottom-m text-center">More About Ajisaka</h1>
             <p class="text-regular text-black" style="text-align: justify;">
                 Festival Ajisaka 2020+ menyajikan berbagai macam program yang dikemas dengan kreatif dan inovatif untuk menyuarakan ajakan bagi insan 
                 kreatif untuk berkarya dan turut serta dalam upaya disaster risk reduction di Indonesia. Insan kreatif Nusantara diharapkan dapat
