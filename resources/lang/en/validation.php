@@ -146,6 +146,9 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'select-cat'=>'Category',
+        'select-opt'=>'Competition'
+    ],
 
 ];
