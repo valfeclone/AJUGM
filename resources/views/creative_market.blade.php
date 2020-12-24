@@ -30,7 +30,7 @@
         <div class="card-wrapper--grid-xs margin-bottom-s">
             @foreach($umkms as $umkm)
                 <div class="card card-xs">
-                    <a href="/creativemarket/{{$umkm->id}}"><img src="{{ asset($umkm->path_photo) }}" alt="" class="card__image card__image--xs"></a>
+                    <a href="/creativemarket/{{$umkm->id}}" class="overflow-hidden"><img src="{{ asset($umkm->path_photo) }}" alt="" class="card__image card__image--xs"></a>
                 </div>
             @endforeach
         </div>

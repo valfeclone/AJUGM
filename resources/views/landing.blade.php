@@ -57,7 +57,7 @@
         </section>
 
         <section class="landing-matlom" id="landing-matlom">
-            <div class="landing-matlom__content">
+            <div class="landing-matlom__content z-max">
                 <h2 class="heading-2 text-black text-uppercase margin-bottom-l text-center">Mata Lomba Ajisaka</h2>
                 <div class="card-wrapper card-wrapper--flex center">
                     
