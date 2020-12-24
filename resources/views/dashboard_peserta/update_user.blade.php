@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="settings__content">
-            <h3 class="heading-3 margin-bottom-s align-self-start text-black">Account</h3>
+            <h3 class="heading-3 margin-bottom-s settings__heading text-black">Account</h3>
 
             <form action="/tim/update" class="form settings__form" method="POST">
                 @csrf
@@ -59,7 +59,7 @@
                         <p class="status text-regular text-black">Belum Membayar</p>
                     @endif
 
-                    <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
+                    <input type="submit" class="button button--white" value="Update >"/>
 
                 @else
                     <input type="text" value="{{$user->name}}" placeholder="Nama Tim" name="name" class="input no-symbols" required autofocus disabled>

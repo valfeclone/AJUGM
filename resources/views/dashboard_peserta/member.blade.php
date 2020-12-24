@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="settings__content">
-            <h3 class="heading-3 margin-bottom-s align-self-start text-black">Members</h3>
+            <h3 class="heading-3 margin-bottom-s text-black settings__heading">Members</h3>
 
             <form action="/tim/member" class="form settings__form" method="POST" enctype="multipart/form-data">
             @csrf
@@ -48,7 +48,7 @@
 
                 <!-- <button id="addTeamMember" type="button" class="button button--white button--borderless align-self-start margin-top-s">Add Member +</button> -->
 
-                <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
+                <input type="submit" class="button button--white" value="Update >"/>
 
             </form>
         </div>

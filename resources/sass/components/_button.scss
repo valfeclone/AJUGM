@@ -5,6 +5,10 @@
     border: 1px solid $color-black;
     padding: .8rem 2.4rem;
     width: max-content;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .button--white {

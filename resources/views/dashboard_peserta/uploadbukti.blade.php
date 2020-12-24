@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="settings__content">
-            <h3 class="heading-3 margin-bottom-s align-self-start text-black">Bukti Pembayaran</h3>
+            <h3 class="heading-3 margin-bottom-s settings__heading text-black">Bukti Pembayaran</h3>
 
             <form action="/tim/uploadbukti" class="form settings__form" method="POST" enctype="multipart/form-data">
             @csrf
@@ -34,7 +34,7 @@
                 Harap menuliskan keterangan transaksi sebagai berikut: Nama Tim - Ajisaka
                 </p>
 
-                <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
+                <input type="submit" class="button button--white" value="Update >"/>
 
             </form>
         </div>
