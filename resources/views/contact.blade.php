@@ -82,6 +82,44 @@
                 </div>
                 @endguest
             </div>
+
+            <div class="header__link-box--responsive">
+                <a href="/about" class="link-item"><p class="text-bold text-black text-uppercase">About</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-black text-uppercase">Contact</p></a>
+                <div class="link-item nested-menu">
+                    <p class="text-bold text-black text-uppercase">Kompetisi <i class="fas fa-angle-down nested-menu__arrow"></i></p>
+                    <div class="menu">
+                        <a href="/kompetisi/arjuna" class="link-item"><p class="text-bold text-black text-uppercase">Arjuna</p></a>
+                        <a href="/kompetisi/kresna" class="link-item"><p class="text-bold text-black text-uppercase">Kresna</p></a>
+                        <a href="/kompetisi/nakula" class="link-item"><p class="text-bold text-black text-uppercase">Nakula</p></a>
+                        <a href="/kompetisi/prahasta" class="link-item"><p class="text-bold text-black text-uppercase">Prahasta</p></a>
+                        <a href="/kompetisi/sadewa" class="link-item"><p class="text-bold text-black text-uppercase">Sadewa</p></a>
+                    </div>
+                </div>
+                <div class="link-item nested-menu">
+                    <p class="text-bold text-black text-uppercase">Events <i class="fas fa-angle-down nested-menu__arrow"></i></p>
+                    <div class="menu">
+                        <a href="/creativemarket" class="link-item"><p class="text-bold text-black text-uppercase">Creative Market</p></a>
+                        <a href="/webinar" class="link-item"><p class="text-bold text-black text-uppercase">Webinar</p></a>
+                        <a href="/exhibition" class="link-item"><p class="text-bold text-black text-uppercase">3D Exhibition</p></a>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                @guest
+                <a href="/login" class="link-item"><p class="text-bold text-black text-uppercase">Login</p></a>
+                @else
+                <a href="/tim/update" class="link-item"><p class="text-bold text-black text-uppercase">{{auth()->User()->name}}'s Dashboard</p></a>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <input type="submit" class="link-item text-bold text-black text-uppercase no-border" value="Log out">
+                </form> 
+                @endguest
+
+                <i class="fas fa-times-circle close-button"></i>
+            </div>
+            <a href="javascript:void(0);" class="icon header__hamburger-button">
+                <i class="fa fa-bars header__hamburger text-black"></i>
+            </a>
         </nav>
 
         <div class="contact">
@@ -90,14 +128,14 @@
                     <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" alt="" class="media media-left contact__image z-max">
                     <img src="{{ asset('assets/Path 25.png') }}" alt="" class="market-banner__geometry--triangle z-min">
 
-                    <div class="media__content">
-                        <div class="market-banner__media-heading adaptive">
-                        <div class="width-max">
-                            <h1 class="heading-caps text-black margin-bottom-s width-max">Contact</h1>
+                    <div class="media__content contact__media-content z-mid">
+                        <div class="market-banner__media-heading adaptive contact__heading">
+                            <div class="width-max">
+                                <h1 class="heading-caps text-black margin-bottom-s width-max">Contact</h1>
+                            </div>
+                            <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="market-banner__geometry--circle adaptive">
                         </div>
-                        <img src="{{ asset('assets/Ellipse 11.png') }}" alt="" class="market-banner__geometry--circle adaptive">
-                    </div>
-                        <p class="text-regular" style="text-align: justify;">
+                        <p class="text-regular">
                         Jika ada pertanyaan, kritik, dan/atau saran, kami akan membantu kalian dengan senang hati. Silakan hubungi kami melalui:<br><br>
                         Email : ajisaka.fisipol@ugm.ac.id <br>
                         IG&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <a href="https://instagram.com/ajisakaugm">@ajisakaugm</a><br>
@@ -112,13 +150,13 @@
             <a href="/" class="logo-box">
                 <img src="/images/ajisaka-logo.png" alt="" class="logo">
             </a>
-            <div class="header__link-box">
+            <div class="footer__link-box">
                 <a href="/about" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
                 <a href="/#landing-matlom" class="link-item"><p class="text-bold text-grey text-uppercase">Kompetisi</p></a>
                 <a href="/#" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
                 <a href="/contact" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
             </div>
-            <div class="header__util">
+            <div class="footer__util">
                 <p class="text-regular text-grey">&#169;2020-Form | All Rights Reserved</p>
             </div>
         </footer>

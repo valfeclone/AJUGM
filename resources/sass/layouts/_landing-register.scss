@@ -6,8 +6,21 @@
 
     display: grid;
     grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
-
     overflow: hidden;
+
+    @include respond(tab-land) {
+        grid-template-columns: 1fr minmax(min-content, 75vw) 1fr;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr minmax(min-content, 85vw) 1fr;
+    }
+
+    &__arrow {
+        @include respond(phone) {
+            display: none;
+        }
+    }
 
     &__content {
         grid-column: 2 / 3;

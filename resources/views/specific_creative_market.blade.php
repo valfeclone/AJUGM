@@ -7,19 +7,20 @@
 @section('content')
 <div class="market">
     <div class="market-banner">
+        <img src="{{ asset('images/market.png')}}" alt="" class="landing-banner__image">
         <div class="media-container market-banner__media-container">
             <img src="{{ asset('assets/Rectangle 71.png')}}" class="media media-left market-banner__media"/>
 
-            <img src="{{ asset('assets/Group 77.png') }}" alt="" class="market-banner__geometry--wave">
+            <img src="{{ asset('assets/Group 77.png') }}" alt="" class="market-banner__geometry--wave z-min">
 
-            <div class="media__content">
+            <div class="media__content market__media-content">
                 <div class="market-banner__media-heading adaptive">
                     <div class="width-max">
                         <h1 class="heading-caps text-white margin-bottom-s width-max">{{$umkm->name}}</h1>
                     </div>
-                    <img src="{{ asset('assets/Rectangle 77.png') }}" alt="" class="market-banner__geometry--square adaptive">
+                    <img src="{{ asset('assets/Rectangle 77.png') }}" alt="" class="market-banner__geometry--square adaptive z-min">
                 </div>
-                <p class="text-regular text-white" style="text-align: justify;">{!!$umkm->description!!}</p>
+                <p class="text-regular text-white z-mid" style="text-align: justify;">{!!$umkm->description!!}</p>
                 <a href="{{$umkm->instagram_link}}" class="cta cta--white  margin-top-s" target="_blank"><h3 class="text-bold text-grey-dark text-uppercase">Contact</h3></a>
             </div>
         </div>
@@ -33,24 +34,10 @@
             @endif
             <div class="media-container">
                 <div class="slideshow tenant-product--1__carousel">
-                    <div class="slideshow-container">
                         <!-- Full-width images with number and caption text -->
-                        <div class="mySlides tenant-product--{{$loop->index+1}}__image" style="display: block">
-                            <img src="{{ asset($product->path_photo) }}">
+                        <div class="tenant-product--{{$loop->index+1}}__image w-100" style="display: inline-block">
+                            <img src="{{ asset($product->path_photo) }}" class="tenant-product__image"> 
                         </div>
-                        <!-- <div class="mySlides tenant-product--1__image">
-                            <img src="{{ asset('images/tenant-placeholder-cuy.jpg') }}">
-                        </div>
-                        <div class="mySlides tenant-product--1__image">
-                            <img src="{{ asset('images/tenants-placeholder.jpg') }}">
-                        </div> -->
-                    </div>
-                    <!-- The dots/circles -->
-                    <!-- <div style="text-align:center">
-                        <span class="dot tenant-product--1__dot active" onclick="currentSlide(1, 1)"></span>
-                        <span class="dot tenant-product--1__dot" onclick="currentSlide(2, 1)"></span>
-                        <span class="dot tenant-product--1__dot" onclick="currentSlide(3, 1)"></span>
-                    </div> -->
                     @if($loop->index+1==1)
                         <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--1__triangle"/>
                     @elseif($loop->index+1==2)

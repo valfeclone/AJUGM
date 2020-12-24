@@ -14,8 +14,13 @@
         transition: all 1s;
 
         &.show {
-            transform: translate(-5%, 0);
+            transform: translate(0, 0);
             transition: all 1s;
+        }
+
+        @include respond(tab-port) {
+            position: static;
+            transform: translate(100vw, 0);
         }
     }
 

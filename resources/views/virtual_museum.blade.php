@@ -4,9 +4,9 @@
     Ajisaka | 3D Exhibition
 @endsection
 
-@section('content')
-<div class="virtual-museum">
-    <div class="virtual-museum__content">
+@section('content') 
+<div class="virtual-museum z-mid">
+    <div class="virtual-museum__content media-container">
         <div class="virtual-museum__media-container">
             <img src="/images/Rectangle 71.png" alt="" class="virtual-museum__media media media-left">
             <img src="/assets/Path 67.png" alt="" class="virtual-museum__geometry--triangle">

@@ -4,10 +4,21 @@
     background-position: center;
     object-fit: cover;
     align-self: center !important;
+    display: inline-block;
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem;
+        order: 1 !important;
+    }
 
     &-container {
         display: flex;
         justify-content: space-between;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__content {
@@ -15,13 +26,35 @@
         flex-direction: column;
         justify-content: center;
         width: 50%;
+
+        @include respond(tab-port) {
+            width: 80%;
+            align-items: center;
+            order: 2 !important;
+        }
+
+        & * {
+            @include respond(tab-port) {
+                text-align: center !important;
+            }
+        }
     }
 }
 
 .media-left {
     justify-self: start !important;
+
+    @include respond(tab-port) {
+        justify-self: center !important;
+        align-self: center !important;
+    }
 }
 
 .media-right {
     justify-self: end !important;
+
+    @include respond(tab-port) {
+        justify-self: center !important;
+        align-self: center !important;
+    }
 }

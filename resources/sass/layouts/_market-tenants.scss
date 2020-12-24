@@ -3,7 +3,15 @@
     width: 100%;
 
     padding: 5.5rem 15rem;
-    margin-top: 1px solid $color-grey;
+    border-top: 1px solid $color-grey;
 
     background-color: $color-white;
+
+    @include respond(tab-land) {
+        padding: 5.5rem 10rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 5.5rem 7rem;
+    }
 }

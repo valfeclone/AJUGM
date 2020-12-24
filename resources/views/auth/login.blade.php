@@ -15,22 +15,27 @@
 
             <input type="email" placeholder="E-mail" name="email" class="input" required autofocus>
 
-            <input type="password" placeholder="Password" name="password" class="input margin-bottom-xs" required autofocus>
-            <input type="submit" class="button button--white align-self-center margin-bottom-xs" value="Login >">
+            @error('email')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+
+            <input type="password" placeholder="Password" name="password" class="input" required autofocus>
+
+            @error('password')
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+
+            <input type="submit" class="button button--white align-self-center margin-top-l margin-bottom-xs" value="Login >">
         </form>
         <div class="align-self-center">
             <a href="/register" class="link"><p class="text-regular text-black">Register .</p></a>
         </div>
-
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
         <img src="/assets/Ellipse 11.png" alt="" class="login__geometry--circle">
         <img src="/assets/Group 75.png" alt="" class="login__geometry--wave">

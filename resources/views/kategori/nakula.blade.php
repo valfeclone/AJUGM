@@ -6,7 +6,8 @@
 
 @section('content')
 <div class="lomba">
-    <section class="museum-banner">
+    <section class="museum-banner z-min">
+        <img src="{{ asset('images/museum.png')}}" alt="" class="landing-banner__image">
         <div class="media-container museum-banner__media-container">
             <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" class="media media-left museum-banner__media z-max"/>
 
@@ -24,22 +25,26 @@
         </div>
     </section>
 
-    <!-- Item 1 -->
-    <section class="lomba-desc">
-        <div class="media__content width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Konvensional</h3>
-            <p class="text-regular" style="text-align: justify;">Kategori ini mendorong para insan kreatif untuk menemukan solusi dari bencana yang terjadi. Secara umum riset ini berorientasi pada kesimpulan. Tujuan dari riset ini adalah memperoleh generalisasi pengetahuan berdasarkan perumusan dan pengujian hipotesis.</p>
-        </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video margin-left-xl">
-    </section>
-    <!-- Item 2 -->
-    <section class="lomba-desc">
+    <section class="lomba-desc media-container z-max">
         <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
-        <div class="media__content margin-left-xl width-25">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Fun</h3>
-            <p class="text-regular" style="text-align: justify;">Kategori ini membebaskan insan kreatif untuk menemukan solusi dari bencana yang terjadi dengan mengutamakan kreativitas dan humor. Meskipun mengutamakan humor, peserta diharapkan tetap berpegang pada metode penelitian ilmiah. Tujuan dari riset ini adalah memperoleh solusi permasalahan bencana dengan solusi yang ringan dan humoristis. </p>
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+        <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Konvensional</h3>
+            <p class="text-regular">Kategori ini mendorong para insan kreatif untuk menemukan solusi dari bencana yang terjadi. Secara umum riset ini berorientasi pada kesimpulan. Tujuan dari riset ini adalah memperoleh generalisasi pengetahuan berdasarkan perumusan dan pengujian hipotesis.</p>
         </div>
     </section>
 
+    <section class="lomba-desc media-container z-max">
+        <div class="media__content lomba-desc__media-content">
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Fun</h3>
+            <p class="text-regular">Kategori ini membebaskan insan kreatif untuk menemukan solusi dari bencana yang terjadi dengan mengutamakan kreativitas dan humor. Meskipun mengutamakan humor, peserta diharapkan tetap berpegang pada metode penelitian ilmiah. Tujuan dari riset ini adalah memperoleh solusi permasalahan bencana dengan solusi yang ringan dan humoristis.</p>
+        </div>
+        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <!-- <video class="media media-left lomba-desc__video" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video> -->
+    </section>
 </div>
 @endsection

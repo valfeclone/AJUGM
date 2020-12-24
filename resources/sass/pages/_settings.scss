@@ -10,6 +10,16 @@
     background-repeat: no-repeat;
     background-size: cover;
 
+    overflow: hidden;
+
+    @include respond(tab-land) {
+        padding: 15rem 0rem 9rem 0rem;
+    }
+
+    @include respond(phone) {
+        padding: 15rem 3rem 9rem 3rem;
+    }
+
     &__form-card {
         position: relative;
         display: grid;
@@ -17,10 +27,45 @@
         grid-row-gap: 2rem;
         align-items: flex-start;
         border-radius: 3.5rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            grid-template-rows: max-content;
+            grid-row-gap: 0;
+            align-items: center;
+        }
     }
 
     &__form {
         height: 100%;
+
+        @include respond(tab-port) {
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include respond(phone) {
+            width: 90%;
+        }
+
+        & > *:last-child {
+            margin-top: auto !important;
+            align-self: flex-end;
+
+            @include respond(tab-port) {
+                justify-self: flex-end;
+                align-self: center;
+            }
+        }
+    }
+
+    &__heading {
+        align-self: flex-start;
+
+        @include respond(tab-port) {
+            align-self: center;
+        }
     }
 
     &__sidebar {
@@ -34,6 +79,13 @@
         border-left: 1px solid $color-grey;
         padding: 1rem 2.5rem 0 4.5rem;
         width: 100%;
+
+        @include respond(tab-port) {
+            border-left: 0;
+            border-top: 1px solid $color-grey;
+            padding: 3.5rem 0;
+            width: 100%;
+        }
     }
 
     &__geometry {
@@ -43,6 +95,10 @@
             left: 0;
             width: 13rem;
             transform: translate(-40%, -15%);
+
+            @include respond(tab-port) {
+                width: 11rem;
+            }
         }
 
         &--circle {
@@ -51,6 +107,14 @@
             right: 0;
             width: 25rem;
             transform: translate(60%, -30%);
+
+            @include respond(tab-port) {
+                width: 20rem;
+            }
+
+            @include respond(phone) {
+                width: 17rem;
+            }
         }
     }
 }

@@ -55,18 +55,34 @@
 
 .margin-top-m {
     margin-top: 3.5rem !important;
+
+    @include respond(tab-land) {
+        margin-top: 3rem !important;
+    }
 }
 
 .margin-top-l {
     margin-top: 5rem !important;
+
+    @include respond(tab-land) {
+        margin-top: 4.2rem !important;
+    }
 }
 
 .margin-top-xl {
     margin-top: 12rem !important;
+
+    @include respond(tab-land) {
+        margin-top: 10rem !important;
+    }
 }
 
 .margin-top-xxl {
     margin-top: 15rem !important;
+
+    @include respond(tab-land) {
+        margin-top: 12rem !important;
+    }
 }
 
 // Margin Bottom
@@ -84,18 +100,34 @@
 
 .margin-bottom-m {
     margin-bottom: 3.5rem !important;
+
+    @include respond(tab-land) {
+        margin-bottom: 3rem !important;
+    }
 }
 
 .margin-bottom-l {
     margin-bottom: 5rem !important;
+
+    @include respond(tab-land) {
+        margin-bottom: 4.2rem !important;
+    }
 }
 
 .margin-bottom-xl {
     margin-bottom: 12rem !important;
+
+    @include respond(tab-land) {
+        margin-bottom: 10rem !important;
+    }
 }
 
 .margin-bottom-xxl {
     margin-bottom: 15rem !important;
+
+    @include respond(tab-land) {
+        margin-bottom: 12rem !important;
+    }
 }
 
 // Margin left
@@ -201,6 +233,15 @@
     z-index: 999 !important;
 }
 
+.z-mid {
+    z-index: 500 !important;
+}
+
 .z-min {
     z-index: 1 !important;
+}
+
+// Border
+.no-border {
+    border: 0;
 }

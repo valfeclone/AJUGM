@@ -7,12 +7,13 @@
 @section('content')
 <div class="market">
     <div class="market-banner">
+        <img src="{{ asset('images/market.png')}}" alt="" class="landing-banner__image">
         <div class="media-container market-banner__media-container">
             <img src="{{ asset('assets/Rectangle 71.png')}}" class="media media-left market-banner__media"/>
 
             <img src="{{ asset('assets/Group 77.png') }}" alt="" class="market-banner__geometry--wave">
 
-            <div class="media__content">
+            <div class="media__content market__media-content"> 
                 <div class="market-banner__media-heading">
                     <div>
                         <h1 class="heading-caps text-white margin-bottom-s">Creative Market</h1>
@@ -29,7 +30,7 @@
         <div class="card-wrapper--grid-xs margin-bottom-s">
             @foreach($umkms as $umkm)
                 <div class="card card-xs">
-                    <a href="/creativemarket/{{$umkm->id}}"><img src="{{ asset($umkm->path_photo) }}" alt="" class="card__image card__image--xs"></a>
+                    <a href="/creativemarket/{{$umkm->id}}" class="overflow-hidden"><img src="{{ asset($umkm->path_photo) }}" alt="" class="card__image card__image--xs"></a>
                 </div>
             @endforeach
         </div>
