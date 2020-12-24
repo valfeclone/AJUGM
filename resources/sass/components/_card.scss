@@ -73,8 +73,18 @@
 
     
     &-xs {
-        width: 100% !important;
-        height: 100% !important;
+        width: 20rem !important;
+        height: 20rem !important;
+
+        @include respond(tab-land) {
+            width: 15rem !important;
+            height: 15rem !important; 
+        }
+
+        @include respond(phone) {
+            width: 20rem !important;
+            height: 20rem !important; 
+        }
     }
 
     &-s {

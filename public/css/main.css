@@ -718,8 +718,22 @@ body {
 }
 
 .card-xs {
-  width: 100% !important;
-  height: 100% !important;
+  width: 20rem !important;
+  height: 20rem !important;
+}
+
+@media (max-width: 75em) {
+  .card-xs {
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .card-xs {
+    width: 20rem !important;
+    height: 20rem !important;
+  }
 }
 
 .card-s {
