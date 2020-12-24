@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         DB::table('umkms')->insert([
             'name'=>'Berdistraksi',
-            'path_photo'=>'images/umkm/berdistraksi.jpg',
+            'path_photo'=>'images/umkm/berdistraksi.png',
             'description'=>'Berdistraksi is a brand that established to accommodate productivity and creativity issues in Indonesia. Delivering ideas about "Everyone can be a creator" and "There is no right and wrong in art" we came out with our main product: DIY Kit Merangkai. We design every aspect in the product to make it as easy as possible to understand and also make it environmentally friendly through the waste management from the waste product.
             <br><br>
             We are not just selling DIY Kit, we also sell beaded basic accessories: bag, choker, and bracelet. Because the majority of our market are women, we try to deliver women empowerment campaigns through our collections.
@@ -162,6 +162,79 @@ class DatabaseSeeder extends Seeder
             <br><br>
             Harga : <s>IDR 30.000</s> 28.500",
             'path_photo'=>'images/umkm/products/bylily-5.jpg'
+        ]);
+        DB::table('umkms')->insert([
+            'name'=>'CLS Cloth',
+            'description'=>'C’EST LA SOCIETE /sie-la-sosiete/: Berasal dari Bahasa Perancis yang juga berarti “Ini-lah masyarakat”. Adalah sebuah Clothing Brand yang terinspirasi oleh apa yang sedang terjadi di tengah masyarakat atau individu.
+            <br><br>
+            KODE PROMO : CLSPASARAYA',
+            'path_photo'=>'images/umkm/cls.png',
+            'instagram_link'=>'https://www.instagram.com/clscloth.id/'
+        ]);
+        product::create([
+            'name'=>'CLS .002',
+            'umkm_id'=>umkm::where('name', 'CLS Cloth')->first()->id,
+            'description'=>"“Do not hesitate, because tomorrow will be worse.”
+            <br><br>
+            From Chapter 1 : “Your peace, my peace, their peace, whose peace?”
+            <br><br>
+            Price : IDR 100,000 (After discount)<br>
+            Discount : 20% <br>
+            Voucher Code : CLSPASARAYA
+            ",
+            'path_photo'=>'images/umkm/products/cls-1.png'
+        ]);
+        product::create([
+            'name'=>'CLS .005',
+            'umkm_id'=>umkm::where('name', 'CLS Cloth')->first()->id,
+            'description'=>"“Do not hesitate, because tomorrow will be worse.”
+            <br><br>
+            From Chapter 2 : “Meet your fear from yesterday.”
+            <br><br>
+            Price : IDR 100,000 (After discount)<br>
+            Discount : 20% <br>
+            Voucher Code : CLSPASARAYA
+            ",
+            'path_photo'=>'images/umkm/products/cls-2.png'
+        ]);
+        product::create([
+            'name'=>'CLS .006',
+            'umkm_id'=>umkm::where('name', 'CLS Cloth')->first()->id,
+            'description'=>"“Do not hesitate, because tomorrow will be worse.”
+            <br><br>
+            From Chapter 2 : “Meet your fear from yesterday.”
+            <br><br>
+            Price : IDR 100,000 (After discount)<br>
+            Discount : 20% <br>
+            Voucher Code : CLSPASARAYA
+            ",
+            'path_photo'=>'images/umkm/products/cls-3.png'
+        ]);
+        product::create([
+            'name'=>'CLS .007',
+            'umkm_id'=>umkm::where('name', 'CLS Cloth')->first()->id,
+            'description'=>"“Do not hesitate, because tomorrow will be worse.”
+            <br><br>
+            From Chapter 2 : “Meet your fear from yesterday.”
+            <br><br>
+            Price : IDR 100,000 (After discount)<br>
+            Discount : 20% <br>
+            Voucher Code : CLSPASARAYA
+            ",
+            'path_photo'=>'images/umkm/products/cls-4.png'
+        ]);
+        product::create([
+            'name'=>'CLS .008 Long Sleve',
+            'umkm_id'=>umkm::where('name', 'CLS Cloth')->first()->id,
+            'description'=>"“Do not hesitate, because tomorrow will be worse.”
+            <br><br>
+            From Chapter 2 : “Meet your fear from yesterday.”
+            <br><br>
+            Price : IDR 100,000 (After discount)<br>
+            Discount : 20% <br>
+            Voucher Code : CLSPASARAYA
+            ",
+            'path_photo'=>'images/umkm/products/cls-5.png'
         ]);
         DB::table('umkms')->insert([
             'name'=>'desoyjoy',
@@ -529,7 +602,8 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
             'description'=>"Socks Rajut<br>
             All	Size<br>
-            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
+            Discount	5% selama event	berlangsung <br>
+            Kode : MBTXPASARAYA<br>
             HARGA	NORMAL :Rp.	75.000<br>
             DISCOUNT	:Rp.	71.250",
             'path_photo'=>'images/umkm/products/MadebyTempa-1.jpg'
@@ -539,39 +613,62 @@ class DatabaseSeeder extends Seeder
             'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
             'description'=>"Socks Rajut<br>
             All	Size<br>
-            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
+            Discount	5% selama event	berlangsung<br>
+            Kode : MBTXPASARAYA<br>
             HARGA	NORMAL :Rp.	75.000<br>
             DISCOUNT	:Rp.	71.250",
             'path_photo'=>'images/umkm/products/MadebyTempa-2.jpg'
         ]);
         product::create([
-            'name'=>'Patch 3',
+            'name'=>'CAKRA TIE DYE T.SHIRT',
             'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
-            'description'=>"Patches<br>
-            11,6cm x 6,7cm dan 8,6cm x 6,6cm<br>
-            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
-            HARGA	NORMAL :Rp.	120.000<br>
-            DISCOUNT	:Rp.	114.000",
+            'description'=>"T.SHIRT<br>
+            S	:	P	67	cm	x	L	49	cm
+            <br>
+            M	:	P	73	cm	x	L	53	cm
+            <br>
+            L	:	P	77	cm	x	L	58	cm
+            <br>
+            XL	:	P	79	cm	x	L	62	cm
+            <br>
+            XXL	:	P	79	cm	x	L	64	cm
+            <br>
+            Discount	5% selama event	berlangsung <br>
+            Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	270.000<br>
+            DISCOUNT	:Rp.	256.500",
             'path_photo'=>'images/umkm/products/MadebyTempa-3.jpg'
         ]);
         product::create([
-            'name'=>'Sankes and Sunn',
+            'name'=>'SUNNTEMPLE	TIE	DYE	T.SHIRT',
             'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
-            'description'=>"Enamel Pin<br>
-            4cm x 3cm<br>
-            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
-            HARGA	NORMAL :Rp.	70.000<br>
-            DISCOUNT	:Rp.	66.500",
+            'description'=>"T.SHIRT<br>
+            S	:	P	67	cm	x	L	49	cm
+            <br>
+            M	:	P	73	cm	x	L	53	cm
+            <br>
+            L	:	P	77	cm	x	L	58	cm
+            <br>
+            XL	:	P	79	cm	x	L	62	cm
+            <br>
+            XXL	:	P	79	cm	x	L	64	cm
+            <br>
+            Discount	5% selama event	berlangsung <br>
+            Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	270.000<br>
+            DISCOUNT	:Rp.	256.500",
             'path_photo'=>'images/umkm/products/MadebyTempa-4.jpg'
         ]);
         product::create([
-            'name'=>'Heavy and Loud',
+            'name'=>'DYNASTY BUCKET	HAT',
             'umkm_id'=>umkm::where('name', 'Made By Tempa')->first()->id,
-            'description'=>"Enamel Pin<br>
-            4cm x 3cm<br>
-            Discount	5% selama event	berlangsung Kode : MBTXPASARAYA<br>
-            HARGA	NORMAL :Rp.	70.000<br>
-            DISCOUNT	:Rp.	66.500",
+            'description'=>"Bucket Hat<br>
+            All Size
+            <br>
+            Discount	5% selama event	berlangsung <br>
+            Kode : MBTXPASARAYA<br>
+            HARGA	NORMAL :Rp.	200.000<br>
+            DISCOUNT	:Rp.	190.000",
             'path_photo'=>'images/umkm/products/MadebyTempa-5.jpg'
         ]);
         DB::table('umkms')->insert([
