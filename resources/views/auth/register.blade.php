@@ -31,7 +31,7 @@
                 <option value="" selected hidden>Category</option> 
                 <option value="Arjuna">Arjuna (Ajang Citra Sejuta Warna)</option>
                 <option value="Kresna">Kresna (Kreasi Insan Sinema)</option>
-                <option value="Prahasta">Prahasta (Pertarungan Humas Nusantara)</option>
+                <option value="Prahasta">Prahasta (Pertempuran Humas Nusantara)</option>
                 <option value="Nakula">Nakula (Penelitian Kawula Muda)</option>
                 <option value="Sadewa">Sadewa (Sayembara Dewa Pariwara)</option>
             </select>
