@@ -9,9 +9,9 @@
     <section class="museum-banner z-min">
         <img src="{{ asset('images/museum.png')}}" alt="" class="landing-banner__image">
         <div class="media-container museum-banner__media-container">
-            <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" class="media media-left museum-banner__media z-max"/>
+            <img src="/images/ARJUNA.png" class="media media-left museum-banner__media z-max"/>
 
-            <img src="{{ asset('assets/Path 25.png') }}" alt="" class="museum-banner__geometry--triangle z-min">
+            <!-- <img src="{{ asset('assets/Path 25.png') }}" alt="" class="museum-banner__geometry--triangle z-min"> -->
 
             <div class="media__content">
                 <div class="museum-banner__media-heading adaptive">

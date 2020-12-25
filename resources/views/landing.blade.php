@@ -22,7 +22,7 @@
                         <div class="carousel-item">
                             <div class="landing-banner__carousel-text">
                                 <h1 class="heading-caps text-white margin-bottom-m">Creative Market</h1>
-                                <p class="text-bold text-grey-dark margin-bottom-s">Pasaraya merupakan festival belanja online yang merupakan salah satu kontribusi Festival Ajisaka 2020+ untuk membantu UMKM terdampak Covid-19. Festival Ajisaka 2020+ memberikan <i>platform</i> online secara gratis kepada para pemilik <i>creative brand</i> untuk dapat memperluas jangkauan pemasarannya.</p>
+                                <p class="text-bold text-white margin-bottom-s">Pasaraya merupakan festival belanja online yang merupakan salah satu kontribusi Festival Ajisaka 2020+ untuk membantu UMKM terdampak Covid-19. Festival Ajisaka 2020+ memberikan <i>platform</i> online secara gratis kepada para pemilik <i>creative brand</i> untuk dapat memperluas jangkauan pemasarannya.</p>
                                 <a href="/creativemarket" class="link"><p class="text-bold text-white">Learn More .</p></a>
                             </div>
                         </div>
@@ -55,6 +55,39 @@
             <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">
             <img src="/assets/Group 73.png" alt="" class="landing-about__geometry--white-circle">
         </section>
+        
+        <section class="landing-about">
+            <div class="landing-about__content">
+                <div class="landing-about__media-container">
+                    <img src="images/gallery-4.jpg" alt="" class="media media-left landing-about__video">
+                </div>
+                <div class="media__content landing-about__text">
+                    <h3 class="heading-3 text-black text-uppercase landing-about__about-text margin-bottom-s">Creative Market</h3>
+                    <p class="text-regular margin-bottom-m" style="text-align: justify;">Pasaraya merupakan festival belanja online yang merupakan salah satu kontribusi Festival Ajisaka 2020+ untuk membantu UMKM terdampak Covid-19. Festival Ajisaka 2020+ memberikan <i>platform</i> online secara gratis kepada para pemilik <i>creative brand</i> untuk dapat memperluas jangkauan pemasarannya. Melalui proses kurasi yang detail, <i>creative brand</i> akan menampilkan produk terbaik untuk para insan kreatif. Festival belanja online ini akan dilaksanakan selama 35 hari dengan menggunakan <i>platform</i> digital web Festival Ajisaka 2020+. Dengan berbagai penawaran serta diskon menarik mulai dari 5% sampai dengan 60% yang diberikan oleh <i>creative brand</i>, diharapkan insan kreatif dapat turut serta berkontribusi dalam kemajuan UMKM.</p>
+                    <a href="/creativemarket" class="link align-self-start"><h3 class="heading-3 text-black">Explore more .</h3></a>
+                </div>
+            </div>
+            <img src="/assets/Group 68.png" alt="" class="landing-matlom__geometry--dots">
+            
+        </section>
+
+        <section class="landing-matlom">
+            <div class="market-tenants" style="border-top:none; padding:0;">
+                <h3 class="heading-3 text-uppercase text-black margin-bottom-m text-center">The Tenants</h3>
+                <div class="card-wrapper--grid-xs margin-bottom-s">
+                    @foreach($umkms as $umkm)
+                        <div class="card card-xs">
+                            <a href="/creativemarket/{{$umkm->id}}" class="overflow-hidden"><img src="{{ asset($umkm->path_photo) }}" alt="" class="card__image card__image--xs"></a>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="pagination">
+                    {{ $umkms->links('vendor.pagination.custom') }}
+                </div>
+            </div>
+            <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">
+            <img src="/assets/Path 25.png" alt="" class="landing-register__geometry--triangle">
+        </section>
 
         <section class="landing-matlom" id="landing-matlom">
             <div class="landing-matlom__content z-max">
@@ -62,45 +95,45 @@
                 <div class="card-wrapper card-wrapper--flex center">
                     
                     <div class="card card-m mx-s">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-matlom__card-image margin-bottom-s">
-                        </div>
+                        <img src="/images/ARJUNA.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div> -->
                         <p class="text-bold margin-bottom-xs">Arjuna</p>
                         <p class="text-regular margin-bottom-xs">Ajang Citra Sejuta Warna</p>
                         <a href="/kompetisi/arjuna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
                     <div class="card card-m mx-s">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-matlom__card-image margin-bottom-s">
-                        </div>
+                        <img src="/images/KRESNA.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div> -->
                         <p class="text-bold margin-bottom-xs">Kresna</p>
                         <p class="text-regular margin-bottom-xs">Kreasi Insan Sinema</p>
                         <a href="/kompetisi/kresna" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
                     <div class="card card-m mx-s">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-matlom__card-image margin-bottom-s">
-                        </div>
+                        <img src="/images/NAKULA.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div> -->
                         <p class="text-bold margin-bottom-xs">Nakula</p>
                         <p class="text-regular margin-bottom-xs">Penelitian Kawula Muda</p>
                         <a href="/kompetisi/nakula" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
                     
                     <div class="card card-m mx-s">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-matlom__card-image margin-bottom-s">
-                        </div>
+                        <img src="/images/PRAHASTA.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div> -->
                         <p class="text-bold margin-bottom-xs">Prahasta</p>
                         <p class="text-regular margin-bottom-xs">Pertempuran Humas Nusantara</p>
                         <a href="/kompetisi/prahasta" class="link"><p class="text-bold text-black">Learn more .</p></a>
                     </div>
 
                     <div class="card card-m mx-s">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-matlom__card-image margin-bottom-s">
-                        </div>
+                        <img src="/images/SADEWA.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-matlom__card-image margin-bottom-s">
+                        </div> -->
                         <p class="text-bold margin-bottom-xs">Sadewa</p>
                         <p class="text-regular margin-bottom-xs">Sayembara Dewa Pariwara</p>
                         <a href="/kompetisi/sadewa" class="link"><p class="text-bold text-black">Learn more .</p></a>
@@ -114,15 +147,15 @@
 
         <section class="landing-register">
             <div class="landing-register__content">
-                <h2 class="heading-2 text-black margin-bottom-l">How to Register?</h2>
+                <h2 class="heading-2 text-black margin-bottom-l">Cara Mendaftar</h2>
                 <div class="card-wrapper--flex evenly margin-bottom-s landing-register__card-wrapper">
                     
                     <div class="card card-s landing-register__card">
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-register__card-image margin-bottom-m">
                         </div>
-                        <h3 class="heading-3 text-grey margin-bottom-s">Step 1</p>
-                        <p class="text-regular">Click on Login Button on The Upper Left Corner</p>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Langkah 1</p>
+                        <p class="text-regular">Ketuk tombol Login pada pojok kanan atas laman.</p>
                     </div>
 
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
@@ -130,8 +163,8 @@
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-register__card-image margin-bottom-m">
                         </div>
-                        <h3 class="heading-3 text-grey margin-bottom-s">Step 2</p>
-                        <p class="text-regular">If you havent created an account, click register, otherwise, click login.</p>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Langkah 2</p>
+                        <p class="text-regular">Apabila belum memiliki akun, pilih register. Jika sudah, pilih login.</p>
                     </div>
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
 
@@ -139,8 +172,8 @@
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-register__card-image margin-bottom-m">
                         </div>
-                        <h3 class="heading-3 text-grey margin-bottom-s">Step 3</p>
-                        <p class="text-regular">Enter your team and your member credentials.</p>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Langkah 3</p>
+                        <p class="text-regular">Masukkan data kelompok dan anggota kelompok.</p>
                     </div>
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
 
@@ -148,8 +181,8 @@
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-register__card-image margin-bottom-m">
                         </div>
-                        <h3 class="heading-3 text-grey margin-bottom-s">Step 4</p>
-                        <p class="text-regular">Pay the amount required to the listed available accounts.</p>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Langkah 4</p>
+                        <p class="text-regular">Lakukan pembayaran ke nomor rekening yang sudah tertera.</p>
                     </div>
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
                     
@@ -157,8 +190,8 @@
                         <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
                         <div class="card__image landing-register__card-image margin-bottom-m">
                         </div>
-                        <h3 class="heading-3 text-grey margin-bottom-s">Step 5</p>
-                        <p class="text-regular">Upload your work and hope for the best!</p>
+                        <h3 class="heading-3 text-grey margin-bottom-s">Langkah 5</p>
+                        <p class="text-regular">Selamat berkarya, Insan Kreatif!</p>
                     </div>
                     <img src="/assets/Path 57.png" alt="" class="landing-register__geometry--boxes">
                 </div>
