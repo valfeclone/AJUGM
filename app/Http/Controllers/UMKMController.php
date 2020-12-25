@@ -18,4 +18,9 @@ class UMKMController extends Controller
         $products =$umkm->products;
         return view('specific_creative_market', compact('umkm', 'products'));
     }
+    public function indexlanding()
+    {
+        $umkms=umkm::paginate(10);
+        return view('landing', compact('umkms'));
+    }
 }
