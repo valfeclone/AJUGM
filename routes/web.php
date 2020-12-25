@@ -26,9 +26,7 @@ Route::get('/welcome', function () {
 });
 
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', [ UMKMController::class, "indexlanding" ]);
 
 //akses dashboard admin, harus pake admin ya hehehe
 Route::group([ "middleware" => ['auth:admins', 'verified'] ], function () {

@@ -9,7 +9,7 @@
     <div class="market-banner">
         <img src="{{ asset('images/market.png')}}" alt="" class="landing-banner__image">
         <div class="media-container market-banner__media-container">
-            <img src="{{ asset('assets/Rectangle 71.png')}}" class="media media-left market-banner__media"/>
+            <img src="/{{ $umkm->path_photo}}" class="media media-left market-banner__media"/>
 
             <img src="{{ asset('assets/Group 77.png') }}" alt="" class="market-banner__geometry--wave z-min">
 
