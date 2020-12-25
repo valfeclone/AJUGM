@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
  
 class UploadFileLombaController extends Controller
 {
@@ -55,6 +56,10 @@ class UploadFileLombaController extends Controller
             'link_file_lomba' => 'required',
             'file-pendukung' => 'required',
         ]);
+
+        if (!STR::is('https://*', $request['link_file_lomba'])) {
+            $request['link_file_lomba']='https://'.$request['link_file_lomba'];
+        }
 
         // menyimpan data file yang diupload ke variabel $file
         $filependukung = $request->file('file-pendukung');
