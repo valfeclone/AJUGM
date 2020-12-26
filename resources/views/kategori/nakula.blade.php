@@ -26,7 +26,7 @@
     </section>
 
     <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/risetakademik.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -41,7 +41,7 @@
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Riset Fun</h3>
             <p class="text-regular">Kategori ini membebaskan insan kreatif untuk menemukan solusi dari bencana yang terjadi dengan mengutamakan kreativitas dan humor. Meskipun mengutamakan humor, peserta diharapkan tetap berpegang pada metode penelitian ilmiah. Tujuan dari riset ini adalah memperoleh solusi permasalahan bencana dengan solusi yang ringan dan humoristis.</p>
         </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <img src="/images/logolomba/funresearch.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->

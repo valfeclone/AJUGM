@@ -48,7 +48,7 @@
     </section>
 
     <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/riskmanagement.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->

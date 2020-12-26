@@ -26,7 +26,7 @@
     </section>
 
     <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/comicstrip.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -41,7 +41,7 @@
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Homeless Media</h3>
             <p class="text-regular">Homeless Media mengajak insan kreatif untuk merancang konten untuk media sosial Instagram. Konten dirancang sedemikian rupa sehingga berisi informasi yang edukatif, kreatif, dan mengandung fakta sebagaimana produk jurnalistik.</p>
         </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <img src="/images/logolomba/homelessmedia.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->

@@ -43,7 +43,7 @@
         <section class="landing-about">
             <div class="landing-about__content">
                 <div class="landing-about__media-container">
-                    <img src="/images/video-image.png" alt="" class="media media-left landing-about__video">
+                    <img src="/images/about-1.png" alt="" class="media media-left landing-about__video">
                     <img src="/assets/Group 71.png" alt="" class="landing-about__geometry--red-circle">
                 </div>
                 <div class="media__content landing-about__text">
@@ -59,7 +59,7 @@
         <section class="landing-about">
             <div class="landing-about__content">
                 <div class="landing-about__media-container">
-                    <img src="images/gallery-4.jpg" alt="" class="media media-left landing-about__video">
+                    <img src="/images/creativemarket.jpg" alt="" class="media media-left landing-about__video">
                 </div>
                 <div class="media__content landing-about__text">
                     <h3 class="heading-3 text-black text-uppercase landing-about__about-text margin-bottom-s">Creative Market</h3>
@@ -86,7 +86,6 @@
                 </div>
             </div>
             <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">
-            <img src="/assets/Path 25.png" alt="" class="landing-register__geometry--triangle">
         </section>
 
         <section class="landing-matlom" id="landing-matlom">
@@ -151,45 +150,45 @@
                 <div class="card-wrapper--flex evenly margin-bottom-s landing-register__card-wrapper">
                     
                     <div class="card card-s landing-register__card">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-register__card-image margin-bottom-m">
-                        </div>
+                        <img src="/images/step1.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div> -->
                         <h3 class="heading-3 text-grey margin-bottom-s">Langkah 1</p>
                         <p class="text-regular">Ketuk tombol Login pada pojok kanan atas laman.</p>
                     </div>
 
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
                     <div class="card card-s landing-register__card">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-register__card-image margin-bottom-m">
-                        </div>
+                        <img src="/images/step2.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div> -->
                         <h3 class="heading-3 text-grey margin-bottom-s">Langkah 2</p>
                         <p class="text-regular">Apabila belum memiliki akun, pilih register. Jika sudah, pilih login.</p>
                     </div>
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
 
                     <div class="card card-s landing-register__card">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-register__card-image margin-bottom-m">
-                        </div>
+                        <img src="/images/step3.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div> -->
                         <h3 class="heading-3 text-grey margin-bottom-s">Langkah 3</p>
                         <p class="text-regular">Masukkan data kelompok dan anggota kelompok.</p>
                     </div>
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
 
                     <div class="card card-s landing-register__card">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-register__card-image margin-bottom-m">
-                        </div>
+                        <img src="/images/step4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div> -->
                         <h3 class="heading-3 text-grey margin-bottom-s">Langkah 4</p>
                         <p class="text-regular">Lakukan pembayaran ke nomor rekening yang sudah tertera.</p>
                     </div>
                     <img src="/assets/Arrow.png" alt="" class="landing-register__arrow">
                     
                     <div class="card card-s landing-register__card">
-                        <!-- <img src="/images/Rectangle 4.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s"> -->
-                        <div class="card__image landing-register__card-image margin-bottom-m">
-                        </div>
+                        <img src="/images/step5.png" alt="" class="card__image landing-matlom__card-image margin-bottom-s">
+                        <!-- <div class="card__image landing-register__card-image margin-bottom-m">
+                        </div> -->
                         <h3 class="heading-3 text-grey margin-bottom-s">Langkah 5</p>
                         <p class="text-regular">Selamat berkarya, Insan Kreatif!</p>
                     </div>

@@ -26,7 +26,7 @@
     </section>
 
     <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/filmfiksi.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -41,14 +41,14 @@
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Film Dokumenter Pendek</h3>
             <p class="text-regular">Kategori Film Dokumenter Pendek memberikan ruang kepada para insan kreatif untuk mengeksplorasi berbagai perspektif dalam ruang lingkup dampak sosial dan budaya yang timbul akibat bencana yang pernah terjadi sebelumnya. Dalam pembuatan karya, sineas diberikan kebebasan dalam eksplorasi ide dan  penyampaian makna atau pesan. Namun data dan riset tetap diperlukan sebagai dasar pembuatan  karya agar esensi film dokumenter sebagai karya yang faktual tetap terjaga.</p>
         </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <img src="/images/logolomba/filmdokumenter.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
     </section>
 
     <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/naskahfilm.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -63,7 +63,7 @@
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Scoring Film</h3>
             <p class="text-regular">Kategori Scoring Film membebaskan para insan kreatif untuk mengasah sense untuk membuat adegan dalam film menjadi powerful. Dengan menambahkan unsur score dalam suatu film, diharapkan pesan film dapat tersampaikan secara menyeluruh.</p>
         </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <img src="/images/logolomba/scoringfilm.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->

@@ -9,7 +9,7 @@
     <div class="market-banner">
         <img src="{{ asset('images/market.png')}}" alt="" class="landing-banner__image">
         <div class="media-container market-banner__media-container">
-            <img src="images/about-2.jpg" class="media media-left market-banner__media z-max"/>
+            <img src="images/about-1.png" class="media media-left market-banner__media z-max"/>
 
             <img src="{{ asset('assets/Path 25.png') }}" alt="" class="market-banner__geometry--triangle z-min">
 
@@ -50,11 +50,11 @@
 
     <section class="about-section">
         <div class="about-section__content media-container">
-            <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" alt="" class="media media-left about-section__image">
+            <img src="/images/about-2.jpg" alt="" class="media media-left about-section__image">
 
             <div class="media__content">
                 <h1 class="heading-caps text-black margin-bottom-s">Our Team</h1>
-                <p class="text-regular text-black" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, exercitationem? Odio ullam eos culpa, consequuntur reiciendis nostrum odit quod consequatur, laborum delectus voluptatum facilis. Blanditiis repellendus natus dolorum amet corrupti.</p>
+                <p class="text-regular text-black" style="text-align: justify;">Festival Ajisaka 2020+ merupakan ajang kompetisi kreatif terbesar yang merupakan persembahan dari Departemen Ilmu Komunikasi UGM.  Membawa semangat baru di tahun 2021, Festival Ajisaka 2020+ terwujud berkat hasil kerja kolektif mahasiswa dan segenap Departemen Ilmu Komunikasi Universitas Gadjah Mada.</p>
             </div>
         </div>
     </section>
@@ -64,12 +64,15 @@
             <h1 class="heading-caps text-black margin-bottom-l text-center">Gallery</h1>
 
             <div class="card-wrapper--grid-s">
-                    <img src="images/gallery-1.jpg" alt="" class="card__image card__image--gallery">
-                    <img src="images/gallery-2.jpg" alt="" class="card__image card__image--gallery">
-                    <img src="images/gallery-3.jpg" alt="" class="card__image card__image--gallery">
-                    <img src="images/gallery-4.jpg" alt="" class="card__image card__image--gallery">
-                    <img src="images/gallery-5.jpg" alt="" class="card__image card__image--gallery">
-                    <img src="images/gallery-6.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-1.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-2.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-3.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-4.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-5.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-6.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-7.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-8.jpg" alt="" class="card__image card__image--gallery">
+                    <img src="images/gallery/gallery-9.jpg" alt="" class="card__image card__image--gallery">
             </div>
         </div>
     </section>

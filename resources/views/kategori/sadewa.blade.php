@@ -26,7 +26,7 @@
     </section>
 
 <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/brandbook.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -41,14 +41,14 @@
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Skip Ad</h3>
             <p class="text-regular">Skip Ad mengajak insan kreatif untuk membuat Video Ads yang nantinya akan ditayangkan sebagai Skippable Ads di platform YouTube. Dengan audiens yang bisa melewati iklan setelah lima detik pertama, insan kreatif ditantang untuk membuat iklan yang bisa menangkap atensi audiens.</p>
         </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <img src="/images/logolomba/skipad.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
     </section>
 
     <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/socialmediaactivation.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -63,7 +63,7 @@
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Unconventional Media</h3>
             <p class="text-regular">Unconventional Media mengajak insan kreatif untuk merancang kampanye dengan media yang tidak konvensional. Insan kreatif ditantang untuk berpikir outside the box untuk merancang strategi yang efektif dengan media yang tidak terpikirkan sebelumnya.</p>
         </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <img src="/images/logolomba/unconventionalmedia.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
