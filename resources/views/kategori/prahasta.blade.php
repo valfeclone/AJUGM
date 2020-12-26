@@ -26,7 +26,7 @@
     </section>
 
     <section class="lomba-desc media-container z-max">
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-left lomba-desc__video">
+        <img src="/images/logolomba/prcampaign.png" alt="" class="media media-left lomba-desc__video">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -41,7 +41,7 @@
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Press Conference Simulation</h3>
             <p class="text-regular">Kategori Press Conference Simulation mengajak insan kreatif berperan aktif dengan tanggap dan kritis dalam menyikapi suatu permasalahan. Insan kreatif akan ditantang untuk menggagaskan ide atau pemikiran dan menuangkannya dengan kompetensi riset yang menjadi landasan dari sebuah konferensi pers. Selain itu, insan kreatif juga ditantang untuk membuktikan kemampuannya sebagai seorang praktisi public relations dalam membangun hubungan dengan media atau pers.</p>
         </div>
-        <img src="{{ asset('images/video-image.png') }}" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
+        <img src="/images/logolomba/presscon.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
