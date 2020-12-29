@@ -62,8 +62,12 @@
                     <br>
                     
                     <div class="d-flex">
-                        <a href="#" class="link width-max margin-bottom-s mr-3 cta cta--white"><i class="fab fa-instagram icon" style="font-size:24px;color:red"></i></a>
-                        <a  class="cta cta--white"><h3 class="text-bold text-grey-dark">Kode Promo : </h3></a>
+                        @if(!empty($product->kode_promo))
+                        <a href="{{$umkm->instagram_link}}" class="link width-max margin-bottom-s mr-3 cta cta--white"><i class="fab fa-instagram icon" style="font-size:16px;color:red"></i></a>
+                        <a  class="cta cta--white"><h3 class="text-bold text-grey-dark">Kode Promo : {{$product->kode_promo}}</h3></a>
+                        @else
+                        <a  href="{{$umkm->instagram_link}}" class="cta cta--white"><h3 class="text-bold text-grey-dark">Go To Instagram Page</h3></a>
+                        @endif
                     </div>
                 </div>
             </div>

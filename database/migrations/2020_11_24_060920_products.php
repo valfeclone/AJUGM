@@ -18,6 +18,7 @@ class Products extends Migration
             $table->string('name');
             $table->foreignId('umkm_id')->constrained()->onDelete('cascade');
             $table->text('description');
+            $table->text('kode_promo')->nullable();
             $table->string('path_photo');
             $table->timestamps();
         });
