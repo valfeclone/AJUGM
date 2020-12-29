@@ -49,7 +49,7 @@
                     @elseif($loop->index+1==5)
                         <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--5__triangle z-min"/>
                     @endif
-                </div>D
+                </div>
                
                 <div class="media__content">
                     <div class="relative width-max">
@@ -60,8 +60,11 @@
                     </div>
                     <p class="text-regular margin-bottom-xs" style="text-align: justify;">{!!$product->description!!}</p>
                     <br>
-                    <!-- <a href="#" class="link width-max margin-bottom-s"><i class="fab fa-instagram icon"></i></a> -->
-                    <a href="{{$umkm->instagram_link}}" class="cta cta--white"><h3 class="text-bold text-grey-dark">Go to Instagram Page</h3></a>
+                    
+                    <div class="d-flex">
+                        <a href="#" class="link width-max margin-bottom-s mr-3 cta cta--white"><i class="fab fa-instagram icon" style="font-size:24px;color:red"></i></a>
+                        <a  class="cta cta--white"><h3 class="text-bold text-grey-dark">Kode Promo : </h3></a>
+                    </div>
                 </div>
             </div>
         </div>

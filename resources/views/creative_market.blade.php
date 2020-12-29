@@ -35,7 +35,7 @@
             @endforeach
         </div>
         <div class="pagination">
-            {{ $umkms->links('vendor.pagination.custom') }}
+            {{ $umkms->links()}}
         </div>
     </div>
 </div>
