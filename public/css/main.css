@@ -1184,10 +1184,11 @@ input.dropdown-option {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem !important;
 }
 
 .pagination > *:not(:last-child) {
-  margin-right: 1.2rem;
+  margin-right: 1.5rem;
 }
 
 .page:link,
@@ -1208,6 +1209,16 @@ input.dropdown-option {
 
 .page--disabled {
   pointer-events: none;
+}
+
+.page-item {
+  font-size: 1.5rem !important;
+}
+
+@media (max-width: 37.5em) {
+  .page-item {
+    font-size: 2rem !important;
+  }
 }
 
 .slideshow {
