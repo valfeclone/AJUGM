@@ -82,7 +82,7 @@
                     @endforeach
                 </div>
                 <div class="pagination">
-                    {{ $umkms->links('vendor.pagination.custom') }}
+                    {{ $umkms->links() }}
                 </div>
             </div>
             <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">
