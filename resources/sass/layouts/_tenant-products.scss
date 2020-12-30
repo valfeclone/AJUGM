@@ -85,10 +85,6 @@
 
         &__carousel {
             position: relative;
-
-            & > *:not(:last-child) {
-                z-index: 999;
-            }
         }
 
         &__triangle {
@@ -96,13 +92,13 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            z-index: 1;
+            z-index: 0;
             transform: translate(-50%, 25%)
         }
 
         &__circle {
             width: 50rem;
-            z-index: 1;
+            z-index: 0;
             position: absolute;
             bottom: 0;
             right: 0;
@@ -111,7 +107,7 @@
 
         &__red {
             width: 4rem;
-            z-index: 1;
+            z-index: 0;
             position: absolute;
             top: 0;
             right: 0;
@@ -139,7 +135,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            z-index: 1;
+            z-index: 0;
             transform: translate(55%, -40%)
         }
     }
@@ -164,7 +160,7 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            z-index: 1;
+            z-index: 0;
             transform: translate(50%, 30%)
         }
     }

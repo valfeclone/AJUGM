@@ -35,6 +35,30 @@
     text-align: left !important;
 }
 
+// Padding horizontal
+.px-s {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+.px-m {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+// Padding vertical
+
+.py-s {
+    padding-top: .5rem !important;
+    padding-bottom: .5rem !important;
+}
+
+.py-m {
+    padding-top: 2 !important;
+    padding-bottom: 2 !important;
+}
+
+
 // Margin horizontal
 .mx-s {
     margin: 0 1.5rem;

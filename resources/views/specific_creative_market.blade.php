@@ -33,21 +33,21 @@
             <img src="{{ asset('assets/Group 73.png') }}" class="tenant-product--1__circle"/>
             @endif
             <div class="media-container">
-                <div class="slideshow tenant-product--1__carousel">
+                <div class="slideshow tenant-product--1__carousel z-max">
                         <!-- Full-width images with number and caption text -->
-                        <div class="tenant-product--{{$loop->index+1}}__image w-100 z-max" style="display: inline-block">
-                            <img src="{{ asset($product->path_photo) }}" class="tenant-product__image z-max"> 
+                        <div class="tenant-product--{{$loop->index+1}}__image w-100 z-mid" style="display: inline-block">
+                            <img src="{{ asset($product->path_photo) }}" class="tenant-product__image"> 
                         </div>
                     @if($loop->index+1==1)
-                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--1__triangle z-min"/>
+                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--1__triangle" style="z-index: -1"/>
                     @elseif($loop->index+1==2)
-                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--2__circle z-min"/>
+                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--2__circle" style="z-index: -1"/>
                     @elseif($loop->index+1==3)
-                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--3__triangle z-min"/>
+                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--3__triangle" style="z-index: -1"/>
                     @elseif($loop->index+1==4)
-                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--4__circle z-min"/>
+                        <img src="{{ asset('assets/Ellipse 11.png') }}" class="tenant-product--4__circle" style="z-index: -1"/>
                     @elseif($loop->index+1==5)
-                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--5__triangle z-min"/>
+                        <img src="{{ asset('assets/Path 67.png') }}" class="tenant-product--5__triangle" style="z-index: -1"/>
                     @endif
                 </div>
                
@@ -59,14 +59,12 @@
                         @endif
                     </div>
                     <p class="text-regular margin-bottom-xs" style="text-align: justify;">{!!$product->description!!}</p>
-                    <br>
+                    <br> 
                     
                     <div class="d-flex">
+                        <a href="{{$umkm->instagram_link}}" class="link width-max mr-3 cta cta--white align-self-center px-s py-s"><i class="fab fa-instagram icon" style="font-size:2rem;color:red"></i></a>
                         @if(!empty($product->kode_promo))
-                        <a href="{{$umkm->instagram_link}}" class="link width-max margin-bottom-s mr-3 cta cta--white"><i class="fab fa-instagram icon" style="font-size:16px;color:red"></i></a>
-                        <a  class="cta cta--white"><h3 class="text-bold text-grey-dark">Kode Promo : {{$product->kode_promo}}</h3></a>
-                        @else
-                        <a  href="{{$umkm->instagram_link}}" class="cta cta--white"><h3 class="text-bold text-grey-dark">Go To Instagram Page</h3></a>
+                        <h3 class=" cta cta--white text-bold text-grey-dark align-self-center">Kode Promo : LANGITSORE</h3>
                         @endif
                     </div>
                 </div>
