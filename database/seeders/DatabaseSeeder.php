@@ -445,7 +445,7 @@ class DatabaseSeeder extends Seeder
             Kanigara bekerja sama dengan AJISAKA UGM 2020 dan terdapat berlaku diskon sebesar 20% dengan promotion code: KNGR2020 berlaku hanya pada tanggal 26 Desember 2020-31 Januari 2021. <br>
             Untuk pemesanan dapat melalui <a href="https://msha.ke/kanigara">Link Disini</a>',
             'path_photo'=>'images/umkm/kanigara.jpg',
-            'instagram_link'=>'https://www.instagram.com/'
+            'instagram_link'=>'https://www.instagram.com/kanigarabooks'
         ]);
         product::create([
             'name'=>'',
@@ -711,7 +711,7 @@ class DatabaseSeeder extends Seeder
             Potongan Produk yang diberikan : 55k/pcs 100k/get 2 pcs. Harga asli 65K
             <br>
             Kode #MagnAjisaka2020",
-            'instagram_link'=>'https://www.instagram.com/',
+            'instagram_link'=>'https://www.instagram.com/magnabody.co',
             'path_photo'=>'images/umkm/magna.jpg',
         ]);
         product::create([
@@ -815,7 +815,7 @@ class DatabaseSeeder extends Seeder
             //kosong
             'name'=>'Merekat Di Jiwa',
             'description'=>'Merekat di Jiwa adalah fashion brand yang memiliki tujuan untuk mengeksplorasi tekstil Indonesia dan mengempower pengrajin lokal yang ada di Indonesia dengan konsep play-fair dan sustainable bisnis! Sebagai small brand kami ingin ikut serta dalam event Pasaraya yang akan diselenggarakan oleh Ajisaka UGM! Berikut kami sertakan informasi terkait brand dan product kamiii!',
-            'instagram_link'=>'https://www.instagram.com/',
+            'instagram_link'=>'https://www.instagram.com/merekat_di_jiwa',
             'path_photo'=>'images/umkm/merekatdijiwa.jpg',
         ]);
         product::create([
@@ -913,7 +913,7 @@ class DatabaseSeeder extends Seeder
             'description'=>"Peculiarmoods is an artsy-craftsy business managed by two 'nona' based in Yogyakarta. Established in April 16th, 2019, Peculiarmoods is such a new babyborn excited for another journey ahead. The trigger came when we recognized the lack of artsy local pride among our society. We initiated to provide artsy-cutesy local products with affordable price which later being accepted and got such unexpected responses.
             <br><br>
             Kode Unik : PECULIAR1",
-            'instagram_link'=>'https://www.instagram.com/',
+            'instagram_link'=>'https://www.instagram.com/peculiarmoods',
             'path_photo'=>'images/umkm/peculiarmoods.jpg',
         ]);
         product::create([
@@ -1300,7 +1300,7 @@ class DatabaseSeeder extends Seeder
             'description'=>'WEEKDAYSCLUB adalah lifestyle brand yang menggunakan weekdays (senin-jumat) sebagai referensi dan di kemas dengan naratif isu-isu yang sedang berkembang serta aliran pop culture yang kental. Di bentuk pada tahun 2019 di bawah naungan Ikatan Keluarga Mahasiswa Manajemen UGM, WEEKDAYSCLUB sudah mengeluarkan beberapa artikel, diantaranya volume 1 yaitu “Weekdays Club”, lalu yang pada oktober lalu beredar yaitu “Brave New World”, dan juga artikel yang baru saja keluar, yaitu “Demi Sesuap Ilmu dan Koneksi”.
             <br><br>
             Kode unik yang bisa digunakan untuk membeli produk-produk WEEKDAYSCLUB di Pasaraya adalah #RAYACLUB.',
-            'instagram_link'=>'https://www.instagram.com/weekdays.club//',
+            'instagram_link'=>'https://www.instagram.com/weekdays.club/',
             'path_photo'=>'images/umkm/weekdaysclub.jpg',
         ]);
         product::create([

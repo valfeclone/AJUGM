@@ -64,7 +64,7 @@
                     <div class="d-flex">
                         <a href="{{$umkm->instagram_link}}" class="link width-max mr-3 cta cta--white align-self-center px-s py-s"><i class="fab fa-instagram icon" style="font-size:2rem;color:red"></i></a>
                         @if(!empty($product->kode_promo))
-                        <h3 class=" cta cta--white text-bold text-grey-dark align-self-center">Kode Promo : LANGITSORE</h3>
+                        <h3 class=" cta cta--white text-bold text-grey-dark align-self-center">Kode Promo : {{$product->kode_promo}}</h3>
                         @endif
                     </div>
                 </div>
