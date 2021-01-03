@@ -3,10 +3,10 @@
     <x-data-table :data="$data" :model="$users">
         <x-slot name="head">
             <tr>
-                <th><a wire:click.prevent="sortBy('id')" role="button" href="#">
+                <!-- <th><a wire:click.prevent="sortBy('id')" role="button" href="#">
                     ID Tim
                     @include('components.sort-icon', ['field' => 'id'])
-                </a></th>
+                </a></th> -->
                 <th><a wire:click.prevent="sortBy('name')" role="button" href="#">
                     Nama Tim
                     @include('components.sort-icon', ['field' => 'name'])
@@ -49,7 +49,7 @@
         <x-slot name="body">
             @foreach ($users as $user)
                 <tr x-data="window.__controller.dataTableController({{ $user->id }})">
-                    <td>{{ $user->id }}</td>
+                    <!-- <td>{{ $user->id }}</td> -->
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->universitas }}</td>
                     <td>{{ $user->kompetisi }}</td>
