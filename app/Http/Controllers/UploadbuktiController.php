@@ -11,7 +11,8 @@ class UploadbuktiController extends Controller
 	// }
  
 	public function upload(){
-		return view('dashboard_peserta.uploadbukti');
+		$user = auth()->user();
+		return view('dashboard_peserta.uploadbukti')->with('user', $user);
 	}
 
 	public function proses_upload(Request $request){
