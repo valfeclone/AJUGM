@@ -19,6 +19,14 @@
         <div class="settings__content">
             <h3 class="heading-3 margin-bottom-s settings__heading text-black">Bukti Pembayaran</h3>
 
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('success') !!}</li>
+                    </ul>
+                </div>
+            @endif
+
             <form action="/tim/uploadbukti" class="form settings__form" method="POST" enctype="multipart/form-data">
             @csrf
 

@@ -19,46 +19,59 @@
         <div class="settings__content">
             <h3 class="heading-3 margin-bottom-s settings__heading text-black">Upload Karya</h3>
 
-            @if ($kategori !== "Skip Ad" and $kategori !== "Film Dokumenter" and $kategori !== "Film Fiksi")
-                <form action="/tim/uploadkarya" class="form settings__form" method="POST" enctype="multipart/form-data">
-                    @csrf
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('success') !!}</li>
+                    </ul>
+                </div>
+            @endif
+            
+            @if ($user->validasi_pembayaran == true)
+                @if ($user->kategori !== "Skip Ad" and $user->kategori !== "Film Dokumenter" and $user->kategori !== "Film Fiksi")
+                    <form action="/tim/uploadkarya" class="form settings__form" method="POST" enctype="multipart/form-data">
+                        @csrf
 
-                    <label for="file-upload" class="input input-file-label">Upload Karya <span>+</span></label>
-                    <input type="file" placeholder="Upload Karya" name="file_lomba" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
+                        <label for="file-upload" class="input input-file-label">Upload Karya <span>+</span></label>
+                        <input type="file" placeholder="Upload Karya" name="file_lomba" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
 
-                    @error('file_lomba')
-                        <span class="alert-text alert-text--failed" role="alert">
-                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                    <!-- <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required> -->
+                        @error('file_lomba')
+                            <span class="alert-text alert-text--failed" role="alert">
+                                <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <!-- <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required> -->
 
-                    <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
-                    <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
-                    @error('file-pendukung')
-                        <span class="alert-text alert-text--failed" role="alert">
-                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                        <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
+                        <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
+                        @error('file-pendukung')
+                            <span class="alert-text alert-text--failed" role="alert">
+                                <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
 
+                        <input type="submit" class="button button--white" value="Update >"/>
 
-                    <input type="submit" class="button button--white" value="Update >"/>
+                    </form>
+                @else
+                    <form action="/tim/uploadlink/proses" class="form settings__form" method="POST" enctype="multipart/form-data">
+                        @csrf
 
-                </form>
+                        <input type="text" class="input input-file-label" placeholder="Link Google Drive Karya" name="file_lomba" id="file-upload"  required>
+
+                        <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
+                        <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf">
+
+                        <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
+
+                    </form>
+                @endif
             @else
-                <form action="/tim/uploadlink/proses" class="form settings__form" method="POST" enctype="multipart/form-data">
-                    @csrf
-
-                    <input type="text" class="input input-file-label"placeholder="Link Google Drive Karya" name="file_lomba" id="file-upload"  required>
-
-                    <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
-                    <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf">
-
-                    <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
-
-                </form>
+                <p>
+                Maaf kamu belum bisa mengupload file. Silahkan upload bukti pembayaran terlebih dahulu atau menunggu verifikasi admin.
+                </p>
             @endif
 
         </div>

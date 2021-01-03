@@ -35,6 +35,10 @@
                     File Lomba
                     @include('components.sort-icon', ['field' => 'path_file_lomba'])
                 </a></th>
+                <th><a wire:click.prevent="sortBy('path_file_pendukung')" role="button" href="#">
+                    File Pendukung
+                    @include('components.sort-icon', ['field' => 'path_file_pendukung'])
+                </a></th>
                 <th><a wire:click.prevent="sortBy('path_file_lomba')" role="button" href="#">
                     Status Pembayaran
                     @include('components.sort-icon', ['field' => 'validasi_pembayaran'])
@@ -57,7 +61,7 @@
                     <td>{{ $user->email }}</td>
                     <td>
                         @if ($user->path_bukti_bayar)
-                            <a href="/storage/bukti_pembayaran/{{ $user->path_bukti_bayar }}" download>Click to view</a>
+                            <a href="/storage/bukti_pembayaran/{{ $user->path_bukti_bayar }}" download>Click to download</a>
                         @else
                             belum tersedia
                         @endif
@@ -65,11 +69,18 @@
                     <td>
                         @if ($user->path_file_lomba)
                             @if ($user->lomba == "Skip Ad" and $user->lomba == "Film Dokumenter" and $user->lomba == "Film Fiksi")
-                                <a href="storage/file_lomba/{{ $user->path_file_lomba }}" download>Click to view</a>
+                                <a href="storage/file_lomba/{{ $user->path_file_lomba }}" download>Click to download</a>
                             @else
                             <!-- Harus pake https:// -->
                                 <a href="{{ $user->path_file_lomba }}" target="_blank">Click to open file link</a>
                             @endif
+                        @else
+                            belum tersedia
+                        @endif
+                    </td>
+                    <td>
+                        @if ($user->path_file_pendukung)
+                            <a href="storage/file_pendukung/{{ $user->path_file_pendukung }}" download>Click to download</a>
                         @else
                             belum tersedia
                         @endif

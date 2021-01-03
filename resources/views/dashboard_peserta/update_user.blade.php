@@ -19,6 +19,14 @@
         <div class="settings__content">
             <h3 class="heading-3 margin-bottom-s settings__heading text-black">Account</h3>
 
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('success') !!}</li>
+                    </ul>
+                </div>
+            @endif
+            
             <form action="/tim/update" class="form settings__form" method="POST">
                 @csrf
                 @if ($user->validasi_pembayaran == false)
@@ -85,11 +93,7 @@
                     @enderror
 
                     @if($user->path_bukti_bayar)
-                        @if($user->validasi_pembayaran == true)
-                            <p class="status text-regular text-black">Sudah Verifikasi</p>
-                        @else
-                            <p class="status text-regular text-black">Paid / Belum Verifikasi</p>
-                        @endif
+                        <p class="status text-regular text-black">Paid / Belum Verifikasi</p>
                     @else
                         <p class="status text-regular text-black">Belum Membayar</p>
                     @endif
@@ -104,6 +108,9 @@
                     <input type="text" value="{{$user->universitas}}" placeholder="Universitas" name="universitas" class="input margin-top-xs no-symbols" required autofocus disabled>
 
                     <input type="text" value="{{$user->kategori}}" placeholder="Kategori" name="select-comp" class="input margin-top-xs no-symbols" required autofocus disabled>
+
+                    <br>
+                    <p class="status text-regular text-black">Sudah Verifikasi</p>
                 @endif
             </form>
 <!-- 

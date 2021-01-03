@@ -16,8 +16,8 @@ class UploadFileLombaController extends Controller
     public function upload()
     {
         $user = auth()->user();
-        $kategori = $user->kategori;
-        return view('dashboard_peserta.uploadfile')->with('kategori', $kategori);
+        // $kategori = $user->kategori;
+        return view('dashboard_peserta.uploadfile')->with('user', $user);
     }
 
     public function proses_upload(Request $request)
