@@ -80,6 +80,6 @@ class UploadFileLombaController extends Controller
             $user->save();
         }
 
-        return redirect('/tim/update')->with('success', 'Upload file sukses');
+        return redirect('/tim/update')->with('success', 'Upload sukses');
     }
 }

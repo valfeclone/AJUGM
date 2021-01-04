@@ -54,8 +54,7 @@
 
                 </form>
             @else
-                <label for="file-upload" class="input input-file-label" accept=".jpg,.jpeg,.png,.pdf">Upload Pembayaran <span>+</span></label>
-                <input type="file" placeholder="{{$user->path_bukti_bayar}}" name="file_bukti_pembayaran" id="file-upload" disabled>
+                <label for="file-upload" class="input input-file-label" accept=".jpg,.jpeg,.png,.pdf">{{$user->path_bukti_bayar}}</label>
                 
                 <p class="text-regular text-left text-black margin-top-s" >Akun tim ini sudah terverifikasi</p>
                 

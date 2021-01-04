@@ -32,8 +32,15 @@
                     <form action="/tim/uploadkarya" class="form settings__form" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <label for="file-upload" class="input input-file-label">Upload Karya <span>+</span></label>
-                        <input type="file" placeholder="Upload Karya" name="file_lomba" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
+                        <label for="file-upload" class="input input-file-label">
+                        @if(!is_null($user->path_file_lomba))
+                        {{$user->path_file_lomba}}
+                        @else
+                        Upload Karya
+                        @endif
+                        <span>+</span></label>
+                        <input type="file"
+                        name="file_lomba" id="file-upload" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
 
                         @error('file_lomba')
                             <span class="alert-text alert-text--failed" role="alert">
@@ -43,7 +50,12 @@
                         @enderror
                         <!-- <input type="text" placeholder="Deskripsi Karya" name="deskripsi-karya" class="input margin-top-xs" required> -->
 
-                        <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
+                        <label for="file-upup" class="input input-file-label margin-top-xs">
+                        @if(!is_null($user->path_file_pendukung))
+                        {{$user->path_file_pendukung}}
+                        @else
+                        Upload File Pendukung
+                        @endif<span>+</span></label>
                         <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf" required>
                         @error('file-pendukung')
                             <span class="alert-text alert-text--failed" role="alert">
@@ -59,17 +71,18 @@
                     <form action="/tim/uploadlink/proses" class="form settings__form" method="POST" enctype="multipart/form-data">
                         @csrf
 
-                        <input type="text" class="input input-file-label" placeholder="Link Google Drive Karya" name="file_lomba" id="file-upload"  required>
-
-                        <label for="file-upup" class="input input-file-label margin-top-xs">Upload File Pendukung <span>+</span></label>
-                        <input type="file" placeholder="Upload File Pendukung" name="file-pendukung" id="file-upup" accept=".jpg,.jpeg,.png,.rar,.zip,.pdf">
+                        <input type="text" class="input input-file-label" placeholder="Link Google Drive Karya" name="link_file_lomba" id="file-upload" required
+                        @if(!is_null($user->path_file_lomba))
+                        value="{{$user->path_file_lomba}}"
+                        @endif 
+                        >
 
                         <input type="submit" class="button button--white align-self-end margin-top-auto" value="Update >"/>
 
                     </form>
                 @endif
             @else
-                <p>
+                <p class="text-regular text-left text-black">
                 Maaf kamu belum bisa mengupload file. Silahkan upload bukti pembayaran terlebih dahulu atau menunggu verifikasi admin.
                 </p>
             @endif

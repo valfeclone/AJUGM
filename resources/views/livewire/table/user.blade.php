@@ -3,10 +3,10 @@
     <x-data-table :data="$data" :model="$users">
         <x-slot name="head">
             <tr>
-                <!-- <th><a wire:click.prevent="sortBy('id')" role="button" href="#">
+                <th><a wire:click.prevent="sortBy('id')" role="button" href="#">
                     ID Tim
                     @include('components.sort-icon', ['field' => 'id'])
-                </a></th> -->
+                </a></th>
                 <th><a wire:click.prevent="sortBy('name')" role="button" href="#">
                     Nama Tim
                     @include('components.sort-icon', ['field' => 'name'])
@@ -35,10 +35,6 @@
                     File Lomba
                     @include('components.sort-icon', ['field' => 'path_file_lomba'])
                 </a></th>
-                <th><a wire:click.prevent="sortBy('path_file_pendukung')" role="button" href="#">
-                    File Pendukung
-                    @include('components.sort-icon', ['field' => 'path_file_pendukung'])
-                </a></th>
                 <th><a wire:click.prevent="sortBy('path_file_lomba')" role="button" href="#">
                     Status Pembayaran
                     @include('components.sort-icon', ['field' => 'validasi_pembayaran'])
@@ -53,7 +49,7 @@
         <x-slot name="body">
             @foreach ($users as $user)
                 <tr x-data="window.__controller.dataTableController({{ $user->id }})">
-                    <!-- <td>{{ $user->id }}</td> -->
+                    <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->universitas }}</td>
                     <td>{{ $user->kompetisi }}</td>
@@ -61,7 +57,7 @@
                     <td>{{ $user->email }}</td>
                     <td>
                         @if ($user->path_bukti_bayar)
-                            <a href="/storage/bukti_pembayaran/{{ $user->path_bukti_bayar }}" download>Click to download</a>
+                            <a href="/storage/bukti_pembayaran/{{ $user->path_bukti_bayar }}" download>Click to view</a>
                         @else
                             belum tersedia
                         @endif
@@ -69,18 +65,11 @@
                     <td>
                         @if ($user->path_file_lomba)
                             @if ($user->lomba == "Skip Ad" and $user->lomba == "Film Dokumenter" and $user->lomba == "Film Fiksi")
-                                <a href="storage/file_lomba/{{ $user->path_file_lomba }}" download>Click to download</a>
+                                <a href="storage/file_lomba/{{ $user->path_file_lomba }}" download>Click to view</a>
                             @else
                             <!-- Harus pake https:// -->
                                 <a href="{{ $user->path_file_lomba }}" target="_blank">Click to open file link</a>
                             @endif
-                        @else
-                            belum tersedia
-                        @endif
-                    </td>
-                    <td>
-                        @if ($user->path_file_pendukung)
-                            <a href="storage/file_pendukung/{{ $user->path_file_pendukung }}" download>Click to download</a>
                         @else
                             belum tersedia
                         @endif
@@ -113,13 +102,13 @@
             @endforeach
         </x-slot>
     </x-data-table>
-    @if (\Session::has('success'))
-    <div class="alert alert-success">
-        <ul>
-            <li>{!! \Session::get('success') !!}</li>
-        </ul>
-    </div>
-    @endif
+            @if (\Session::has('success'))
+            <div class="alert alert-success">
+                <ul>
+                    <li>{!! \Session::get('success') !!}</li>
+                </ul>
+            </div>
+            @endif
     @if (\Session::has('error'))
     <div class="alert alert-error">
         <ul>

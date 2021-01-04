@@ -21,9 +21,7 @@
 
             @if (\Session::has('success'))
                 <div class="alert alert-success">
-                    <ul>
-                        <li>{!! \Session::get('success') !!}</li>
-                    </ul>
+                       <p class="link-item text-regular">{!! \Session::get('success') !!}</p>
                 </div>
             @endif
             
@@ -57,7 +55,31 @@
                         </span>
                     @enderror
 
-                    <select class="select margin-top-xs" name="select-comp">
+                    <select class="select margin-top-xs" id="select-cat" name="select-cat">
+                        <option value="Arjuna" @if($user->kompetisi=="Arjuna")selected @endif>Arjuna (Ajang Citra Sejuta Warna)</option>
+                        <option value="Kresna" @if($user->kompetisi=="Kresna")selected @endif>Kresna (Kreasi Insan Sinema)</option>
+                        <option value="Prahasta" @if($user->kompetisi=="Prahasta")selected @endif>Prahasta (Pertempuran Humas Nusantara)</option>
+                        <option value="Nakula" @if($user->kompetisi=="Nakula")selected @endif>Nakula (Penelitian Kawula Muda)</option>
+                        <option value="Sadewa" @if($user->kompetisi=="Sadewa")selected @endif>Sadewa (Sayembara Dewa Pariwara)</option>
+                    </select>
+
+                    @error('select-cat')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    <select class="select margin-top-xs" id="select-comp" name="select-opt">
+                        <option selected value="" hidden>Competition</option> 
+                        <option disabled value="default">Please select the category first</option>
+                    </select>
+                    @error('select-opt')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    <!-- <select class="select margin-top-xs" name="select-comp">
                         <option value="Homeless Media"@if($user->kategori=="Homeless Media")selected @endif>Homeless Media</option>
                         <option value="Comic Strip" @if($user->kategori=="Comic Strip")selected @endif>Comic Strip</option>
                         <option value="Podcast"@if($user->kategori=="Podcast")selected @endif>Podcast</option>
@@ -74,7 +96,7 @@
                         <option value="Unconventional Media" @if($user->kategori=="Unconventional Media")selected @endif>Unconventional Media</option>
                         <option value="Brandbook"@if($user->kategori=="Brandbook")selected @endif>Brandbook</option>
                         <option value="Skip Ad"@if($user->kategori=="Skip Ad")selected @endif>Skip Ad</option>
-                    </select>
+                    </select> -->
 
                     @error('select-comp')
                         <span class="alert-text alert-text--failed" role="alert">
