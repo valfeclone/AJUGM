@@ -15,7 +15,7 @@ return [
 
     'reset' => 'Password Telah di Reset',
     'sent' => 'Kami telah mengirimkan link reset password',
-    'throttled' => 'Please wait before retrying.',
+    'throttled' => 'Mohon menunggu sebelum mencoba lagi.',
     'token' => 'Token Reset Password Telah Invalid',
     'user' => "Tidak ada team yang terdaftar dengan email tersebut.",
 
