@@ -4,8 +4,13 @@
     Ajisaka | Account Settings
 @endsection
 
-@section ('content')
+@section('extra-script')
+<script>
+    var app = @json($user);
+</script>
+@endsection
 
+@section ('content')
 <div class="settings">
     <div class="card card-xxl settings__form-card">
         <div class="settings__sidebar">
@@ -55,50 +60,24 @@
                         </span>
                     @enderror
 
-                    <select class="select margin-top-xs" id="select-cat" name="select-cat">
+                    <select class="select margin-top-xs select-cat" id="select-cat" name="select-cat">
                         <option value="Arjuna" @if($user->kompetisi=="Arjuna")selected @endif>Arjuna (Ajang Citra Sejuta Warna)</option>
                         <option value="Kresna" @if($user->kompetisi=="Kresna")selected @endif>Kresna (Kreasi Insan Sinema)</option>
                         <option value="Prahasta" @if($user->kompetisi=="Prahasta")selected @endif>Prahasta (Pertempuran Humas Nusantara)</option>
                         <option value="Nakula" @if($user->kompetisi=="Nakula")selected @endif>Nakula (Penelitian Kawula Muda)</option>
                         <option value="Sadewa" @if($user->kompetisi=="Sadewa")selected @endif>Sadewa (Sayembara Dewa Pariwara)</option>
                     </select>
-
                     @error('select-cat')
                         <span class="alert-text alert-text--failed" role="alert">
                             <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-                    <select class="select margin-top-xs" id="select-comp" name="select-opt">
+
+                    <select class="select margin-top-xs select-comp" id="select-comp" name="select-opt">
                         <option selected value="" hidden>Competition</option> 
-                        <option disabled value="default">Please select the category first</option>
                     </select>
                     @error('select-opt')
-                        <span class="alert-text alert-text--failed" role="alert">
-                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                    <!-- <select class="select margin-top-xs" name="select-comp">
-                        <option value="Homeless Media"@if($user->kategori=="Homeless Media")selected @endif>Homeless Media</option>
-                        <option value="Comic Strip" @if($user->kategori=="Comic Strip")selected @endif>Comic Strip</option>
-                        <option value="Podcast"@if($user->kategori=="Podcast")selected @endif>Podcast</option>
-                        <option value="Film Fiksi"@if($user->kategori=="Film Fiksi")selected @endif>Film Fiksi</option>
-                        <option value="Movie Scoring"@if($user->kategori=="Movie Scoring")selected @endif>Movie Scoring</option>
-                        <option value="Film Dokumenter"@if($user->kategori=="Film Dokumenter")selected @endif>Film Dokumenter</option>
-                        <option value="Penulisan Naskah"@if($user->kategori=="Penulisan Naskah")selected @endif>Penulisan Naskah</option>
-                        <option value="PR Campaign"@if($user->kategori=="PR Campaign")selected @endif>PR Campaign</option>
-                        <option value="Press Conference"@if($user->kategori=="Press Conference")selected @endif>Press Conference</option>
-                        <option value="Risk Management"@if($user->kategori=="Risk Management")selected @endif>Risk Management</option>
-                        <option value="Riset Strategis Akademik"@if($user->kategori=="Riset Strategis Akademik")selected @endif>Riset Strategis Akademik</option>
-                        <option value="Fun Research"@if($user->kategori=="Fun Research")selected @endif>Fun Research</option>
-                        <option value="Social Media Activation"@if($user->kategori=="Social media Activation")selected @endif>Social Media Activation</option>
-                        <option value="Unconventional Media" @if($user->kategori=="Unconventional Media")selected @endif>Unconventional Media</option>
-                        <option value="Brandbook"@if($user->kategori=="Brandbook")selected @endif>Brandbook</option>
-                        <option value="Skip Ad"@if($user->kategori=="Skip Ad")selected @endif>Skip Ad</option>
-                    </select> -->
-
-                    @error('select-comp')
                         <span class="alert-text alert-text--failed" role="alert">
                             <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
                             <strong>{{ $message }}</strong>

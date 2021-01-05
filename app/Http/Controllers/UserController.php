@@ -52,10 +52,10 @@ class UserController extends Controller
                 'name' => 'required',
                 'universitas' => 'required',
                 'email' => 'required|email',
-                'select-comp'=>'required',
+                'select-opt'=>'required',
             ]);
             $user->update($validated);
-            $user->kategori = $validated['select-comp'];
+            $user->kategori = $validated['select-opt'];
 
             if($request->password){
                 $user->password = Hash::make($request['password']);
