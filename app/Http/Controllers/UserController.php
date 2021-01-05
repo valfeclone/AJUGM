@@ -47,28 +47,40 @@ class UserController extends Controller
     public function updateUser(Request $request)
     {
         $user = auth()->user();
-        if ($user) {
-            $validated = $request->validate([
+        if ($user->validasi_pembayaran == false) {
+            if ($user) {
+                $validated = $request->validate([
                 'name' => 'required',
                 'universitas' => 'required',
                 'email' => 'required|email|unique:users',
                 'select-cat'=>'required',
                 'select-opt'=>'required',
             ]);
-            $user->update($validated);
-            $user->kategori = $validated['select-opt'];
-            $user->kompetisi = $validated['select-cat'];
+                $user->update($validated);
+                $user->kategori = $validated['select-opt'];
+                $user->kompetisi = $validated['select-cat'];
 
-            if ($request->password) {
-                $request->validate([
+                if ($request->password) {
+                    $request->validate([
                     'password'=>'required|min:8'
                 ]);
+                    $user->password = Hash::make($request['password']);
+                    $user->save();
+                }
+
+                $user->save();
+                return redirect()->back()->with('success', 'Update sukses');
+            }
+        } else {
+            if ($request->password) {
+                $request->validate([
+                'password'=>'required|min:8'
+            ]);
                 $user->password = Hash::make($request['password']);
                 $user->save();
+                return redirect()->back()->with('success', 'Update password sukses');
             }
-
-            $user->save();
-            return redirect()->back()->with('success', 'Update sukses');
+            return redirect()->back()->with('failure', 'Tidak ada yang diupdate');
         }
     }
 

@@ -39,8 +39,8 @@ class MemberController extends Controller
                 $tujuan_upload = storage_path('app/public/foto_ktm');
 
                 // menyimpan file foto ktm yang diupload ke variabel $file
-                $file->move($tujuan_upload, $file->getClientOriginalName());
-                $user->member[0]->path_foto_ktm = $file->getClientOriginalName();
+                $file->move($tujuan_upload, str_replace(' ', '', $file->getClientOriginalName()));
+                $user->member[0]->path_foto_ktm = str_replace(' ', '', $file->getClientOriginalName());
                 $user->member[0]->save();
             }
     
@@ -68,8 +68,8 @@ class MemberController extends Controller
                             $tujuan_upload = storage_path('app/public/foto_ktm');
                         
                             // menyimpan file foto ktm yang diupload ke variabel $file
-                            $file->move($tujuan_upload, $file->getClientOriginalName());
-                            $user->member[($x-1)]->path_foto_ktm = $file->getClientOriginalName();
+                            $file->move($tujuan_upload, str_replace(' ', '', $file->getClientOriginalName()));
+                            $user->member[($x-1)]->path_foto_ktm = str_replace(' ', '', $file->getClientOriginalName());
                             $user->member[($x-1)]->save();
                         }
                     }

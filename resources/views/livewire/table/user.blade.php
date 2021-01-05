@@ -3,10 +3,6 @@
     <x-data-table :data="$data" :model="$users">
         <x-slot name="head">
             <tr>
-                <th><a wire:click.prevent="sortBy('id')" role="button" href="#">
-                    ID Tim
-                    @include('components.sort-icon', ['field' => 'id'])
-                </a></th>
                 <th><a wire:click.prevent="sortBy('name')" role="button" href="#">
                     Nama Tim
                     @include('components.sort-icon', ['field' => 'name'])
@@ -35,6 +31,10 @@
                     File Lomba
                     @include('components.sort-icon', ['field' => 'path_file_lomba'])
                 </a></th>
+                <th><a wire:click.prevent="sortBy('path_file_pendukung')" role="button" href="#">
+                    File Pendukung
+                    @include('components.sort-icon', ['field' => 'path_file_pendukung'])
+                </a></th>
                 <th><a wire:click.prevent="sortBy('path_file_lomba')" role="button" href="#">
                     Status Pembayaran
                     @include('components.sort-icon', ['field' => 'validasi_pembayaran'])
@@ -49,7 +49,6 @@
         <x-slot name="body">
             @foreach ($users as $user)
                 <tr x-data="window.__controller.dataTableController({{ $user->id }})">
-                    <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->universitas }}</td>
                     <td>{{ $user->kompetisi }}</td>
@@ -64,14 +63,27 @@
                     </td>
                     <td>
                         @if ($user->path_file_lomba)
-                            @if ($user->lomba == "Skip Ad" and $user->lomba == "Film Dokumenter" and $user->lomba == "Film Fiksi")
-                                <a href="storage/file_lomba/{{ $user->path_file_lomba }}" download>Click to view</a>
+                            @if(!$user->kategori=="Skip Ad"||!$user->kategori=="Film Dokumenter"||!$user->kategori=="Film Fiksi")
+                                <a href="{{ $user->path_file_lomba }}" target="_blank">Click to open file link</a>
                             @else
                             <!-- Harus pake https:// -->
-                                <a href="{{ $user->path_file_lomba }}" target="_blank">Click to open file link</a>
+                                <a href="storage/{{str_replace(' ', '', $user->kategori)}}/file_lomba/{{ $user->path_file_lomba }}" download>Click to view</a> 
                             @endif
                         @else
                             belum tersedia
+                        @endif
+                    </td>
+                    <td>
+                        @if ($user->path_file_pendukung)
+                            @if(!$user->kategori=="Skip Ad"||!$user->kategori=="Film Dokumenter"||!$user->kategori=="Film Fiksi")
+                            Tersedia di Link Masing-Masing
+                            @else
+                            <!-- Harus pake https:// -->
+                            <a href="storage/{{str_replace(' ', '', $user->kategori)}}/file_pendukung/{{ $user->path_file_pendukung }}" download>Click to view</a>
+                                 
+                            @endif
+                        @else
+                            Belum tersedia
                         @endif
                     </td>
                     <td>

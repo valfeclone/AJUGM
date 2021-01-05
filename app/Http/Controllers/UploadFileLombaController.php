@@ -35,17 +35,17 @@ class UploadFileLombaController extends Controller
         $filependukung = $request->file('file-pendukung');
 
         // menyimpan data file yang diupload ke variabel $file
-        $tujuan_upload = storage_path('app/public/'.$kategori.'/file_lomba');
-        $file->move($tujuan_upload, $file->getClientOriginalName());
+        $tujuan_upload = storage_path('app/public/'.str_replace(' ', '', $kategori).'/file_lomba');
+        $file->move($tujuan_upload, str_replace(' ', '', $file->getClientOriginalName()));
 
         // menyimpan data file pendukung yang diupload ke variabel $file-pendukung
-        $tujuan_pendukung = storage_path('app/public/'.$kategori.'/file_pendukung');
-        $filependukung->move($tujuan_pendukung, $filependukung->getClientOriginalName());
+        $tujuan_pendukung = storage_path('app/public/'.str_replace(' ', '', $kategori).'/file_pendukung');
+        $filependukung->move($tujuan_pendukung, str_replace(' ', '', $filependukung->getClientOriginalName()));
         
         $user = auth()->user();
         if ($user) {
-            $user->path_file_lomba = $file->getClientOriginalName();
-            $user->path_file_pendukung = $filependukung->getClientOriginalName();
+            $user->path_file_lomba = str_replace(' ', '', $file->getClientOriginalName());
+            $user->path_file_pendukung = str_replace(' ', '', $filependukung->getClientOriginalName());
             $user->save();
         }
 
@@ -59,7 +59,6 @@ class UploadFileLombaController extends Controller
 
         $this->validate($request, [
             'link_file_lomba' => 'required',
-            'file-pendukung' => 'required',
         ]);
 
         if (!STR::is('https://*', $request['link_file_lomba'])) {
@@ -67,16 +66,16 @@ class UploadFileLombaController extends Controller
         }
 
         // menyimpan data file yang diupload ke variabel $file
-        $filependukung = $request->file('file-pendukung');
+        // $filependukung = $request->file('file-pendukung');
 
         // menyimpan data file pendukung yang diupload ke variabel $file-pendukung
-        $tujuan_pendukung = storage_path('app/public/file_pendukung/'.$kategori);
-        $filependukung->move($tujuan_pendukung, $filependukung->getClientOriginalName());
+        // $tujuan_pendukung = storage_path('app/public/'.$kategori.'file_pendukung');
+        // $filependukung->move($tujuan_pendukung, $filependukung->getClientOriginalName());
     
         $user = auth()->user();
         if ($user) {
             $user->path_file_lomba = $request->link_file_lomba;
-            $user->path_file_pendukung = $filependukung->getClientOriginalName();
+            // $user->path_file_pendukung = $filependukung->getClientOriginalName();
             $user->save();
         }
 

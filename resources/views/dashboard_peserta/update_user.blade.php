@@ -29,7 +29,11 @@
                        <p class="link-item text-regular">{!! \Session::get('success') !!}</p>
                 </div>
             @endif
-            
+            @if (\Session::has('failure'))
+                <div class="alert alert-secondary">
+                       <p class="link-item text-regular">{!! \Session::get('failure') !!}</p>
+                </div>
+            @endif
             <form action="/tim/update" class="form settings__form" method="POST">
                 @csrf
                 @if ($user->validasi_pembayaran == false)
@@ -109,9 +113,27 @@
                     <input type="text" value="{{$user->universitas}}" placeholder="Universitas" name="universitas" class="input margin-top-xs no-symbols" required autofocus disabled>
 
                     <input type="text" value="{{$user->kategori}}" placeholder="Kategori" name="select-comp" class="input margin-top-xs no-symbols" required autofocus disabled>
+                    
+                    <input type="text" value="{{$user->kompetisi}}" placeholder="Kompetisi" name="select-cat" class="input margin-top-xs no-symbols" required autofocus disabled>
+                    <input type="password" placeholder="Password" name="password" id="password" class="input margin-top-xs margin-bottom-s" autofocus>
 
-                    <br>
+                    @error('password')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <p class="status text-regular text-black">Sudah Verifikasi</p>
+                    <input type="submit" class="button button--white" value="Update >"/>
                 @endif
             </form>
 <!-- 

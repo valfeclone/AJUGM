@@ -8,7 +8,7 @@
                     @include('components.sort-icon', ['field' => 'id'])
                 </a></th> -->
                 <th><a wire:click.prevent="sortBy('team_id')" role="button" href="#">
-                    ID Tim
+                    Nama Tim
                     @include('components.sort-icon', ['field' => 'team_id'])
                 </a></th>
                 <th><a wire:click.prevent="sortBy('name')" role="button" href="#">
