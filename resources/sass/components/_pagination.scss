@@ -4,9 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 2rem !important;
 
     > *:not(:last-child) {
-        margin-right: 1.2rem;
+        margin-right:1.5rem;
     }
 }
 
@@ -30,5 +31,13 @@
 
     &--disabled {
         pointer-events: none;
+    }
+
+    &-item {
+        font-size: 1.5rem !important;
+
+        @include respond(phone) {
+            font-size: 2rem !important;
+        }
     }
 }

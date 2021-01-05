@@ -10,6 +10,8 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
+use App\Notifications\ResetPassword as ResetPassword;
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -80,5 +82,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Member::class, 'team_id');
         // return $this->hasMany('App\Models\Member');
+    }
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPassword($token));
     }
 }

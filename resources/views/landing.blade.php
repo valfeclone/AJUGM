@@ -71,7 +71,7 @@
             
         </section>
 
-        <section class="landing-matlom">
+        <section class="landing-matlom" id="creativemarket">
             <div class="market-tenants" style="border-top:none; padding:0;">
                 <h3 class="heading-3 text-uppercase text-black margin-bottom-m text-center">The Tenants</h3>
                 <div class="card-wrapper--grid-xs margin-bottom-s">
@@ -82,7 +82,7 @@
                     @endforeach
                 </div>
                 <div class="pagination">
-                    {{ $umkms->links('vendor.pagination.custom') }}
+                    {{ $umkms->links() }}
                 </div>
             </div>
             <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">

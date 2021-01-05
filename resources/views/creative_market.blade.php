@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div class="market-tenants">
+    <div class="market-tenants" id="creativemarket">
         <h3 class="heading-3 text-uppercase text-black margin-bottom-m text-center">The Tenants</h3>
         <div class="card-wrapper--grid-xs margin-bottom-s">
             @foreach($umkms as $umkm)
@@ -35,7 +35,7 @@
             @endforeach
         </div>
         <div class="pagination">
-            {{ $umkms->links('vendor.pagination.custom') }}
+            {{ $umkms->links()}}
         </div>
     </div>
 </div>

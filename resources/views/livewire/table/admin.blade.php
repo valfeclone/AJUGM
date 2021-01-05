@@ -3,10 +3,6 @@
     <x-data-table :data="$data" :model="$admins">
         <x-slot name="head">
             <tr>
-                <th><a wire:click.prevent="sortBy('id')" role="button" href="#">
-                    ID Tim
-                    @include('components.sort-icon', ['field' => 'id'])
-                </a></th>
                 <th><a wire:click.prevent="sortBy('name')" role="button" href="#">
                     Nama
                     @include('components.sort-icon', ['field' => 'name'])

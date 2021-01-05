@@ -19,6 +19,14 @@
         <div class="settings__content">
             <h3 class="heading-3 margin-bottom-s text-black settings__heading">Members</h3>
 
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('success') !!}</li>
+                    </ul>
+                </div>
+            @endif
+            
             <form action="/tim/member" class="form settings__form" method="POST" enctype="multipart/form-data">
             @csrf
 

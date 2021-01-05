@@ -19,31 +19,46 @@
         <div class="settings__content">
             <h3 class="heading-3 margin-bottom-s settings__heading text-black">Bukti Pembayaran</h3>
 
-            <form action="/tim/uploadbukti" class="form settings__form" method="POST" enctype="multipart/form-data">
-            @csrf
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                    <ul>
+                        <li>{!! \Session::get('success') !!}</li>
+                    </ul>
+                </div>
+            @endif
 
-                <label for="file-upload" class="input input-file-label" accept=".jpg,.jpeg,.png,.pdf">Upload Pembayaran <span>+</span></label>
-                <input type="file" placeholder="Upload Pembayaran" name="file_bukti_pembayaran" id="file-upload" required>
+            @if ($user->validasi_pembayaran == false)
+                <form action="/tim/uploadbukti" class="form settings__form" method="POST" enctype="multipart/form-data">
+                @csrf
 
-                @error('file_bukti_pembayaran')
-                    <span class="alert-text alert-text--failed" role="alert">
-                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
+                    <label for="file-upload" class="input input-file-label" accept=".jpg,.jpeg,.png,.pdf">Upload Pembayaran <span>+</span></label>
+                    <input type="file" placeholder="Upload Pembayaran" name="file_bukti_pembayaran" id="file-upload" required>
 
-                <p class="text-regular text-left text-black margin-top-s" >Untuk pembayaran bisa dilakukan dengan cara mentransfer ke akun dibawah ini :</p>
-                <br>
-                <p class="text-regular text-left text-black">059001019819504
-                <br>
-                BRI / a.n Ni Kadek Ayu Pratiwi
-                <br><br>
-                Harap menuliskan keterangan transaksi sebagai berikut: Nama Tim - Ajisaka
-                </p>
+                    @error('file_bukti_pembayaran')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
 
-                <input type="submit" class="button button--white" value="Update >"/>
+                    <p class="text-regular text-left text-black margin-top-s" >Untuk pembayaran bisa dilakukan dengan cara mentransfer ke akun dibawah ini :</p>
+                    <br>
+                    <p class="text-regular text-left text-black">059001019819504
+                    <br>
+                    BRI / a.n Ni Kadek Ayu Pratiwi
+                    <br><br>
+                    Harap menuliskan keterangan transaksi sebagai berikut: Nama Tim - Ajisaka
+                    </p>
 
-            </form>
+                    <input type="submit" class="button button--white" value="Update >"/>
+
+                </form>
+            @else
+                <label for="file-upload" class="input input-file-label" accept=".jpg,.jpeg,.png,.pdf">{{$user->path_bukti_bayar}}</label>
+                
+                <p class="text-regular text-left text-black margin-top-s" >Akun tim ini sudah terverifikasi</p>
+                
+            @endif
         </div>
 
         <img src="/assets/Rectangle 18.png" class="settings__geometry--square" alt="">

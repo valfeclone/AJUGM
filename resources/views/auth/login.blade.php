@@ -22,7 +22,7 @@
                 </span>
             @enderror
 
-            <input type="password" placeholder="Password" name="password" class="input" required autofocus>
+            <input type="password" placeholder="Password" name="password" class="input margin-bottom-xs" required autofocus>
 
             @error('password')
                 <span class="alert-text alert-text--failed" role="alert">
@@ -30,7 +30,7 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-
+            <a href="{{ route('password.request') }}" class="link"><p class="text-regular margin-bottom-l">forgot password?</p></a>
             <input type="submit" class="button button--white align-self-center margin-top-l margin-bottom-xs" value="Login >">
         </form>
         <div class="align-self-center">
