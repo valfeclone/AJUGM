@@ -87,7 +87,7 @@ Route::group([ "middleware" => ['auth:sanctum', 'verified'] ], function () {
         return view("dashboard_peserta.member");
     });
     Route::get('/tim/member', [ UserController::class, "show_member"]);
-    Route::post('/tim/member', [ UserController::class, "updateMember"]);
+    Route::post('/tim/member', [ MemberController::class, "updateMember"]);
 });
 
 //artstep

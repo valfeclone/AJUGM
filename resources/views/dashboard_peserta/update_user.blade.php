@@ -4,8 +4,13 @@
     Ajisaka | Account Settings
 @endsection
 
-@section ('content')
+@section('extra-script')
+<script>
+    var app = @json($user);
+</script>
+@endsection
 
+@section ('content')
 <div class="settings">
     <div class="card card-xxl settings__form-card">
         <div class="settings__sidebar">
@@ -19,6 +24,16 @@
         <div class="settings__content">
             <h3 class="heading-3 margin-bottom-s settings__heading text-black">Account</h3>
 
+            @if (\Session::has('success'))
+                <div class="alert alert-success">
+                       <p class="link-item text-regular">{!! \Session::get('success') !!}</p>
+                </div>
+            @endif
+            @if (\Session::has('failure'))
+                <div class="alert alert-secondary">
+                       <p class="link-item text-regular">{!! \Session::get('failure') !!}</p>
+                </div>
+            @endif
             <form action="/tim/update" class="form settings__form" method="POST">
                 @csrf
                 @if ($user->validasi_pembayaran == false)
@@ -49,26 +64,24 @@
                         </span>
                     @enderror
 
-                    <select class="select margin-top-xs" name="select-comp">
-                        <option value="Homeless Media"@if($user->kategori=="Homeless Media")selected @endif>Homeless Media</option>
-                        <option value="Comic Strip" @if($user->kategori=="Comic Strip")selected @endif>Comic Strip</option>
-                        <option value="Podcast"@if($user->kategori=="Podcast")selected @endif>Podcast</option>
-                        <option value="Film Fiksi"@if($user->kategori=="Film Fiksi")selected @endif>Film Fiksi</option>
-                        <option value="Movie Scoring"@if($user->kategori=="Movie Scoring")selected @endif>Movie Scoring</option>
-                        <option value="Film Dokumenter"@if($user->kategori=="Film Dokumenter")selected @endif>Film Dokumenter</option>
-                        <option value="Penulisan Naskah"@if($user->kategori=="Penulisan Naskah")selected @endif>Penulisan Naskah</option>
-                        <option value="PR Campaign"@if($user->kategori=="PR Campaign")selected @endif>PR Campaign</option>
-                        <option value="Press Conference"@if($user->kategori=="Press Conference")selected @endif>Press Conference</option>
-                        <option value="Risk Management"@if($user->kategori=="Risk Management")selected @endif>Risk Management</option>
-                        <option value="Riset Strategis Akademik"@if($user->kategori=="Riset Strategis Akademik")selected @endif>Riset Strategis Akademik</option>
-                        <option value="Fun Research"@if($user->kategori=="Fun Research")selected @endif>Fun Research</option>
-                        <option value="Social Media Activation"@if($user->kategori=="Social media Activation")selected @endif>Social Media Activation</option>
-                        <option value="Unconventional Media" @if($user->kategori=="Unconventional Media")selected @endif>Unconventional Media</option>
-                        <option value="Brandbook"@if($user->kategori=="Brandbook")selected @endif>Brandbook</option>
-                        <option value="Skip Ad"@if($user->kategori=="Skip Ad")selected @endif>Skip Ad</option>
+                    <select class="select margin-top-xs select-cat" id="select-cat" name="select-cat">
+                        <option value="Arjuna" @if($user->kompetisi=="Arjuna")selected @endif>Arjuna (Ajang Citra Sejuta Warna)</option>
+                        <option value="Kresna" @if($user->kompetisi=="Kresna")selected @endif>Kresna (Kreasi Insan Sinema)</option>
+                        <option value="Prahasta" @if($user->kompetisi=="Prahasta")selected @endif>Prahasta (Pertempuran Humas Nusantara)</option>
+                        <option value="Nakula" @if($user->kompetisi=="Nakula")selected @endif>Nakula (Penelitian Kawula Muda)</option>
+                        <option value="Sadewa" @if($user->kompetisi=="Sadewa")selected @endif>Sadewa (Sayembara Dewa Pariwara)</option>
                     </select>
+                    @error('select-cat')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
 
-                    @error('select-comp')
+                    <select class="select margin-top-xs select-comp" id="select-comp" name="select-opt">
+                        <option selected value="" hidden>Competition</option> 
+                    </select>
+                    @error('select-opt')
                         <span class="alert-text alert-text--failed" role="alert">
                             <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
                             <strong>{{ $message }}</strong>
@@ -85,11 +98,7 @@
                     @enderror
 
                     @if($user->path_bukti_bayar)
-                        @if($user->validasi_pembayaran == true)
-                            <p class="status text-regular text-black">Sudah Verifikasi</p>
-                        @else
-                            <p class="status text-regular text-black">Paid / Belum Verifikasi</p>
-                        @endif
+                        <p class="status text-regular text-black">Paid / Belum Verifikasi</p>
                     @else
                         <p class="status text-regular text-black">Belum Membayar</p>
                     @endif
@@ -104,6 +113,27 @@
                     <input type="text" value="{{$user->universitas}}" placeholder="Universitas" name="universitas" class="input margin-top-xs no-symbols" required autofocus disabled>
 
                     <input type="text" value="{{$user->kategori}}" placeholder="Kategori" name="select-comp" class="input margin-top-xs no-symbols" required autofocus disabled>
+                    
+                    <input type="text" value="{{$user->kompetisi}}" placeholder="Kompetisi" name="select-cat" class="input margin-top-xs no-symbols" required autofocus disabled>
+                    <input type="password" placeholder="Password" name="password" id="password" class="input margin-top-xs margin-bottom-s" autofocus>
+
+                    @error('password')
+                        <span class="alert-text alert-text--failed" role="alert">
+                            <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <p class="status text-regular text-black">Sudah Verifikasi</p>
+                    <input type="submit" class="button button--white" value="Update >"/>
                 @endif
             </form>
 <!-- 

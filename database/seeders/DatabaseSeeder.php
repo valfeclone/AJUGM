@@ -564,9 +564,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('umkms')->insert([
             'name'=>'Macrame',
-            'description'=>"Awal September 2020 lalu, saya berinisiatif membuat usaha kecil-kecilan berupa kerajinan tangan macrame. Macrame adalah seni menyimpul tali untuk menciptakan motif geometrik yang digunakan sebagai hiasan, dekorasi, atau aksesoris. Usaha ini saya beri nama 'Macrame Njonjae' (baca : nyonyae), karena biasanya nyonya-nyonya suka membuat kerajinan tangan. Usaha macrame saya ini menggunakan sistem pre order karena dapat menyesuaikan permintaan dari customer. Waktu pengerjaan 3-7 hari tergantung tingkat kerumitan barang. Harganya pun variatif sesuai dengan ukuran, material yang digunakan, dan warna tali. Produk best seller dari Macrame Njonjae adalah ukulele hanger. Sementara ini saya baru menjual beberapa produk, ke depannya akan rilis banyak produk baru. Saya menerima request apapun dari teman-teman, saya juga menerima jasa pembuatan dekorasi wedding beserta souvenir. Silakan kunjungi Instagram @macramenjonjae untuk melihat produk yang lainnya. Terima kasih.
-            <br><br>
-            KODE UNIK VOUCHER = MCRNJO309",
+            'description'=>"Awal September 2020 lalu, saya berinisiatif membuat usaha kecil-kecilan berupa kerajinan tangan macrame. Macrame adalah seni menyimpul tali untuk menciptakan motif geometrik yang digunakan sebagai hiasan, dekorasi, atau aksesoris. Usaha ini saya beri nama 'Macrame Njonjae' (baca : nyonyae), karena biasanya nyonya-nyonya suka membuat kerajinan tangan. Usaha macrame saya ini menggunakan sistem pre order karena dapat menyesuaikan permintaan dari customer. Waktu pengerjaan 3-7 hari tergantung tingkat kerumitan barang. Harganya pun variatif sesuai dengan ukuran, material yang digunakan, dan warna tali. Produk best seller dari Macrame Njonjae adalah ukulele hanger. Sementara ini saya baru menjual beberapa produk, ke depannya akan rilis banyak produk baru. Saya menerima request apapun dari teman-teman, saya juga menerima jasa pembuatan dekorasi wedding beserta souvenir.",
             'instagram_link'=>'https://www.instagram.com/macramenjonjae/',
             'path_photo'=>'images/umkm/macrame.png',
         ]);
@@ -758,15 +756,13 @@ class DatabaseSeeder extends Seeder
             'name'=>'Mantra Puspa',
             'description'=>"Halo! Mantrapuspa mengumpulkan energi dari bunga asli yang sudah dikeringkan, lalu mengolahnya menjadi kerajinan: buku catatan, aksesoris, dan hiasan meja yang manis! Boleh untuk menyenangkan diri sendiri maupun diberikan sebagai hadiah kepada yang terkasih. Semuanya dibuat dengan tangan, mengalirkan ketulusan yang bersumber dari dalam hati.
             <br><br>
-            Tengok kerajinan bunga kering Mantrapuspa di galeri Instagram: @mantrapuspa.id. Alamat surel kami: mantrapuspa@gmail.com. May the flowers bloom in your heart!
-            <br><br>
             Diskon Khusus Pasaraya Ajisaka<br>
             - Diskon 5% untuk setiap pembelian jewelry<br>
             -Jewelry Bundling Package (varian bebas memilih di Instagram @mantrapuspa.id!)<br>
             - Puspita Package: Get 10% discount for 1 necklace + 1 bracelet<br>
               IDR <s>125.000</s> 112.500    |     Kode Voucher: PUSPITA<br>
             - Kesuma Package: Get 10% discount for 1 pair of earrings + 1 bracelet<br>
-              IDR <s>125.000</s> 112.500    |     Kode Voucher: KESUMA<br>",
+              IDR <s>125.000</s> 112.500    |     Kode Voucher: KESUMA",
             'instagram_link'=>'https://www.instagram.com/mantrapuspa.id/',
             'path_photo'=>'images/umkm/mantrapuspa.png',
         ]);
@@ -981,9 +977,7 @@ class DatabaseSeeder extends Seeder
             untuk menggambar adalah apapun yang ada di sekitar seperti tembok, tong sampah,
             canvas, kaos, dll.
             Seiring berjalannya waktu, kini Potlot fokus untuk bergerak dibidang melukis, Drawing,
-            Mural, Custom Painting, Sign Painting, Custom gift Painting, dll.
-            <br><br>
-            Kode Promo : LocalMade15',
+            Mural, Custom Painting, Sign Painting, Custom gift Painting, dll.',
             'instagram_link'=>'https://www.instagram.com/potlotstudio/',
             'path_photo'=>'images/umkm/potlot.jpg',
         ]);
@@ -1067,12 +1061,10 @@ class DatabaseSeeder extends Seeder
             'name'=>'Relaxine.',
             'description'=>'Beauty is special because it\'s so personal and can be extremely grounding during times of uncertainty. In Relaxine, we bridge fun and personal narratives to own your daily beauty experience that are fun, easy, imperfect, personal and relaxing.<br>
             Small things, big purpose. The little things that is often overlooked.<br>
-            While beauty trends, tools and products evolved and contantly change, some words of wisdom have stood to the test of time.<br>
-            Relaxine. was started after going through a year of research. We\'re inspired by colours, little things that made us feel the joy, the hectic busy lifestyle most of us have, and realizing the fact that people love beautiful things. Using a handmade press-on nails is not a culture yet here in Indonesia, but people love cute nails!<br>
+            While beauty trends, tools and products evolved and contantly change, some words of wisdom have stood to the test of time.
+            Relaxine, was started after going through a year of research. We\'re inspired by colours, little things that made us feel the joy, the hectic busy lifestyle most of us have, and realizing the fact that people love beautiful things. Using a handmade press-on nails is not a culture yet here in Indonesia, but people love cute nails!<br>
             We had a vision of making a new community-driven beauty space, where we can help to remind people to take a breather amidst the busy and chaotic time we live in. Doing our nails was quite the answer in our heads.<br>
-            Visit us on : <a href = "https://relaxine-inc.com/">Relaxine.</a>
-            <br><br>
-            Kode Promo : RELAXINEDIAJISAKA',
+            Visit us on : <a href = "https://relaxine-inc.com/">Relaxine.</a>',
             'instagram_link'=>'https://www.instagram.com/__relaxine/',
             'path_photo'=>'images/umkm/relaxine.jpg',
         ]);
