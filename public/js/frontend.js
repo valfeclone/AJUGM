@@ -130,6 +130,8 @@ $(document).ready(() => {
             $competition.append(`<option value="${value}">${value}</option>`);
         });
     });
+
+    
     
     // Event listener for 'Next' button in Registration Page
     $('#nextStepButton').click(() => {
@@ -150,6 +152,40 @@ $(document).ready(() => {
         $(this).find('.menu').toggleClass('show');
         // $(this).toggleClass('show');
     })
+
+    // In dashboard peserta, show the selected competition lists from selected category
+    var $cat = $(".select-cat");
+    var keyz = $cat[0].value;
+    var vals1 = [];
+                        
+    switch(keyz) {
+        case 'Arjuna':
+            vals1 = json.Category[0].Arjuna;
+            break;
+        case 'Kresna':
+            vals1 = json.Category[1].Kresna;
+            break;
+        case 'Prahasta':
+            vals1 = json.Category[2].Prahasta;
+            break;
+        case 'Nakula':
+            vals1 = json.Category[3].Nakula;
+            break;
+        case 'Sadewa':
+            vals1 = json.Category[4].Sadewa;
+            break;
+    }
+
+    var $comp = $(".select-comp");
+    $comp.empty();
+
+    $.each(vals1, function(index, value) {
+        if(value == app.kategori) {
+            $comp.append(`<option value="${value}" selected>${value}</option>`);
+        } else {
+            $comp.append(`<option value="${value}">${value}</option>`);
+        }
+    });
 });
 
 $(document).click(function(event){

@@ -57,7 +57,7 @@ class UserController extends Controller
             ]);
             $user->update($validated);
             $user->kategori = $validated['select-opt'];
-            $user->kompetisi  =$validated['select-cat'];
+            $user->kompetisi = $validated['select-cat'];
 
             if ($request->password) {
                 $request->validate([
