@@ -51,7 +51,7 @@ class UserController extends Controller
             $validated = $request->validate([
                 'name' => 'required',
                 'universitas' => 'required',
-                'email' => 'required|email',
+                'email' => 'required|email|unique:users',
                 'select-cat'=>'required',
                 'select-opt'=>'required',
             ]);

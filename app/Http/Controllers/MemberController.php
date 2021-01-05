@@ -51,7 +51,7 @@ class MemberController extends Controller
                         'member-name-'.$x => 'required',
                         'member-faculty-'.$x => 'required',
                         'member-major-'.$x => 'required',
-                        'member-email-'.$x => ['required', 'string', 'email', 'max:255'],
+                        'member-email-'.$x => ['required', 'string', 'email', 'max:255','unique:members,email'],
                     ]);
                     //member already exist
                     if ($user->member[($x-1)]) {
