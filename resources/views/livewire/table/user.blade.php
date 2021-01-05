@@ -45,6 +45,7 @@
                 </a></th> -->
                 <th>Action</th>
             </tr>
+            <!-- Sebenernya gapenting buat nambahin aja biar ga error -->
         </x-slot>
         <x-slot name="body">
             @foreach ($users as $user)
