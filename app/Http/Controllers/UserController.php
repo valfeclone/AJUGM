@@ -52,13 +52,19 @@ class UserController extends Controller
                 'name' => 'required',
                 'universitas' => 'required',
                 'email' => 'required|email',
-                'select-comp'=>'required',
+                'select-cat'=>'required',
+                'select-opt'=>'required',
             ]);
             $user->update($validated);
-            $user->kategori = $validated['select-comp'];
+            $user->kategori = $validated['select-opt'];
+            $user->kompetisi  =$validated['select-cat'];
 
-            if($request->password){
+            if ($request->password) {
+                $request->validate([
+                    'password'=>'required|min:8'
+                ]);
                 $user->password = Hash::make($request['password']);
+                $user->save();
             }
 
             $user->save();
