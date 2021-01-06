@@ -28,7 +28,7 @@
             @endif
             
             @if ($user->validasi_pembayaran == true)
-                @if ($user->kategori !== "Skip Ad" and $user->kategori !== "Film Dokumenter" and $user->kategori !== "Film Fiksi")
+                @if ($user->kategori !== "Skip Ad" and $user->kategori !== "Film Dokumenter" and $user->kategori !== "Film Fiksi" and $user->kategori !== "Podcast")
                     <form action="/tim/uploadkarya" class="form settings__form" method="POST" enctype="multipart/form-data">
                         @csrf
 
