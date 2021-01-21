@@ -53,8 +53,8 @@
             <source src="movie.mp4" type="video/mp4">
         </video> -->
         <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
-            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Penulisan Skenario Pendek</h3>
-            <p class="text-regular">Kategori Penulisan Skenario Film membebaskan para insan kreatif untuk mengeksplorasi ide-idenya dalam ruang lingkup  dampak sosial dan budaya yang akan atau mungkin timbul akibat bencana tertentu. Dalam karya skenario film fiksi, imajinasi dan cara penyampaian makna atau pesan tidak dibatasi oleh keadaan faktual.</p>
+            <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Penulisan Naskah Film</h3>
+            <p class="text-regular">Kategori Penulisan Naskah Film membebaskan para insan kreatif untuk mengeksplorasi ide-idenya dalam ruang lingkup  dampak sosial dan budaya yang akan atau mungkin timbul akibat bencana tertentu. Dalam karya skenario film fiksi, imajinasi dan cara penyampaian makna atau pesan tidak dibatasi oleh keadaan faktual.</p>
         </div>
     </section>
 
