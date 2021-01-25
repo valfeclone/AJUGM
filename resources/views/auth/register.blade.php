@@ -97,7 +97,7 @@
                         <label for="file-upload-1" class="input width-60 input-file-label">Upload KTM <span>+</span></label>
                         <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload-1" class="ktm" accept=".jpg,.jpeg,.png">
                         <input type="email" placeholder="Same as team E-Mail" name="member-email-1" class="input width-60" disabled>
-                        <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60 linkedin" required>
+                        <input type="text" placeholder="Linked In" name="member-linkedin-1" class="input width-60 linkedin" >
                     </div>
                 </div>
             </div>
