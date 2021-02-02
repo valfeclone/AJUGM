@@ -40,6 +40,11 @@
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
+                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="button button--white margin-top-s" data-toggle="modal" data-target="#exampleModal">
+                        Price List >
+                    </button>
 
                     <p class="text-regular text-left text-black margin-top-s" >Untuk pembayaran bisa dilakukan dengan cara mentransfer ke akun dibawah ini :</p>
                     <br>
@@ -63,6 +68,52 @@
 
         <img src="/assets/Rectangle 18.png" class="settings__geometry--square" alt="">
         <img src="/assets/Ellipse 10.png" class="settings__geometry--circle" alt="">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content padding-m">
+                <div class="modal-header">
+                    <h5 class="modal-title heading-3 text-black py-m" id="exampleModalLabel">Price List Kompetisi Festival Ajisaka 2020+</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-regular">
+                    <p class="text-regular text-black py-s">
+                        Arjuna<br>
+                        1. Comic Strip: 70.000<br>
+                        2. Podcast: 120.000<br>
+                        3. Homeless Media: 180.000<br>
+                        <br>            
+                        Kresna<br>
+                        1. Film Fiksi Pendek: 200.000<br>
+                        2. Film Dokumenter Pendek: 200.000<br>
+                        3. Penulisan Naskah Film: 70.000<br>
+                        4. Scoring Film: 160.000<br>
+                        <br>
+                        Nakula<br>
+                        1. Riset Konvensional: 180.000<br>
+                        2. Riset Fun: 180.000<br>
+                        <br>        
+                        Prahasta<br>
+                        1. PR Campaign: 200.000<br>
+                        2. Press Conference Simulation: 200.000<br>
+                        3. Risk Management: 180.000<br>
+                        <br>
+                        Sadewa<br>
+                        1. Brandbook: 120.000<br>
+                        2. Skip Ad: 180.000<br>
+                        3. Social Media Activation: 120.000<br>
+                        4. Unconventional Media: 120.000<br>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button button--red margin-top-s" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
