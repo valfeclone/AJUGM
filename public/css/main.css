@@ -276,6 +276,10 @@ body {
   text-align: left !important;
 }
 
+.padding-m {
+  padding: 3rem !important;
+}
+
 .px-s {
   padding-left: 1rem !important;
   padding-right: 1rem !important;
@@ -925,6 +929,12 @@ input[type="file"] {
 .button--borderless {
   padding: 0 !important;
   border: none !important;
+}
+
+.button--red {
+  color: white !important;
+  background-color: #D02344 !important;
+  border: none;
 }
 
 .collapsible {
@@ -2938,6 +2948,10 @@ input.dropdown-option {
   .settings__geometry--circle {
     width: 17rem;
   }
+}
+
+.modal-content {
+  border-radius: 3rem;
 }
 
 .virtual-museum {
