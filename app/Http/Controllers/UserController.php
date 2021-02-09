@@ -49,13 +49,24 @@ class UserController extends Controller
         $user = auth()->user();
         if ($user->validasi_pembayaran == false) {
             if ($user) {
-                $validated = $request->validate([
-                'name' => 'required',
-                'universitas' => 'required',
-                'email' => 'required|email|unique:users',
-                'select-cat'=>'required',
-                'select-opt'=>'required',
-            ]);
+                if ($request->email == $user->email){
+                    $validated = $request->validate([
+                        'name' => 'required',
+                        'universitas' => 'required',
+                        'email' => 'required|email',
+                        'select-cat'=>'required',
+                        'select-opt'=>'required',
+                    ]);
+                }
+                else {
+                    $validated = $request->validate([
+                        'name' => 'required',
+                        'universitas' => 'required',
+                        'email' => 'required|email|unique:users',
+                        'select-cat'=>'required',
+                        'select-opt'=>'required',
+                    ]);
+                }
                 $user->update($validated);
                 $user->kategori = $validated['select-opt'];
                 $user->kompetisi = $validated['select-cat'];
