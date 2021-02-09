@@ -29,76 +29,142 @@
             
             <form action="/tim/member" class="form settings__form" method="POST" enctype="multipart/form-data">
             @csrf
+            @if ($user->validasi_pembayaran == false)
+                @foreach ($user->member as $members)
+                    <div class="register-detail-inputs" id="accordion">
+                        <div class="collapsible">
+                            <button class="collapsible__button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index+1}}" aria-expanded="true" aria-controls="collapse{{$loop->index+1}}">
+                                @if($loop->index == 0)
+                                    <p class="text-regular text-black">Team Leader</p>
+                                @else
+                                    <p class="text-regular text-black">Member {{$loop->index+1}}</p>
+                                @endif
+                                <span class="collapsible__arrow"></span>
+                            </button>
+                            <div class="collapse" id="collapse{{$loop->index+1}}" data-parent="#accordion">
+                                <input type="text" value="{{ $members->name }}" placeholder="Name" name="member-name-{{$loop->index+1}}" class="input width-60 no-symbols" required>
+                                @error('member-name-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 
-            @foreach ($user->member as $members)
-                <div class="register-detail-inputs" id="accordion">
-                    <div class="collapsible">
-                        <button class="collapsible__button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index+1}}" aria-expanded="true" aria-controls="collapse{{$loop->index+1}}">
-                            @if($loop->index == 0)
-                                <p class="text-regular text-black">Team Leader</p>
-                            @else
-                                <p class="text-regular text-black">Member {{$loop->index+1}}</p>
-                            @endif
-                            <span class="collapsible__arrow"></span>
-                        </button>
-                        <div class="collapse" id="collapse{{$loop->index+1}}" data-parent="#accordion">
-                            <input type="text" value="{{ $members->name }}" placeholder="Name" name="member-name-{{$loop->index+1}}" class="input width-60 no-symbols" required>
-                            @error('member-name-{{$loop->index+1}}')
-                                <span class="alert-text alert-text--failed" role="alert">
-                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            
-                            <input type="text" value="{{ $members->fakultas }}" placeholder="Faculty" name="member-faculty-{{$loop->index+1}}" class="input width-60 no-symbols" required>
-                            @error('member-faculty-{{$loop->index+1}}')
-                                <span class="alert-text alert-text--failed" role="alert">
-                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            
-                            <input type="text" value="{{ $members->jurusan }}" placeholder="Major" name="member-major-{{$loop->index+1}}" class="input width-60 no-symbols" required>
-                            @error('member-major-{{$loop->index+1}}')
-                                <span class="alert-text alert-text--failed" role="alert">
-                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            
-                            <label for="file-upload-{{$loop->index+1}}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">{{$members->path_foto_ktm}}<span>+</span></label>                            
-                            <input type="file" placeholder="Upload KTM" name="member-ktm-{{$loop->index+1}}" class="ktm" id="file-upload-{{$loop->index+1}}">
-                            @error('member-ktm-{{$loop->index+1}}')
-                                <span class="alert-text alert-text--failed" role="alert">
-                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                                <input type="text" value="{{ $members->fakultas }}" placeholder="Faculty" name="member-faculty-{{$loop->index+1}}" class="input width-60 no-symbols" required>
+                                @error('member-faculty-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 
-                            <input type="email" value="{{ $members->email }}" placeholder="E-mail" name="member-email-{{$loop->index+1}}" class="input width-60" required>
-                            @error('member-email-{{$loop->index+1}}')
-                                <span class="alert-text alert-text--failed" role="alert">
-                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            
-                            <input type="text" value="{{ $members->linkedin }}" placeholder="Linked In" name="member-linkedin-{{$loop->index+1}}" class="input width-60 linkedin">
-                            @error('member-linkedin-{{$loop->index+1}}')
-                                <span class="alert-text alert-text--failed" role="alert">
-                                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                                <input type="text" value="{{ $members->jurusan }}" placeholder="Major" name="member-major-{{$loop->index+1}}" class="input width-60 no-symbols" required>
+                                @error('member-major-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <label for="file-upload-{{$loop->index+1}}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">{{$members->path_foto_ktm}}<span>+</span></label>                            
+                                <input type="file" placeholder="Upload KTM" name="member-ktm-{{$loop->index+1}}" class="ktm" id="file-upload-{{$loop->index+1}}">
+                                @error('member-ktm-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <input type="email" value="{{ $members->email }}" placeholder="E-mail" name="member-email-{{$loop->index+1}}" class="input width-60" required>
+                                @error('member-email-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <input type="text" value="{{ $members->linkedin }}" placeholder="Linked In" name="member-linkedin-{{$loop->index+1}}" class="input width-60 linkedin">
+                                @error('member-linkedin-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
 
-                <!-- <button id="addTeamMember" type="button" class="button button--white button--borderless align-self-start margin-top-s">Add Member +</button> -->
+                    <!-- <button id="addTeamMember" type="button" class="button button--white button--borderless align-self-start margin-top-s">Add Member +</button> -->
 
                 <input type="submit" class="button button--white" value="Update >"/>
+                
+            @else
+                @foreach ($user->member as $members)
+                <div class="register-detail-inputs" id="accordion">
+                        <div class="collapsible">
+                            <button class="collapsible__button collapsed" type="button" data-toggle="collapse" data-target="#collapse{{$loop->index+1}}" aria-expanded="true" aria-controls="collapse{{$loop->index+1}}">
+                                @if($loop->index == 0)
+                                    <p class="text-regular text-black">Team Leader</p>
+                                @else
+                                    <p class="text-regular text-black">Member {{$loop->index+1}}</p>
+                                @endif
+                                <span class="collapsible__arrow"></span>
+                            </button>
+                            <div class="collapse" id="collapse{{$loop->index+1}}" data-parent="#accordion">
+                                <input type="text" value="{{ $members->name }}" placeholder="Name" name="member-name-{{$loop->index+1}}" class="input width-60 no-symbols" required disabled>
+                                @error('member-name-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
 
+                                <input type="text" value="{{ $members->fakultas }}" placeholder="Faculty" name="member-faculty-{{$loop->index+1}}" class="input width-60 no-symbols" required disabled>
+                                @error('member-faculty-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <input type="text" value="{{ $members->jurusan }}" placeholder="Major" name="member-major-{{$loop->index+1}}" class="input width-60 no-symbols" required disabled>
+                                @error('member-major-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <label for="file-upload-{{$loop->index+1}}" class="input width-60 input-file-label" accept=".jpg,.jpeg,.png">{{$members->path_foto_ktm}}<span>+</span></label>                            
+                                <input type="file" placeholder="Upload KTM" name="member-ktm-{{$loop->index+1}}" class="ktm" id="file-upload-{{$loop->index+1}}" disabled>
+                                @error('member-ktm-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <input type="email" value="{{ $members->email }}" placeholder="E-mail" name="member-email-{{$loop->index+1}}" class="input width-60" required disabled>
+                                @error('member-email-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+                                <input type="text" value="{{ $members->linkedin }}" placeholder="Linked In" name="member-linkedin-{{$loop->index+1}}" class="input width-60 linkedin" disabled>
+                                @error('member-linkedin-{{$loop->index+1}}')
+                                    <span class="alert-text alert-text--failed" role="alert">
+                                        <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @endif
             </form>
         </div>
 
