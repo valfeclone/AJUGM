@@ -32,14 +32,22 @@
         </video> -->
         <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Brand Book</h3>
-            <p class="text-regular">Brand Book meminta insan kreatif untuk merancang brand identity dari suatu brand dan merangkumnya dalam sebuah brand book. Insan kreatif ditantang untuk menunjukkan kemampuan branding dan desain mereka.</p>
+            <p class="text-regular">Brand Book meminta insan kreatif untuk merancang brand identity dari suatu brand dan merangkumnya dalam sebuah brand book. Insan kreatif ditantang untuk menunjukkan kemampuan branding dan desain mereka.
+            <br><br>
+            Harga &nbsp&nbsp: Rp 120.000<br>
+            Peserta : 2 Orang<br>
+            </p>
         </div>
     </section>
 
     <section class="lomba-desc media-container z-max">
         <div class="media__content lomba-desc__media-content">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Skip Ad</h3>
-            <p class="text-regular">Skip Ad mengajak insan kreatif untuk membuat Video Ads yang nantinya akan ditayangkan sebagai Skippable Ads di platform YouTube. Dengan audiens yang bisa melewati iklan setelah lima detik pertama, insan kreatif ditantang untuk membuat iklan yang bisa menangkap atensi audiens.</p>
+            <p class="text-regular">Skip Ad mengajak insan kreatif untuk membuat Video Ads yang nantinya akan ditayangkan sebagai Skippable Ads di platform YouTube. Dengan audiens yang bisa melewati iklan setelah lima detik pertama, insan kreatif ditantang untuk membuat iklan yang bisa menangkap atensi audiens.
+            <br><br>
+            Harga &nbsp&nbsp: Rp 180.000<br>
+            Peserta : 3 Orang<br>
+            </p>
         </div>
         <img src="/images/logolomba/skipad.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
@@ -54,14 +62,22 @@
         </video> -->
         <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Social Media Activation</h3>
-            <p class="text-regular">Social Media Activation meminta insan kreatif untuk membuat sebuah kampanye yang akan dijalankan di media sosial. Insan kreatif ditantang untuk membuat kampanye yang berbasiskan riset dengan ide yang kreatif dan inovatif.</p>
+            <p class="text-regular">Social Media Activation meminta insan kreatif untuk membuat sebuah kampanye yang akan dijalankan di media sosial. Insan kreatif ditantang untuk membuat kampanye yang berbasiskan riset dengan ide yang kreatif dan inovatif.
+            <br><br>
+            Harga &nbsp&nbsp: Rp 120.000<br>
+            Peserta : 2 Orang<br>
+            </p>
         </div>
     </section>
 
     <section class="lomba-desc media-container z-max">
         <div class="media__content lomba-desc__media-content">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Unconventional Media</h3>
-            <p class="text-regular">Unconventional Media mengajak insan kreatif untuk merancang kampanye dengan media yang tidak konvensional. Insan kreatif ditantang untuk berpikir outside the box untuk merancang strategi yang efektif dengan media yang tidak terpikirkan sebelumnya.</p>
+            <p class="text-regular">Unconventional Media mengajak insan kreatif untuk merancang kampanye dengan media yang tidak konvensional. Insan kreatif ditantang untuk berpikir outside the box untuk merancang strategi yang efektif dengan media yang tidak terpikirkan sebelumnya.
+            <br><br>
+            Harga &nbsp&nbsp: Rp 120.000<br>
+            Peserta : 2 Orang<br>
+            </p>
         </div>
         <img src="/images/logolomba/unconventionalmedia.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>

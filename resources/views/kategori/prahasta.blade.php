@@ -32,14 +32,22 @@
         </video> -->
         <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">PR Campaign</h3>
-            <p class="text-regular">Kategori PR Campaign mengajak insan kreatif untuk memberikan kontribusinya dalam menyelesaikan permasalahan kehumasan. Insan kreatif akan ditantang untuk mengeluarkan gagasan-gagasan kreatif dalam menentukan strategi dan media komunikasi yang tepat dan efektif untuk mencapai tujuan dari Kampanye Kehumasan.</p>
+            <p class="text-regular">Kategori PR Campaign mengajak insan kreatif untuk memberikan kontribusinya dalam menyelesaikan permasalahan kehumasan. Insan kreatif akan ditantang untuk mengeluarkan gagasan-gagasan kreatif dalam menentukan strategi dan media komunikasi yang tepat dan efektif untuk mencapai tujuan dari Kampanye Kehumasan.
+            <br><br>
+            Harga &nbsp&nbsp: Rp 200.000<br>
+            Peserta : 3 Orang<br>
+            </p>
         </div>
     </section>
 
     <section class="lomba-desc media-container z-max">
         <div class="media__content lomba-desc__media-content">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Press Conference Simulation</h3>
-            <p class="text-regular">Kategori Press Conference Simulation mengajak insan kreatif berperan aktif dengan tanggap dan kritis dalam menyikapi suatu permasalahan. Insan kreatif akan ditantang untuk menggagaskan ide atau pemikiran dan menuangkannya dengan kompetensi riset yang menjadi landasan dari sebuah konferensi pers. Selain itu, insan kreatif juga ditantang untuk membuktikan kemampuannya sebagai seorang praktisi public relations dalam membangun hubungan dengan media atau pers.</p>
+            <p class="text-regular">Kategori Press Conference Simulation mengajak insan kreatif berperan aktif dengan tanggap dan kritis dalam menyikapi suatu permasalahan. Insan kreatif akan ditantang untuk menggagaskan ide atau pemikiran dan menuangkannya dengan kompetensi riset yang menjadi landasan dari sebuah konferensi pers. Selain itu, insan kreatif juga ditantang untuk membuktikan kemampuannya sebagai seorang praktisi public relations dalam membangun hubungan dengan media atau pers.
+            <br><br>
+            Harga &nbsp&nbsp: Rp 200.000<br>
+            Peserta : 3/4 Orang<br>
+            </p>
         </div>
         <img src="/images/logolomba/presscon.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
@@ -54,7 +62,11 @@
         </video> -->
         <div class="media__content lomba-desc__media-content lomba-desc__media-content--right">
             <h3 class="heading-3 text-uppercase text-black margin-bottom-s">Risk Management</h3>
-            <p class="text-regular">Risk management mengajak insan kreatif untuk menjadi praktisi public relations yang proaktif, dengan menyusun pemetaan dan penanganan risiko yang ada dari suatu organisasi atau perusahaan. Insan kreatif akan ditantang untuk merancang strategi kehumasan yang efektif, sistematis, terencana, kreatif, dan didasari pada riset yang kuat untuk meminimalisir risiko yang dapat menjadi sebuah krisis.</p>
+            <p class="text-regular">Risk management mengajak insan kreatif untuk menjadi praktisi public relations yang proaktif, dengan menyusun pemetaan dan penanganan risiko yang ada dari suatu organisasi atau perusahaan. Insan kreatif akan ditantang untuk merancang strategi kehumasan yang efektif, sistematis, terencana, kreatif, dan didasari pada riset yang kuat untuk meminimalisir risiko yang dapat menjadi sebuah krisis.
+            <br><br>
+            Harga &nbsp&nbsp: Rp 180.000<br>
+            Peserta : 3 Orang<br>
+            </p>
         </div>
     </section>
 </div>
