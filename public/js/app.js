@@ -19448,10 +19448,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\ASUS\AJUGM\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\ASUS\AJUGM\resources\sass\main.scss */"./resources/sass/main.scss");
-__webpack_require__(/*! C:\Users\ASUS\AJUGM\resources\css\app.css */"./resources/css/app.css");
-module.exports = __webpack_require__(/*! C:\Users\ASUS\AJUGM\resources\css\tailwind.css */"./resources/css/tailwind.css");
+__webpack_require__(/*! C:\Data\My Projects\Ajisaka\AJUGM\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\Data\My Projects\Ajisaka\AJUGM\resources\sass\main.scss */"./resources/sass/main.scss");
+__webpack_require__(/*! C:\Data\My Projects\Ajisaka\AJUGM\resources\css\app.css */"./resources/css/app.css");
+module.exports = __webpack_require__(/*! C:\Data\My Projects\Ajisaka\AJUGM\resources\css\tailwind.css */"./resources/css/tailwind.css");
 
 
 /***/ })

@@ -56,10 +56,10 @@
             <img src="/assets/Group 73.png" alt="" class="landing-about__geometry--white-circle">
         </section>
 
-        <section class="landing-about py-l h-max">
-        <div class="landing-about__content">
-            <h2 class="heading-2 text-black text-uppercase margin-bottom-l text-center w-100">Timeline</h2>
-        </div>
+        <section class="landing-timeline py-l h-max">
+            <div class="landing-timeline__content">
+                <h2 class="heading-2 text-black text-uppercase margin-bottom-l text-center w-100">Timeline</h2>
+            </div>
             <img src="/images/timeline.jpg" alt="" class="landing__timeline">
         </section>
         
@@ -206,6 +206,7 @@
             <img src="/assets/Ellipse 8.png" alt="" class="landing-register__geometry--circle">
             <img src="/assets/Path 25.png" alt="" class="landing-register__geometry--triangle">
         </section>
+
         <section class="landing-matlom" id="sponsors">
             <div class="market-tenants" style="border-top:none; padding:0;">
                 <h3 class="heading-3 text-uppercase text-black margin-bottom-m text-center">Our Sponsors</h3>

@@ -1837,6 +1837,38 @@ input.dropdown-option {
   }
 }
 
+.landing-timeline {
+  padding: 13rem 0;
+  background-color: #EBEBED;
+  position: relative;
+  border-bottom: 1px solid #858586;
+  display: grid;
+  grid-template-columns: 1fr minmax(-webkit-min-content, 65vw) 1fr;
+  grid-template-columns: 1fr minmax(min-content, 65vw) 1fr;
+  overflow: hidden;
+  z-index: 2;
+}
+
+@media (max-width: 75em) {
+  .landing-timeline {
+    grid-template-columns: 1fr minmax(-webkit-min-content, 75vw) 1fr;
+    grid-template-columns: 1fr minmax(min-content, 75vw) 1fr;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .landing-timeline {
+    grid-template-columns: 1fr minmax(-webkit-min-content, 85vw) 1fr;
+    grid-template-columns: 1fr minmax(min-content, 85vw) 1fr;
+  }
+}
+
+.landing-timeline__content {
+  grid-column: 2 / 3;
+  z-index: 10;
+  display: flex;
+}
+
 .landing-matlom {
   padding: 10rem 0;
   background-color: #EBEBED;
@@ -2721,22 +2753,22 @@ input.dropdown-option {
   width: 100%;
   z-index: 0;
   display: grid;
-  grid-template-rows: [banner-start] minmax(-webkit-min-content, 90vh) [banner-end about-start] minmax(-webkit-min-content, -webkit-max-content) [about-end matlom-start] minmax(-webkit-min-content, -webkit-max-content) [matlom-end register-start] minmax(-webkit-min-content, 70vh) [register-end];
-  grid-template-rows: [banner-start] minmax(min-content, 90vh) [banner-end about-start] minmax(min-content, max-content) [about-end matlom-start] minmax(min-content, max-content) [matlom-end register-start] minmax(min-content, 70vh) [register-end];
+  grid-template-rows: [banner-start] minmax(-webkit-min-content, 90vh) [banner-end about-start] minmax(-webkit-min-content, -webkit-max-content) [about-end] -webkit-max-content [matlom-start] minmax(-webkit-min-content, -webkit-max-content) [matlom-end register-start] minmax(-webkit-min-content, 70vh) [register-end];
+  grid-template-rows: [banner-start] minmax(min-content, 90vh) [banner-end about-start] minmax(min-content, max-content) [about-end] max-content [matlom-start] minmax(min-content, max-content) [matlom-end register-start] minmax(min-content, 70vh) [register-end];
   overflow: hidden !important;
 }
 
 @media (max-width: 75em) {
   .landing {
-    grid-template-rows: [banner-start] minmax(-webkit-min-content, 75vh) [banner-end about-start] minmax(-webkit-min-content, 80vh) [about-end matlom-start] minmax(-webkit-min-content, 80vh) [matlom-end register-start] minmax(-webkit-min-content, 80vh) [register-end];
-    grid-template-rows: [banner-start] minmax(min-content, 75vh) [banner-end about-start] minmax(min-content, 80vh) [about-end matlom-start] minmax(min-content, 80vh) [matlom-end register-start] minmax(min-content, 80vh) [register-end];
+    grid-template-rows: [banner-start] minmax(-webkit-min-content, 75vh) [banner-end about-start] minmax(-webkit-min-content, 80vh) [about-end] -webkit-max-content [matlom-start] minmax(-webkit-min-content, 80vh) [matlom-end register-start] minmax(-webkit-min-content, 80vh) [register-end];
+    grid-template-rows: [banner-start] minmax(min-content, 75vh) [banner-end about-start] minmax(min-content, 80vh) [about-end] max-content [matlom-start] minmax(min-content, 80vh) [matlom-end register-start] minmax(min-content, 80vh) [register-end];
   }
 }
 
 @media (max-width: 56.25em) {
   .landing {
-    grid-template-rows: [banner-start] minmax(-webkit-min-content, 80vh) [banner-end about-start] minmax(-webkit-min-content, 80vh) [about-end matlom-start] minmax(-webkit-min-content, 80vh) [matlom-end register-start] minmax(-webkit-min-content, 80vh) [register-end];
-    grid-template-rows: [banner-start] minmax(min-content, 80vh) [banner-end about-start] minmax(min-content, 80vh) [about-end matlom-start] minmax(min-content, 80vh) [matlom-end register-start] minmax(min-content, 80vh) [register-end];
+    grid-template-rows: [banner-start] minmax(-webkit-min-content, 80vh) [banner-end about-start] minmax(-webkit-min-content, 80vh) [about-end] -webkit-max-content [matlom-start] minmax(-webkit-min-content, 80vh) [matlom-end register-start] minmax(-webkit-min-content, 80vh) [register-end];
+    grid-template-rows: [banner-start] minmax(min-content, 80vh) [banner-end about-start] minmax(min-content, 80vh) [about-end] max-content [matlom-start] minmax(min-content, 80vh) [matlom-end register-start] minmax(min-content, 80vh) [register-end];
   }
 }
 
