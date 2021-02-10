@@ -816,8 +816,8 @@ body {
 }
 
 .card-xxl {
-  width: 65rem !important;
-  height: 60rem !important;
+  width: 70rem !important;
+  height: 65rem !important;
   padding: 7rem 5rem;
 }
 
@@ -832,7 +832,7 @@ body {
 @media (max-width: 56.25em) {
   .card-xxl {
     width: 65rem !important;
-    height: 70rem !important;
+    height: 75rem !important;
     padding: 7rem 5rem;
   }
 }
@@ -841,6 +841,13 @@ body {
   .card-xxl {
     width: 65rem !important;
     height: 75rem !important;
+  }
+}
+
+@media (max-width: 25em) {
+  .card-xxl {
+    width: 65rem !important;
+    height: 90rem !important;
   }
 }
 
