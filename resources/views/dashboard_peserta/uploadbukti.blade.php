@@ -48,11 +48,15 @@
 
                     <p class="text-regular text-left text-black margin-top-s" >Untuk pembayaran bisa dilakukan dengan cara mentransfer ke akun dibawah ini :</p>
                     <br>
-                    <p class="text-regular text-left text-black">059001019819504
+                    <p class="text-regular text-left text-black margin-bottom-s">059001019819504
                     <br>
                     BRI / a.n Ni Kadek Ayu Pratiwi
                     <br><br>
                     Harap menuliskan keterangan transaksi sebagai berikut: Nama Tim - Ajisaka
+                    <br><br>
+                    Pembayaran dan verifikasi akan diproses pada sore hari. Brief lomba akan dikirimkan pada malam hari melalui surel team leader. Pembayaran setelah pukul 18.00 WIB akan diproses pada hari selanjutnya. 
+                    <br><br> 
+                    Apabila dalam waktu 1 x 24 jam akun belum terverifikasi, harap segera menghubungi panitia melalui OA Line @ajisakaugm
                     </p>
 
                     <input type="submit" class="button button--white" value="Update >"/>
