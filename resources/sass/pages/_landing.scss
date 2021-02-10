@@ -3,7 +3,7 @@
     z-index: 0;
 
     display: grid;
-    grid-template-rows: [banner-start] minmax(min-content, 90vh) [banner-end about-start] minmax(min-content, 70vh) [about-end matlom-start] minmax(min-content, 70vh) [matlom-end register-start] minmax(min-content, 70vh) [register-end];
+    grid-template-rows: [banner-start] minmax(min-content, 90vh) [banner-end about-start] minmax(min-content, max-content) [about-end matlom-start] minmax(min-content, max-content) [matlom-end register-start] minmax(min-content, 70vh) [register-end];
 
     overflow: hidden !important;
 
@@ -13,5 +13,9 @@
 
     @include respond(tab-port) {
         grid-template-rows: [banner-start] minmax(min-content, 80vh) [banner-end about-start] minmax(min-content, 80vh) [about-end matlom-start] minmax(min-content, 80vh) [matlom-end register-start] minmax(min-content, 80vh) [register-end];
+    }
+    &__timeline{
+        width: 100%;
+        grid-column:1/-1;
     }
 }

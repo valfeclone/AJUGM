@@ -55,8 +55,15 @@
             <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">
             <img src="/assets/Group 73.png" alt="" class="landing-about__geometry--white-circle">
         </section>
+
+        <section class="landing-about py-l h-max">
+        <div class="landing-about__content">
+            <h2 class="heading-2 text-black text-uppercase margin-bottom-l text-center w-100">Timeline</h2>
+        </div>
+            <img src="/images/timeline.jpg" alt="" class="landing__timeline">
+        </section>
         
-        <section class="landing-about">
+        <!-- <section class="landing-about">
             <div class="landing-about__content">
                 <div class="landing-about__media-container">
                     <img src="/images/creativemarket.jpg" alt="" class="media media-left landing-about__video">
@@ -86,7 +93,7 @@
                 </div>
             </div>
             <img src="/assets/Group 70.png" alt="" class="landing-about__geometry--blue-wave">
-        </section>
+        </section> -->
 
         <section class="landing-matlom" id="landing-matlom">
             <div class="landing-matlom__content z-max">
