@@ -77,7 +77,12 @@
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
-
+            @if (\Session::has('message'))
+                <span class="alert-text alert-text--failed" role="alert">
+                    <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
+                    <strong>{!! \Session::get('message') !!}</strong>
+                </span>
+            @endif
             <button type="button" class="button button--white align-self-end margin-bottom-xs" id="nextStepButton">NEXT ></button>
 
             <img src="/assets/Rectangle 18.png" class="register__geometry--square" alt="">
@@ -109,7 +114,6 @@
 
                 <p class="text-regular">Already have an account? <a href="#" class="link text-black">Login Here!</a></p>
             </div>
-
             <img src="/assets/Ellipse 10.png" class="register__geometry--circle" alt="">
         </div>
     </form>
