@@ -42,7 +42,7 @@ $(document).ready(() => {
                     <label for="file-upload-${n+1}" class="input width-60 input-file-label">Upload KTM  <span>+</span></label>
                     <input type="file" placeholder="Upload KTM" name="member-ktm-${n+1}" id="file-upload-${n+1}" class="ktm" accept=".jpg,.jpeg,.png">
                     <input type="email" placeholder="E-mail" name="member-email-${n+1}" class="input width-60" required>
-                    <input type="text" placeholder="LinkedIn (opsional)" name="member-linkedin-${n+1}" class="input width-60 linkedin">
+                    <input type="text" placeholder="WA number" name="member-phonenumber-${n+1}" class="input width-60">
                 </div>
             </div>`);
         n++;

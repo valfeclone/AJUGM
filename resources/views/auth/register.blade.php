@@ -83,6 +83,15 @@
                     <strong>{!! \Session::get('message') !!}</strong>
                 </span>
             @endif
+            @if ($errors->any())
+                    <div class="alert-text alert-text--failed" role="alert">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
             <button type="button" class="button button--white align-self-end margin-bottom-xs" id="nextStepButton">NEXT ></button>
 
             <img src="/assets/Rectangle 18.png" class="register__geometry--square" alt="">
@@ -102,7 +111,7 @@
                         <label for="file-upload-1" class="input width-60 input-file-label">Upload KTM <span>+</span></label>
                         <input type="file" placeholder="Upload KTM" name="member-ktm-1" id="file-upload-1" class="ktm" accept=".jpg,.jpeg,.png">
                         <input type="email" placeholder="Same as team E-Mail" name="member-email-1" class="input width-60" disabled>
-                        <input type="text" placeholder="LinkedIn (opsional)" name="member-linkedin-1" class="input width-60 linkedin">
+                        <input type="text" placeholder="WA number" name="member-phonenumber-1" class="input width-60">
                     </div>
                 </div>
             </div>
@@ -111,7 +120,6 @@
 
             <div class="register-detail-utilities">
                 <input type="submit" class="button button--white margin-bottom-m" value="Register >">
-
                 <p class="text-regular">Already have an account? <a href="#" class="link text-black">Login Here!</a></p>
             </div>
             <img src="/assets/Ellipse 10.png" class="register__geometry--circle" alt="">

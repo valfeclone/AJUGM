@@ -9,7 +9,7 @@ class Member extends Model
 {
     use HasFactory;
 
-        /**
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
@@ -21,7 +21,7 @@ class Member extends Model
         'jurusan',
         'path_foto_ktm',
         'email',
-        'linkedin',
+        'phone_number',
     ];
 
     public static function search($query)
