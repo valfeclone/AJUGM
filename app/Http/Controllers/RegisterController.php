@@ -63,6 +63,7 @@ class RegisterController extends Controller
         'member-faculty-1' => 'required',
         'member-major-1' => 'required',
         'member-ktm-1' => 'required',
+        'member-phonenumber-1'=>'required|numeric'
         ]);
 
         for ($x = 2; $x <= 4; $x+=1) {
@@ -73,6 +74,7 @@ class RegisterController extends Controller
                     'member-major-'.$x => 'required',
                     'member-ktm-'.$x => 'required',
                     'member-email-'.$x => ['required', 'string', 'email', 'max:255', 'unique:members,email'],
+                    'member-phonenumber-'.$x=>'required|numeric'
                 ]);
                 if ($request['member-email-'.$x]==$validatedTeam['email']) {
                     return redirect('/register')->with('message', 'Member email cannot be the same as Team Leader/Team Email.');
@@ -102,7 +104,7 @@ class RegisterController extends Controller
             'jurusan' => $validatedMember['member-major-1'],
             'path_foto_ktm' => $validatedMember['member-ktm-1'],
             'email' => $validatedTeam['email'],
-            'linkedin' => $request['member-linkedin-1'],
+            'phone_number' => $validatedMember['member-phonenumber-1'],
             ]);
         
         $newTeam->ketua_id = $newMember->id;
@@ -134,7 +136,7 @@ class RegisterController extends Controller
                     'jurusan' => $newValidatedMember[$y]['member-major-'.$y],
                     'path_foto_ktm' => $newValidatedMember[$y]['member-ktm-'.$y],
                     'email' => $newValidatedMember[$y]['member-email-'.$y],
-                    'linkedin' => $request['member-linkedin-'.$y],
+                    'phone_number' => $newValidatedMember[$y]['member-phonenumber-'.$y],
                 ]);
 
                 // define variable buat simpan foto

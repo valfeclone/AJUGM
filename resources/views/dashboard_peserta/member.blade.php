@@ -83,8 +83,8 @@
                                     </span>
                                 @enderror
 
-                                <input type="text" value="{{ $members->linkedin }}" placeholder="Linked In" name="member-linkedin-{{$loop->index+1}}" class="input width-60 linkedin">
-                                @error('member-linkedin-{{$loop->index+1}}')
+                                <input type="text" value="{{ $members->phone_number }}" placeholder="Linked In" name="member-phonenumber-{{$loop->index+1}}" class="input width-60">
+                                @error('member-phonenumber-{{$loop->index+1}}')
                                     <span class="alert-text alert-text--failed" role="alert">
                                         <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
                                         <strong>{{ $message }}</strong>
@@ -153,8 +153,8 @@
                                     </span>
                                 @enderror
 
-                                <input type="text" value="{{ $members->linkedin }}" placeholder="Linked In" name="member-linkedin-{{$loop->index+1}}" class="input width-60 linkedin" disabled>
-                                @error('member-linkedin-{{$loop->index+1}}')
+                                <input type="text" value="{{ $members->phone_number }}" placeholder="Linked In" name="member-phonenumber-{{$loop->index+1}}" class="input width-60" disabled>
+                                @error('member-phonenumber-{{$loop->index+1}}')
                                     <span class="alert-text alert-text--failed" role="alert">
                                         <i class="fas fa-exclamation-circle fa-lg margin-right-xs" aria-hidden="true"></i>
                                         <strong>{{ $message }}</strong>

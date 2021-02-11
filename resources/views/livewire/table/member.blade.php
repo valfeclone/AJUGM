@@ -27,9 +27,9 @@
                     E-mail
                     @include('components.sort-icon', ['field' => 'email'])
                 </a></th>
-                <th><a wire:click.prevent="sortBy('linkedin')" role="button" href="#">
-                    LinkedIn
-                    @include('components.sort-icon', ['field' => 'linkedin'])
+                <th><a wire:click.prevent="sortBy('phone_number')" role="button" href="#">
+                    Phone Number
+                    @include('components.sort-icon', ['field' => 'phone_number'])
                 </a></th>
                 <th><a wire:click.prevent="sortBy('path_foto_ktm')" role="button" href="#">
                     Foto KTM
@@ -46,9 +46,9 @@
                     <td>{{ $member->fakultas }}</td>
                     <td>{{ $member->jurusan }}</td>
                     <td>{{ $member->email }}</td>
-                    <td>{{ $member->linkedin }}</td>
+                    <td>{{ $member->phone_number }}</td>
                     <td>
-                        @if ($member->linkedin)
+                        @if ($member->phone_number)
                             <a href="storage/foto_ktm/{{ $member->path_foto_ktm }}">Click to view</a>
                         @else
                             foto ktm belum tersedia

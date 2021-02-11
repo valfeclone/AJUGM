@@ -24,13 +24,14 @@ class MemberController extends Controller
                 'member-faculty-1' => 'required',
                 'member-major-1' => 'required',
                 'member-email-1' => ['required', 'string', 'email', 'max:255'],
+                'member-phonenumber-1'=>'required|numeric'
             ]);
 
             $user->member[0]->name = $validated['member-name-1'];
             $user->member[0]->fakultas = $validated['member-faculty-1'];
             $user->member[0]->jurusan = $validated['member-major-1'];
             $user->member[0]->email = $validated['member-email-1'];
-            $user->member[0]->linkedin = $request['member-linkedin-1'];
+            $user->member[0]->phone_number = $validated['member-phonenumber-1'];
             $user->member[0]->save();
 
             if ($request['member-ktm-1']) {
@@ -52,6 +53,7 @@ class MemberController extends Controller
                         'member-faculty-'.$x => 'required',
                         'member-major-'.$x => 'required',
                         'member-email-'.$x => ['required', 'string', 'email', 'max:255','unique:members,email'],
+                        'member-phonenumber-'.$x=>'required|numeric'
                     ]);
                     //member already exist
                     if ($user->member[($x-1)]) {
@@ -59,7 +61,7 @@ class MemberController extends Controller
                         $user->member[($x-1)]->fakultas = $newValidatedMember['member-faculty-'.$x];
                         $user->member[($x-1)]->jurusan = $newValidatedMember['member-major-'.$x];
                         $user->member[($x-1)]->email = $newValidatedMember['member-email-'.$x];
-                        $user->member[($x-1)]->linkedin = $request['member-linkedin-'.$x];
+                        $user->member[($x-1)]->phone_number = $newValidatedMember['member-phonenumber-'.$x];
                         $user->member[($x-1)]->save();
                     
                         if ($request['member-ktm-'.$x]) {
