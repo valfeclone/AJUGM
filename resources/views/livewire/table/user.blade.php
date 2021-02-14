@@ -64,7 +64,7 @@
                     </td>
                     <td>
                         @if ($user->path_file_lomba)
-                            @if ($user->kategori == "Skip Ad" || $user->kategori == "Film Dokumenter" || $user->kategori == "Film Fiksi" || $user->kategori == "Podcast")
+                            @if ($user->kategori == "Skip Ad" || $user->kategori == "Film Dokumenter" || $user->kategori == "Film Fiksi" || $user->kategori == "Podcast" || $user->kategori == "Movie Scoring")
                                 <a href="{{ $user->path_file_lomba }}" target="_blank">Click to open file link</a>
                             @else
                             <!-- Harus pake https:// -->
@@ -76,7 +76,7 @@
                     </td>
                     <td>
                         @if ($user->path_file_pendukung)
-                            @if($user->kategori == "Skip Ad" || $user->kategori == "Film Dokumenter" || $user->kategori == "Film Fiksi" || $user->kategori == "Podcast")
+                            @if($user->kategori == "Skip Ad" || $user->kategori == "Film Dokumenter" || $user->kategori == "Film Fiksi" || $user->kategori == "Podcast" || $user->kategori == "Movie Scoring")
                             Tersedia di Link Masing-Masing
                             @else
                             <!-- Harus pake https:// -->
