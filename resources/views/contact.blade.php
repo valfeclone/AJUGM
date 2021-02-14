@@ -17,6 +17,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/tailwind.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
@@ -143,6 +144,40 @@
                         </p>
                     </div>
                 </div>
+            </section>
+            <section class="about-section background-gray">
+                <div class="about-section__content flex-col">
+                    <div class="w-max">
+                        <div><h1 class="text-5xl font-bold margin-bottom-m">FAQ</h1></div>
+                    </div>
+                    <div class="flex">
+                    <!-- Kiri -->
+                    <div class="mr-3">
+                        @for ($i = 0; $i < 5; $i++)
+                        <div class="mb-3 margin-right-s">
+                            <div><h3 class="text-2xl mb-2">Gimana Caranya jadi Orang Keren?</h3></div>
+                            <div class="text-regular">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio sunt, esse deleniti ratione placeat. Fuga officiis, magni architecto asperiores reiciendis suscipit quos ipsam maxime quod minus, hic nisi! Illum?
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+                    <!-- Kanan -->
+                    <div>
+                        @for ($i = 0; $i < 5; $i++)
+                        <div class="mb-3 margin-right-s">
+                            <div><h3 class="text-2xl mb-2">Gimana Caranya jadi Orang Keren?</h3></div>
+                            <div class="text-regular">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio sunt, esse deleniti ratione placeat. Fuga officiis, magni architecto asperiores reiciendis suscipit quos ipsam maxime quod minus, hic nisi! Illum?
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+                        
+                    </div>
+                    
+                </div>
+                
             </section>
         </div>
 

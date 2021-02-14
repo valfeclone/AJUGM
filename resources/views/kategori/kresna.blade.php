@@ -37,7 +37,9 @@
             Harga &nbsp&nbsp: Rp 200.000<br>
             Peserta : 3 Orang<br>
             </p>
+            <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="#" download><i class="fa fa-download"></i>&nbsp Download Brief</a>   
         </div>
+        
     </section>
 
     <section class="lomba-desc media-container z-max">
@@ -48,6 +50,7 @@
             Harga &nbsp&nbsp: Rp 200.000<br>
             Peserta : 3 Orang<br>
             </p>
+            <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="#" download><i class="fa fa-download"></i>&nbsp Download Brief</a>
         </div>
         <img src="/images/logolomba/filmdokumenter.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
@@ -66,6 +69,7 @@
             <br><br>
             Harga &nbsp&nbsp: Rp 70.000<br>
             Peserta : 1 Orang<br>
+            <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="#" download><i class="fa fa-download"></i>&nbsp Download Brief</a>
             </p>
         </div>
     </section>
@@ -78,6 +82,7 @@
             Harga &nbsp&nbsp: Rp 160.000<br>
             Peserta : 2 Orang<br>
             </p>
+            <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="#" download><i class="fa fa-download"></i>&nbsp Download Brief</a>
         </div>
         <img src="/images/logolomba/scoringfilm.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
