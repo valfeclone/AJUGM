@@ -126,7 +126,7 @@
         <div class="contact">
             <section class="about-section">
                 <div class="about-section__content media-container market-banner__media-container">
-                    <img src="https://dummyimage.com/400x400/fff/fff.png&text=X" alt="" class="media media-left contact__image z-max">
+                    <img src="{{ asset('images/contact.jpg') }}" alt="" class="media media-left contact__image z-max">
                     <img src="{{ asset('assets/Path 25.png') }}" alt="" class="market-banner__geometry--triangle z-min">
 
                     <div class="media__content contact__media-content z-mid">

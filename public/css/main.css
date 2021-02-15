@@ -3309,6 +3309,8 @@ input.dropdown-option {
 
 .contact__image {
   border: 1px solid #858586;
+  width: 40rem;
+  height: 40rem;
 }
 
 @media (max-width: 75em) {
