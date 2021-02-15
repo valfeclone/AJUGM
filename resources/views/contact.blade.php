@@ -145,36 +145,39 @@
                     </div>
                 </div>
             </section>
-            <section class="about-section background-gray">
+            <section class="about-section background-gray faq">
                 <div class="about-section__content flex-col">
-                    <div class="w-max">
-                        <div><h1 class="text-5xl font-bold margin-bottom-m">FAQ</h1></div>
+                    <div class="w-max faq__heading">
+                        <div class="w-max">
+                            <h1 class="heading-1 text-black margin-bottom-l">FAQ</h1>
+                        </div>
+                        <img class="faq__geometry--circle" src="{{ asset('assets/Ellipse 11.png') }}" />
                     </div>
-                    <div class="flex">
+                    <div class="flex faq__questions">
                     <!-- Kiri -->
-                    <div class="mr-3">
-                        @for ($i = 0; $i < 5; $i++)
-                        <div class="mb-3 margin-right-s">
-                            <div><h3 class="text-2xl mb-2">Gimana Caranya jadi Orang Keren?</h3></div>
-                            <div class="text-regular">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio sunt, esse deleniti ratione placeat. Fuga officiis, magni architecto asperiores reiciendis suscipit quos ipsam maxime quod minus, hic nisi! Illum?
+                        <div class="mr-3">
+                            @for ($i = 0; $i < 5; $i++)
+                            <div class="mb-5">
+                                <div><h3 class="text-2xl mb-2">Gimana Caranya jadi Orang Keren?</h3></div>
+                                <div class="text-regular">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio sunt, esse deleniti ratione placeat. Fuga officiis, magni architecto asperiores reiciendis suscipit quos ipsam maxime quod minus, hic nisi! Illum?
+                                </div>
                             </div>
+                            @endfor
                         </div>
-                        @endfor
-                    </div>
-                    <!-- Kanan -->
-                    <div>
-                        @for ($i = 0; $i < 5; $i++)
-                        <div class="mb-3 margin-right-s">
-                            <div><h3 class="text-2xl mb-2">Gimana Caranya jadi Orang Keren?</h3></div>
-                            <div class="text-regular">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio sunt, esse deleniti ratione placeat. Fuga officiis, magni architecto asperiores reiciendis suscipit quos ipsam maxime quod minus, hic nisi! Illum?
+                        <!-- Kanan -->
+                        <div>
+                            @for ($i = 0; $i < 5; $i++)
+                            <div class="mb-5">
+                                <div><h3 class="text-2xl mb-2">Gimana Caranya jadi Orang Keren?</h3></div>
+                                <div class="text-regular">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta distinctio sunt, esse deleniti ratione placeat. Fuga officiis, magni architecto asperiores reiciendis suscipit quos ipsam maxime quod minus, hic nisi! Illum?
+                                </div>
                             </div>
+                            @endfor
                         </div>
-                        @endfor
                     </div>
-                        
-                    </div>
+                    <img class="faq__geometry--triangle" src="{{ asset('assets/Path 25.png') }}" />
                     
                 </div>
                 

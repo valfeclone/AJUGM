@@ -8,7 +8,7 @@
     background-color: white !important;
     height: max-content;
 
-    > * {
+    > *:first-child {
         padding-top: 0 !important;
         background-color: white !important;
     }
