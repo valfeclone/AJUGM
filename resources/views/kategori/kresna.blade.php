@@ -37,7 +37,9 @@
             Harga &nbsp&nbsp: Rp 200.000<br>
             Peserta : 3 Orang<br>
             </p>
+            <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="/files/BriefFilmFiksiPendek.pdf" download><i class="fa fa-download"></i>&nbsp Download Brief</a>   
         </div>
+        
     </section>
 
     <section class="lomba-desc media-container z-max">
@@ -48,6 +50,7 @@
             Harga &nbsp&nbsp: Rp 200.000<br>
             Peserta : 3 Orang<br>
             </p>
+            <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="/files/BriefFilmDokumenterPendek.pdf" download><i class="fa fa-download"></i>&nbsp Download Brief</a>
         </div>
         <img src="/images/logolomba/filmdokumenter.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>
@@ -66,6 +69,7 @@
             <br><br>
             Harga &nbsp&nbsp: Rp 70.000<br>
             Peserta : 1 Orang<br>
+            <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="/files/BriefPenulisanNaskahFilm.pdf" download><i class="fa fa-download"></i>&nbsp Download Brief</a>
             </p>
         </div>
     </section>
@@ -78,6 +82,10 @@
             Harga &nbsp&nbsp: Rp 160.000<br>
             Peserta : 2 Orang<br>
             </p>
+            <div class="flex">
+                <a class=" cta cta--white text-bold text-grey-dark margin-top-s mr-2 cta__drive" href="https://drive.google.com/drive/folders/1NugZaI0ct7s8xJymEckQksCqMM4AWAml?usp=sharing" target="__blank" rel="noopener noreferrer"><i class="fab fa-google-drive"></i></a>
+                <a class=" cta cta--white text-bold text-grey-dark margin-top-s" href="/files/BriefScoringFilm.pdf" download><i class="fa fa-download"></i>&nbsp Download Brief</a>
+            </div>
         </div>
         <img src="/images/logolomba/scoringfilm.png" alt="" class="media media-right lomba-desc__video lomba-desc__media--right">
         <!-- <video class="media media-left lomba-desc__video" controls>

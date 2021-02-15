@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">Contact</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-white text-uppercase">FAQ & Contact</p></a>
             </div>
             <div class="header__util">
                 @guest
@@ -88,7 +88,7 @@
 
             <div class="header__link-box--responsive">
                 <a href="/about" class="link-item"><p class="text-bold text-black text-uppercase">About</p></a>
-                <a href="/contact" class="link-item"><p class="text-bold text-black text-uppercase">Contact</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-black text-uppercase">FAQ & Contact</p></a>
                 <div class="link-item nested-menu">
                     <p class="text-bold text-black text-uppercase">Kompetisi <i class="fas fa-angle-down nested-menu__arrow"></i></p>
                     <div class="menu">
@@ -134,7 +134,7 @@
                 <a href="/about" class="link-item"><p class="text-bold text-grey text-uppercase">About</p></a>
                 <a href="/#landing-matlom" class="link-item"><p class="text-bold text-grey text-uppercase">Kompetisi</p></a>
                 <a href="/#" class="link-item"><p class="text-bold text-grey text-uppercase">Events</p></a>
-                <a href="/contact" class="link-item"><p class="text-bold text-grey text-uppercase">Contact</p></a>
+                <a href="/contact" class="link-item"><p class="text-bold text-grey text-uppercase">FAQ & Contact</p></a>
             </div>
             <div class="footer__util">
                 <p class="text-regular text-grey">&#169;2020-Form | All Rights Reserved</p>

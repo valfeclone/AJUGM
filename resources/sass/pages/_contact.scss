@@ -8,13 +8,15 @@
     background-color: white !important;
     height: max-content;
 
-    > * {
+    > *:first-child {
         padding-top: 0 !important;
         background-color: white !important;
     }
 
     &__image {
         border: 1px solid $color-grey;
+        width: 40rem;
+        height: 40rem;
 
         @include respond(tab-land) {
             width: 35rem;

@@ -1,0 +1,50 @@
+.faq {
+    background-color: $color-white !important;
+    position: relative;
+    border-top: 1px solid $color-grey;
+
+    &__heading {
+        position: relative;
+        z-index: 90;
+
+        & > img {
+            z-index: -1;
+        }
+    }
+
+    &__questions {
+        & > div:first-child > *{
+            margin-right: 3rem !important;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;    
+
+            & > div > *:not(:last-child) {
+                margin-bottom: 2rem;
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    &__geometry {
+        &--circle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 3rem;
+            height: 3rem;
+            transform: translate(30%, -25%)
+        }
+
+        &--triangle {
+            z-index: -1;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 18rem;
+            height: 18rem;
+            transform: rotate(45deg) translate(-50%, 100%);
+        }
+    }
+}
