@@ -1019,18 +1019,14 @@ input[type="file"] {
   border-bottom: 1px solid #858586;
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px,
- 5px 5px,
- 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
 }
 
 .select:focus {
   background-image: linear-gradient(45deg, #858586 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #858586 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px,
- 5px 5px,
- 1px 1.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
   border-color: #858586;
   outline: 0;
@@ -1087,10 +1083,6 @@ input[type="file"] {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-}
-
-.cta__drive{
-  padding: .8rem 1rem;
 }
 
 .cta:hover {
@@ -2792,6 +2784,12 @@ input.dropdown-option {
     margin-bottom: 2rem;
     margin-right: 0 !important;
   }
+
+  .faq__questions > div > * {
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
+  }
 }
 
 .faq__geometry--circle {
@@ -3486,9 +3484,5 @@ input.dropdown-option {
   .webinar__media-content {
     margin-left: 4rem;
   }
-}
-
-.height-faq-card{
-  height: 7rem;
 }
 
