@@ -24,6 +24,10 @@
                 margin-bottom: 2rem;
                 margin-right: 0 !important;
             }
+
+            & > div > * {
+                height: max-content !important;
+            }
         }
     }
 
