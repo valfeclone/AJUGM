@@ -10,7 +10,7 @@ const json = {
             "Prahasta": ["PR Campaign", "Press Conference", "Risk Management"]
         },
         {
-            "Nakula": ["Riset Strategis Akademik", "Fun Research"]
+            "Nakula": ["Riset Konvensional", "Riset Fun"]
         },
         {
             "Sadewa": ["Social Media Activation", "Unconventional Media", "Brandbook", "Skip Ad"]
