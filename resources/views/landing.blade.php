@@ -212,19 +212,43 @@
                 <h3 class="heading-3 text-uppercase text-black margin-bottom-m text-center">Our Sponsors</h3>
                 <div class="card-wrapper--grid-xs margin-bottom-s">
                     <div class="card card-xs rounded">
-                        <img src="/images/sponsors/pln.png" alt="" class="card__image card__image">
+                        <img src="{{ asset('images/sponsors/pln.png') }}" alt="" class="card__image">
                     </div>
                     <div class="card card-xs rounded">
-                        <img src="/images/sponsors/pertamina.png" alt="" class="card__image card__image">
+                        <img src="{{ asset('images/sponsors/telkomsel.jpg') }}" alt="" class="card__image">
                     </div>
                     <div class="card card-xs rounded">
-                        <img src="/images/sponsors/dentsu.png" alt="" class="card__image card__image">
+                        <img src="{{ asset('images/sponsors/pertamina.png') }}" alt="" class="card__image">
                     </div>
                     <div class="card card-xs rounded">
-                        <img src="/images/sponsors/matchamu.png" alt="" class="card__image card__image">
+                        <img src="{{ asset('images/sponsors/semengresik.png') }}" alt="" class="card__image">
                     </div>
                     <div class="card card-xs rounded">
-                        <img src="/images/sponsors/Gambarin.png" alt="" class="card__image card__image">
+                        <img src="{{ asset('images/sponsors/pupukindonesia.png') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/dentsu.png') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/matchamu.png') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/anteraja.png') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/dagadu.jpg') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/Gambarin.png') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/vicee.png') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/appri.png') }}" alt="" class="card__image">
+                    </div>
+                    <div class="card card-xs rounded">
+                        <img src="{{ asset('images/sponsors/imogen.png') }}" alt="" class="card__image">
                     </div>
                 </div>
             </div>
