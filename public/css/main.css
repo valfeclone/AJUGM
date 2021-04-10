@@ -1020,14 +1020,18 @@ input[type="file"] {
   border-bottom: 1px solid #858586;
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px,
+ 5px 5px,
+ 1px 1.5em;
   background-repeat: no-repeat;
 }
 
 .select:focus {
   background-image: linear-gradient(45deg, #858586 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #858586 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-size: 5px 5px,
+ 5px 5px,
+ 1px 1.5em;
   background-repeat: no-repeat;
   border-color: #858586;
   outline: 0;
@@ -3150,7 +3154,7 @@ input.dropdown-option {
 }
 
 .virtual-museum__geometry--circle {
-  width: 12rem;
+  width: 7rem;
   position: absolute;
   right: 0;
   top: 0;
