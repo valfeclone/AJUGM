@@ -104,9 +104,9 @@ Route::get('/creativemarket/{umkm}', [UMKMController::class, 'show']);
 Route::get('/exhibition', function () {
     return view('virtual_museum');
 });
-Route::get('/detailexhibition', function () {
-    return view('detailexhibition');
-});
+// Route::get('/detailexhibition', function () {
+//     return view('detailexhibition');
+// });
 
 //kategori lomba
 Route::view('/kompetisi/arjuna', 'kategori.arjuna');
